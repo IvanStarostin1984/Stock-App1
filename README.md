@@ -5,7 +5,10 @@
 > **One code-base → two front-ends**: a Flutter 3 .22 mobile app **and** a responsive Vue-powered PWA that surface *end-of-day* market data **without** busting free-tier API limits.
 
 ---
-
+##Secrets/APIs:
+ 1. MARKETSTACK_KEY = YOUR_MARKETSTACK_KEY. Limit - 100 requests/month.
+ 2. NEWSDATA_KEY = YOUR_NEWSDATA_KEY - 200 requests/day
+ 3. 
 ## ✨ Features (MVP = 6 mobile screens · 6 web pages)
 
 | Screen ↔ Page | What you get | FR / PF ref. |
