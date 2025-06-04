@@ -6,8 +6,8 @@
 
 ---
 ## ==== External API tokens (never commit real values) ====
-MARKETSTACK_KEY=YOUR_MARKETSTACK_KEY
-NEWSDATA_KEY=YOUR_NEWSDATA_KEY
+VITE_MARKETSTACK_KEY=YOUR_MARKETSTACK_KEY
+VITE_NEWSDATA_KEY=YOUR_NEWSDATA_KEY
 LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 
 ## ✨ Features (MVP = 6 mobile screens · 6 web pages)
@@ -60,8 +60,8 @@ cd ../web-app
 npm install && npm run dev            # ⇒ http://localhost:5173
 Required env vars (MVP)
 Variable	Example	Purpose
-MARKETSTACK_KEY	9b3e…	EoD quotes
-NEWSDATA_KEY	pub_123…	News digest
+VITE_MARKETSTACK_KEY	9b3e…	EoD quotes
+VITE_NEWSDATA_KEY	pub_123…	News digest
 LHCI_GITHUB_APP_TOKEN gh_abc…   Lighthouse CI (CI only)
 
 Create identical .env files in mobile-app/ and web-app/.

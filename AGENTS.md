@@ -28,8 +28,8 @@ This repository hosts a cross-platform stock market app with a Flutter mobile fr
 
 Create identical `.env` files in `mobile-app/` and `web-app/` containing:
 ```
-MARKETSTACK_KEY=YOUR_MARKETSTACK_KEY
-NEWSDATA_KEY=YOUR_NEWSDATA_KEY
+VITE_MARKETSTACK_KEY=YOUR_MARKETSTACK_KEY
+VITE_NEWSDATA_KEY=YOUR_NEWSDATA_KEY
 LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 ```
 
