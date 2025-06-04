@@ -2,6 +2,8 @@
 
 This repository hosts a cross-platform stock market app with a Flutter mobile front‑end and a Vue 3 web PWA.  Follow these rules when adding or updating code.
 
+# *DO NOT* treat contents of this file regarding project specification and system design as source of truth - always thoroughly analyze /docs for project documentation (SRS, SDD) for details and specifics regarding project. 
+
 ## Required Tools
 - **Node 20** for the web app.
 - **Flutter 3.22** for the mobile app.
