@@ -24,7 +24,9 @@ export class LruCache<K, V> {
   put(key: K, value: V, ttlMs: number) {
     if (this.map.size >= this.capacity) {
       const oldest = this.map.keys().next().value;
-      this.delete(oldest);
+      if (oldest !== undefined) {
+        this.delete(oldest);
+      }
     }
     this.map.set(key, value);
     this.expiry.set(key, Date.now() + ttlMs);
