@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Displays the user's stock portfolio.
 class PortfolioScreen extends StatelessWidget {
   const PortfolioScreen({super.key});
 

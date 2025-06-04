@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Screen allowing users to authenticate.
 class AuthScreen extends StatelessWidget {
   const AuthScreen({super.key});
 
