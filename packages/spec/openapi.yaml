@@ -1,11 +1,18 @@
 openapi: 3.0.0
+servers:
+  - url: https://api.example.com
 info:
   title: SMWA API
+  description: Simple market watch API
   version: 1.0.0
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
 paths:
   /quote:
     get:
       summary: Get quote
+      operationId: getQuote
       parameters:
         - in: query
           name: symbol
@@ -13,6 +20,8 @@ paths:
           schema:
             type: string
       responses:
+        '400':
+          description: Bad request
         '200':
           description: Quote data
           content:
@@ -22,6 +31,7 @@ paths:
   /news:
     get:
       summary: Get news
+      operationId: getNews
       parameters:
         - in: query
           name: symbol
@@ -29,6 +39,8 @@ paths:
           schema:
             type: string
       responses:
+        '400':
+          description: Bad request
         '200':
           description: News list
           content:

@@ -4,7 +4,13 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "gen:ts": "npx @openapitools/openapi-generator-cli generate -i openapi.yaml -g typescript-fetch -o generated-ts",
-    "gen:dart": "npx @openapitools/openapi-generator-cli generate -i openapi.yaml -g dart-dio -o generated-dart"
+    "gen:ts": "npx @openapitools/openapi-generator-cli generate -i spec/openapi.yaml -g typescript-fetch -o generated-ts",
+    "gen:dart": "npx @openapitools/openapi-generator-cli generate -i spec/openapi.yaml -g dart-dio -o generated-dart",
+    "lint:spec": "openapi lint spec/openapi.yaml",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@redocly/openapi-cli": "1.0.0-beta.95",
+    "vitest": "^3.2.1"
   }
 }
