@@ -11,4 +11,10 @@ describe('router', () => {
     const match = router.resolve('/no-route');
     expect(match.name).toBeUndefined();
   });
+
+  it('parses optional symbol param', () => {
+    const match = router.resolve('/detail/ABC');
+    expect(match.name).toBe('detail');
+    expect(match.params.symbol).toBe('ABC');
+  });
 });

@@ -73,4 +73,23 @@ describe('NewsService', () => {
     expect(fetchMock).toHaveBeenCalledTimes(2);
     expect(ledger.increment).toHaveBeenCalledTimes(1);
   });
+
+  it('maintains separate cache entries per symbol', async () => {
+    const service = new NewsService('key');
+    const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
+    (service as any).ledger = ledger;
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce({ ok: true, json: async () => apiPayload() })
+      .mockResolvedValueOnce({ ok: true, json: async () => apiPayload() });
+    global.fetch = fetchMock as any;
+
+    const first = await service.getNews('AA');
+    expect(first).toEqual(sampleArticles);
+    const second = await service.getNews('BB');
+    expect(second).toEqual(sampleArticles);
+    await service.getNews('AA');
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+    expect(ledger.increment).toHaveBeenCalledTimes(2);
+  });
 });
