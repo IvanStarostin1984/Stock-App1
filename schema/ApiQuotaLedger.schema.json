@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ApiQuotaLedger",
+  "type": "object",
+  "properties": {
+    "apiId": {
+      "type": "string",
+      "enum": ["marketstack", "fx", "newsdata", "supabase", "stripe"]
+    },
+    "rollingCount": { "type": "integer" },
+    "windowStart": { "type": "string", "format": "date-time" }
+  },
+  "required": ["apiId", "rollingCount", "windowStart"]
+}

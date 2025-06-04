@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CountrySetting",
+  "type": "object",
+  "properties": {
+    "iso2": { "type": "string", "minLength": 2, "maxLength": 2 },
+    "lastCurrency": { "type": "string", "minLength": 3, "maxLength": 3 },
+    "acquired": { "type": "string", "format": "date-time" },
+    "method": { "type": "string", "enum": ["GPS", "HTML5", "Manual"] }
+  },
+  "required": ["iso2", "lastCurrency", "acquired", "method"]
+}
