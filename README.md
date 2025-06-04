@@ -40,15 +40,21 @@ NEWSDATA_KEY=YOUR_NEWSDATA_KEY
 ## 🚚 Quick Start
 
 ```bash
-# 1 · Clone (incl. shared DTO contracts)
+# 1 · Clone
 git clone https://github.com/IvanStarostin1984/Stock-App1.git
-cd Stock-App1 && git submodule update --init --recursive
+cd Stock-App1
 
-# 2 · Mobile (Flutter)
+# 2 · Generate REST clients
+cd packages
+npx @openapitools/openapi-generator-cli generate -i openapi.yaml -g typescript-fetch -o generated-ts
+npx @openapitools/openapi-generator-cli generate -i openapi.yaml -g dart-dio -o generated-dart
+cd ..
+
+# 3 · Mobile (Flutter)
 cd mobile-app
 flutter pub get && flutter run        # launches Android emulator
 
-# 3 · Web (PWA)
+# 4 · Web (PWA)
 cd ../web-app
 npm install && npm run dev            # ⇒ http://localhost:5173
 Required env vars (MVP)

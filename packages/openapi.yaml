@@ -1,0 +1,58 @@
+openapi: 3.0.0
+info:
+  title: SMWA API
+  version: 1.0.0
+paths:
+  /quote:
+    get:
+      summary: Get quote
+      parameters:
+        - in: query
+          name: symbol
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Quote data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Quote'
+  /news:
+    get:
+      summary: Get news
+      parameters:
+        - in: query
+          name: symbol
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: News list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/NewsArticle'
+components:
+  schemas:
+    Quote:
+      type: object
+      properties:
+        symbol:
+          type: string
+        price:
+          type: number
+          format: double
+      required: [symbol, price]
+    NewsArticle:
+      type: object
+      properties:
+        title:
+          type: string
+        url:
+          type: string
+      required: [title, url]
