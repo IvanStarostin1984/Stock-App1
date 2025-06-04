@@ -1,0 +1,5 @@
+{
+  "apiId": "marketstack",
+  "rollingCount": 10,
+  "windowStart": "2024-01-01T00:00:00Z"
+}
