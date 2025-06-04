@@ -2,12 +2,16 @@
 
 This repository hosts a cross-platform stock market app with a Flutter mobile front‑end and a Vue 3 web PWA.  Follow these rules when adding or updating code.
 
-# *DO NOT* treat contents of this file regarding project specification and system design as source of truth - always thoroughly analyze /docs for project documentation (SRS, SDD) for details and specifics regarding project. 
+# Important — Not authoritative:
+1. This file is only a quick-start contributor guide.
+2. For every requirement and/or design decision, the single source of truth is the documentation in /docs (SDD_v1.md, SRS_v1.md, original assignment - single source of truth).
+3. Always consult those documents first and treat this file as secondary.
 
 ## Required Tools
 - **Node 20** for the web app.
 - **Flutter 3.22** for the mobile app.
 - `openapi-generator-cli` (`openapitools.json` pins version 7.13.0) to refresh API clients under `packages/`.
+- Charting stack is fixed to **Chart.js 4.4.9 (UMD, SRI-pinned)** and **fl_chart 0.66.x**; CI fails on drift.
 
 ## Setup & Build
 1. Clone the repo and generate REST clients:
@@ -32,8 +36,15 @@ Create identical `.env` files in `mobile-app/` and `web-app/` containing:
 ```
 VITE_MARKETSTACK_KEY=YOUR_MARKETSTACK_KEY
 VITE_NEWSDATA_KEY=YOUR_NEWSDATA_KEY
+VITE_EXCHANGERATE_KEY=YOUR_EXCHANGERATE_KEY
 LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 ```
+
+## API hygiene
+All external calls go through `/packages/core/net.ts` which  
+* applies a **24 h LRU cache**,  
+* throws **429** when > 100 Marketstack/FX calls · month⁻¹ or > 200 NewsData calls · day⁻¹.  
+(See *docs/SRS_v1.md § 9.6.7 Limitations*.)
 
 ## Coding Standards
 - One domain concept per file; no cyclic imports.
@@ -50,6 +61,13 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 - Run `dart format`, `flutter analyze`, `flutter test`, `eslint --fix`, and `npm test` before committing.
 - Provide at least one positive and one negative unit test per public API, aiming for ≥75 % branch coverage.
 - GitHub Actions in `.github/workflows/ci.yml` will build the web app, run tests, trigger a Netlify deployment and execute Lighthouse CI. Keep the pipeline green.
+
+# Quality gates
+* **Lighthouse** perf & a11y ≥ 90 or CI fails.  
+* **Core Web Vitals** budget: LCP ≤ 2.5 s, CLS < 0.10.  
+* **Axe-core** a11y violations = 0.  
+* **Flutter** frame time ≤ 16 ms (DevTools trace).  
+* WCAG 2.1 AA colour contrast verified via axe-lint.
 
 ## Contributing Workflow
 - Fork then branch off `main` using the pattern `feat/<topic>`.
