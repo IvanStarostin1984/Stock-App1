@@ -5,10 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "npm run tokens && vue-tsc -b && vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "lint": "eslint '{src,tests}/**/*.{js,ts,vue}' --fix"
+    "lint": "eslint '{src,tests}/**/*.{js,ts,vue}' --fix",
+    "tokens": "npm --prefix design-tokens run build",
+    "pretest": "npm run tokens",
+    "postinstall": "npm install --prefix design-tokens"
   },
   "dependencies": {
     "vue": "^3.5.13",
