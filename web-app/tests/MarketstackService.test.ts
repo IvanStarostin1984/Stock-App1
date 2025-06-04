@@ -1,9 +1,17 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { MarketstackService, type Quote } from '../src/services/MarketstackService';
 
+const sampleApiQuote = {
+  symbol: 'AAPL',
+  open: 1,
+  high: 2,
+  low: 0.5,
+  close: 1.5
+};
+
 const sampleQuote: Quote = {
   symbol: 'AAPL',
-  date: '2024-01-01',
+  price: 1.5,
   open: 1,
   high: 2,
   low: 0.5,
@@ -24,7 +32,7 @@ describe('MarketstackService', () => {
     const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
     (service as any).ledger = ledger;
 
-    const fetchMock = vi.fn().mockResolvedValue({ ok: true, json: async () => ({ data: [sampleQuote] }) });
+    const fetchMock = vi.fn().mockResolvedValue({ ok: true, json: async () => ({ data: [sampleApiQuote] }) });
     global.fetch = fetchMock as any;
 
     const first = await service.getQuote('AAPL');
@@ -56,7 +64,7 @@ describe('MarketstackService', () => {
     const fetchMock = vi
       .fn()
       .mockResolvedValueOnce({ ok: false })
-      .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [sampleQuote] }) });
+      .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [sampleApiQuote] }) });
     global.fetch = fetchMock as any;
 
     const fail = await service.getQuote('AAPL');
@@ -74,10 +82,11 @@ describe('MarketstackService', () => {
     const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
     (service as any).ledger = ledger;
     const quoteB: Quote = { ...sampleQuote, symbol: 'IBM' };
+    const apiQuoteB = { ...sampleApiQuote, symbol: 'IBM' };
     const fetchMock = vi
       .fn()
-      .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [sampleQuote] }) })
-      .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [quoteB] }) });
+      .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [sampleApiQuote] }) })
+      .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [apiQuoteB] }) });
     global.fetch = fetchMock as any;
 
     const first = await service.getQuote('AAPL');

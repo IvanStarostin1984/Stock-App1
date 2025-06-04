@@ -1,7 +1,6 @@
 <template>
   <div v-if="quote" class="headline-card">
-    <h2>{{ quote.symbol }} {{ quote.close }}</h2>
-    <p>{{ quote.date }}</p>
+    <h2>{{ quote.symbol }} {{ quote.price }}</h2>
   </div>
   <p v-else>Loading...</p>
 </template>

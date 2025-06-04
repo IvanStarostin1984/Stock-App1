@@ -1,15 +1,10 @@
 import { LruCache } from '@/utils/LruCache';
 import { ApiQuotaLedger } from '@/utils/ApiQuotaLedger';
 import { logApiCall } from '@/utils/logMetrics';
+import type { Quote } from '../../../packages/generated-ts/models/Quote';
 
-export interface Quote {
-  symbol: string;
-  date: string;
-  open: number;
-  high: number;
-  low: number;
-  close: number;
-}
+export type { Quote };
+
 
 const CACHE_TTL = 24 * 60 * 60 * 1000; // 24h
 
@@ -46,7 +41,15 @@ export class MarketstackService {
       if (!resp.ok) return null;
       this.ledger.increment();
       const data = await resp.json();
-      const quote: Quote = data.data[0];
+      const raw = data.data[0];
+      const quote: Quote = {
+        symbol: raw.symbol,
+        price: raw.close,
+        open: raw.open,
+        high: raw.high,
+        low: raw.low,
+        close: raw.close
+      };
       this.cache.put(symbol, quote, CACHE_TTL);
       return quote;
     } catch {
