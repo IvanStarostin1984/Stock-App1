@@ -21,6 +21,8 @@
 
 ## Environment & config
 16. Runtime config ONLY via env-vars / secrets manager – `VITE_MARKETSTACK_KEY`, `VITE_NEWSDATA_KEY`, etc.
-17. Lint-defined code style: 2-space indent, single quotes, trailing newline.
+17. Lint-defined code style: 2-space indent, single quotes, trailing newline. The
+    lint rules live in `mobile-app/analysis_options.yaml` and are checked via
+    `flutter analyze`.
 
 *(CI enforces CVE scans, licence checks, coverage threshold, and prettier formatting – see `.github/workflows/`.)*
