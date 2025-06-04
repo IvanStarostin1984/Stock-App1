@@ -1,5 +1,29 @@
-# Vue 3 + TypeScript + Vite
+# Web App
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This directory hosts the Vue 3 Progressive Web App of **Stock-App1**. Ensure Node 20 is available on your machine.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Install dependencies
+
+```bash
+npm install
+```
+
+## Run the development server
+
+```bash
+npm run dev
+```
+
+Vite will expose the PWA at http://localhost:5173.
+
+## Configure environment variables
+
+Create a `.env` file (mirrored in `mobile-app/`) containing:
+
+```
+VITE_MARKETSTACK_KEY=YOUR_MARKETSTACK_KEY
+VITE_NEWSDATA_KEY=YOUR_NEWSDATA_KEY
+LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
+```
+
+`Exchangerate.host` needs no API key. Never commit real credentials.
