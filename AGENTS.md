@@ -71,16 +71,26 @@ All external calls go through `/packages/core/net.ts` which
 * **Flutter** frame time ≤ 16 ms (DevTools trace).  
 * WCAG 2.1 AA colour contrast verified via axe-lint.
 
+### Requirement traceability
+
+* **Always comment generated code with requirement IDs** (`FR-`, `US-`, `QR-`, etc).  
+  Example:
+  ```dart
+  /// FR-123 – Place trade order
+  /// US-04  – “As a user, I can buy stocks…”
+  /// QR-02  – < 200 ms round-trip
+  ```
+
 ## Contributing Workflow
 - **Fork** then branch off `main` using the pattern `feat/<topic>`.
 - **Ensure local tests pass** before opening a PR.
 - **Each PR requires at least one reviewer.**
 
-### Decision & Progress Logging
+## Decision & Progress Logging
 To keep project history and reasoning transparent **and** trace every change back to official documentation,  
 **every contribution must include**:
 
-#### PR Decision Checklist *(in the PR description)*
+### PR Decision Checklist *(in the PR description)*
 - **Major design decisions** and their rationale  
 - **Any deviations** from `/docs` (`SRS_v1.md`, `SDD_v1.md`) or this `AGENTS.md`  
 - **Blockers / limitations**, e.g., failing tests or unmet dependencies  
@@ -89,7 +99,7 @@ To keep project history and reasoning transparent **and** trace every change bac
   *(Use the IDs defined in `SRS_v1.md` § 4 “Functional Requirements”, § 5 “User Stories”,  
   and `SDD_v1.md` § 7 “Quality Requirements”.)*
 
-#### Progress Log (`Notes.md`)
+### Progress Log (`Notes.md`)
 Append **one new section at the top of `NOTES.md`** (newest entry first) using this template:
 
 ```markdown
