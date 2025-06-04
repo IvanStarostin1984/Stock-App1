@@ -47,7 +47,19 @@ components:
         price:
           type: number
           format: double
-      required: [symbol, price]
+        open:
+          type: number
+          format: double
+        high:
+          type: number
+          format: double
+        low:
+          type: number
+          format: double
+        close:
+          type: number
+          format: double
+      required: [symbol, price, open, high, low, close]
     NewsArticle:
       type: object
       properties:
