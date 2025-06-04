@@ -72,8 +72,36 @@ All external calls go through `/packages/core/net.ts` which
 * WCAG 2.1 AA colour contrast verified via axe-lint.
 
 ## Contributing Workflow
-- Fork then branch off `main` using the pattern `feat/<topic>`.
-- Ensure local tests pass before opening a PR.
-- Each PR requires at least one reviewer.
+- **Fork** then branch off `main` using the pattern `feat/<topic>`.
+- **Ensure local tests pass** before opening a PR.
+- **Each PR requires at least one reviewer.**
+
+### Decision & Progress Logging *(NEW — with requirement cross-refs)*
+To keep project history and reasoning transparent **and** trace every change back to official documentation,  
+**every contribution must include**:
+
+#### PR Decision Checklist *(in the PR description)*
+- **Major design decisions** and their rationale  
+- **Any deviations** from `/docs` (`SRS_v1.md`, `SDD_v1.md`) or this `AGENTS.md`  
+- **Blockers / limitations**, e.g., failing tests or unmet dependencies  
+- **Requirements addressed**: list the exact IDs touched, e.g.  
+  `FR-01`, `US-03`, `QR-02` <br>
+  *(Use the IDs defined in `SRS_v1.md` § 4 “Functional Requirements”, § 5 “User Stories”,  
+  and `SDD_v1.md` § 7 “Quality Requirements”.)*
+
+#### Progress Log (`Notes.md`)
+Append **one new section at the top of `Notes.md`** (newest entry first) using this template:
+
+```markdown
+## YYYY-MM-DD PR #<number>
+- **Summary**: …
+- **Stage**: …
+- **Requirements addressed**: FR-01, US-03, QR-02
+- **Deviations/Decisions**: …
+- **Next step**: …
+- **Notes**: … (optional)
+```
+Agents MUST consult Notes.md and the referenced requirement IDs before starting work
+to understand the current stage, past decisions, and open questions tied to the spec.
 
 Refer to `README.md` and full documentation in `docs/` for further details on features and architecture.
