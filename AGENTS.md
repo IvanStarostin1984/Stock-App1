@@ -17,10 +17,10 @@ This repository hosts a cross-platform stock market app with a Flutter mobile fr
 1. Clone the repo and generate REST clients:
    ```bash
    cd packages
-   npx @openapitools/openapi-generator-cli generate -i openapi.yaml -g typescript-fetch -o generated-ts
-   npx @openapitools/openapi-generator-cli generate -i openapi.yaml -g dart-dio -o generated-dart
+   npm run gen:clients
    cd ..
    ```
+   This script replaces running `npm run gen:ts` and `npm run gen:dart` separately.
 2. Mobile app:
    ```bash
    cd mobile-app
