@@ -38,6 +38,12 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 
 ---
 
+### Prerequisites
+Before running the apps ensure the correct toolchains are installed:
+* **Node 20** for the web app
+* **Flutter 3.22** for the mobile app
+Detailed setup steps live in `AGENTS.md`.
+
 ## 🚚 Quick Start
 
 ```bash
