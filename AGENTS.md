@@ -5,7 +5,7 @@ This repository hosts a cross-platform stock market app with a Flutter mobile fr
 # Important — Not authoritative:
 1. This file is only a quick-start contributor guide.
 2. For every requirement and/or design decision, the single source of truth is the documentation in /docs (SDD_v1.md, SRS_v1.md, original assignment - single source of truth).
-3. Always consult those documents first and treat this file as secondary.
+3. Always consult those documents first and treat AGENTS.md as secondary.
 
 ## Required Tools
 - **Node 20** for the web app.
