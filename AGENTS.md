@@ -5,7 +5,9 @@ This repository hosts a cross-platform stock market app with a Flutter mobile fr
 # Important — Not authoritative:
 1. This file is only a quick-start contributor guide.
 2. For any requirement or design decision, /docs (SRS_v1.md, SDD_v1.md, original_assignment.md) is the sole authority; this file is only a convenience summary.
-3. Always consult those documents first and treat AGENTS.md as secondary.
+3. If following SRS_v1.md, SDD_v1.md produces a conflict, or not working code, treat original_assignment.md as single source of truth. Inform end-user about such situation with *IMPORTANT* disclaimer.
+4. Always consult those documents first and treat AGENTS.md as secondary.
+5. End-user of codex may explicitly ask to modify SRS_v1.md and/or SDD_v1.md, in that case comply.
 
 ## Required Tools
 - **Node 20** for the web app.
