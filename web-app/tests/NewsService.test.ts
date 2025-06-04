@@ -26,6 +26,10 @@ describe('NewsService', () => {
     vi.restoreAllMocks();
   });
 
+  it('throws for empty API key', () => {
+    expect(() => new NewsService('')).toThrow();
+  });
+
   it('fetches news and caches result', async () => {
     const service = new NewsService('key');
     const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
