@@ -76,7 +76,7 @@ All external calls go through `/packages/core/net.ts` which
 - **Ensure local tests pass** before opening a PR.
 - **Each PR requires at least one reviewer.**
 
-### Decision & Progress Logging *(NEW — with requirement cross-refs)*
+### Decision & Progress Logging
 To keep project history and reasoning transparent **and** trace every change back to official documentation,  
 **every contribution must include**:
 
