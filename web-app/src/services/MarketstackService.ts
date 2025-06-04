@@ -1,5 +1,5 @@
-import { LruCache } from '@/utils/LruCache';
-import { ApiQuotaLedger } from '@/utils/ApiQuotaLedger';
+import { LruCache } from "@/utils/LruCache";
+import { ApiQuotaLedger } from "@/utils/ApiQuotaLedger";
 
 export interface Quote {
   symbol: string;
@@ -12,11 +12,23 @@ export interface Quote {
 
 const CACHE_TTL = 24 * 60 * 60 * 1000; // 24h
 
+/**
+ * Service for retrieving end-of-day stock quotes from Marketstack.
+ */
 export class MarketstackService {
   private cache = new LruCache<string, Quote>(32);
   private ledger = new ApiQuotaLedger(100);
   constructor(private apiKey: string) {}
 
+  /**
+   * Retrieve the latest quote for a given stock symbol.
+   *
+   * Results are cached and API usage is throttled via the
+   * internal quota ledger.
+   *
+   * @param symbol - Stock ticker symbol.
+   * @returns Quote information or `null` when not available.
+   */
   async getQuote(symbol: string): Promise<Quote | null> {
     const cached = this.cache.get(symbol);
     if (cached) return cached;
