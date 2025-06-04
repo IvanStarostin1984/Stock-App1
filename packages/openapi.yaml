@@ -67,4 +67,9 @@ components:
           type: string
         url:
           type: string
-      required: [title, url]
+        source:
+          type: string
+        published:
+          type: string
+          format: date-time
+      required: [title, url, source, published]

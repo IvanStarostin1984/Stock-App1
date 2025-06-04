@@ -13,6 +13,10 @@ part 'quote.g.dart';
 /// Properties:
 /// * [symbol] 
 /// * [price] 
+/// * [open] 
+/// * [high] 
+/// * [low] 
+/// * [close] 
 @BuiltValue()
 abstract class Quote implements Built<Quote, QuoteBuilder> {
   @BuiltValueField(wireName: r'symbol')
@@ -20,6 +24,18 @@ abstract class Quote implements Built<Quote, QuoteBuilder> {
 
   @BuiltValueField(wireName: r'price')
   double get price;
+
+  @BuiltValueField(wireName: r'open')
+  double get open;
+
+  @BuiltValueField(wireName: r'high')
+  double get high;
+
+  @BuiltValueField(wireName: r'low')
+  double get low;
+
+  @BuiltValueField(wireName: r'close')
+  double get close;
 
   Quote._();
 
@@ -52,6 +68,26 @@ class _$QuoteSerializer implements PrimitiveSerializer<Quote> {
     yield r'price';
     yield serializers.serialize(
       object.price,
+      specifiedType: const FullType(double),
+    );
+    yield r'open';
+    yield serializers.serialize(
+      object.open,
+      specifiedType: const FullType(double),
+    );
+    yield r'high';
+    yield serializers.serialize(
+      object.high,
+      specifiedType: const FullType(double),
+    );
+    yield r'low';
+    yield serializers.serialize(
+      object.low,
+      specifiedType: const FullType(double),
+    );
+    yield r'close';
+    yield serializers.serialize(
+      object.close,
       specifiedType: const FullType(double),
     );
   }
@@ -90,6 +126,34 @@ class _$QuoteSerializer implements PrimitiveSerializer<Quote> {
             specifiedType: const FullType(double),
           ) as double;
           result.price = valueDes;
+          break;
+        case r'open':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(double),
+          ) as double;
+          result.open = valueDes;
+          break;
+        case r'high':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(double),
+          ) as double;
+          result.high = valueDes;
+          break;
+        case r'low':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(double),
+          ) as double;
+          result.low = valueDes;
+          break;
+        case r'close':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(double),
+          ) as double;
+          result.close = valueDes;
           break;
         default:
           unhandled.add(key);

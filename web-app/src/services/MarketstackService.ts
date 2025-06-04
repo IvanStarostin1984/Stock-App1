@@ -18,7 +18,10 @@ const CACHE_TTL = 24 * 60 * 60 * 1000; // 24h
 export class MarketstackService {
   private cache = new LruCache<string, Quote>(32);
   private ledger = new ApiQuotaLedger(100);
-  constructor(private apiKey: string) {}
+  private apiKey: string;
+  constructor(apiKey: string) {
+    this.apiKey = apiKey;
+  }
 
   /**
    * Retrieve the latest quote for a given stock symbol.

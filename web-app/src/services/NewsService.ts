@@ -3,7 +3,7 @@ import { ApiQuotaLedger } from '@/utils/ApiQuotaLedger';
 
 export interface NewsArticle {
   title: string;
-  link: string;
+  url: string;
   source: string;
   published: string;
 }
@@ -16,7 +16,10 @@ const CACHE_TTL = 12 * 60 * 60 * 1000; // 12h
 export class NewsService {
   private cache = new LruCache<string, NewsArticle[]>(32);
   private ledger = new ApiQuotaLedger(200); // 200 req/day
-  constructor(private apiKey: string) {}
+  private apiKey: string;
+  constructor(apiKey: string) {
+    this.apiKey = apiKey;
+  }
 
   /**
    * Retrieve up to three recent articles about the given symbol.
@@ -41,7 +44,7 @@ export class NewsService {
         .slice(0, 3)
         .map((a: any) => ({
           title: a.title,
-          link: a.link,
+          url: a.link,
           source: a.source_id,
           published: a.pubDate,
         }));
