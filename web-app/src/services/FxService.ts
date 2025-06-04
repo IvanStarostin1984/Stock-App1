@@ -26,12 +26,16 @@ export class FxService {
     if (cached !== undefined) return cached;
     if (!this.ledger.isSafe()) return null;
     const url = `https://api.exchangerate.host/latest?base=${base}&symbols=${quote}`;
-    const resp = await fetch(url);
-    if (!resp.ok) return null;
-    this.ledger.increment();
-    const data = await resp.json();
-    const rate = data.rates[quote];
-    this.cache.put(key, rate, CACHE_TTL);
-    return rate;
+    try {
+      const resp = await fetch(url);
+      if (!resp.ok) return null;
+      this.ledger.increment();
+      const data = await resp.json();
+      const rate = data.rates[quote];
+      this.cache.put(key, rate, CACHE_TTL);
+      return rate;
+    } catch {
+      return null;
+    }
   }
 }

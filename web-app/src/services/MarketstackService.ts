@@ -36,12 +36,16 @@ export class MarketstackService {
       return null;
     }
     const url = `https://api.marketstack.com/v1/eod/latest?access_key=${this.apiKey}&symbols=${symbol}`;
-    const resp = await fetch(url);
-    if (!resp.ok) return null;
-    this.ledger.increment();
-    const data = await resp.json();
-    const quote: Quote = data.data[0];
-    this.cache.put(symbol, quote, CACHE_TTL);
-    return quote;
+    try {
+      const resp = await fetch(url);
+      if (!resp.ok) return null;
+      this.ledger.increment();
+      const data = await resp.json();
+      const quote: Quote = data.data[0];
+      this.cache.put(symbol, quote, CACHE_TTL);
+      return quote;
+    } catch {
+      return null;
+    }
   }
 }

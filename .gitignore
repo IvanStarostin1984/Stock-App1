@@ -1,0 +1,16 @@
+# Node
+node_modules/
+dist/
+coverage/
+
+# Flutter
+build/
+.dart_tool/
+.packages
+
+# Env files
+.env
+.env.*
+
+# Misc
+.DS_Store

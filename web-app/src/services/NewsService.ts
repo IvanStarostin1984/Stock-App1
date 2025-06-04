@@ -32,19 +32,23 @@ export class NewsService {
     if (cached) return cached;
     if (!this.ledger.isSafe()) return null;
     const url = `https://newsdata.io/api/1/news?apikey=${this.apiKey}&q=${symbol}&language=en`;
-    const resp = await fetch(url);
-    if (!resp.ok) return null;
-    this.ledger.increment();
-    const data = await resp.json();
-    const articles: NewsArticle[] = (data.results || [])
-      .slice(0, 3)
-      .map((a: any) => ({
-        title: a.title,
-        link: a.link,
-        source: a.source_id,
-        published: a.pubDate,
-      }));
-    this.cache.put(symbol, articles, CACHE_TTL);
-    return articles;
+    try {
+      const resp = await fetch(url);
+      if (!resp.ok) return null;
+      this.ledger.increment();
+      const data = await resp.json();
+      const articles: NewsArticle[] = (data.results || [])
+        .slice(0, 3)
+        .map((a: any) => ({
+          title: a.title,
+          link: a.link,
+          source: a.source_id,
+          published: a.pubDate,
+        }));
+      this.cache.put(symbol, articles, CACHE_TTL);
+      return articles;
+    } catch {
+      return null;
+    }
   }
 }
