@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Screen reserved for the pro version of the app.
 class ProScreen extends StatelessWidget {
   const ProScreen({super.key});
 

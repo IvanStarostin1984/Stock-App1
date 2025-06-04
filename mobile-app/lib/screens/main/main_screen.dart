@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Landing page of the app showing market data.
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
 
