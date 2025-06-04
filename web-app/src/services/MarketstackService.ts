@@ -1,5 +1,6 @@
 import { LruCache } from '@/utils/LruCache';
 import { ApiQuotaLedger } from '@/utils/ApiQuotaLedger';
+import { logApiCall } from '@/utils/logMetrics';
 
 export interface Quote {
   symbol: string;
@@ -18,7 +19,10 @@ const CACHE_TTL = 24 * 60 * 60 * 1000; // 24h
 export class MarketstackService {
   private cache = new LruCache<string, Quote>(32);
   private ledger = new ApiQuotaLedger(100);
-  constructor(private apiKey: string) {}
+  private apiKey: string;
+  constructor(apiKey: string) {
+    this.apiKey = apiKey;
+  }
 
   /**
    * Retrieve the latest quote for a given stock symbol.
@@ -36,6 +40,7 @@ export class MarketstackService {
       return null;
     }
     const url = `https://api.marketstack.com/v1/eod/latest?access_key=${this.apiKey}&symbols=${symbol}`;
+    const start = performance.now();
     try {
       const resp = await fetch(url);
       if (!resp.ok) return null;
@@ -46,6 +51,8 @@ export class MarketstackService {
       return quote;
     } catch {
       return null;
+    } finally {
+      logApiCall('MarketstackService.getQuote', start);
     }
   }
 }

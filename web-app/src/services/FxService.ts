@@ -1,5 +1,6 @@
 import { LruCache } from '@/utils/LruCache';
 import { ApiQuotaLedger } from '@/utils/ApiQuotaLedger';
+import { logApiCall } from '@/utils/logMetrics';
 
 const CACHE_TTL = 24 * 60 * 60 * 1000;
 
@@ -26,6 +27,7 @@ export class FxService {
     if (cached !== undefined) return cached;
     if (!this.ledger.isSafe()) return null;
     const url = `https://api.exchangerate.host/latest?base=${base}&symbols=${quote}`;
+    const start = performance.now();
     try {
       const resp = await fetch(url);
       if (!resp.ok) return null;
@@ -36,6 +38,8 @@ export class FxService {
       return rate;
     } catch {
       return null;
+    } finally {
+      logApiCall('FxService.getRate', start);
     }
   }
 }

@@ -18,7 +18,10 @@ export default [
       globals: {
         fetch: 'readonly',
         global: 'readonly',
-        setTimeout: 'readonly'
+        setTimeout: 'readonly',
+        console: 'readonly',
+        performance: 'readonly',
+        process: 'readonly'
       }
     },
     plugins: {
