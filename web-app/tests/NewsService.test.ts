@@ -2,16 +2,16 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { NewsService, type NewsArticle } from '../src/services/NewsService';
 
 const sampleArticles: NewsArticle[] = [
-  { title: 't1', link: 'l1', source: 's1', published: 'p1' },
-  { title: 't2', link: 'l2', source: 's2', published: 'p2' },
-  { title: 't3', link: 'l3', source: 's3', published: 'p3' }
+  { title: 't1', url: 'l1', source: 's1', published: 'p1' },
+  { title: 't2', url: 'l2', source: 's2', published: 'p2' },
+  { title: 't3', url: 'l3', source: 's3', published: 'p3' }
 ];
 
 function apiPayload() {
   return {
     results: sampleArticles.map(a => ({
       title: a.title,
-      link: a.link,
+      link: a.url,
       source_id: a.source,
       pubDate: a.published
     }))

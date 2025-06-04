@@ -31,6 +31,30 @@ export interface Quote {
      * @memberof Quote
      */
     price: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof Quote
+     */
+    open: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof Quote
+     */
+    high: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof Quote
+     */
+    low: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof Quote
+     */
+    close: number;
 }
 
 /**
@@ -39,6 +63,10 @@ export interface Quote {
 export function instanceOfQuote(value: object): value is Quote {
     if (!('symbol' in value) || value['symbol'] === undefined) return false;
     if (!('price' in value) || value['price'] === undefined) return false;
+    if (!('open' in value) || value['open'] === undefined) return false;
+    if (!('high' in value) || value['high'] === undefined) return false;
+    if (!('low' in value) || value['low'] === undefined) return false;
+    if (!('close' in value) || value['close'] === undefined) return false;
     return true;
 }
 
@@ -54,6 +82,10 @@ export function QuoteFromJSONTyped(json: any, ignoreDiscriminator: boolean): Quo
         
         'symbol': json['symbol'],
         'price': json['price'],
+        'open': json['open'],
+        'high': json['high'],
+        'low': json['low'],
+        'close': json['close'],
     };
 }
 
@@ -70,6 +102,10 @@ export function QuoteToJSONTyped(value?: Quote | null, ignoreDiscriminator: bool
         
         'symbol': value['symbol'],
         'price': value['price'],
+        'open': value['open'],
+        'high': value['high'],
+        'low': value['low'],
+        'close': value['close'],
     };
 }
 

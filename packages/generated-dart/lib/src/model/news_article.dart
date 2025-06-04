@@ -13,6 +13,8 @@ part 'news_article.g.dart';
 /// Properties:
 /// * [title] 
 /// * [url] 
+/// * [source_] 
+/// * [published] 
 @BuiltValue()
 abstract class NewsArticle implements Built<NewsArticle, NewsArticleBuilder> {
   @BuiltValueField(wireName: r'title')
@@ -20,6 +22,12 @@ abstract class NewsArticle implements Built<NewsArticle, NewsArticleBuilder> {
 
   @BuiltValueField(wireName: r'url')
   String get url;
+
+  @BuiltValueField(wireName: r'source')
+  String get source_;
+
+  @BuiltValueField(wireName: r'published')
+  DateTime get published;
 
   NewsArticle._();
 
@@ -53,6 +61,16 @@ class _$NewsArticleSerializer implements PrimitiveSerializer<NewsArticle> {
     yield serializers.serialize(
       object.url,
       specifiedType: const FullType(String),
+    );
+    yield r'source';
+    yield serializers.serialize(
+      object.source_,
+      specifiedType: const FullType(String),
+    );
+    yield r'published';
+    yield serializers.serialize(
+      object.published,
+      specifiedType: const FullType(DateTime),
     );
   }
 
@@ -90,6 +108,20 @@ class _$NewsArticleSerializer implements PrimitiveSerializer<NewsArticle> {
             specifiedType: const FullType(String),
           ) as String;
           result.url = valueDes;
+          break;
+        case r'source':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.source_ = valueDes;
+          break;
+        case r'published':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
+          result.published = valueDes;
           break;
         default:
           unhandled.add(key);

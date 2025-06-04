@@ -31,6 +31,18 @@ export interface NewsArticle {
      * @memberof NewsArticle
      */
     url: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NewsArticle
+     */
+    source: string;
+    /**
+     * 
+     * @type {Date}
+     * @memberof NewsArticle
+     */
+    published: Date;
 }
 
 /**
@@ -39,6 +51,8 @@ export interface NewsArticle {
 export function instanceOfNewsArticle(value: object): value is NewsArticle {
     if (!('title' in value) || value['title'] === undefined) return false;
     if (!('url' in value) || value['url'] === undefined) return false;
+    if (!('source' in value) || value['source'] === undefined) return false;
+    if (!('published' in value) || value['published'] === undefined) return false;
     return true;
 }
 
@@ -54,6 +68,8 @@ export function NewsArticleFromJSONTyped(json: any, ignoreDiscriminator: boolean
         
         'title': json['title'],
         'url': json['url'],
+        'source': json['source'],
+        'published': (new Date(json['published'])),
     };
 }
 
@@ -70,6 +86,8 @@ export function NewsArticleToJSONTyped(value?: NewsArticle | null, ignoreDiscrim
         
         'title': value['title'],
         'url': value['url'],
+        'source': value['source'],
+        'published': ((value['published']).toISOString()),
     };
 }
 

@@ -4,7 +4,7 @@ import { logApiCall } from '@/utils/logMetrics';
 
 export interface NewsArticle {
   title: string;
-  link: string;
+  url: string;
   source: string;
   published: string;
 }
@@ -46,7 +46,7 @@ export class NewsService {
         .slice(0, 3)
         .map((a: any) => ({
           title: a.title,
-          link: a.link,
+          url: a.link,
           source: a.source_id,
           published: a.pubDate,
         }));
