@@ -68,4 +68,24 @@ describe('MarketstackService', () => {
     expect(fetchMock).toHaveBeenCalledTimes(2);
     expect(ledger.increment).toHaveBeenCalledTimes(1);
   });
+
+  it('stores quotes separately per symbol', async () => {
+    const service = new MarketstackService('k');
+    const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
+    (service as any).ledger = ledger;
+    const quoteB: Quote = { ...sampleQuote, symbol: 'IBM' };
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [sampleQuote] }) })
+      .mockResolvedValueOnce({ ok: true, json: async () => ({ data: [quoteB] }) });
+    global.fetch = fetchMock as any;
+
+    const first = await service.getQuote('AAPL');
+    expect(first).toEqual(sampleQuote);
+    const second = await service.getQuote('IBM');
+    expect(second).toEqual(quoteB);
+    await service.getQuote('AAPL');
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+    expect(ledger.increment).toHaveBeenCalledTimes(2);
+  });
 });

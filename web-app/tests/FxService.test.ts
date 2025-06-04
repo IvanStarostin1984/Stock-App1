@@ -56,4 +56,23 @@ describe('FxService', () => {
     expect(fetchMock).toHaveBeenCalledTimes(2);
     expect(ledger.increment).toHaveBeenCalledTimes(1);
   });
+
+  it('caches rates per currency pair', async () => {
+    const service = new FxService();
+    const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
+    (service as any).ledger = ledger;
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce({ ok: true, json: async () => ({ rates: { USD: 1.2 } }) })
+      .mockResolvedValueOnce({ ok: true, json: async () => ({ rates: { EUR: 0.5 } }) });
+    global.fetch = fetchMock as any;
+
+    const first = await service.getRate('EUR', 'USD');
+    expect(first).toBe(1.2);
+    const second = await service.getRate('GBP', 'EUR');
+    expect(second).toBe(0.5);
+    await service.getRate('EUR', 'USD');
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+    expect(ledger.increment).toHaveBeenCalledTimes(2);
+  });
 });
