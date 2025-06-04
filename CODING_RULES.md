@@ -20,7 +20,7 @@
 15. Use Riverpod (Flutter) & Pinia (Vue) for state – avoid global mutable singletons.
 
 ## Environment & config
-16. Runtime config ONLY via env-vars / secrets manager – `MARKETSTACK_KEY`, `NEWSDATA_KEY`, etc.
+16. Runtime config ONLY via env-vars / secrets manager – `VITE_MARKETSTACK_KEY`, `VITE_NEWSDATA_KEY`, etc.
 17. Lint-defined code style: 2-space indent, single quotes, trailing newline.
 
 *(CI enforces CVE scans, licence checks, coverage threshold, and prettier formatting – see `.github/workflows/`.)*
