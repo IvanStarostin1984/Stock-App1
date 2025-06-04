@@ -68,9 +68,6 @@ Create identical .env files in mobile-app/ and web-app/.
 (Exchangerate.host is key-less – no variable needed.)
 
 📂 Repo Layout
-pgsql
-Copy
-Edit
 packages/           shared DTOs + generated REST clients
 mobile-app/         Flutter application (6 screens)
 web-app/            PWA (Vue 3 + Vite, 6 pages)
