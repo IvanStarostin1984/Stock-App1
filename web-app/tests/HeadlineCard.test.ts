@@ -12,7 +12,7 @@ vi.mock('../src/services/MarketstackService', () => ({
 
 const sampleQuote: Quote = {
   symbol: 'AAPL',
-  date: '2024-01-01',
+  price: 1.5,
   open: 1,
   high: 2,
   low: 0.5,
