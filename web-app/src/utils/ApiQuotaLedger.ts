@@ -8,10 +8,12 @@
 export class ApiQuotaLedger {
   private rollingCount = 0;
   private windowStart = Date.now();
-  constructor(
-    private limit: number,
-    private windowMs = 24 * 60 * 60 * 1000,
-  ) {}
+  private limit: number;
+  private windowMs: number;
+  constructor(limit: number, windowMs = 24 * 60 * 60 * 1000) {
+    this.limit = limit;
+    this.windowMs = windowMs;
+  }
 
   /**
    * Increase the count for the current window.

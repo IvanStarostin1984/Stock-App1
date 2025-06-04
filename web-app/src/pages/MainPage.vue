@@ -5,4 +5,7 @@
 </template>
 
 <script setup lang="ts">
+import { useLoadTimeLogger } from '@/utils/useLoadTimeLogger';
+
+useLoadTimeLogger('MainPage');
 </script>

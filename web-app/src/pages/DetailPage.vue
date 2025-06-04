@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
+import { useLoadTimeLogger } from '@/utils/useLoadTimeLogger';
 const route = useRoute();
+useLoadTimeLogger('DetailPage');
 </script>
 
 <template>
