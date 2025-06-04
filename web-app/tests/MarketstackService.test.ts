@@ -19,6 +19,10 @@ describe('MarketstackService', () => {
     vi.restoreAllMocks();
   });
 
+  it('throws for empty API key', () => {
+    expect(() => new MarketstackService('')).toThrow();
+  });
+
   it('fetches quote and caches result', async () => {
     const service = new MarketstackService('k');
     const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };

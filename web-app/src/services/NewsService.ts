@@ -19,6 +19,9 @@ export class NewsService {
   private ledger = new ApiQuotaLedger(200); // 200 req/day
   private apiKey: string;
   constructor(apiKey: string) {
+    if (typeof apiKey !== 'string' || apiKey.trim() === '') {
+      throw new Error('Newsdata API key is required');
+    }
     this.apiKey = apiKey;
   }
 

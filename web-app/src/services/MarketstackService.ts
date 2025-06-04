@@ -21,6 +21,9 @@ export class MarketstackService {
   private ledger = new ApiQuotaLedger(100);
   private apiKey: string;
   constructor(apiKey: string) {
+    if (typeof apiKey !== 'string' || apiKey.trim() === '') {
+      throw new Error('Marketstack API key is required');
+    }
     this.apiKey = apiKey;
   }
 
