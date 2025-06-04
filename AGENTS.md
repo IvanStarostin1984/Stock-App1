@@ -90,7 +90,7 @@ To keep project history and reasoning transparent **and** trace every change bac
   and `SDD_v1.md` § 7 “Quality Requirements”.)*
 
 #### Progress Log (`Notes.md`)
-Append **one new section at the top of `Notes.md`** (newest entry first) using this template:
+Append **one new section at the top of `NOTES.md`** (newest entry first) using this template:
 
 ```markdown
 ## YYYY-MM-DD PR #<number>
