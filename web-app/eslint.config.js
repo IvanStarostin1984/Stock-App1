@@ -14,6 +14,11 @@ export default [
         parser: tsParser,
         ecmaVersion: 2021,
         sourceType: 'module'
+      },
+      globals: {
+        fetch: 'readonly',
+        global: 'readonly',
+        setTimeout: 'readonly'
       }
     },
     plugins: {
