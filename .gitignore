@@ -15,3 +15,7 @@ build/
 
 # Misc
 .DS_Store
+
+# OpenAPI generated clients
+packages/generated-ts/
+packages/generated-dart/

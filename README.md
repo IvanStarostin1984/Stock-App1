@@ -52,10 +52,8 @@ git clone https://github.com/IvanStarostin1984/Stock-App1.git
 cd Stock-App1
 
 # 2 · Generate REST clients
-cd packages
 npm run gen:ts   # TypeScript client
 npm run gen:dart # Dart client
-cd ..
 
 # 3 · Mobile (Flutter)
 cd mobile-app

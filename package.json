@@ -1,0 +1,9 @@
+{
+  "name": "stock-app1-root",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "gen:ts": "cd packages && npm run gen:ts",
+    "gen:dart": "cd packages && npm run gen:dart"
+  }
+}
