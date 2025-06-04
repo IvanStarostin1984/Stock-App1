@@ -1,21 +1,15 @@
 import 'package:test/test.dart';
 import 'package:openapi/openapi.dart';
 
-// tests for Quote
+/// Basic checks for the generated Quote model
 void main() {
-  final instance = QuoteBuilder();
-  // TODO add properties to the builder and call build()
-
-  group(Quote, () {
-    // String symbol
-    test('to test the property `symbol`', () async {
-      // TODO
+  group('Quote', () {
+    test('can be built', () {
+      final quote = Quote((b) => b
+        ..symbol = 'FOO'
+        ..price = 1.23);
+      expect(quote.symbol, 'FOO');
+      expect(quote.price, closeTo(1.23, 0.001));
     });
-
-    // double price
-    test('to test the property `price`', () async {
-      // TODO
-    });
-
   });
 }
