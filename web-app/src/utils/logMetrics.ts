@@ -6,7 +6,7 @@ export function isDev(): boolean {
     return process.env.NODE_ENV !== 'production';
   }
   try {
-    return Boolean((import.meta as any).env?.DEV);
+    return Boolean((import.meta as ImportMeta).env?.DEV);
   } catch {
     return false;
   }

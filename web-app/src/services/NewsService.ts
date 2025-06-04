@@ -9,6 +9,13 @@ export interface NewsArticle {
   published: string;
 }
 
+interface NewsApiEntry {
+  title: string;
+  link: string;
+  source_id: string;
+  pubDate: string;
+}
+
 const CACHE_TTL = 12 * 60 * 60 * 1000; // 12h
 
 /**
@@ -41,14 +48,15 @@ export class NewsService {
       const resp = await fetch(url);
       if (!resp.ok) return null;
       this.ledger.increment();
-      const data = await resp.json();
-      const articles: NewsArticle[] = (data.results || [])
+      const data = (await resp.json()) as { results?: NewsApiEntry[] };
+      const results: NewsApiEntry[] = data.results ?? [];
+      const articles: NewsArticle[] = results
         .slice(0, 3)
-        .map((a: any) => ({
-          title: a.title,
-          url: a.link,
-          source: a.source_id,
-          published: a.pubDate,
+        .map(({ title, link, source_id, pubDate }) => ({
+          title,
+          url: link,
+          source: source_id,
+          published: pubDate,
         }));
       this.cache.put(symbol, articles, CACHE_TTL);
       return articles;
