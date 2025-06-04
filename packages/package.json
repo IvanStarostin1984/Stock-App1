@@ -1,0 +1,8 @@
+{
+  "name": "stock-app-packages",
+  "private": true,
+  "scripts": {
+    "gen:ts": "npx @openapitools/openapi-generator-cli generate -i openapi.yaml -g typescript-fetch -o generated-ts",
+    "gen:dart": "npx @openapitools/openapi-generator-cli generate -i openapi.yaml -g dart-dio -o generated-dart"
+  }
+}

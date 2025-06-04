@@ -47,8 +47,8 @@ cd Stock-App1
 
 # 2 · Generate REST clients
 cd packages
-npx @openapitools/openapi-generator-cli generate -i openapi.yaml -g typescript-fetch -o generated-ts
-npx @openapitools/openapi-generator-cli generate -i openapi.yaml -g dart-dio -o generated-dart
+npm run gen:ts
+npm run gen:dart
 cd ..
 
 # 3 · Mobile (Flutter)
