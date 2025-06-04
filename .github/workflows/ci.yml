@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: web-app/package-lock.json
+      - name: Install dependencies
+        run: npm ci
+        working-directory: web-app
+      - name: Run tests
+        run: npm test
+        working-directory: web-app
+      - name: Build
+        run: npm run build
+        working-directory: web-app
+      - name: Trigger Netlify build
+        run: |
+          if [ -n "$NETLIFY_HOOK_URL" ]; then
+            curl -X POST "$NETLIFY_HOOK_URL"
+          fi
+        env:
+          NETLIFY_HOOK_URL: ${{ secrets.NETLIFY_HOOK_URL }}
+      - name: Run Lighthouse CI
+        id: lighthouse
+        run: npx lhci autorun
+        working-directory: web-app
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+      - name: Upload Lighthouse artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-report
+          path: web-app/.lighthouseci
+
