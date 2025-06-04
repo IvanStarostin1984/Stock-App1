@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "gen:ts": "npx @openapitools/openapi-generator-cli generate -i openapi.yaml -g typescript-fetch -o generated-ts",
-    "gen:dart": "npx @openapitools/openapi-generator-cli generate -i openapi.yaml -g dart-dio -o generated-dart"
+    "gen:dart": "npx @openapitools/openapi-generator-cli generate -i openapi.yaml -g dart-dio -o generated-dart",
+    "gen:all": "openapi-generator-cli generate -i ../spec/openapi.yaml -g typescript-axios -o generated"
   }
 }
