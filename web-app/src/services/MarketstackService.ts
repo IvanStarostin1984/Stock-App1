@@ -1,5 +1,5 @@
-import { LruCache } from "@/utils/LruCache";
-import { ApiQuotaLedger } from "@/utils/ApiQuotaLedger";
+import { LruCache } from '@/utils/LruCache';
+import { ApiQuotaLedger } from '@/utils/ApiQuotaLedger';
 
 export interface Quote {
   symbol: string;

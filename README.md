@@ -90,6 +90,7 @@ Dev hot-reload	flutter run	npm run dev
 Unit tests	flutter test	npm test
 Lint / format	dart format .	npm run lint
 Build (CI)	GitHub Action → Netlify preview	(same)
+`npm run lint` in `web-app/` runs ESLint with auto-fix enabled for all TypeScript and Vue files, enforcing 2-space indentation and single quotes.
 
 🛣 Road-map / OPT-Later
 🌩 Cloud watch-list sync (Supabase REST)
