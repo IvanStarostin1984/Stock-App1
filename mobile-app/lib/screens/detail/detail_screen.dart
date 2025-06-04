@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Displays detailed information about a selected stock.
 class DetailScreen extends StatelessWidget {
   const DetailScreen({super.key});
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Manages the user's watch list and holdings.
 class PortfolioScreen extends StatelessWidget {
   const PortfolioScreen({super.key});
 

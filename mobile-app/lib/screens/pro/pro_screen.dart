@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Mock upgrade screen for demonstrating Pro features.
 class ProScreen extends StatelessWidget {
   const ProScreen({super.key});
 

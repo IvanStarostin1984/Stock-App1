@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Shows the latest market news.
 class NewsScreen extends StatelessWidget {
   const NewsScreen({super.key});
 
