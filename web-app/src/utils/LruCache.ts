@@ -47,8 +47,10 @@ export class LruCache<K, V> {
    */
   put(key: K, value: V, ttlMs: number) {
     if (this.map.size >= this.capacity) {
-      const oldest = this.map.keys().next().value;
-      this.delete(oldest);
+      const first = this.map.keys().next();
+      if (!first.done) {
+        this.delete(first.value);
+      }
     }
     this.map.set(key, value);
     this.expiry.set(key, Date.now() + ttlMs);
