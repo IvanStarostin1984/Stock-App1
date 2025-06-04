@@ -13,6 +13,12 @@ jobs:
         shell: bash
     steps:
       - uses: actions/checkout@v4
+      - name: Create env files
+        run: |
+          echo "VITE_MARKETSTACK_KEY=${{ secrets.VITE_MARKETSTACK_KEY }}" > web-app/.env
+          echo "VITE_NEWSDATA_KEY=${{ secrets.VITE_NEWSDATA_KEY }}" >> web-app/.env
+          echo "LHCI_GITHUB_APP_TOKEN=${{ secrets.LHCI_GITHUB_APP_TOKEN }}" >> web-app/.env
+          cp web-app/.env mobile-app/.env
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
