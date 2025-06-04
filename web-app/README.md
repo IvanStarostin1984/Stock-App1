@@ -27,3 +27,8 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 ```
 
 `Exchangerate.host` needs no API key. Never commit real credentials.
+
+## Build design tokens
+
+Run `npm run tokens` to generate `design-tokens/build/css/tokens.scss` and `design-tokens/build/dart/tokens.dart`. These files are regenerated automatically during `npm run build` and before tests.
+
