@@ -53,8 +53,7 @@ cd Stock-App1
 
 # 2 · Generate REST clients
 cd packages
-npm run gen:ts   # TypeScript client
-npm run gen:dart # Dart client
+npm run gen:clients   # runs gen:ts and gen:dart
 cd ..
 
 # 3 · Mobile (Flutter)
@@ -92,7 +91,7 @@ Task	Mobile	Web
 Dev hot-reload	flutter run	npm run dev
 Unit tests	flutter test	npm test
 Lint / format	dart format .	npm run lint
-REST clients    –               npm run gen:ts && npm run gen:dart (in packages/)
+REST clients    –               npm run gen:clients (in packages/)
 Build (CI)	GitHub Action → Netlify preview	(same)
 `npm run lint` in `web-app/` runs ESLint with auto-fix enabled for all TypeScript and Vue files. The linter is configured via `eslint.config.js`, enforcing 2-space indentation and single quotes.
 
