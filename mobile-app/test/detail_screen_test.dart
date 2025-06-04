@@ -4,9 +4,16 @@ import 'package:mobile_app/screens/detail/detail_screen.dart';
 
 void main() {
   group('DetailScreen', () {
-    testWidgets('shows expected text', (tester) async {
+    testWidgets('shows expected text when no symbol', (tester) async {
       await tester.pumpWidget(const MaterialApp(home: DetailScreen()));
       expect(find.text('Detail Screen'), findsOneWidget);
+    });
+
+    testWidgets('shows symbol when provided', (tester) async {
+      await tester.pumpWidget(
+        const MaterialApp(home: DetailScreen(symbol: 'ABC')),
+      );
+      expect(find.text('Detail Screen (ABC)'), findsOneWidget);
     });
 
     testWidgets('does not show wrong text', (tester) async {

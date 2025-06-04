@@ -16,14 +16,29 @@ class SmwaApp extends StatelessWidget {
     return MaterialApp(
       title: 'SMWA',
       initialRoute: '/',
-      routes: {
-        '/': (_) => const MainScreen(),
-        '/news': (_) => const NewsScreen(),
-        '/detail': (_) => const DetailScreen(),
-        '/auth': (_) => const AuthScreen(),
-        '/portfolio': (_) => const PortfolioScreen(),
-        '/pro': (_) => const ProScreen(),
-      },
+      onGenerateRoute: generateRoute,
     );
   }
+}
+
+/// Generates routes with optional parameters.
+Route<dynamic>? generateRoute(RouteSettings settings) {
+  final uri = Uri.parse(settings.name ?? '/');
+  final path = uri.pathSegments.isEmpty ? '/' : '/${uri.pathSegments.first}';
+  switch (path) {
+    case '/':
+      return MaterialPageRoute(builder: (_) => const MainScreen());
+    case '/news':
+      return MaterialPageRoute(builder: (_) => const NewsScreen());
+    case '/detail':
+      final symbol = uri.pathSegments.length > 1 ? uri.pathSegments[1] : null;
+      return MaterialPageRoute(builder: (_) => DetailScreen(symbol: symbol));
+    case '/auth':
+      return MaterialPageRoute(builder: (_) => const AuthScreen());
+    case '/portfolio':
+      return MaterialPageRoute(builder: (_) => const PortfolioScreen());
+    case '/pro':
+      return MaterialPageRoute(builder: (_) => const ProScreen());
+  }
+  return null;
 }
