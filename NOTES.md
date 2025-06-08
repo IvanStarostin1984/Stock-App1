@@ -1,3 +1,10 @@
+## 2025-06-08 PR #70
+- **Summary**: feat: introduced Riverpod AppStateNotifier with counter and hooked it into all screens with increment buttons. Added widget tests.
+- **Stage**: In progress
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: None
+- **Next step**: expand state usage across app.
+
 ## 2025-06-08 PR #69
 - **Summary**: docs: clarify planned state management
 - **Stage**: In progress
