@@ -8,6 +8,12 @@ dependencies:
   flutter:
     sdk: flutter
 
+  smwa_services:
+    path: packages/services
+
+  flutter_riverpod: ^2.6.1
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

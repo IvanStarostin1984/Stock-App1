@@ -7,7 +7,6 @@ linter:
     prefer_const_constructors_in_immutables: true
     prefer_final_locals: true
     prefer_single_quotes: true
-    newline_at_end_of_file: true
 
 analyzer:
   plugins:

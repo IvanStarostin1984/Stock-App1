@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'screens/main/main_screen.dart';
 import 'screens/news/news_screen.dart';
 import 'screens/detail/detail_screen.dart';
@@ -7,7 +8,7 @@ import 'screens/portfolio/portfolio_screen.dart';
 import 'screens/pro/pro_screen.dart';
 
 /// Entry point of the mobile application.
-void main() => runApp(const SmwaApp());
+void main() => runApp(const ProviderScope(child: SmwaApp()));
 
 /// Root widget of the stock market mobile app.
 class SmwaApp extends StatelessWidget {
