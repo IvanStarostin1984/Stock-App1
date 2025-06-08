@@ -4,7 +4,7 @@
 
 # Outstanding Tasks
 
-- [ ] Implement `packages/core/net.ts` with 24h LRU cache and quota handling.
+- [x] Implement `packages/core/net.ts` with 24h LRU cache and quota handling.
 - [x] Start **shared-contracts** repo with spec and schema folders, then bundle the public APIs (`openapi.yaml`). (Repo hosted within main project)
 - [x] Add JSON schema models with tests in shared-contracts.
 - [x] Generate design tokens via style-dictionary for CSS and Dart.
