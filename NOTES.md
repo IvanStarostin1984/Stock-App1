@@ -1,9 +1,18 @@
+
+## 2025-06-08 PR #70
+- **Summary**: add Pinia app store and tests
+- **Stage**: In progress
+- **Requirements addressed**: FR-0101, FR-0104, FR-0107
+- **Deviations/Decisions**: Used simple SymbolTrie placeholder; lazy-init services
+- **Next step**: Wire Flutter store.
+
 ## 2025-06-08 PR #70
 - **Summary**: add Flutter test workflow
 - **Stage**: In progress
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: Added separate workflow for Flutter tests on PRs to avoid CI clashes
 - **Next step**: monitor CI runs
+
 
 ## 2025-06-08 PR #69
 - **Summary**: docs: clarify planned state management
