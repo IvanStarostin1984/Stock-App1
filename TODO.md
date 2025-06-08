@@ -1,3 +1,7 @@
+# TODO
+
+- Implement a unified network layer shared by mobile and web services.
+
 # Outstanding Tasks
 
 - [ ] Implement `packages/core/net.ts` with 24h LRU cache and quota handling.
@@ -10,3 +14,4 @@
 - [ ] Create PWA pages and hook them to a Pinia store.
 - [ ] Add GitHub CI and Netlify pipeline with Lighthouse checks.
 - [ ] (Optional) Add a mobile-only CI workflow.
+
