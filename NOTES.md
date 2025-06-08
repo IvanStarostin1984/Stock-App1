@@ -1,4 +1,12 @@
 
+## 2025-06-08 PR #73
+- **Summary**: feat: introduced Riverpod AppStateNotifier with counter and hooked it into all screens with increment buttons. Added widget tests.
+- **Stage**: In progress
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: None
+- **Next step**: expand state usage across app.
+
+
 ## 2025-06-08 PR #72
 - **Summary**: add core net helper and JS services package with tests
 - **Stage**: In progress
@@ -20,6 +28,7 @@
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: Added separate workflow for Flutter tests on PRs to avoid CI clashes
 - **Next step**: monitor CI runs
+
 
 
 
