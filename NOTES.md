@@ -1,3 +1,10 @@
+## 2025-06-08 PR #69
+- **Summary**: docs: clarify planned state management
+- **Stage**: In progress
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: None
+- **Next step**: integrate Riverpod and Pinia state stores.
+
 ## 2025-06-08 PR #66
 - **Summary**: Initial full source import with CI workflow, tests, and design tokens.
 - **Stage**: In progress
