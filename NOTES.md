@@ -1,3 +1,10 @@
+## 2025-06-08 PR #66
+- **Summary**: Initial full source import with CI workflow, tests, and design tokens.
+- **Stage**: In progress
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: None
+- **Next step**: implement unified network layer.
+
 ## 2025-06-08 PR #65
 - **Summary**: Document service-based API approach.
 - **Stage**: Planning
