@@ -13,6 +13,7 @@ export type { Quote };
  */
 export class MarketstackService {
   private cache = new LruCache<string, Quote>(32);
+  private moversCache = new LruCache<string, Quote[]>(4);
   private ledger = new ApiQuotaLedger(100);
   private apiKey: string;
   constructor(apiKey: string) {
@@ -52,5 +53,51 @@ export class MarketstackService {
     );
     logApiCall('MarketstackService.getQuote', start);
     return quote ?? null;
+  }
+
+  /**
+   * Retrieve top market gainers and losers.
+   *
+   * Results are cached separately for gainers and losers and
+   * share the same quota ledger as other requests.
+   *
+   * @returns Lists of top gainers and losers or `null` on failure.
+   */
+  async getTopMovers(): Promise<{ gainers: Quote[]; losers: Quote[] } | null> {
+    const base = 'https://api.marketstack.com/v1/eod/latest';
+    const gainUrl = `${base}?access_key=${this.apiKey}&limit=5&sort=change_over_time.desc`;
+    const loseUrl = `${base}?access_key=${this.apiKey}&limit=5&sort=change_over_time.asc`;
+    const start = performance.now();
+    const gainers = await fetchJson<{ data: any[] }>(
+      gainUrl,
+      this.moversCache,
+      this.ledger,
+      json =>
+        json.data.map(raw => ({
+          symbol: raw.symbol,
+          price: raw.close,
+          open: raw.open,
+          high: raw.high,
+          low: raw.low,
+          close: raw.close,
+        })) as Quote[]
+    );
+    const losers = await fetchJson<{ data: any[] }>(
+      loseUrl,
+      this.moversCache,
+      this.ledger,
+      json =>
+        json.data.map(raw => ({
+          symbol: raw.symbol,
+          price: raw.close,
+          open: raw.open,
+          high: raw.high,
+          low: raw.low,
+          close: raw.close,
+        })) as Quote[]
+    );
+    logApiCall('MarketstackService.getTopMovers', start);
+    if (!gainers || !losers) return null;
+    return { gainers, losers };
   }
 }

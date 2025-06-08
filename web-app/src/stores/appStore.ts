@@ -10,6 +10,8 @@ export interface AppState {
   currency: string;
   isPro: boolean;
   searchResults: string[];
+  topGainers: Quote[];
+  topLosers: Quote[];
 }
 
 export interface AppDeps {
@@ -26,7 +28,9 @@ export function createAppStore(deps: AppDeps = {}) {
       articles: null,
       currency: 'USD',
       isPro: false,
-      searchResults: []
+      searchResults: [],
+      topGainers: [],
+      topLosers: []
     }),
     actions: {
       async loadHeadline(symbol: string = 'AAPL') {
@@ -38,6 +42,14 @@ export function createAppStore(deps: AppDeps = {}) {
           new NewsService(import.meta.env.VITE_NEWSDATA_KEY ?? '');
         this.headline = await quoteSvc.getQuote(symbol);
         this.articles = this.headline ? await newsSvc.getNews(symbol) : null;
+      },
+      async loadTopMovers() {
+        const quoteSvc =
+          deps.quoteService ??
+          new MarketstackService(import.meta.env.VITE_MARKETSTACK_KEY ?? '');
+        const res = await quoteSvc.getTopMovers();
+        this.topGainers = res?.gainers ?? [];
+        this.topLosers = res?.losers ?? [];
       },
       async toggleCurrency() {
         const target = this.currency === 'USD' ? 'EUR' : 'USD';

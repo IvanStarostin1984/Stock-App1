@@ -101,4 +101,35 @@ describe('MarketstackService', () => {
     expect(fetchMock).toHaveBeenCalledTimes(2);
     expect(ledger.increment).toHaveBeenCalledTimes(2);
   });
+
+  it('fetches top movers and caches results', async () => {
+    const service = new MarketstackService('k');
+    const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
+    (service as any).ledger = ledger;
+    const payload = { data: [sampleApiQuote] };
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValue({ ok: true, json: async () => payload });
+    global.fetch = fetchMock as any;
+
+    const first = await service.getTopMovers();
+    expect(first).toEqual({ gainers: [sampleQuote], losers: [sampleQuote] });
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+    expect(ledger.increment).toHaveBeenCalledTimes(2);
+
+    const second = await service.getTopMovers();
+    expect(second).toEqual({ gainers: [sampleQuote], losers: [sampleQuote] });
+    expect(fetchMock).toHaveBeenCalledTimes(2); // from cache
+  });
+
+  it('returns null for movers when quota exceeded', async () => {
+    const service = new MarketstackService('k');
+    const ledger = { isSafe: vi.fn().mockReturnValue(false), increment: vi.fn() };
+    (service as any).ledger = ledger;
+    global.fetch = vi.fn();
+
+    const res = await service.getTopMovers();
+    expect(res).toBeNull();
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
 });
