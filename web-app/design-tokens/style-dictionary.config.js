@@ -1,4 +1,4 @@
-const StyleDictionary = require('style-dictionary').default;
+import StyleDictionary from 'style-dictionary';
 
 function rgbaToHex(rgba) {
   const m = rgba.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d*\.?\d+))?\)/);
@@ -37,7 +37,7 @@ StyleDictionary.registerFormat({
   }
 });
 
-module.exports = {
+export default {
   source: ['tokens.json'],
   platforms: {
     css: {
