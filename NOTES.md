@@ -1,4 +1,12 @@
 
+## 2025-06-08 PR #74
+- **Summary**: add smwa_services package with stub services and tests
+- **Stage**: In progress
+- **Requirements addressed**: CMP-Svc-MS, CMP-Svc-FX, CMP-Svc-News
+- **Deviations/Decisions**: Implemented simple cache and quota ledger locally.
+- **Next step**: flesh out real API calls.
+
+
 ## 2025-06-08 PR #73
 - **Summary**: feat: introduced Riverpod AppStateNotifier with counter and hooked it into all screens with increment buttons. Added widget tests.
 - **Stage**: In progress
@@ -28,6 +36,7 @@
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: Added separate workflow for Flutter tests on PRs to avoid CI clashes
 - **Next step**: monitor CI runs
+
 
 
 

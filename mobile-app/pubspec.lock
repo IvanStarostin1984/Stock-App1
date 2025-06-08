@@ -139,6 +139,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.0"
+
   riverpod:
     dependency: transitive
     description:
@@ -147,11 +148,21 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.6.1"
+
   sky_engine:
     dependency: transitive
     description: flutter
     source: sdk
     version: "0.0.99"
+
+  smwa_services:
+    dependency: "direct main"
+    description:
+      path: "packages/services"
+      relative: true
+    source: path
+    version: "0.1.0"
+
   source_span:
     dependency: transitive
     description:
@@ -168,6 +179,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.11.1"
+
   state_notifier:
     dependency: transitive
     description:
@@ -176,6 +188,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
+
   stream_channel:
     dependency: transitive
     description:
