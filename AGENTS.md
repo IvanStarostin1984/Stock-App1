@@ -43,9 +43,9 @@ Create identical `.env` files in `mobile-app/` and `web-app/` containing:
 ```
 VITE_MARKETSTACK_KEY=YOUR_MARKETSTACK_KEY
 VITE_NEWSDATA_KEY=YOUR_NEWSDATA_KEY
-VITE_EXCHANGERATE_KEY=YOUR_EXCHANGERATE_KEY
 LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 ```
+(Exchangerate.host is key-less – no variable needed.)
 
 ## API hygiene
 API requests are implemented in service classes under `web-app/src/services/`.
