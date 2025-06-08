@@ -9,6 +9,11 @@ This repository hosts a cross-platform stock market app with a Flutter mobile fr
 4. Always consult those documents first and treat AGENTS.md as secondary.
 5. End-user of codex may explicitly ask to modify SRS_v1.md and/or SDD_v1.md, in that case comply.
 
+#Distinct-files rule:
+1. Every concurrent task must confine its edits to a unique list of code or data files.
+2. Shared exceptions: any task may append (never rewrite) the markdown logs NOTES.md, TODO.md, and this AGENTS.md.
+3. If two or more open PRs would touch the same non-markdown file, cancel or re-scope one of them before continuing.
+
 ## Required Tools
 - **Node 20** for the web app.
 - **Flutter 3.22** for the mobile app.
