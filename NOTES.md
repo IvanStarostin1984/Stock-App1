@@ -1,4 +1,12 @@
 
+## 2025-06-08 PR #75
+- **Summary**: add fetchJson helper and refactor services; added tests
+- **Stage**: In progress
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: NewsService cache TTL now 24h via helper (spec says 12h)
+- **Next step**: integrate helper in mobile services
+
+
 ## 2025-06-08 PR #74
 - **Summary**: add smwa_services package with stub services and tests
 - **Stage**: In progress
