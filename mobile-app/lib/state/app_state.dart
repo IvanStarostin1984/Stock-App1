@@ -1,17 +1,56 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:smwa_services/services.dart';
+import '../models/quote.dart';
 
-/// Application level state provider managing a simple counter.
-class AppStateNotifier extends StateNotifier<int> {
-  /// Creates an [AppStateNotifier] with an initial count of zero.
-  AppStateNotifier() : super(0);
+/// Simple state container used by the app.
+class AppState {
+  final int count;
+  final Quote? headline;
+  final List<Map<String, dynamic>>? articles;
 
-  /// Increments the counter by one.
-  void increment() => state++;
+  const AppState({this.count = 0, this.headline, this.articles});
 
-  /// Resets the counter to zero.
-  void reset() => state = 0;
+  AppState copyWith(
+      {int? count, Quote? headline, List<Map<String, dynamic>>? articles}) {
+    return AppState(
+      count: count ?? this.count,
+      headline: headline ?? this.headline,
+      articles: articles ?? this.articles,
+    );
+  }
 }
 
-/// Riverpod provider exposing the application counter.
-final appStateProvider =
-    StateNotifierProvider<AppStateNotifier, int>((ref) => AppStateNotifier());
+/// Application level state provider managing market data.
+class AppStateNotifier extends StateNotifier<AppState> {
+  final MarketstackService _marketstack;
+  final NewsService _news;
+
+  /// Creates an [AppStateNotifier] with optional service overrides.
+  AppStateNotifier({MarketstackService? marketstack, NewsService? news})
+      : _marketstack = marketstack ?? MarketstackService(),
+        _news = news ?? NewsService(),
+        super(const AppState());
+
+  /// Increments the counter by one.
+  void increment() => state = state.copyWith(count: state.count + 1);
+
+  /// Resets the counter to zero.
+  void reset() => state = state.copyWith(count: 0);
+
+  /// Loads the headline quote and related news articles.
+  Future<void> loadHeadline([String symbol = 'AAPL']) async {
+    final data = await _marketstack.getIndexQuote(symbol);
+    Quote? q;
+    if (data.isNotEmpty) {
+      q = Quote(
+          symbol: data['symbol'] as String,
+          price: (data['price'] as num).toDouble());
+    }
+    final news = q != null ? await _news.getDigest(symbol) : null;
+    state = state.copyWith(headline: q, articles: news);
+  }
+}
+
+/// Riverpod provider exposing the application state.
+final appStateProvider = StateNotifierProvider<AppStateNotifier, AppState>(
+    (ref) => AppStateNotifier());
