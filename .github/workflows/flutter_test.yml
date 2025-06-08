@@ -1,0 +1,27 @@
+name: Flutter Test
+
+on:
+  pull_request:
+    paths:
+      - 'mobile-app/**'
+      - 'packages/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: flutter-test-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.22.x'
+          channel: stable
+      - name: Install dependencies
+        run: flutter pub get
+        working-directory: mobile-app
+      - name: Run Flutter tests
+        run: flutter test
+        working-directory: mobile-app
