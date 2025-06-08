@@ -6,6 +6,12 @@
 
 <script setup lang="ts">
 import { useLoadTimeLogger } from '@/utils/useLoadTimeLogger';
+import { useAppStore } from '@/stores/appStore';
+import { onMounted } from 'vue';
 
+const store = useAppStore();
 useLoadTimeLogger('MainPage');
+onMounted(() => {
+  store.loadHeadline();
+});
 </script>
