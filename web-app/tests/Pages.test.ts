@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { createPinia, setActivePinia } from 'pinia';
 import MainPage from '../src/pages/MainPage.vue';
 import DetailPage from '../src/pages/DetailPage.vue';
 import NewsPricesPage from '../src/pages/NewsPricesPage.vue';
@@ -8,8 +9,23 @@ import SearchPage from '../src/pages/SearchPage.vue';
 import PortfolioPage from '../src/pages/PortfolioPage.vue';
 import { useRoute } from 'vue-router';
 
+vi.mock('../src/stores/appStore', () => ({
+  useAppStore: () => ({
+    loadHeadline: vi.fn(),
+    toggleCurrency: vi.fn(),
+    signIn: vi.fn(),
+    search: vi.fn().mockReturnValue([]),
+    upgradePro: vi.fn(),
+    syncWatchList: vi.fn()
+  })
+}));
+
 vi.mock('vue-router', () => ({ useRoute: vi.fn() }));
 const mockedUseRoute = useRoute as unknown as ReturnType<typeof vi.fn>;
+
+beforeEach(() => {
+  setActivePinia(createPinia());
+});
 
 describe('MainPage', () => {
   it('renders heading', () => {
