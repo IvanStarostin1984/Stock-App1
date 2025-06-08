@@ -7,6 +7,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  smwa_services:
+    path: packages/services
 
 dev_dependencies:
   flutter_test:
