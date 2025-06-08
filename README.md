@@ -89,7 +89,7 @@ Toast warning at ≥ 90 % of any quota.
 ⚙️ Useful Scripts
 Task	Mobile	Web
 Dev hot-reload	flutter run	npm run dev
-Unit tests	flutter test	npm test
+Unit tests      flutter test (in mobile-app/)    npm test (in web-app/)
 Lint / format	dart format .	npm run lint
 REST clients    –               npm run gen:clients (in packages/)
 Build (CI)	GitHub Action → Netlify preview	(same)
@@ -103,6 +103,12 @@ These components are feature-flagged (backendMode = remote) and kept out of the 
 
 🤝 Contributing
 Fork → branch feat/<topic>
+
+Run tests from each app before pushing:
+```bash
+cd mobile-app && flutter test
+cd ../web-app && npm test
+```
 
 flutter test and npm test – keep CI green
 
