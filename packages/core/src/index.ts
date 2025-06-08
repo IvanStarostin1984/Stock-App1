@@ -1,0 +1,1 @@
+export { fetchCached } from './net';
