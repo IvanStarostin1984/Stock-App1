@@ -64,6 +64,7 @@ day⁻¹). A unified network layer remains a TODO (see `TODO.md`).
 - Document each public API/function with a doc comment.
 - Log `loadTimeMs` and external API latency in debug builds.
 - State management: Riverpod (Flutter) and Pinia (Vue) – avoid global singletons.
+(These frameworks are planned; current code does not yet use them.)
 
 ## Testing & CI
 - Run `dart format`, `flutter analyze`, `flutter test`, `eslint --fix`, and `npm test` before committing.
