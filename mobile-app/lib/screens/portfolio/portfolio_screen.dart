@@ -8,9 +8,9 @@ class PortfolioScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final count = ref.watch(appStateProvider);
+    final state = ref.watch(appStateProvider);
     return Scaffold(
-      body: Center(child: Text('Portfolio Screen: $count')),
+      body: Center(child: Text('Portfolio Screen: ${state.count}')),
       floatingActionButton: FloatingActionButton(
         onPressed: () => ref.read(appStateProvider.notifier).increment(),
         child: const Icon(Icons.add),

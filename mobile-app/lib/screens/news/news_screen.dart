@@ -8,9 +8,9 @@ class NewsScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final count = ref.watch(appStateProvider);
+    final state = ref.watch(appStateProvider);
     return Scaffold(
-      body: Center(child: Text('News Screen: $count')),
+      body: Center(child: Text('News Screen: ${state.count}')),
       floatingActionButton: FloatingActionButton(
         onPressed: () => ref.read(appStateProvider.notifier).increment(),
         child: const Icon(Icons.add),

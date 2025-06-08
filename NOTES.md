@@ -1,3 +1,9 @@
+## 2025-06-08 PR #76
+- **Summary**: load headline from MarketstackService in AppStateNotifier; MainScreen displays quote with tests.
+- **Stage**: In progress
+- **Requirements addressed**: VM-01
+- **Deviations/Decisions**: Added simple Quote model in mobile app.
+- **Next step**: use news data on NewsScreen.
 
 ## 2025-06-08 PR #75
 - **Summary**: add fetchJson helper and refactor services; added tests
