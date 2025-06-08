@@ -1,4 +1,11 @@
 
+## 2025-06-08 PR #76
+- **Summary**: added Marketstack getTopMovers, Pinia action and page lists with tests
+- **Stage**: In progress
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: expand store features
+
 ## 2025-06-08 PR #75
 - **Summary**: add fetchJson helper and refactor services; added tests
 - **Stage**: In progress

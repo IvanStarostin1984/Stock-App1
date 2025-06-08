@@ -80,4 +80,37 @@ describe('appStore', () => {
     store.upgradePro();
     expect(store.isPro).toBe(true);
   });
+
+  it('loads top movers', async () => {
+    const gainers: Quote[] = [
+      { symbol: 'A', price: 1, open: 1, high: 1, low: 1, close: 1 },
+    ];
+    const losers: Quote[] = [
+      { symbol: 'B', price: 2, open: 2, high: 2, low: 2, close: 2 },
+    ];
+    const getTopMovers = vi.fn().mockResolvedValue({ gainers, losers });
+    const store = createAppStore({
+      quoteService: { getTopMovers } as any,
+      newsService: { getNews: vi.fn() } as any,
+      fxService: { getRate: vi.fn() } as any,
+      trie: { search: vi.fn().mockReturnValue([]) } as any,
+    })();
+    await store.loadTopMovers();
+    expect(store.topGainers).toEqual(gainers);
+    expect(store.topLosers).toEqual(losers);
+    expect(getTopMovers).toHaveBeenCalled();
+  });
+
+  it('handles null movers result', async () => {
+    const getTopMovers = vi.fn().mockResolvedValue(null);
+    const store = createAppStore({
+      quoteService: { getTopMovers } as any,
+      newsService: { getNews: vi.fn() } as any,
+      fxService: { getRate: vi.fn() } as any,
+      trie: { search: vi.fn().mockReturnValue([]) } as any,
+    })();
+    await store.loadTopMovers();
+    expect(store.topGainers).toEqual([]);
+    expect(store.topLosers).toEqual([]);
+  });
 });

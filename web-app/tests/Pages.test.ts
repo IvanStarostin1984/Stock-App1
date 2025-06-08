@@ -9,15 +9,9 @@ import SearchPage from '../src/pages/SearchPage.vue';
 import PortfolioPage from '../src/pages/PortfolioPage.vue';
 import { useRoute } from 'vue-router';
 
+let storeMock: any;
 vi.mock('../src/stores/appStore', () => ({
-  useAppStore: () => ({
-    loadHeadline: vi.fn(),
-    toggleCurrency: vi.fn(),
-    signIn: vi.fn(),
-    search: vi.fn().mockReturnValue([]),
-    upgradePro: vi.fn(),
-    syncWatchList: vi.fn()
-  })
+  useAppStore: () => storeMock
 }));
 
 vi.mock('vue-router', () => ({ useRoute: vi.fn() }));
@@ -25,6 +19,17 @@ const mockedUseRoute = useRoute as unknown as ReturnType<typeof vi.fn>;
 
 beforeEach(() => {
   setActivePinia(createPinia());
+  storeMock = {
+    loadHeadline: vi.fn(),
+    loadTopMovers: vi.fn(),
+    toggleCurrency: vi.fn(),
+    signIn: vi.fn(),
+    search: vi.fn().mockReturnValue([]),
+    upgradePro: vi.fn(),
+    syncWatchList: vi.fn(),
+    topGainers: [],
+    topLosers: []
+  };
 });
 
 describe('MainPage', () => {
@@ -57,11 +62,21 @@ describe('NewsPricesPage', () => {
   it('renders heading', () => {
     const wrapper = mount(NewsPricesPage);
     expect(wrapper.find('h1').text()).toBe('News & Prices');
+    expect(storeMock.loadTopMovers).toHaveBeenCalled();
   });
 
-  it('no extra heading present', () => {
+  it('shows movers lists', () => {
+    storeMock.topGainers = [
+      { symbol: 'A', price: 1, open: 1, high: 1, low: 1, close: 1 }
+    ];
+    storeMock.topLosers = [
+      { symbol: 'B', price: 2, open: 2, high: 2, low: 2, close: 2 }
+    ];
     const wrapper = mount(NewsPricesPage);
-    expect(wrapper.find('h2').exists()).toBe(false);
+    expect(wrapper.text()).toContain('Top Gainers');
+    expect(wrapper.text()).toContain('A 1');
+    expect(wrapper.text()).toContain('Top Losers');
+    expect(wrapper.text()).toContain('B 2');
   });
 });
 
