@@ -48,9 +48,10 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 ```
 
 ## API hygiene
-All external calls go through `/packages/core/net.ts` which  
-* applies a **24 h LRU cache**,  
-* throws **429** when > 100 Marketstack/FX calls · month⁻¹ or > 200 NewsData calls · day⁻¹.  
+API requests are implemented in service classes under `web-app/src/services/`.
+Each service uses `LruCache` and `ApiQuotaLedger` to enforce the 24 h cache and
+free‑tier quotas (≤ 100 Marketstack/FX calls · month⁻¹, ≤ 200 NewsData calls ·
+day⁻¹). A unified network layer remains a TODO (see `TODO.md`).
 (See *docs/SRS_v1.md § 9.6.7 Limitations*.)
 
 ## Coding Standards
