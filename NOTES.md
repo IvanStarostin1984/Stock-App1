@@ -1,3 +1,10 @@
+## 2025-06-08 PR #77
+- **Summary**: added NewsArticle model, updated AppState, NewsScreen lists articles with tests.
+- **Stage**: In progress
+- **Requirements addressed**: FR-0104, SD-03
+- **Deviations/Decisions**: none
+- **Next step**: enhance services to parse real API data
+
 ## 2025-06-08 PR #76
 - **Summary**: load headline from MarketstackService in AppStateNotifier; MainScreen displays quote with tests.
 - **Stage**: In progress
