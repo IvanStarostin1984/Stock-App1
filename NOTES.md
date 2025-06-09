@@ -1,5 +1,12 @@
 ## 2025-06-09 PR #87
 
+- **Summary**: marked smwa-js-services, Flutter screens and PWA pages done in TODO; noted repository work underway.
+- **Stage**: Docs update
+- **Requirements addressed**: FR-0106
+- **Deviations/Decisions**: none
+- **Next step**: monitor repo progress
+
+
 - **Summary**: added CredentialStore with AES encryption and bcrypt-12 hashing, plus unit tests.
 - **Stage**: In progress
 - **Requirements addressed**: FR-0105, FR-0108, SEC-0003
@@ -12,6 +19,7 @@
 - **Requirements addressed**: FR-0106
 - **Deviations/Decisions**: totals cached via LruCache; can't run flutter tools in container.
 - **Next step**: integrate into PortfolioScreen.
+
 
 ## 2025-06-09 PR #86
 - **Summary**: added PortfolioRepository storing holdings via idb-keyval and new Jest-style tests matching Flutter; installed fake-indexeddb for testing.
