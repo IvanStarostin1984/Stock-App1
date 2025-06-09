@@ -41,7 +41,7 @@ class AppStateNotifier extends StateNotifier<AppState> {
   Future<void> loadHeadline([String symbol = 'AAPL']) async {
     final data = await _marketstack.getIndexQuote(symbol);
     Quote? q;
-    if (data.isNotEmpty) {
+    if (data != null && data.isNotEmpty) {
       q = Quote(
           symbol: data['symbol'] as String,
           price: (data['price'] as num).toDouble());
