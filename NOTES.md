@@ -1,3 +1,10 @@
+## 2025-06-09 PR #86
+- **Summary**: added PortfolioRepository storing holdings via idb-keyval and new Jest-style tests matching Flutter; installed fake-indexeddb for testing.
+- **Stage**: In progress
+- **Requirements addressed**: FR-0106
+- **Deviations/Decisions**: kept Vitest instead of Jest to match existing stack.
+- **Next step**: implement refreshTotals and integrate with UI.
+
 ## 2025-06-09 PR #85
 - **Summary**: implemented QuoteRepository in the web app and refactored appStore to use it; added repository tests.
 - **Stage**: In progress
