@@ -1,3 +1,10 @@
+## 2025-06-09 PR #87
+- **Summary**: added CredentialStore with AES encryption and bcrypt-12 hashing, plus unit tests.
+- **Stage**: In progress
+- **Requirements addressed**: FR-0105, FR-0108, SEC-0003
+- **Deviations/Decisions**: static AES key used for demo.
+- **Next step**: integrate with AuthService.
+
 ## 2025-06-09 PR #86
 - **Summary**: added PortfolioRepository storing holdings via idb-keyval and new Jest-style tests matching Flutter; installed fake-indexeddb for testing.
 - **Stage**: In progress
