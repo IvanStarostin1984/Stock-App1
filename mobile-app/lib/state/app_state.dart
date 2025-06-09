@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:smwa_services/services.dart';
+import '../repositories/quote_repository.dart';
 import '../models/quote.dart';
 import '../models/news_article.dart';
 
@@ -23,12 +24,12 @@ class AppState {
 
 /// Application level state provider managing market data.
 class AppStateNotifier extends StateNotifier<AppState> {
-  final MarketstackService _marketstack;
+  final QuoteRepository _quotes;
   final NewsService _news;
 
   /// Creates an [AppStateNotifier] with optional service overrides.
-  AppStateNotifier({MarketstackService? marketstack, NewsService? news})
-      : _marketstack = marketstack ?? MarketstackService(),
+  AppStateNotifier({QuoteRepository? quotes, NewsService? news})
+      : _quotes = quotes ?? QuoteRepository(),
         _news = news ?? NewsService(),
         super(const AppState());
 
@@ -40,13 +41,7 @@ class AppStateNotifier extends StateNotifier<AppState> {
 
   /// Loads the headline quote and related news articles.
   Future<void> loadHeadline([String symbol = 'AAPL']) async {
-    final data = await _marketstack.getIndexQuote(symbol);
-    Quote? q;
-    if (data != null && data.isNotEmpty) {
-      q = Quote(
-          symbol: data['symbol'] as String,
-          price: (data['price'] as num).toDouble());
-    }
+    final q = await _quotes.headline(symbol);
     final rawNews = q != null ? await _news.getDigest(symbol) : null;
     final articles = rawNews?.map((e) => NewsArticle.fromMap(e)).toList();
     state = state.copyWith(headline: q, articles: articles);

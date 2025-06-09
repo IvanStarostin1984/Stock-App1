@@ -1,3 +1,10 @@
+## 2025-06-09 PR #79
+- **Summary**: added QuoteRepository with 24h caching and hooked AppStateNotifier to it; added unit tests.
+- **Stage**: In progress
+- **Requirements addressed**: FR-0101, FR-0102, FR-0103
+- **Deviations/Decisions**: flutter analyze fails due to missing generated packages
+- **Next step**: implement remaining repositories
+
 
 ## 2025-06-09 PR #78
 - **Summary**: implemented Dart fetchJson helper and refactored services; added network tests.
