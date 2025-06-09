@@ -1,9 +1,18 @@
-## 2025-06-10 PR #88
+
+## 2025-06-10 PR #89
 - **Summary**: fixed BCrypt gensalt prefix to \$2b in CredentialStore.
 - **Stage**: bug fix
 - **Requirements addressed**: FR-0105
 - **Deviations/Decisions**: flutter tools unavailable; format and tests couldn't run.
 - **Next step**: ensure CI passes with updated hashing.
+
+## 2025-06-09 PR #88
+- **Summary**: updated PortfolioRepository test constant to use const DateTime.utc and ran formatting and analysis commands (failed in container).
+- **Stage**: In progress
+- **Requirements addressed**: FR-0106
+- **Deviations/Decisions**: container lacks dart/flutter
+- **Next step**: fix container build scripts
+
 
 ## 2025-06-09 PR #87
 
@@ -133,10 +142,6 @@ npm test
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: Added separate workflow for Flutter tests on PRs to avoid CI clashes
 - **Next step**: monitor CI runs
-
-
-
-
 
 ## 2025-06-08 PR #69
 - **Summary**: docs: clarify planned state management
