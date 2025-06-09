@@ -6,3 +6,4 @@ export 'src/news_service.dart';
 export 'src/location_service.dart';
 export 'src/auth_service.dart';
 export 'src/pro_upgrade_service.dart';
+export 'src/fetch_json.dart';

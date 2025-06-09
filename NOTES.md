@@ -1,3 +1,7 @@
+
+## 2025-06-09 PR #78
+- **Summary**: implemented Dart fetchJson helper and refactored services; added network tests.
+
 ## 2025-06-08 PR #77
 - **Summary**: added NewsArticle model, updated AppState, NewsScreen lists articles with tests.
 - **Stage**: In progress
@@ -7,8 +11,13 @@
 
 ## 2025-06-08 PR #76
 - **Summary**: load headline from MarketstackService in AppStateNotifier; MainScreen displays quote with tests.
+
 - **Stage**: In progress
-- **Requirements addressed**: VM-01
+- **Requirements addressed**: CMP-Svc-MS, CMP-Svc-FX, CMP-Svc-News
+- **Deviations/Decisions**: Services now return nullable maps and are used in app_state accordingly.
+- **Next step**: monitor for further API integration.
+
+## 2025-06-08 PR #76
 - **Deviations/Decisions**: Added simple Quote model in mobile app.
 - **Next step**: use news data on NewsScreen.
 

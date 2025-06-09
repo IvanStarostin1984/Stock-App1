@@ -1,27 +1,36 @@
 import 'lru_cache.dart';
 import 'api_quota_ledger.dart';
+import 'fetch_json.dart';
 
 /// S-01 – MarketstackService
 class MarketstackService {
   final LruCache<String, Map<String, dynamic>> _cache = LruCache(32);
+  final LruCache<String, List<Map<String, dynamic>>> _seriesCache =
+      LruCache(32);
   final ApiQuotaLedger _ledger = ApiQuotaLedger(100);
 
-  Future<Map<String, dynamic>> getIndexQuote(String symbol) async {
-    final cached = _cache.get(symbol);
-    if (cached != null) return cached;
-    if (!_ledger.isSafe()) throw Exception('quota exceeded');
-    _ledger.increment();
-    final result = {'symbol': symbol, 'price': 123.45};
-    _cache.put(symbol, result, const Duration(hours: 24));
-    return result;
+  Future<Map<String, dynamic>?> getIndexQuote(String symbol) async {
+    final url = 'https://api.marketstack.com/v1/eod/latest?symbols=$symbol';
+    return fetchJson<Map<String, dynamic>>(
+      url,
+      _cache,
+      _ledger,
+      (json) {
+        final raw = json['data'][0];
+        return {'symbol': raw['symbol'], 'price': raw['close']};
+      },
+    );
   }
 
-  Future<List<Map<String, dynamic>>> getSeries(String symbol) async {
-    if (!_ledger.isSafe()) throw Exception('quota exceeded');
-    _ledger.increment();
-    return [
-      {'symbol': symbol, 'close': 120.0},
-      {'symbol': symbol, 'close': 121.0},
-    ];
+  Future<List<Map<String, dynamic>>?> getSeries(String symbol) async {
+    final url = 'https://api.marketstack.com/v1/eod?symbols=$symbol&limit=2';
+    return fetchJson<List<Map<String, dynamic>>>(
+      url,
+      _seriesCache,
+      _ledger,
+      (json) => (json['data'] as List)
+          .map((r) => {'symbol': r['symbol'], 'close': r['close']})
+          .toList(),
+    );
   }
 }
