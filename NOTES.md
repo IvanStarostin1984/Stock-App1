@@ -1,3 +1,19 @@
+## 2025-06-09 PR #85
+- **Summary**: implemented QuoteRepository in the web app and refactored appStore to use it; added repository tests.
+- **Stage**: In progress
+- **Requirements addressed**: FR-0101, FR-0103
+- **Deviations/Decisions**: TypeScript repository omits series method because the service lacks it.
+- **Next step**: extend repositories for other domains.
+<details><summary>Cmd</summary>
+
+```bash
+# eslint and tests
+npm run lint
+npm test
+```
+
+</details>
+
 ## 2025-06-09 PR #79
 - **Summary**: added QuoteRepository with 24h caching and hooked AppStateNotifier to it; added unit tests.
 - **Stage**: In progress
