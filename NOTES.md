@@ -1,3 +1,10 @@
+## 2025-06-10 PR #88
+- **Summary**: fixed BCrypt gensalt prefix to \$2b in CredentialStore.
+- **Stage**: bug fix
+- **Requirements addressed**: FR-0105
+- **Deviations/Decisions**: flutter tools unavailable; format and tests couldn't run.
+- **Next step**: ensure CI passes with updated hashing.
+
 ## 2025-06-09 PR #87
 
 - **Summary**: marked smwa-js-services, Flutter screens and PWA pages done in TODO; noted repository work underway.

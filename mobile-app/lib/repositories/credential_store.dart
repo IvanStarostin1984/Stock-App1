@@ -46,7 +46,7 @@ class CredentialStore {
 
   /// Utility to create a hashed credential.
   UserCredential create(String email, String password) {
-    final salt = BCrypt.gensaltWithRounds(12);
+    final salt = BCrypt.gensalt(prefix: '\$2b', logRounds: 12);
     final hash = BCrypt.hashpw(password, salt);
     return UserCredential(
       email: email,
