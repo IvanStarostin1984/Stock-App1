@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { createPinia, setActivePinia } from 'pinia';
 import { createAppStore } from '../src/stores/appStore';
+import { QuoteRepository } from '../src/repositories/QuoteRepository';
 import type { Quote } from '../src/services/MarketstackService';
 import type { NewsArticle } from '../src/services/NewsService';
 
@@ -14,8 +15,9 @@ describe('appStore', () => {
     const article: NewsArticle = { title: 't', url: 'u', source: 's', published: 'p' } as any;
     const getQuote = vi.fn().mockResolvedValue(quote);
     const getNews = vi.fn().mockResolvedValue([article]);
+    const repo = new QuoteRepository({ getQuote } as any);
     const store = createAppStore({
-      quoteService: { getQuote } as any,
+      quoteRepo: repo,
       newsService: { getNews } as any,
       fxService: { getRate: vi.fn() } as any,
       trie: { search: vi.fn().mockReturnValue([]) } as any
@@ -32,7 +34,7 @@ describe('appStore', () => {
     const getRate = vi.fn().mockResolvedValue(0.9);
     const store = createAppStore({
       fxService: { getRate } as any,
-      quoteService: { getQuote: vi.fn() } as any,
+      quoteRepo: new QuoteRepository({ getQuote: vi.fn() } as any),
       newsService: { getNews: vi.fn() } as any,
       trie: { search: vi.fn().mockReturnValue([]) } as any
     })();
@@ -45,7 +47,7 @@ describe('appStore', () => {
     const getRate = vi.fn().mockResolvedValue(null);
     const store = createAppStore({
       fxService: { getRate } as any,
-      quoteService: { getQuote: vi.fn() } as any,
+      quoteRepo: new QuoteRepository({ getQuote: vi.fn() } as any),
       newsService: { getNews: vi.fn() } as any,
       trie: { search: vi.fn().mockReturnValue([]) } as any
     })();
@@ -57,7 +59,7 @@ describe('appStore', () => {
     const search = vi.fn().mockReturnValue(['AAPL']);
     const store = createAppStore({
       trie: { search } as any,
-      quoteService: { getQuote: vi.fn() } as any,
+      quoteRepo: new QuoteRepository({ getQuote: vi.fn() } as any),
       newsService: { getNews: vi.fn() } as any,
       fxService: { getRate: vi.fn() } as any
     })();
@@ -69,7 +71,7 @@ describe('appStore', () => {
 
   it('signIn and upgradePro set pro flag', () => {
     const store = createAppStore({
-      quoteService: { getQuote: vi.fn() } as any,
+      quoteRepo: new QuoteRepository({ getQuote: vi.fn() } as any),
       newsService: { getNews: vi.fn() } as any,
       fxService: { getRate: vi.fn() } as any,
       trie: { search: vi.fn().mockReturnValue([]) } as any
@@ -90,7 +92,7 @@ describe('appStore', () => {
     ];
     const getTopMovers = vi.fn().mockResolvedValue({ gainers, losers });
     const store = createAppStore({
-      quoteService: { getTopMovers } as any,
+      quoteRepo: new QuoteRepository({ getTopMovers } as any),
       newsService: { getNews: vi.fn() } as any,
       fxService: { getRate: vi.fn() } as any,
       trie: { search: vi.fn().mockReturnValue([]) } as any,
@@ -104,7 +106,7 @@ describe('appStore', () => {
   it('handles null movers result', async () => {
     const getTopMovers = vi.fn().mockResolvedValue(null);
     const store = createAppStore({
-      quoteService: { getTopMovers } as any,
+      quoteRepo: new QuoteRepository({ getTopMovers } as any),
       newsService: { getNews: vi.fn() } as any,
       fxService: { getRate: vi.fn() } as any,
       trie: { search: vi.fn().mockReturnValue([]) } as any,

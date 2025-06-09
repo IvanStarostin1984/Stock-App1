@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
 import { MarketstackService, type Quote } from '@/services/MarketstackService';
+import { QuoteRepository } from '@/repositories/QuoteRepository';
 import { NewsService, type NewsArticle } from '@/services/NewsService';
 import { FxService } from '@/services/FxService';
 import { SymbolTrie } from '@/utils/SymbolTrie';
@@ -15,7 +16,7 @@ export interface AppState {
 }
 
 export interface AppDeps {
-  quoteService?: MarketstackService;
+  quoteRepo?: QuoteRepository;
   newsService?: NewsService;
   fxService?: FxService;
   trie?: SymbolTrie;
@@ -34,20 +35,24 @@ export function createAppStore(deps: AppDeps = {}) {
     }),
     actions: {
       async loadHeadline(symbol: string = 'AAPL') {
-        const quoteSvc =
-          deps.quoteService ??
-          new MarketstackService(import.meta.env.VITE_MARKETSTACK_KEY ?? '');
+        const repo =
+          deps.quoteRepo ??
+          new QuoteRepository(
+            new MarketstackService(import.meta.env.VITE_MARKETSTACK_KEY ?? '')
+          );
         const newsSvc =
           deps.newsService ??
           new NewsService(import.meta.env.VITE_NEWSDATA_KEY ?? '');
-        this.headline = await quoteSvc.getQuote(symbol);
+        this.headline = await repo.headline(symbol);
         this.articles = this.headline ? await newsSvc.getNews(symbol) : null;
       },
       async loadTopMovers() {
-        const quoteSvc =
-          deps.quoteService ??
-          new MarketstackService(import.meta.env.VITE_MARKETSTACK_KEY ?? '');
-        const res = await quoteSvc.getTopMovers();
+        const repo =
+          deps.quoteRepo ??
+          new QuoteRepository(
+            new MarketstackService(import.meta.env.VITE_MARKETSTACK_KEY ?? '')
+          );
+        const res = await repo.topMovers();
         this.topGainers = res?.gainers ?? [];
         this.topLosers = res?.losers ?? [];
       },
