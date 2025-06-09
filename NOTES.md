@@ -1,3 +1,9 @@
+## 2025-06-09 PR #87
+- **Summary**: added Flutter PortfolioRepository using SharedPreferences with hourly cached totals and tests.
+- **Stage**: In progress
+- **Requirements addressed**: FR-0106
+- **Deviations/Decisions**: totals cached via LruCache; can't run flutter tools in container.
+- **Next step**: integrate into PortfolioScreen.
 ## 2025-06-09 PR #86
 - **Summary**: added PortfolioRepository storing holdings via idb-keyval and new Jest-style tests matching Flutter; installed fake-indexeddb for testing.
 - **Stage**: In progress
