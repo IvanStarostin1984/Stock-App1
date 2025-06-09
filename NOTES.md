@@ -1,3 +1,10 @@
+## 2025-06-09 PR #88
+- **Summary**: updated PortfolioRepository test constant to use const DateTime.utc and ran formatting and analysis commands (failed in container).
+- **Stage**: In progress
+- **Requirements addressed**: FR-0106
+- **Deviations/Decisions**: container lacks dart/flutter
+- **Next step**: fix container build scripts
+
 ## 2025-06-09 PR #87
 
 - **Summary**: marked smwa-js-services, Flutter screens and PWA pages done in TODO; noted repository work underway.

@@ -27,7 +27,7 @@ void main() {
     symbol: 'AAPL',
     quantity: 2,
     buyPrice: 100,
-    added: DateTime.utc(2024, 1, 1),
+    added: const DateTime.utc(2024, 1, 1),
   );
 
   group('PortfolioRepository', () {
