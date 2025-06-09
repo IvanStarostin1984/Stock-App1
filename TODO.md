@@ -11,6 +11,7 @@
 - [x] Build Dart service package `smwa_services` using LruCache and ApiQuotaLedger.
 - [x] Implement QuoteRepository (mobile & web)
 - [x] Implement PortfolioRepository with IndexedDB persistence
+- [x] Implement CredentialStore storing bcrypt hashes encrypted via AES in SharedPreferences.
 - [x] Implement PortfolioRepository for Flutter using SharedPreferences
 - [ ] Build TypeScript package `smwa-js-services` mirroring the Dart services.
 - [ ] Create Flutter screens wired to a Riverpod `AppStateNotifier`.
