@@ -16,8 +16,8 @@
 - [x] Create PWA pages and hook them to a Pinia store.
 - [x] Implement CredentialStore storing bcrypt hashes encrypted via AES in SharedPreferences.
 - [x] Implement PortfolioRepository for Flutter using SharedPreferences
-- [ ] Build TypeScript package `smwa-js-services` mirroring the Dart services.
-- [ ] Fix CredentialStore bcrypt prefix bug (use gensalt prefix 2b)
+- [x] Build TypeScript package `smwa-js-services` mirroring the Dart services.
+- [x] Fix CredentialStore bcrypt prefix bug (use gensalt prefix 2b)
 - [ ] Create Flutter screens wired to a Riverpod `AppStateNotifier`.
 - [ ] Create PWA pages and hook them to a Pinia store.
 - [x] Add GitHub CI and Netlify pipeline with Lighthouse checks.

@@ -1,3 +1,10 @@
+## 2025-06-10 PR #90
+- **Summary**: added Jest to web-app with ts-jest preset, placeholder test and updated test script.
+- **Stage**: improvement
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: added jest-environment-jsdom for compatibility; placeholder test to keep jest green.
+- **Next step**: monitor CI for cross-tool coverage.
+
 
 ## 2025-06-10 PR #89
 - **Summary**: fixed BCrypt gensalt prefix to \$2b in CredentialStore.
