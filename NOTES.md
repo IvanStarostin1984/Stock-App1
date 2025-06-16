@@ -1,3 +1,10 @@
+## 2025-06-10 PR #93
+- **Summary**: refactored mobile fetchJson helper into NetClient class and updated services and tests.
+- **Stage**: improvement
+- **Requirements addressed**: FR-0101, FR-0103, FR-0104, FR-0107
+- **Deviations/Decisions**: constructor injection used to allow mocking http clients.
+- **Next step**: share NetClient between platforms.
+
 ## 2025-06-10 PR #90
 - **Summary**: added Jest to web-app with ts-jest preset, placeholder test and updated test script.
 - **Stage**: improvement
