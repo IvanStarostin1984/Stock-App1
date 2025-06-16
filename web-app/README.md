@@ -32,3 +32,6 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 
 Run `npm run tokens` to generate `design-tokens/build/css/tokens.scss` and `design-tokens/build/dart/tokens.dart`. These files are regenerated automatically during `npm run build` and before tests.
 
+Run this command (or `npm test`, which also triggers it) **before** running any
+Flutter analysis or build steps so `tokens.dart` exists.
+

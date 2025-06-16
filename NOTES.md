@@ -1,9 +1,10 @@
-## 2025-06-16 PR #102
-- **Summary**: added root analysis_options.yaml; updated AGENTS and CODING_RULES.
+
+## 2025-06-18 PR #102
+- **Summary**: documented tokens build order in README and AGENTS.
 - **Stage**: documentation
 - **Requirements addressed**: N/A
-- **Deviations/Decisions**: root file excludes design tokens path.
-- **Next step**: verify cross-platform behaviour of NetClient.
+- **Deviations/Decisions**: emphasised running tokens before Flutter steps.
+- **Next step**: monitor CI for doc updates.
 
 ## 2025-06-16 PR #100
 - **Summary**: implemented web CountrySettingRepository with localStorage and unit tests; updated README and TODO.
