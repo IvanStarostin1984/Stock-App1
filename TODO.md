@@ -51,3 +51,4 @@
 - [ ] Wire Flutter store.
 - [ ] Monitor CI runs.
 - [ ] Integrate Riverpod and Pinia state stores.
+- [ ] Verify tsconfig paths whenever packages are added.

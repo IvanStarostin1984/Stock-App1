@@ -1,4 +1,11 @@
 
+## 2025-06-19 PR #107
+- **Summary**: fixed NewsService type handling and updated tsconfig to include generated models.
+- **Stage**: improvement
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: ensures typed API results and compilation against packages.
+- **Next step**: verify tsconfig paths after adding packages.
+
 ## 2025-06-18 PR #102
 - **Summary**: documented tokens build order in README and AGENTS.
 - **Stage**: documentation
