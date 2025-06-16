@@ -1,3 +1,10 @@
+## 2025-06-16 PR #102
+- **Summary**: added root analysis_options.yaml; updated AGENTS and CODING_RULES.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: root file excludes design tokens path.
+- **Next step**: verify cross-platform behaviour of NetClient.
+
 ## 2025-06-16 PR #100
 - **Summary**: implemented web CountrySettingRepository with localStorage and unit tests; updated README and TODO.
 - **Stage**: implementation
