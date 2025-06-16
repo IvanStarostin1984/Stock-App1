@@ -1,3 +1,10 @@
+## 2025-06-19 PR #XXX
+- **Summary**: corrected core net utility import paths.
+- **Stage**: bug fix
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: changed ../web-app references to ../../web-app for accuracy.
+- **Next step**: run CI to confirm build.
+
 ## 2025-06-19 PR #103
 - **Summary**: noted tsconfig path rule and NetClient.get generic usage in AGENTS.
 - **Stage**: documentation

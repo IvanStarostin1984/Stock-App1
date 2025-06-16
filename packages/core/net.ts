@@ -9,8 +9,8 @@ export const DAY_MS = 24 * 60 * 60 * 1000;
  */
 export async function fetchJson<T>(
   url: string,
-  cache: import('../web-app/src/utils/LruCache').LruCache<string, T>,
-  ledger: import('../web-app/src/utils/ApiQuotaLedger').ApiQuotaLedger,
+  cache: import('../../web-app/src/utils/LruCache').LruCache<string, T>,
+  ledger: import('../../web-app/src/utils/ApiQuotaLedger').ApiQuotaLedger,
   transform: (json: any) => T
 ): Promise<T | null> {
   const cached = cache.get(url);
@@ -34,7 +34,7 @@ export async function fetchJson<T>(
  */
 export class NetClient {
   constructor(
-    private ledger: import('../web-app/src/utils/ApiQuotaLedger').ApiQuotaLedger
+    private ledger: import('../../web-app/src/utils/ApiQuotaLedger').ApiQuotaLedger
   ) {}
 
   /**
@@ -42,7 +42,7 @@ export class NetClient {
    */
   async get<T>(
     url: string,
-    cache: import('../web-app/src/utils/LruCache').LruCache<string, T>,
+    cache: import('../../web-app/src/utils/LruCache').LruCache<string, T>,
     transform: (json: any) => T
   ): Promise<T | null> {
     return fetchJson(url, cache, this.ledger, transform);
