@@ -1,5 +1,5 @@
-import { LruCache } from '../../web-app/src/utils/LruCache';
-import { ApiQuotaLedger } from '../../web-app/src/utils/ApiQuotaLedger';
+import { LruCache } from '../../../web-app/src/utils/LruCache';
+import { ApiQuotaLedger } from '../../../web-app/src/utils/ApiQuotaLedger';
 
 function log(name: string, start: number) {
   if (process.env.NODE_ENV !== 'production') {

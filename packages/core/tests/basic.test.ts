@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { fetchJson } from '../net';
-import { LruCache } from '../../web-app/src/utils/LruCache';
-import { ApiQuotaLedger } from '../../web-app/src/utils/ApiQuotaLedger';
+import { LruCache } from '../../../web-app/src/utils/LruCache';
+import { ApiQuotaLedger } from '../../../web-app/src/utils/ApiQuotaLedger';
 
 describe('fetchJson (core)', () => {
   it('returns null if quota exceeded', async () => {

@@ -55,6 +55,6 @@
 - [ ] Monitor CI runs.
 - [ ] Integrate Riverpod and Pinia state stores.
 - [ ] Verify tsconfig paths whenever packages are added.
-- [ ] Add check to ensure packages reference web utilities via '../../web-app/src/utils/'.
+- [ ] Document that `packages/<pkg>/src` must import web utilities using '../../../web-app/src/'.
 - [ ] Verify tsconfig excludes to ensure package tests are ignored.
 - [ ] Investigate flutter analyze errors from generated-dart serializers
