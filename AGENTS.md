@@ -40,7 +40,8 @@ This repository hosts a cross-platform stock market app with a Flutter mobile fr
    ```
 4. When TypeScript files outside `web-app/src/` are imported (e.g. under
    `packages/`), update `web-app/tsconfig.json` to include those paths.
-   Missing entries cause TS6307 build failures.
+   Missing entries cause TS6307 build failures. Exclude each package's
+   `tests/` directory to keep the build fast.
 
 Create identical `.env` files in `mobile-app/` and `web-app/` containing:
 ```
