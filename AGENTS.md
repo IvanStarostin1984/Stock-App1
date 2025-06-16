@@ -38,6 +38,9 @@ This repository hosts a cross-platform stock market app with a Flutter mobile fr
    cd web-app
    npm install && npm run dev
    ```
+4. When TypeScript files outside `web-app/src/` are imported (e.g. under
+   `packages/`), update `web-app/tsconfig.json` to include those paths.
+   Missing entries cause TS6307 build failures.
 
 Create identical `.env` files in `mobile-app/` and `web-app/` containing:
 ```
@@ -64,6 +67,8 @@ calls · month⁻¹, ≤ 200 NewsData calls · day⁻¹).
 - Document each public API/function with a doc comment.
 - Log `loadTimeMs` and external API latency in debug builds.
 - State management: Riverpod (Flutter) and Pinia (Vue) – avoid global singletons.
+- The generic parameter of `NetClient.get<T>` must match the transform function's
+  return type.
 (These frameworks are planned; current code does not yet use them.)
 
 ## Testing & CI

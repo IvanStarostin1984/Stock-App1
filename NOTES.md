@@ -1,3 +1,10 @@
+## 2025-06-19 PR #103
+- **Summary**: noted tsconfig path rule and NetClient.get generic usage in AGENTS.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: emphasised TS6307 prevention and generic match.
+- **Next step**: ensure builds include package sources.
+
 
 ## 2025-06-19 PR #XXX
 - **Summary**: extended web tsconfig include to packages/core for vue-tsc.

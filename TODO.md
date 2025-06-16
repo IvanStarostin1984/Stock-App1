@@ -13,6 +13,7 @@
 - [x] Generate design tokens via style-dictionary for CSS and Dart.
 - [x] Build Dart service package `smwa_services` using LruCache and ApiQuotaLedger.
 - [x] Implement QuoteRepository (mobile & web)
+- [x] Document tsconfig path requirement when importing packages to avoid TS6307.
 - [x] Implement PortfolioRepository with IndexedDB persistence
 - [x] Build TypeScript package `smwa-js-services` mirroring the Dart services.
 - [x] Implement CredentialStore storing bcrypt hashes encrypted via AES in SharedPreferences.
