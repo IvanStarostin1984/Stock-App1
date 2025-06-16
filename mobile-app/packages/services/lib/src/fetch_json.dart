@@ -10,11 +10,21 @@ import 'api_quota_ledger.dart';
 /// [http.Client] that can be swapped in tests.
 class NetClient {
   final http.Client _client;
+  final ApiQuotaLedger ledger;
 
-  NetClient([http.Client? client]) : _client = client ?? http.Client();
+  NetClient(this.ledger, [http.Client? client])
+      : _client = client ?? http.Client();
 
-  /// Fetch JSON from [url] applying [cache] and [ledger].
-  Future<T?> fetchJson<T>(
+  /// Perform a GET request using [cache] and the client's [ledger].
+  Future<T?> get<T>(
+    String url,
+    LruCache<String, T> cache,
+    T Function(dynamic json) transform,
+  ) async {
+    return _fetchJson(url, cache, ledger, transform);
+  }
+
+  Future<T?> _fetchJson<T>(
     String url,
     LruCache<String, T> cache,
     ApiQuotaLedger ledger,

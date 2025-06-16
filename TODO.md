@@ -1,7 +1,7 @@
 # TODO
 
 - [x] Implement a unified network layer shared by mobile and web services.
-- [ ] Refactor mobile (Flutter) services to use NetClient.
+- [x] Refactor mobile (Flutter) services to use NetClient.
 - Implement a unified network layer shared by mobile and web services.
 - [x] Introduce NetClient class in Dart services and update tests.
 
