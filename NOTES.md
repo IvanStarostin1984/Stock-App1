@@ -1,3 +1,4 @@
+
 ## 2025-06-18 PR #102
 - **Summary**: documented tokens build order in README and AGENTS.
 - **Stage**: documentation

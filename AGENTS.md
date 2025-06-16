@@ -68,6 +68,8 @@ calls · month⁻¹, ≤ 200 NewsData calls · day⁻¹).
 
 ## Testing & CI
 - Run `dart format`, `flutter analyze`, `flutter test`, `eslint --fix`, and `npm test` before committing.
+- `flutter analyze` at the repo root uses `analysis_options.yaml` which includes
+  `mobile-app/analysis_options.yaml` and excludes generated design tokens.
 - Run `npm install` in `web-app/` before tests so the style-dictionary build step works.
 - Run `npm run tokens` (or run tests) before any Flutter analysis or build steps so `tokens.dart` exists.
 - Provide at least one positive and one negative unit test per public API, aiming for ≥75 % branch coverage.
