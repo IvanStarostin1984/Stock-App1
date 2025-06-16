@@ -29,6 +29,7 @@ Position _pos() => Position(
       headingAccuracy: 0,
       speed: 0,
       speedAccuracy: 0,
+      altitudeAccuracy: 0,
     );
 
 void main() {
