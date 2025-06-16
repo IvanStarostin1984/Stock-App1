@@ -36,11 +36,11 @@ export class MarketstackService {
   async getQuote(symbol: string): Promise<Quote | null> {
     const url = `https://api.marketstack.com/v1/eod/latest?access_key=${this.apiKey}&symbols=${symbol}`;
     const start = performance.now();
-    const quote = await this.client.get<{ data: any[] }>(
+    const quote = await this.client.get<Quote>(
       url,
       this.cache,
       json => {
-        const raw = json.data[0];
+        const raw: any = json.data[0];
         return {
           symbol: raw.symbol,
           price: raw.close,
@@ -68,11 +68,11 @@ export class MarketstackService {
     const gainUrl = `${base}?access_key=${this.apiKey}&limit=5&sort=change_over_time.desc`;
     const loseUrl = `${base}?access_key=${this.apiKey}&limit=5&sort=change_over_time.asc`;
     const start = performance.now();
-    const gainers = await this.client.get<{ data: any[] }>(
+    const gainers = await this.client.get<Quote[]>(
       gainUrl,
       this.moversCache,
       json =>
-        json.data.map(raw => ({
+        json.data.map((raw: any) => ({
           symbol: raw.symbol,
           price: raw.close,
           open: raw.open,
@@ -81,11 +81,11 @@ export class MarketstackService {
           close: raw.close,
         })) as Quote[]
     );
-    const losers = await this.client.get<{ data: any[] }>(
+    const losers = await this.client.get<Quote[]>(
       loseUrl,
       this.moversCache,
       json =>
-        json.data.map(raw => ({
+        json.data.map((raw: any) => ({
           symbol: raw.symbol,
           price: raw.close,
           open: raw.open,
