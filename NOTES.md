@@ -1,3 +1,10 @@
+## 2025-06-16 PR #XXX
+- **Summary**: document cross-package import paths in AGENTS.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: verify CI docs jobs pass.
+
 ## 2025-06-19 PR #XXX
 - **Summary**: corrected core net utility import paths.
 - **Stage**: bug fix

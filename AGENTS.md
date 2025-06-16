@@ -42,6 +42,9 @@ This repository hosts a cross-platform stock market app with a Flutter mobile fr
    `packages/`), update `web-app/tsconfig.json` to include those paths and
    exclude `../packages/**/tests` so vue-tsc skips package tests.
    Missing entries cause TS6307 build failures.
+   Files inside `packages/<name>/src` are three levels deep, so imports of web
+   utilities must use `'../../../web-app/src/…'`. Files at the package root use
+   `'../../web-app/src/…'`.
 
 Create identical `.env` files in `mobile-app/` and `web-app/` containing:
 ```
