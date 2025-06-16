@@ -1,3 +1,10 @@
+## 2025-06-23 PR #XXX
+- **Summary**: removed unused web-app/packages/services directory and tests.
+- **Stage**: cleanup
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: SDD step 5 replaced by single src/services path.
+- **Next step**: verify CI green.
+
 ## 2025-06-22 PR #XXX
 - **Summary**: fixed import paths in core package to use '../../../web-app/src'.
 - **Stage**: bug fix

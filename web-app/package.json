@@ -9,7 +9,6 @@
     "preview": "vite preview",
     "test": "vitest run && jest",
     "lint": "eslint '{src,tests}/**/*.{js,ts,vue}' --fix",
-    "test:services": "npm --prefix packages/services test",
     "tokens": "npm --prefix design-tokens run build",
     "pretest": "npm run tokens",
     "postinstall": "npm install --prefix design-tokens"
