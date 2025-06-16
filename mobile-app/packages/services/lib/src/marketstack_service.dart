@@ -4,14 +4,17 @@ import 'fetch_json.dart';
 
 /// S-01 – MarketstackService
 class MarketstackService {
+  final NetClient _net;
   final LruCache<String, Map<String, dynamic>> _cache = LruCache(32);
   final LruCache<String, List<Map<String, dynamic>>> _seriesCache =
       LruCache(32);
   final ApiQuotaLedger _ledger = ApiQuotaLedger(100);
 
+  MarketstackService([NetClient? client]) : _net = client ?? NetClient();
+
   Future<Map<String, dynamic>?> getIndexQuote(String symbol) async {
     final url = 'https://api.marketstack.com/v1/eod/latest?symbols=$symbol';
-    return fetchJson<Map<String, dynamic>>(
+    return _net.fetchJson<Map<String, dynamic>>(
       url,
       _cache,
       _ledger,
@@ -24,7 +27,7 @@ class MarketstackService {
 
   Future<List<Map<String, dynamic>>?> getSeries(String symbol) async {
     final url = 'https://api.marketstack.com/v1/eod?symbols=$symbol&limit=2';
-    return fetchJson<List<Map<String, dynamic>>>(
+    return _net.fetchJson<List<Map<String, dynamic>>>(
       url,
       _seriesCache,
       _ledger,

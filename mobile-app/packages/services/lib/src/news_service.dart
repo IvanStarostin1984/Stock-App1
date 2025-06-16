@@ -4,12 +4,15 @@ import 'fetch_json.dart';
 
 /// S-03 – NewsService
 class NewsService {
+  final NetClient _net;
   final LruCache<String, List<Map<String, dynamic>>> _cache = LruCache(32);
   final ApiQuotaLedger _ledger = ApiQuotaLedger(200);
 
+  NewsService([NetClient? client]) : _net = client ?? NetClient();
+
   Future<List<Map<String, dynamic>>?> getDigest(String topic) async {
     final url = 'https://newsdata.io/api/1/news?q=$topic&language=en';
-    return fetchJson<List<Map<String, dynamic>>>(
+    return _net.fetchJson<List<Map<String, dynamic>>>(
       url,
       _cache,
       _ledger,
