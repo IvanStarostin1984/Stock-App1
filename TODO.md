@@ -1,6 +1,7 @@
 # TODO
 
 - Implement a unified network layer shared by mobile and web services.
+- [x] Introduce NetClient class in Dart services and update tests.
 
 # Outstanding Tasks
 
@@ -19,4 +20,6 @@
 - [x] Add GitHub CI and Netlify pipeline with Lighthouse checks.
 - [x] Add a mobile-only CI workflow.
 - [ ] Repository work underway.
+- [x] Implement GPS-based LocationService returning ISO codes.
+
 
