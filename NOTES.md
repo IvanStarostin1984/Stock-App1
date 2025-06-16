@@ -1,3 +1,10 @@
+## 2025-06-25 PR #XXX
+- **Summary**: added browser LocationService, integrated with app store and saved country via CountrySettingRepository; docs and tests updated.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0109
+- **Deviations/Decisions**: uses free reverse-geocode API; errors ignored in store init.
+- **Next step**: verify cross-platform behaviour of LocationService.
+
 ## 2025-06-24 PR #XXX
 - **Summary**: all Dart services now pass `ttl` to NetClient; TODO resolved.
 - **Stage**: implementation
