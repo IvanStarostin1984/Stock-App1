@@ -25,6 +25,7 @@
 - [x] Implement GPS-based LocationService returning ISO codes.
 - [x] Add CountrySettingRepository for the web using localStorage.
 - [x] Implement CountrySettingRepository for web.
+- [x] Added root analysis_options.yaml for repo-level analyzer.
 
 # In progress
 - [ ] Verify cross-platform behaviour of NetClient.
@@ -49,5 +50,3 @@
 - [ ] Wire Flutter store.
 - [ ] Monitor CI runs.
 - [ ] Integrate Riverpod and Pinia state stores.
-- [x] Persist CountrySetting in storage.
-- [ ] 
