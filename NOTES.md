@@ -1,3 +1,10 @@
+## 2025-06-17 PR #101
+- **Summary**: updated TODO with outstanding Next step tasks.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: consolidated open actions from NOTES.
+- **Next step**: implement new tasks.
+
 ## 2025-06-16 PR #95
 - **Summary**: added CountrySettingRepository and stored country via LocationService.
 - **Stage**: implementation
