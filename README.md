@@ -100,6 +100,8 @@ const client = new NetClient(new ApiQuotaLedger(100));
 client.get(url, cache, json => json.value);
 ```
 The Flutter app uses the same abstraction via `packages/services/lib/src/fetch_json.dart`.
+The PWA's services now live directly under `web-app/src/services/`; the old
+`web-app/packages/services/` package has been removed.
 
 ⚙️ Useful Scripts
 Task	Mobile	Web
