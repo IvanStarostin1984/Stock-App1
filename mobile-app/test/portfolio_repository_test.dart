@@ -22,12 +22,12 @@ class _FakeQuoteRepo implements QuoteRepository {
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  const sample = PortfolioHolding(
+  final sample = PortfolioHolding(
     id: '1',
     symbol: 'AAPL',
     quantity: 2,
     buyPrice: 100,
-    added: const DateTime.utc(2024, 1, 1),
+    added: DateTime.utc(2024, 1, 1),
   );
 
   group('PortfolioRepository', () {
@@ -55,7 +55,8 @@ void main() {
 
     test('rejects invalid holding', () async {
       final repo = PortfolioRepository(quoteRepo: _FakeQuoteRepo(1));
-      expect(() async => repo.add(sample.copyWith(quantity: 0)), throwsArgumentError);
+      expect(() async => repo.add(sample.copyWith(quantity: 0)),
+          throwsArgumentError);
     });
 
     test('refreshTotals caches result', () async {

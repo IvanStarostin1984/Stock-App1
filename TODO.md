@@ -24,3 +24,4 @@
 - [x] Add a mobile-only CI workflow.
 - [ ] Repository work underway.
 - [x] Implement GPS-based LocationService returning ISO codes.
+- [ ] Add CountrySettingRepository for the web using localStorage.

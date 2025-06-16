@@ -2,12 +2,15 @@ import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
 
 import 'api_quota_ledger.dart';
+import 'country_setting.dart';
+import 'country_setting_repository.dart';
 
 /// Function returning the current position. Overridden in tests.
-Future<Position> Function() positionGetter = () => Geolocator.getCurrentPosition(
-      desiredAccuracy: LocationAccuracy.medium,
-      timeLimit: const Duration(seconds: 5),
-    );
+Future<Position> Function() positionGetter =
+    () => Geolocator.getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.medium,
+          timeLimit: const Duration(seconds: 5),
+        );
 
 /// Function mapping coordinates to an ISO 3166 code. Overridden in tests.
 Future<String?> Function(double lat, double lon) isoCodeGetter =
@@ -19,8 +22,12 @@ Future<String?> Function(double lat, double lon) isoCodeGetter =
 /// S-04 – LocationService
 class LocationService {
   final ApiQuotaLedger _ledger = ApiQuotaLedger(1);
+  final CountrySettingRepository _repo;
 
-  Future<Map<String, dynamic>> resolveCountry() async {
+  LocationService({CountrySettingRepository? repository})
+      : _repo = repository ?? _NullCountryRepo();
+
+  Future<CountrySetting> resolveCountry() async {
     if (!_ledger.isSafe()) throw Exception('quota exceeded');
 
     final permission = await Geolocator.checkPermission();
@@ -37,8 +44,23 @@ class LocationService {
     final iso2 = await isoCodeGetter(pos.latitude, pos.longitude);
     if (iso2 == null) throw Exception('country not found');
 
+    final setting = CountrySetting(
+      iso2: iso2,
+      lastCurrency: 'USD',
+      acquired: DateTime.now(),
+      method: 'GPS',
+    );
+    await _repo.save(setting);
+
     _ledger.increment();
-    return {'iso2': iso2};
+    return setting;
   }
 }
 
+class _NullCountryRepo implements CountrySettingRepository {
+  @override
+  Future<CountrySetting?> load() async => null;
+
+  @override
+  Future<void> save(CountrySetting setting) async {}
+}
