@@ -1,9 +1,17 @@
 ## 2025-06-16 PR #98
+
 - **Summary**: refactored Flutter services to use `NetClient.get` and updated tests.
 - **Stage**: improvement
 - **Requirements addressed**: FR-0101, FR-0102, FR-0103
 - **Deviations/Decisions**: ledger now stored within `NetClient`; services inject http clients for testing.
 - **Next step**: verify cross-platform behaviour.
+
+- **Summary**: updated TODO and READMEs to mention NetClient and planned CountrySettingRepository.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: implement CountrySettingRepository for web.
+
 
 ## 2025-06-16 PR #94
 - **Summary**: introduced `NetClient` wrapper and refactored web services and tests.
