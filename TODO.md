@@ -2,6 +2,7 @@
 
 - [x] Implement a unified network layer shared by mobile and web services.
 - [x] Refactor mobile (Flutter) services to use NetClient.
+- [x] Implement a unified network layer shared by mobile and web services.
 - [x] Introduce NetClient class in Dart services and update tests.
 
 # Outstanding Tasks
@@ -25,14 +26,15 @@
 - [ ] Add CountrySettingRepository for the web using localStorage.
 - [ ] Implement CountrySettingRepository for web.
 
-- [ ] Verify cross-platform behaviour of NetClient on web and Flutter.
-- [ ] Connect AuthService to CredentialStore and integrate sign-in flow.
-- [ ] Use PortfolioRepository totals in PortfolioScreen.
+# In progress
+- [ ] Verify cross-platform behaviour of NetClient.
 - [ ] Follow CI instructions for docs.
 - [ ] Monitor CI for cross-tool coverage.
 - [ ] Ensure CI passes with updated hashing.
 - [ ] Fix container build scripts.
 - [ ] Monitor repo progress.
+- [ ] Integrate with AuthService.
+- [ ] Integrate into PortfolioScreen.
 - [ ] Implement refreshTotals and integrate with UI.
 - [ ] Extend repositories for other domains.
 - [ ] Implement remaining repositories.
@@ -40,10 +42,12 @@
 - [ ] Monitor for further API integration.
 - [ ] Use news data on NewsScreen.
 - [ ] Expand store features.
-- [ ] Integrate helper in mobile services.
+- [x] Integrate helper in mobile services.
 - [ ] Flesh out real API calls.
 - [ ] Expand state usage across app.
 - [ ] Expand to remaining service stubs.
 - [ ] Wire Flutter store.
 - [ ] Monitor CI runs.
 - [ ] Integrate Riverpod and Pinia state stores.
+- [x] Persist CountrySetting in storage.
+- [ ] 
