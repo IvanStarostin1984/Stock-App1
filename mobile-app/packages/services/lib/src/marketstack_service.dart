@@ -1,23 +1,25 @@
 import 'lru_cache.dart';
 import 'api_quota_ledger.dart';
 import 'fetch_json.dart';
+import 'package:http/http.dart' as http;
 
 /// S-01 – MarketstackService
 class MarketstackService {
-  final NetClient _net;
   final LruCache<String, Map<String, dynamic>> _cache = LruCache(32);
   final LruCache<String, List<Map<String, dynamic>>> _seriesCache =
       LruCache(32);
-  final ApiQuotaLedger _ledger = ApiQuotaLedger(100);
+  final ApiQuotaLedger _ledger;
+  late final NetClient _net;
 
-  MarketstackService([NetClient? client]) : _net = client ?? NetClient();
+  MarketstackService([http.Client? client]) : _ledger = ApiQuotaLedger(100) {
+    _net = NetClient(_ledger, client);
+  }
 
   Future<Map<String, dynamic>?> getIndexQuote(String symbol) async {
     final url = 'https://api.marketstack.com/v1/eod/latest?symbols=$symbol';
-    return _net.fetchJson<Map<String, dynamic>>(
+    return _net.get<Map<String, dynamic>>(
       url,
       _cache,
-      _ledger,
       (json) {
         final raw = json['data'][0];
         return {'symbol': raw['symbol'], 'price': raw['close']};
@@ -27,10 +29,9 @@ class MarketstackService {
 
   Future<List<Map<String, dynamic>>?> getSeries(String symbol) async {
     final url = 'https://api.marketstack.com/v1/eod?symbols=$symbol&limit=2';
-    return _net.fetchJson<List<Map<String, dynamic>>>(
+    return _net.get<List<Map<String, dynamic>>>(
       url,
       _seriesCache,
-      _ledger,
       (json) => (json['data'] as List)
           .map((r) => {'symbol': r['symbol'], 'close': r['close']})
           .toList(),

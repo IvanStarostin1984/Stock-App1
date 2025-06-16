@@ -1,6 +1,7 @@
 import 'package:smwa_services/services.dart';
 import 'package:smwa_services/src/location_service.dart' as loc;
 import 'package:geolocator/geolocator.dart';
+import 'package:geocoding/geocoding.dart';
 import 'package:test/test.dart';
 
 Position _pos() => Position(
@@ -13,6 +14,7 @@ Position _pos() => Position(
       headingAccuracy: 0,
       speed: 0,
       speedAccuracy: 0,
+      altitudeAccuracy: 0,
     );
 
 void main() {
@@ -39,4 +41,3 @@ void main() {
     expect(() async => await svc.resolveCountry(), throwsException);
   });
 }
-
