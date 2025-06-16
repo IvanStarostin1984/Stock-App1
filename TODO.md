@@ -2,9 +2,6 @@
 
 - [x] Implement a unified network layer shared by mobile and web services.
 - [x] Refactor mobile (Flutter) services to use NetClient.
-
-- Implement a unified network layer shared by mobile and web services.
-
 - [x] Introduce NetClient class in Dart services and update tests.
 
 # Outstanding Tasks
@@ -23,7 +20,7 @@
 - [x] Fix CredentialStore bcrypt prefix bug (use gensalt prefix 2b)
 - [x] Add GitHub CI and Netlify pipeline with Lighthouse checks.
 - [x] Add a mobile-only CI workflow.
-- [ ] Repository work underway.
+- [x] Repository work underway.
 - [x] Implement GPS-based LocationService returning ISO codes.
 - [ ] Add CountrySettingRepository for the web using localStorage.
 - [ ] Implement CountrySettingRepository for web.
