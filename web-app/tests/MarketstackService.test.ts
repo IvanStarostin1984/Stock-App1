@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { MarketstackService, type Quote } from '../src/services/MarketstackService';
+import { NetClient } from '../../packages/core/net';
 
 const sampleApiQuote = {
   symbol: 'AAPL',
@@ -35,6 +36,7 @@ describe('MarketstackService', () => {
     const service = new MarketstackService('k');
     const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
     (service as any).ledger = ledger;
+    (service as any).client = new NetClient(ledger);
 
     const fetchMock = vi.fn().mockResolvedValue({ ok: true, json: async () => ({ data: [sampleApiQuote] }) });
     global.fetch = fetchMock as any;
@@ -53,6 +55,7 @@ describe('MarketstackService', () => {
     const service = new MarketstackService('k');
     const ledger = { isSafe: vi.fn().mockReturnValue(false), increment: vi.fn() };
     (service as any).ledger = ledger;
+    (service as any).client = new NetClient(ledger);
     const fetchMock = vi.fn();
     global.fetch = fetchMock as any;
 
@@ -65,6 +68,7 @@ describe('MarketstackService', () => {
     const service = new MarketstackService('k');
     const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
     (service as any).ledger = ledger;
+    (service as any).client = new NetClient(ledger);
     const fetchMock = vi
       .fn()
       .mockResolvedValueOnce({ ok: false })
@@ -85,6 +89,7 @@ describe('MarketstackService', () => {
     const service = new MarketstackService('k');
     const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
     (service as any).ledger = ledger;
+    (service as any).client = new NetClient(ledger);
     const quoteB: Quote = { ...sampleQuote, symbol: 'IBM' };
     const apiQuoteB = { ...sampleApiQuote, symbol: 'IBM' };
     const fetchMock = vi
@@ -106,6 +111,7 @@ describe('MarketstackService', () => {
     const service = new MarketstackService('k');
     const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
     (service as any).ledger = ledger;
+    (service as any).client = new NetClient(ledger);
     const payload = { data: [sampleApiQuote] };
     const fetchMock = vi
       .fn()
@@ -126,6 +132,7 @@ describe('MarketstackService', () => {
     const service = new MarketstackService('k');
     const ledger = { isSafe: vi.fn().mockReturnValue(false), increment: vi.fn() };
     (service as any).ledger = ledger;
+    (service as any).client = new NetClient(ledger);
     global.fetch = vi.fn();
 
     const res = await service.getTopMovers();

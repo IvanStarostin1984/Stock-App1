@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { FxService } from '../src/services/FxService';
+import { NetClient } from '../../packages/core/net';
 
 describe('FxService', () => {
   beforeEach(() => {
@@ -13,6 +14,7 @@ describe('FxService', () => {
     const service = new FxService();
     const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
     (service as any).ledger = ledger;
+    (service as any).client = new NetClient(ledger);
     const fetchMock = vi.fn().mockResolvedValue({ ok: true, json: async () => ({ rates: { USD: 1.2 } }) });
     global.fetch = fetchMock as any;
 
@@ -30,6 +32,7 @@ describe('FxService', () => {
     const service = new FxService();
     const ledger = { isSafe: vi.fn().mockReturnValue(false), increment: vi.fn() };
     (service as any).ledger = ledger;
+    (service as any).client = new NetClient(ledger);
     global.fetch = vi.fn();
 
     const res = await service.getRate('EUR', 'USD');
@@ -41,6 +44,7 @@ describe('FxService', () => {
     const service = new FxService();
     const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
     (service as any).ledger = ledger;
+    (service as any).client = new NetClient(ledger);
     const fetchMock = vi
       .fn()
       .mockResolvedValueOnce({ ok: false })
@@ -61,6 +65,7 @@ describe('FxService', () => {
     const service = new FxService();
     const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
     (service as any).ledger = ledger;
+    (service as any).client = new NetClient(ledger);
     const fetchMock = vi
       .fn()
       .mockResolvedValueOnce({ ok: true, json: async () => ({ rates: { USD: 1.2 } }) })

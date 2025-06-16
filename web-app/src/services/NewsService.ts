@@ -1,7 +1,7 @@
 import { LruCache } from '@/utils/LruCache';
 import { ApiQuotaLedger } from '@/utils/ApiQuotaLedger';
 import { logApiCall } from '@/utils/logMetrics';
-import { fetchJson } from '../../../packages/core/net';
+import { NetClient } from '../../../packages/core/net';
 
 export interface NewsArticle {
   title: string;
@@ -23,6 +23,7 @@ interface NewsApiEntry {
 export class NewsService {
   private cache = new LruCache<string, NewsArticle[]>(32);
   private ledger = new ApiQuotaLedger(200); // 200 req/day
+  private client = new NetClient(this.ledger);
   private apiKey: string;
   constructor(apiKey: string) {
     if (typeof apiKey !== 'string' || apiKey.trim() === '') {
@@ -43,10 +44,9 @@ export class NewsService {
   async getNews(symbol: string): Promise<NewsArticle[] | null> {
     const url = `https://newsdata.io/api/1/news?apikey=${this.apiKey}&q=${symbol}&language=en`;
     const start = performance.now();
-    const articles = await fetchJson<{ results?: NewsApiEntry[] }>(
+    const articles = await this.client.get<{ results?: NewsApiEntry[] }>(
       url,
       this.cache,
-      this.ledger,
       json => {
         const results: NewsApiEntry[] = json.results ?? [];
         return results.slice(0, 3).map(({ title, link, source_id, pubDate }) => ({
