@@ -44,7 +44,7 @@ export class NewsService {
   async getNews(symbol: string): Promise<NewsArticle[] | null> {
     const url = `https://newsdata.io/api/1/news?apikey=${this.apiKey}&q=${symbol}&language=en`;
     const start = performance.now();
-    const articles = await this.client.get<{ results?: NewsApiEntry[] }>(
+    const articles = await this.client.get<NewsArticle[]>(
       url,
       this.cache,
       json => {

@@ -5,13 +5,32 @@
 - **Deviations/Decisions**: changed ../web-app references to ../../web-app for accuracy.
 - **Next step**: run CI to confirm build.
 
+- **Summary**: added exclude pattern in web tsconfig to ignore package tests and updated AGENTS.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: include list unchanged; compile should ignore tests.
+- **Next step**: confirm vue-tsc respects exclude.
+
+## 2025-06-16 PR #XXX
+- **Summary**: aligned NetClient generics in Fx, Marketstack and News services.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: generics now match callback return types; added any casts for raw Marketstack data.
+- **Next step**: run CI to verify type safety.
+
+## 2025-06-20 PR #XXX
+- **Summary**: added rule to exclude package test folders when updating tsconfig.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: monitor tsconfig updates in PRs.
+
 ## 2025-06-19 PR #103
 - **Summary**: noted tsconfig path rule and NetClient.get generic usage in AGENTS.
 - **Stage**: documentation
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: emphasised TS6307 prevention and generic match.
 - **Next step**: ensure builds include package sources.
-
 
 ## 2025-06-19 PR #XXX
 - **Summary**: extended web tsconfig include to packages/core for vue-tsc.

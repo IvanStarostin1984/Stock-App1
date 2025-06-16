@@ -39,7 +39,8 @@ This repository hosts a cross-platform stock market app with a Flutter mobile fr
    npm install && npm run dev
    ```
 4. When TypeScript files outside `web-app/src/` are imported (e.g. under
-   `packages/`), update `web-app/tsconfig.json` to include those paths.
+   `packages/`), update `web-app/tsconfig.json` to include those paths and
+   exclude `../packages/**/tests` so vue-tsc skips package tests.
    Missing entries cause TS6307 build failures.
 
 Create identical `.env` files in `mobile-app/` and `web-app/` containing:

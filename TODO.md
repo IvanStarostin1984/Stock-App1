@@ -29,6 +29,7 @@
 - [x] Document tokens build dependency before Flutter analysis.
 - [x] Added root analysis_options.yaml for repo-level analyzer.
 - [x] Include packages/core in web tsconfig to fix vue-tsc list errors.
+- [x] Exclude package tests directories when adding their sources to web tsconfig.
 
 # In progress
 - [ ] Verify cross-platform behaviour of NetClient.
@@ -55,3 +56,5 @@
 - [ ] Integrate Riverpod and Pinia state stores.
 - [ ] Verify tsconfig paths whenever packages are added.
 - [ ] Add check to ensure packages reference web utilities via '../../web-app/src/utils/'.
+- [ ] Verify tsconfig excludes to ensure package tests are ignored.
+- [ ] Investigate flutter analyze errors from generated-dart serializers
