@@ -1,9 +1,30 @@
-## 2025-06-16 PR #??
+## 2025-06-16 PR #94
 - **Summary**: introduced `NetClient` wrapper and refactored web services and tests.
 - **Stage**: improvement
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: services now create `NetClient` with their quota ledger to share logic.
 - **Next step**: extend same client to Flutter services.
+
+## 2025-06-16 PR #93
+- **Summary**: cleaned TODO duplicates, marked mobile CI workflow done, and clarified npm install requirement for style-dictionary.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: follow CI instructions for docs.
+
+## 2025-06-10 PR #92
+- **Summary**: refactored mobile fetchJson helper into NetClient class and updated services and tests.
+- **Stage**: improvement
+- **Requirements addressed**: FR-0101, FR-0103, FR-0104, FR-0107
+- **Deviations/Decisions**: constructor injection used to allow mocking http clients.
+- **Next step**: share NetClient between platforms.
+
+## 2025-06-16 PR #91
+- **Summary**: replaced LocationService stub with geolocator-based logic and added unit tests.
+- **Stage**: improvement
+- **Requirements addressed**: FR-0109
+- **Deviations/Decisions**: used geocoding plugin instead of offline table for country lookup.
+- **Next step**: persist CountrySetting in storage.
 
 ## 2025-06-10 PR #90
 - **Summary**: added Jest to web-app with ts-jest preset, placeholder test and updated test script.
@@ -11,7 +32,6 @@
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: added jest-environment-jsdom for compatibility; placeholder test to keep jest green.
 - **Next step**: monitor CI for cross-tool coverage.
-
 
 ## 2025-06-10 PR #89
 - **Summary**: fixed BCrypt gensalt prefix to \$2b in CredentialStore.
@@ -27,7 +47,6 @@
 - **Deviations/Decisions**: container lacks dart/flutter
 - **Next step**: fix container build scripts
 
-
 ## 2025-06-09 PR #87
 
 - **Summary**: marked smwa-js-services, Flutter screens and PWA pages done in TODO; noted repository work underway.
@@ -36,20 +55,17 @@
 - **Deviations/Decisions**: none
 - **Next step**: monitor repo progress
 
-
 - **Summary**: added CredentialStore with AES encryption and bcrypt-12 hashing, plus unit tests.
 - **Stage**: In progress
 - **Requirements addressed**: FR-0105, FR-0108, SEC-0003
 - **Deviations/Decisions**: static AES key used for demo.
 - **Next step**: integrate with AuthService.
 
-
 - **Summary**: added Flutter PortfolioRepository using SharedPreferences with hourly cached totals and tests.
 - **Stage**: In progress
 - **Requirements addressed**: FR-0106
 - **Deviations/Decisions**: totals cached via LruCache; can't run flutter tools in container.
 - **Next step**: integrate into PortfolioScreen.
-
 
 ## 2025-06-09 PR #86
 - **Summary**: added PortfolioRepository storing holdings via idb-keyval and new Jest-style tests matching Flutter; installed fake-indexeddb for testing.
@@ -80,7 +96,6 @@ npm test
 - **Requirements addressed**: FR-0101, FR-0102, FR-0103
 - **Deviations/Decisions**: flutter analyze fails due to missing generated packages
 - **Next step**: implement remaining repositories
-
 
 ## 2025-06-09 PR #78
 - **Summary**: implemented Dart fetchJson helper and refactored services; added network tests.
@@ -118,14 +133,12 @@ npm test
 - **Deviations/Decisions**: NewsService cache TTL now 24h via helper (spec says 12h)
 - **Next step**: integrate helper in mobile services
 
-
 ## 2025-06-08 PR #74
 - **Summary**: add smwa_services package with stub services and tests
 - **Stage**: In progress
 - **Requirements addressed**: CMP-Svc-MS, CMP-Svc-FX, CMP-Svc-News
 - **Deviations/Decisions**: Implemented simple cache and quota ledger locally.
 - **Next step**: flesh out real API calls.
-
 
 ## 2025-06-08 PR #73
 - **Summary**: feat: introduced Riverpod AppStateNotifier with counter and hooked it into all screens with increment buttons. Added widget tests.
@@ -134,14 +147,12 @@ npm test
 - **Deviations/Decisions**: None
 - **Next step**: expand state usage across app.
 
-
 ## 2025-06-08 PR #72
 - **Summary**: add core net helper and JS services package with tests
 - **Stage**: In progress
 - **Requirements addressed**: CMP-Svc-MS, CMP-Svc-FX, CMP-Svc-News
 - **Deviations/Decisions**: None
 - **Next step**: expand to remaining service stubs.
-
 
 ## 2025-06-08 PR #71
 - **Summary**: add Pinia app store and tests
@@ -184,4 +195,3 @@ npm test
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: None
 - **Next step**: Populate TODO.md and implement core services.
-

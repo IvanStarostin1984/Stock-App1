@@ -68,6 +68,7 @@ calls · month⁻¹, ≤ 200 NewsData calls · day⁻¹).
 
 ## Testing & CI
 - Run `dart format`, `flutter analyze`, `flutter test`, `eslint --fix`, and `npm test` before committing.
+- Run `npm install` in `web-app/` before tests so the style-dictionary build step works.
 - Provide at least one positive and one negative unit test per public API, aiming for ≥75 % branch coverage.
 - GitHub Actions in `.github/workflows/ci.yml` will build the web app, run tests, trigger a Netlify deployment and execute Lighthouse CI. Keep the pipeline green.
 

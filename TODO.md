@@ -3,6 +3,9 @@
 - [x] Implement a unified network layer shared by mobile and web services.
 - [ ] Refactor mobile (Flutter) services to use NetClient.
 
+- Implement a unified network layer shared by mobile and web services.
+- [x] Introduce NetClient class in Dart services and update tests.
+
 # Outstanding Tasks
 
 - [x] Implement `packages/core/net.ts` with 24h LRU cache and quota handling.
@@ -13,15 +16,11 @@
 - [x] Implement QuoteRepository (mobile & web)
 - [x] Implement PortfolioRepository with IndexedDB persistence
 - [x] Build TypeScript package `smwa-js-services` mirroring the Dart services.
-- [x] Create Flutter screens wired to a Riverpod `AppStateNotifier`.
-- [x] Create PWA pages and hook them to a Pinia store.
 - [x] Implement CredentialStore storing bcrypt hashes encrypted via AES in SharedPreferences.
 - [x] Implement PortfolioRepository for Flutter using SharedPreferences
 - [x] Build TypeScript package `smwa-js-services` mirroring the Dart services.
 - [x] Fix CredentialStore bcrypt prefix bug (use gensalt prefix 2b)
-- [ ] Create Flutter screens wired to a Riverpod `AppStateNotifier`.
-- [ ] Create PWA pages and hook them to a Pinia store.
 - [x] Add GitHub CI and Netlify pipeline with Lighthouse checks.
-- [ ] (Optional) Add a mobile-only CI workflow.
+- [x] Add a mobile-only CI workflow.
 - [ ] Repository work underway.
-
+- [x] Implement GPS-based LocationService returning ISO codes.
