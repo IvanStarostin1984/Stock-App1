@@ -24,4 +24,6 @@
 - [x] Add GitHub CI and Netlify pipeline with Lighthouse checks.
 - [ ] (Optional) Add a mobile-only CI workflow.
 - [ ] Repository work underway.
+- [x] Implement GPS-based LocationService returning ISO codes.
+
 
