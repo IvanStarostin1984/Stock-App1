@@ -1,3 +1,10 @@
+## 2025-06-16 PR #99
+- **Summary**: cleaned TODO list; removed duplicate network layer item and marked repository work done.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: continue with CountrySettingRepository for web.
+
 ## 2025-06-16 PR #95
 - **Summary**: added CountrySettingRepository and stored country via LocationService.
 - **Stage**: implementation
