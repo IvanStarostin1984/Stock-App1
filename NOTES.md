@@ -1,4 +1,10 @@
 ## 2025-06-19 PR #XXX
+- **Summary**: corrected core net utility import paths.
+- **Stage**: bug fix
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: changed ../web-app references to ../../web-app for accuracy.
+- **Next step**: run CI to confirm build.
+
 - **Summary**: added exclude pattern in web tsconfig to ignore package tests and updated AGENTS.
 - **Stage**: implementation
 - **Requirements addressed**: N/A
@@ -25,7 +31,6 @@
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: emphasised TS6307 prevention and generic match.
 - **Next step**: ensure builds include package sources.
-
 
 ## 2025-06-19 PR #XXX
 - **Summary**: extended web tsconfig include to packages/core for vue-tsc.
