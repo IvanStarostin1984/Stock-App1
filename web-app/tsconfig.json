@@ -4,7 +4,8 @@
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.vue",
-    "../packages/generated-ts/**/*.ts"
+    "../packages/generated-ts/**/*.ts",
+    "../packages/core/**/*.ts"
   ],
   "compilerOptions": {
     "composite": true,

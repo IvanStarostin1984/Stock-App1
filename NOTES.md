@@ -1,4 +1,11 @@
 
+## 2025-06-19 PR #XXX
+- **Summary**: extended web tsconfig include to packages/core for vue-tsc.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: monitor CI for tsconfig compile errors.
+
 ## 2025-06-18 PR #102
 - **Summary**: documented tokens build order in README and AGENTS.
 - **Stage**: documentation
