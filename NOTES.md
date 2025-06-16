@@ -5,6 +5,22 @@
 - **Deviations/Decisions**: repository uses browser localStorage; tests rely on jsdom environment.
 - **Next step**: integrate repository into web location flow.
 
+2025-06-16: ticked off old tasks and added missing ones in TODO.md to match work so far.
+
+## 2025-06-17 PR #101
+- **Summary**: updated TODO with outstanding Next step tasks.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: consolidated open actions from NOTES.
+- **Next step**: implement new tasks.
+
+## 2025-06-16 PR #99
+- **Summary**: cleaned TODO list; removed duplicate network layer item and marked repository work done.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: continue with CountrySettingRepository for web.
+
 ## 2025-06-16 PR #95
 - **Summary**: added CountrySettingRepository and stored country via LocationService.
 - **Stage**: implementation
