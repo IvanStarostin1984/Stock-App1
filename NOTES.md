@@ -1,3 +1,10 @@
+## 2025-06-16 PR #XXX
+- **Summary**: added Node 20 and markdown link check instructions in docs.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: emphasised Node 20; doc link check via npx.
+- **Next step**: add automated job for docs.
+
 ## 2025-06-24 PR #XXX
 - **Summary**: all Dart services now pass `ttl` to NetClient; TODO resolved.
 - **Stage**: implementation

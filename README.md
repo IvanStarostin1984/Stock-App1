@@ -41,7 +41,7 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 
 ### Prerequisites
 Before running the apps ensure the correct toolchains are installed:
-* **Node 20** for the web app
+* **Node 20** for the web app and documentation checks
 * **Flutter 3.22** for the mobile app
 Detailed setup steps live in `AGENTS.md`.
 
@@ -125,6 +125,10 @@ Run tests from each app before pushing:
 ```bash
 cd mobile-app && flutter test
 cd ../web-app && npm test
+```
+Run the documentation checks with Node 20:
+```bash
+npx markdown-link-check README.md
 ```
 
 flutter test and npm test – keep CI green

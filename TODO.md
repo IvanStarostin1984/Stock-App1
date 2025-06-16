@@ -56,6 +56,7 @@
 - [ ] Expand to remaining service stubs.
 - [ ] Wire Flutter store.
 - [ ] Monitor CI runs.
+- [ ] Keep AGENTS.md up to date whenever CI tooling changes.
 - [ ] Integrate Riverpod and Pinia state stores.
 - [ ] Verify tsconfig paths whenever packages are added.
 - [ ] Document that `packages/<pkg>/src` must import web utilities using '../../../web-app/src/'.
