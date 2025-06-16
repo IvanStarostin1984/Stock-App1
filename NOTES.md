@@ -1,3 +1,10 @@
+## 2025-06-22 PR #XXX
+- **Summary**: fixed import paths in core package to use '../../../web-app/src'.
+- **Stage**: bug fix
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: packages/<pkg>/src should import utilities from web-app with three-level '../'.
+- **Next step**: confirm CI pipeline stays green.
+
 ## 2025-06-16 PR #XXX
 - **Summary**: document cross-package import paths in AGENTS.
 - **Stage**: documentation
