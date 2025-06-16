@@ -24,6 +24,7 @@ class MarketstackService {
         final raw = json['data'][0];
         return {'symbol': raw['symbol'], 'price': raw['close']};
       },
+      ttl: const Duration(hours: 24),
     );
   }
 
@@ -35,6 +36,7 @@ class MarketstackService {
       (json) => (json['data'] as List)
           .map((r) => {'symbol': r['symbol'], 'close': r['close']})
           .toList(),
+      ttl: const Duration(hours: 24),
     );
   }
 }

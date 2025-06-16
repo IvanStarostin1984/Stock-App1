@@ -25,4 +25,22 @@ void main() {
     final quote = await svc.getIndexQuote('AAPL');
     expect(quote, isNull);
   });
+
+  test('getIndexQuote caches result for 24h', () async {
+    var calls = 0;
+    final client = MockClient((req) async {
+      calls++;
+      return http.Response(
+          jsonEncode({
+            'data': [
+              {'symbol': 'AAPL', 'close': 1.0}
+            ]
+          }),
+          200);
+    });
+    final svc = MarketstackService(client);
+    await svc.getIndexQuote('AAPL');
+    await svc.getIndexQuote('AAPL');
+    expect(calls, 1);
+  });
 }

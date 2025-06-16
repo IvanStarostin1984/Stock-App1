@@ -22,4 +22,20 @@ void main() {
     final rate = await svc.getRate('USD', 'EUR');
     expect(rate, isNull);
   });
+
+  test('getRate caches result for 24h', () async {
+    var calls = 0;
+    final client = MockClient((req) async {
+      calls++;
+      return http.Response(
+          jsonEncode({
+            'rates': {'EUR': 1.2}
+          }),
+          200);
+    });
+    final svc = FxService(client);
+    await svc.getRate('USD', 'EUR');
+    await svc.getRate('USD', 'EUR');
+    expect(calls, 1);
+  });
 }
