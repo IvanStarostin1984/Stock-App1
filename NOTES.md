@@ -1,3 +1,10 @@
+## 2025-06-24 PR #XXX
+- **Summary**: all Dart services now pass `ttl` to NetClient; TODO resolved.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0104, LIM-0016
+- **Deviations/Decisions**: none
+- **Next step**: verify cross-platform behaviour of NetClient.
+
 ## 2025-06-23 PR #XXX
 - **Summary**: added ttl parameter to NetClient and services; NewsService now caches 12h.
 - **Stage**: implementation
