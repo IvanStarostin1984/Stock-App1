@@ -7,6 +7,9 @@
     "../packages/generated-ts/**/*.ts",
     "../packages/core/**/*.ts"
   ],
+  "exclude": [
+    "../packages/**/tests"
+  ],
   "compilerOptions": {
     "composite": true,
     "baseUrl": ".",
