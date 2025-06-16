@@ -11,3 +11,5 @@ linter:
 analyzer:
   plugins:
     - flutter
+  exclude:
+    - packages/services/test/**
