@@ -25,3 +25,25 @@
 - [ ] Add CountrySettingRepository for the web using localStorage.
 - [ ] Implement CountrySettingRepository for web.
 
+- [ ] Verify cross-platform behaviour of NetClient on web and Flutter.
+- [ ] Connect AuthService to CredentialStore and integrate sign-in flow.
+- [ ] Use PortfolioRepository totals in PortfolioScreen.
+- [ ] Follow CI instructions for docs.
+- [ ] Monitor CI for cross-tool coverage.
+- [ ] Ensure CI passes with updated hashing.
+- [ ] Fix container build scripts.
+- [ ] Monitor repo progress.
+- [ ] Implement refreshTotals and integrate with UI.
+- [ ] Extend repositories for other domains.
+- [ ] Implement remaining repositories.
+- [ ] Enhance services to parse real API data.
+- [ ] Monitor for further API integration.
+- [ ] Use news data on NewsScreen.
+- [ ] Expand store features.
+- [ ] Integrate helper in mobile services.
+- [ ] Flesh out real API calls.
+- [ ] Expand state usage across app.
+- [ ] Expand to remaining service stubs.
+- [ ] Wire Flutter store.
+- [ ] Monitor CI runs.
+- [ ] Integrate Riverpod and Pinia state stores.
