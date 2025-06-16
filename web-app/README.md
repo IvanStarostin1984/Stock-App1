@@ -35,3 +35,17 @@ Run `npm run tokens` to generate `design-tokens/build/css/tokens.scss` and `desi
 Run this command (or `npm test`, which also triggers it) **before** running any
 Flutter analysis or build steps so `tokens.dart` exists.
 
+## Determine user location
+
+Call the `initLocation` action from `appStore` once on startup. It invokes
+`LocationService`, which uses `navigator.geolocation` to resolve the user's
+country and stores the ISO code in `CountrySettingRepository` (localStorage).
+Example:
+
+```ts
+import { useAppStore } from './stores/appStore';
+
+const store = useAppStore();
+store.initLocation();
+```
+

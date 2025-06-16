@@ -115,4 +115,45 @@ describe('appStore', () => {
     expect(store.topGainers).toEqual([]);
     expect(store.topLosers).toEqual([]);
   });
+
+  it('initialises location from repo', async () => {
+    const load = vi.fn().mockResolvedValue({
+      iso2: 'US',
+      lastCurrency: 'USD',
+      acquired: '',
+      method: 'GPS'
+    });
+    const store = createAppStore({
+      quoteRepo: new QuoteRepository({ getQuote: vi.fn() } as any),
+      newsService: { getNews: vi.fn() } as any,
+      fxService: { getRate: vi.fn() } as any,
+      trie: { search: vi.fn().mockReturnValue([]) } as any,
+      countryRepo: { load } as any,
+      locationService: { resolveCountry: vi.fn() } as any
+    })();
+    await store.initLocation();
+    expect(store.countryCode).toBe('US');
+    expect(load).toHaveBeenCalled();
+  });
+
+  it('initialises via service when repo empty', async () => {
+    const repo = { load: vi.fn().mockResolvedValue(null) } as any;
+    const resolveCountry = vi.fn().mockResolvedValue({
+      iso2: 'GB',
+      lastCurrency: 'GBP',
+      acquired: '',
+      method: 'GPS'
+    });
+    const store = createAppStore({
+      quoteRepo: new QuoteRepository({ getQuote: vi.fn() } as any),
+      newsService: { getNews: vi.fn() } as any,
+      fxService: { getRate: vi.fn() } as any,
+      trie: { search: vi.fn().mockReturnValue([]) } as any,
+      countryRepo: repo,
+      locationService: { resolveCountry } as any
+    })();
+    await store.initLocation();
+    expect(store.countryCode).toBe('GB');
+    expect(resolveCountry).toHaveBeenCalled();
+  });
 });

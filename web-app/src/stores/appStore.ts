@@ -3,6 +3,11 @@ import { MarketstackService, type Quote } from '@/services/MarketstackService';
 import { QuoteRepository } from '@/repositories/QuoteRepository';
 import { NewsService, type NewsArticle } from '@/services/NewsService';
 import { FxService } from '@/services/FxService';
+import { LocationService } from '@/services/LocationService';
+import {
+  CountrySettingRepository,
+  type CountrySetting
+} from '@/repositories/CountrySettingRepository';
 import { SymbolTrie } from '@/utils/SymbolTrie';
 
 export interface AppState {
@@ -13,6 +18,7 @@ export interface AppState {
   searchResults: string[];
   topGainers: Quote[];
   topLosers: Quote[];
+  countryCode: string | null;
 }
 
 export interface AppDeps {
@@ -20,6 +26,8 @@ export interface AppDeps {
   newsService?: NewsService;
   fxService?: FxService;
   trie?: SymbolTrie;
+  locationService?: LocationService;
+  countryRepo?: CountrySettingRepository;
 }
 
 export function createAppStore(deps: AppDeps = {}) {
@@ -31,7 +39,8 @@ export function createAppStore(deps: AppDeps = {}) {
       isPro: false,
       searchResults: [],
       topGainers: [],
-      topLosers: []
+      topLosers: [],
+      countryCode: null
     }),
     actions: {
       async loadHeadline(symbol: string = 'AAPL') {
@@ -72,6 +81,23 @@ export function createAppStore(deps: AppDeps = {}) {
       },
       async upgradePro() {
         this.isPro = true;
+      },
+      async initLocation() {
+        const repo =
+          deps.countryRepo ?? new CountrySettingRepository();
+        let setting: CountrySetting | null = await repo.load();
+        if (!setting) {
+          const svc = deps.locationService ?? new LocationService(repo);
+          try {
+            setting = await svc.resolveCountry();
+          } catch {
+            setting = null;
+          }
+        }
+        if (setting) {
+          this.countryCode = setting.iso2;
+          this.currency = setting.lastCurrency;
+        }
       },
       async syncWatchList() {
         // placeholder for future sync logic

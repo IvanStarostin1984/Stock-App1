@@ -26,6 +26,7 @@
 - [x] Implement GPS-based LocationService returning ISO codes.
 - [x] Add CountrySettingRepository for the web using localStorage.
 - [x] Implement CountrySettingRepository for web.
+- [x] Integrate LocationService with web store and add tests.
 - [x] Document tokens build dependency before Flutter analysis.
 - [x] Added root analysis_options.yaml for repo-level analyzer.
 - [x] Include packages/core in web tsconfig to fix vue-tsc list errors.
