@@ -1,3 +1,10 @@
+## 2025-06-18 PR #102
+- **Summary**: documented tokens build order in README and AGENTS.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: emphasised running tokens before Flutter steps.
+- **Next step**: monitor CI for doc updates.
+
 ## 2025-06-16 PR #100
 - **Summary**: implemented web CountrySettingRepository with localStorage and unit tests; updated README and TODO.
 - **Stage**: implementation

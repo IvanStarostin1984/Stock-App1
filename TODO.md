@@ -25,6 +25,7 @@
 - [x] Implement GPS-based LocationService returning ISO codes.
 - [x] Add CountrySettingRepository for the web using localStorage.
 - [x] Implement CountrySettingRepository for web.
+- [x] Document tokens build dependency before Flutter analysis.
 
 # In progress
 - [ ] Verify cross-platform behaviour of NetClient.
