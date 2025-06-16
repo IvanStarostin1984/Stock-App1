@@ -1,7 +1,7 @@
 import { LruCache } from '@/utils/LruCache';
 import { ApiQuotaLedger } from '@/utils/ApiQuotaLedger';
 import { logApiCall } from '@/utils/logMetrics';
-import { NetClient } from '../../../packages/core/net';
+import { NetClient, DAY_MS } from '../../../packages/core/net';
 import type { Quote } from '../../../packages/generated-ts/models/Quote';
 
 export type { Quote };
@@ -49,7 +49,8 @@ export class MarketstackService {
           low: raw.low,
           close: raw.close,
         } as Quote;
-      }
+      },
+      DAY_MS
     );
     logApiCall('MarketstackService.getQuote', start);
     return quote ?? null;
@@ -79,7 +80,8 @@ export class MarketstackService {
           high: raw.high,
           low: raw.low,
           close: raw.close,
-        })) as Quote[]
+        })) as Quote[],
+      DAY_MS
     );
     const losers = await this.client.get<Quote[]>(
       loseUrl,
@@ -92,7 +94,8 @@ export class MarketstackService {
           high: raw.high,
           low: raw.low,
           close: raw.close,
-        })) as Quote[]
+        })) as Quote[],
+      DAY_MS
     );
     logApiCall('MarketstackService.getTopMovers', start);
     if (!gainers || !losers) return null;

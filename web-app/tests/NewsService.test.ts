@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { NewsService, type NewsArticle } from '../src/services/NewsService';
-import { NetClient } from '../../packages/core/net';
+import { NetClient, HALF_DAY_MS } from '../../packages/core/net';
 
 const sampleArticles: NewsArticle[] = [
   { title: 't1', url: 'l1', source: 's1', published: 'p1' },
@@ -100,5 +100,21 @@ describe('NewsService', () => {
     await service.getNews('AA');
     expect(fetchMock).toHaveBeenCalledTimes(2);
     expect(ledger.increment).toHaveBeenCalledTimes(2);
+  });
+
+  it('passes 12h ttl to NetClient', async () => {
+    const service = new NewsService('key');
+    const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
+    const client = { get: vi.fn().mockResolvedValue(sampleArticles) } as unknown as NetClient;
+    (service as any).ledger = ledger;
+    (service as any).client = client;
+
+    await service.getNews('AA');
+    expect(client.get).toHaveBeenCalledWith(
+      expect.stringContaining('AA'),
+      (service as any).cache,
+      expect.any(Function),
+      HALF_DAY_MS
+    );
   });
 });

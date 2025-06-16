@@ -55,10 +55,13 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 (Exchangerate.host is key-less – no variable needed.)
 
 ## API hygiene
-API requests are implemented in service classes under `web-app/src/services/`.
+(API requests are implemented in service classes under `web-app/src/services/`.)
 Each service uses `LruCache`, `ApiQuotaLedger` and the shared `NetClient`
-wrapper to enforce 24 h caching and free‑tier quotas (≤ 100 Marketstack/FX
-calls · month⁻¹, ≤ 200 NewsData calls · day⁻¹).
+wrapper. MarketstackService and FxService cache results for 24 h while
+NewsService caches data for only 12 h. The TTL must be passed to
+`NetClient.get`/`fetchJson` when calling the API to enforce the correct
+caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month⁻¹,
+≤ 200 NewsData calls · day⁻¹.
 (See *docs/SRS_v1.md § 9.6.7 Limitations*.)
 
 ## Coding Standards

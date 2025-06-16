@@ -1,7 +1,7 @@
 import { LruCache } from '@/utils/LruCache';
 import { ApiQuotaLedger } from '@/utils/ApiQuotaLedger';
 import { logApiCall } from '@/utils/logMetrics';
-import { NetClient } from '../../../packages/core/net';
+import { NetClient, HALF_DAY_MS } from '../../../packages/core/net';
 
 export interface NewsArticle {
   title: string;
@@ -55,7 +55,8 @@ export class NewsService {
           source: source_id,
           published: pubDate,
         }));
-      }
+      },
+      HALF_DAY_MS
     );
     logApiCall('NewsService.getNews', start);
     return articles ?? null;

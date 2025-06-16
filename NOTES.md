@@ -1,3 +1,10 @@
+## 2025-06-23 PR #XXX
+- **Summary**: added ttl parameter to NetClient and services; NewsService now caches 12h.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0104, LIM-0016
+- **Deviations/Decisions**: TTL passed explicitly to enforce per-service policy.
+- **Next step**: update remaining services to use ttl parameter in Dart code.
+
 ## 2025-06-22 PR #XXX
 - **Summary**: fixed import paths in core package to use '../../../web-app/src'.
 - **Stage**: bug fix
