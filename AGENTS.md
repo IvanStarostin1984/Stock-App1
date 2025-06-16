@@ -57,8 +57,10 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 ## API hygiene
 API requests are implemented in service classes under `web-app/src/services/`.
 Each service uses `LruCache`, `ApiQuotaLedger` and the shared `NetClient`
-wrapper to enforce 24 h caching and free‑tier quotas (≤ 100 Marketstack/FX
-calls · month⁻¹, ≤ 200 NewsData calls · day⁻¹).
+wrapper to enforce caching and free‑tier quotas (≤ 100 Marketstack/FX calls
+· month⁻¹, ≤ 200 NewsData calls · day⁻¹). `NetClient.get` accepts a
+`Duration ttl` which defaults to 24 h. Services pass either a 24 h or 12 h ttl
+as required.
 (See *docs/SRS_v1.md § 9.6.7 Limitations*.)
 
 ## Coding Standards
@@ -73,6 +75,8 @@ calls · month⁻¹, ≤ 200 NewsData calls · day⁻¹).
 - State management: Riverpod (Flutter) and Pinia (Vue) – avoid global singletons.
 - The generic parameter of `NetClient.get<T>` must match the transform function's
   return type.
+- Pass an explicit `ttl` to `NetClient.get` when services need a different
+  cache duration.
 (These frameworks are planned; current code does not yet use them.)
 
 ## Testing & CI

@@ -20,6 +20,7 @@ class FxService {
       url,
       _cache,
       (json) => (json['rates'] as Map<String, dynamic>)[to].toDouble(),
+      ttl: const Duration(hours: 24),
     );
   }
 }

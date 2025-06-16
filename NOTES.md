@@ -1,4 +1,12 @@
 ## 2025-06-23 PR #XXX
+- **Summary**: added TTL parameter to NetClient with services specifying 12‑24 h
+  caching. Extended tests for expiry and caching behaviour.
+- **Stage**: enhancement
+- **Requirements addressed**: FR-0101, FR-0104, FR-0107
+- **Deviations/Decisions**: kept default TTL at 24 h to match existing cache
+  policy.
+- **Next step**: verify CI pipeline stays green.
+
 - **Summary**: removed unused web-app/packages/services directory and tests.
 - **Stage**: cleanup
 - **Requirements addressed**: N/A

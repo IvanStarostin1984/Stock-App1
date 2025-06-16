@@ -27,6 +27,7 @@ class NewsService {
           };
         }).toList();
       },
+      ttl: const Duration(hours: 12),
     );
   }
 }

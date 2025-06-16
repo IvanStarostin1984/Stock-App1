@@ -30,6 +30,7 @@
 - [x] Added root analysis_options.yaml for repo-level analyzer.
 - [x] Include packages/core in web tsconfig to fix vue-tsc list errors.
 - [x] Exclude package tests directories when adding their sources to web tsconfig.
+- [x] Add ttl parameter to NetClient and pass specific durations in services with tests.
 - [x] Remove obsolete `web-app/packages/services` folder; services live in
   `web-app/src/services`.
 

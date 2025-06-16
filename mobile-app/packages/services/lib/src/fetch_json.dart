@@ -19,9 +19,10 @@ class NetClient {
   Future<T?> get<T>(
     String url,
     LruCache<String, T> cache,
-    T Function(dynamic json) transform,
-  ) async {
-    return _fetchJson(url, cache, ledger, transform);
+    T Function(dynamic json) transform, {
+    Duration ttl = const Duration(hours: 24),
+  }) async {
+    return _fetchJson(url, cache, ledger, transform, ttl);
   }
 
   Future<T?> _fetchJson<T>(
@@ -29,6 +30,7 @@ class NetClient {
     LruCache<String, T> cache,
     ApiQuotaLedger ledger,
     T Function(dynamic json) transform,
+    Duration ttl,
   ) async {
     final cached = cache.get(url);
     if (cached != null) return cached;
@@ -39,7 +41,7 @@ class NetClient {
       final json = jsonDecode(resp.body);
       ledger.increment();
       final data = transform(json);
-      cache.put(url, data, const Duration(hours: 24));
+      cache.put(url, data, ttl);
       return data;
     } catch (_) {
       return null;
