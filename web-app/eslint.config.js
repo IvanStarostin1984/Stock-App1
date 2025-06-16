@@ -21,7 +21,8 @@ export default [
         setTimeout: 'readonly',
         console: 'readonly',
         performance: 'readonly',
-        process: 'readonly'
+        process: 'readonly',
+        localStorage: 'readonly'
       }
     },
     plugins: {

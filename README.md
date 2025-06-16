@@ -74,7 +74,8 @@ Create identical .env files in mobile-app/ and web-app/.
 (Exchangerate.host is key-less – no variable needed.)
 
 The Flutter app resolves your country once on startup and stores it in
-`SharedPreferences` via `CountrySettingRepository`.
+`SharedPreferences` via `CountrySettingRepository`. The web PWA uses a
+matching repository backed by `localStorage`.
 
 📂 Repo Layout
 packages/           shared DTOs + generated REST clients
