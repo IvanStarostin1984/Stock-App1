@@ -5,6 +5,13 @@
 - **Deviations/Decisions**: generics now match callback return types; added any casts for raw Marketstack data.
 - **Next step**: run CI to verify type safety.
 
+## 2025-06-20 PR #XXX
+- **Summary**: added rule to exclude package test folders when updating tsconfig.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: monitor tsconfig updates in PRs.
+
 ## 2025-06-19 PR #103
 - **Summary**: noted tsconfig path rule and NetClient.get generic usage in AGENTS.
 - **Stage**: documentation
