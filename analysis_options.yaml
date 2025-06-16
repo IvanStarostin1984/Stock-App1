@@ -3,3 +3,5 @@ include: mobile-app/analysis_options.yaml
 analyzer:
   exclude:
     - web-app/design-tokens/**
+    - packages/generated-dart/**
+    - mobile-app/packages/services/test/**
