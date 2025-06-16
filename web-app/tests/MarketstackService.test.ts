@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { MarketstackService, type Quote } from '../src/services/MarketstackService';
-import { NetClient } from '../../packages/core/net';
+import { NetClient, DAY_MS } from '../../packages/core/net';
 
 const sampleApiQuote = {
   symbol: 'AAPL',
@@ -138,5 +138,21 @@ describe('MarketstackService', () => {
     const res = await service.getTopMovers();
     expect(res).toBeNull();
     expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('passes 24h ttl to NetClient', async () => {
+    const service = new MarketstackService('k');
+    const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
+    const client = { get: vi.fn().mockResolvedValue({ data: [sampleApiQuote] }) } as unknown as NetClient;
+    (service as any).ledger = ledger;
+    (service as any).client = client;
+
+    await service.getQuote('AAPL');
+    expect(client.get).toHaveBeenCalledWith(
+      expect.stringContaining('AAPL'),
+      (service as any).cache,
+      expect.any(Function),
+      DAY_MS
+    );
   });
 });

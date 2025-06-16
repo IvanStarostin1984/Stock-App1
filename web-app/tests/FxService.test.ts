@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { FxService } from '../src/services/FxService';
-import { NetClient } from '../../packages/core/net';
+import { NetClient, DAY_MS } from '../../packages/core/net';
 
 describe('FxService', () => {
   beforeEach(() => {
@@ -79,5 +79,21 @@ describe('FxService', () => {
     await service.getRate('EUR', 'USD');
     expect(fetchMock).toHaveBeenCalledTimes(2);
     expect(ledger.increment).toHaveBeenCalledTimes(2);
+  });
+
+  it('passes 24h ttl to NetClient', async () => {
+    const service = new FxService();
+    const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
+    const client = { get: vi.fn().mockResolvedValue(1.2) } as unknown as NetClient;
+    (service as any).ledger = ledger;
+    (service as any).client = client;
+
+    await service.getRate('EUR', 'USD');
+    expect(client.get).toHaveBeenCalledWith(
+      'https://api.exchangerate.host/latest?base=EUR&symbols=USD',
+      (service as any).cache,
+      expect.any(Function),
+      DAY_MS
+    );
   });
 });

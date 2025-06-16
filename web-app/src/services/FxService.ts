@@ -1,7 +1,7 @@
 import { LruCache } from '@/utils/LruCache';
 import { ApiQuotaLedger } from '@/utils/ApiQuotaLedger';
 import { logApiCall } from '@/utils/logMetrics';
-import { NetClient } from '../../../packages/core/net';
+import { NetClient, DAY_MS } from '../../../packages/core/net';
 
 /**
  * Service for retrieving foreign exchange rates from a public API.
@@ -27,7 +27,8 @@ export class FxService {
     const rate = await this.client.get<number>(
       url,
       this.cache,
-      json => (json as { rates: Record<string, number> }).rates[quote]
+      json => (json as { rates: Record<string, number> }).rates[quote],
+      DAY_MS
     );
     logApiCall('FxService.getRate', start);
     return rate ?? null;

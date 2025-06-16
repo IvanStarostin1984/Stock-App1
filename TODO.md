@@ -62,3 +62,4 @@
 - [ ] Add check to ensure packages reference web utilities via '../../web-app/src/…' at the package root and '../../../web-app/src/…' inside `packages/<name>/src`.
 - [ ] Verify tsconfig excludes to ensure package tests are ignored.
 - [ ] Investigate flutter analyze errors from generated-dart serializers
+- [ ] Update Flutter services to pass ttlMs to NetClient calls
