@@ -1,3 +1,10 @@
+## 2025-06-16 PR #100
+- **Summary**: implemented web CountrySettingRepository with localStorage and unit tests; updated README and TODO.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0109
+- **Deviations/Decisions**: repository uses browser localStorage; tests rely on jsdom environment.
+- **Next step**: integrate repository into web location flow.
+
 ## 2025-06-16 PR #95
 - **Summary**: added CountrySettingRepository and stored country via LocationService.
 - **Stage**: implementation
