@@ -1,3 +1,10 @@
+## 2025-06-16 PR #91
+- **Summary**: replaced LocationService stub with geolocator-based logic and added unit tests.
+- **Stage**: improvement
+- **Requirements addressed**: FR-0109
+- **Deviations/Decisions**: used geocoding plugin instead of offline table for country lookup.
+- **Next step**: persist CountrySetting in storage.
+
 ## 2025-06-10 PR #90
 - **Summary**: added Jest to web-app with ts-jest preset, placeholder test and updated test script.
 - **Stage**: improvement
