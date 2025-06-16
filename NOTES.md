@@ -1,3 +1,10 @@
+## 2025-06-16 PR #??
+- **Summary**: introduced `NetClient` wrapper and refactored web services and tests.
+- **Stage**: improvement
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: services now create `NetClient` with their quota ledger to share logic.
+- **Next step**: extend same client to Flutter services.
+
 ## 2025-06-10 PR #90
 - **Summary**: added Jest to web-app with ts-jest preset, placeholder test and updated test script.
 - **Stage**: improvement

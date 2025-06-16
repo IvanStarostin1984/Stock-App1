@@ -49,9 +49,9 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 
 ## API hygiene
 API requests are implemented in service classes under `web-app/src/services/`.
-Each service uses `LruCache` and `ApiQuotaLedger` to enforce the 24 h cache and
-free‑tier quotas (≤ 100 Marketstack/FX calls · month⁻¹, ≤ 200 NewsData calls ·
-day⁻¹). A unified network layer remains a TODO (see `TODO.md`).
+Each service uses `LruCache`, `ApiQuotaLedger` and the shared `NetClient`
+wrapper to enforce 24 h caching and free‑tier quotas (≤ 100 Marketstack/FX
+calls · month⁻¹, ≤ 200 NewsData calls · day⁻¹).
 (See *docs/SRS_v1.md § 9.6.7 Limitations*.)
 
 ## Coding Standards
