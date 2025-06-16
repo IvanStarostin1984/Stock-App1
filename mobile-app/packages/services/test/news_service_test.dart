@@ -24,4 +24,22 @@ void main() {
     final news = await svc.getDigest('stocks');
     expect(news, isNull);
   });
+
+  test('getDigest caches result for 12h', () async {
+    var calls = 0;
+    final client = MockClient((req) async {
+      calls++;
+      return http.Response(
+          jsonEncode({
+            'results': [
+              {'title': 'Example', 'link': 'https://x.com'}
+            ]
+          }),
+          200);
+    });
+    final svc = NewsService(client);
+    await svc.getDigest('stocks');
+    await svc.getDigest('stocks');
+    expect(calls, 1);
+  });
 }

@@ -76,6 +76,8 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 - State management: Riverpod (Flutter) and Pinia (Vue) – avoid global singletons.
 - The generic parameter of `NetClient.get<T>` must match the transform function's
   return type.
+- Pass an explicit `ttl` to `NetClient.get` when services need a different
+  cache duration.
 (These frameworks are planned; current code does not yet use them.)
 
 ## Testing & CI

@@ -52,4 +52,22 @@ void main() {
     expect(res2, isNull);
     expect(calls, 2);
   });
+
+  test('cache expires after ttl', () async {
+    var calls = 0;
+    final ledger = ApiQuotaLedger(2);
+    final client = NetClient(ledger, MockClient((_) async {
+      calls++;
+      return http.Response('3', 200);
+    }));
+    final cache = LruCache<String, int>(1);
+
+    await client.get<int>('u', cache, (j) => int.parse(j),
+        ttl: const Duration(milliseconds: 1));
+    await Future.delayed(const Duration(milliseconds: 2));
+    await client.get<int>('u', cache, (j) => int.parse(j),
+        ttl: const Duration(milliseconds: 1));
+
+    expect(calls, 2);
+  });
 }
