@@ -1,3 +1,10 @@
+## 2025-06-16 PR #98
+- **Summary**: updated TODO and READMEs to mention NetClient and planned CountrySettingRepository.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: implement CountrySettingRepository for web.
+
 ## 2025-06-16 PR #94
 - **Summary**: introduced `NetClient` wrapper and refactored web services and tests.
 - **Stage**: improvement

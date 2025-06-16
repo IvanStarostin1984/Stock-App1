@@ -95,6 +95,7 @@ Services pass a cache and transform function:
 const client = new NetClient(new ApiQuotaLedger(100));
 client.get(url, cache, json => json.value);
 ```
+The Flutter app uses the same abstraction via `packages/services/lib/src/fetch_json.dart`.
 
 ⚙️ Useful Scripts
 Task	Mobile	Web
