@@ -24,10 +24,10 @@ export class FxService {
   async getRate(base: string, quote: string): Promise<number | null> {
     const url = `https://api.exchangerate.host/latest?base=${base}&symbols=${quote}`;
     const start = performance.now();
-    const rate = await this.client.get<{ rates: Record<string, number> }>(
+    const rate = await this.client.get<number>(
       url,
       this.cache,
-      json => json.rates[quote]
+      json => (json as { rates: Record<string, number> }).rates[quote]
     );
     logApiCall('FxService.getRate', start);
     return rate ?? null;

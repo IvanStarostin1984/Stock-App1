@@ -54,3 +54,4 @@
 - [ ] Monitor CI runs.
 - [ ] Integrate Riverpod and Pinia state stores.
 - [ ] Verify tsconfig paths whenever packages are added.
+- [ ] Investigate flutter analyze errors from generated-dart serializers
