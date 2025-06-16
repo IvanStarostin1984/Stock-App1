@@ -1,3 +1,4 @@
+<<<<<<< codex/create-netclient-parity-tests-for-web-and-mobile
 ## 2025-06-25 PR #XXX
 - **Summary**: added parity tests for NetClient across platforms.
 - **Stage**: testing
@@ -329,6 +330,15 @@ npm test
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: None
 - **Next step**: Populate TODO.md and implement core services.
+=======
+## 2025-06-16 PR #XXX
+- **Summary**: added Node 20 and markdown link check instructions in docs.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: emphasised Node 20; doc link check via npx.
+- **Next step**: add automated job for docs.
+
+>>>>>>> main
 ## 2025-06-24 PR #XXX
 - **Summary**: all Dart services now pass `ttl` to NetClient; TODO resolved.
 - **Stage**: implementation
