@@ -1,4 +1,11 @@
-## 2025-06-16 PR #91
+## 2025-06-16 PR #94
+- **Summary**: introduced `NetClient` wrapper and refactored web services and tests.
+- **Stage**: improvement
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: services now create `NetClient` with their quota ledger to share logic.
+- **Next step**: extend same client to Flutter services.
+
+## 2025-06-16 PR #93
 - **Summary**: cleaned TODO duplicates, marked mobile CI workflow done, and clarified npm install requirement for style-dictionary.
 - **Stage**: documentation
 - **Requirements addressed**: N/A

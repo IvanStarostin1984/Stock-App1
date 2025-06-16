@@ -1,7 +1,7 @@
 import { LruCache } from '@/utils/LruCache';
 import { ApiQuotaLedger } from '@/utils/ApiQuotaLedger';
 import { logApiCall } from '@/utils/logMetrics';
-import { fetchJson } from '../../../packages/core/net';
+import { NetClient } from '../../../packages/core/net';
 import type { Quote } from '../../../packages/generated-ts/models/Quote';
 
 export type { Quote };
@@ -15,6 +15,7 @@ export class MarketstackService {
   private cache = new LruCache<string, Quote>(32);
   private moversCache = new LruCache<string, Quote[]>(4);
   private ledger = new ApiQuotaLedger(100);
+  private client = new NetClient(this.ledger);
   private apiKey: string;
   constructor(apiKey: string) {
     if (typeof apiKey !== 'string' || apiKey.trim() === '') {
@@ -35,10 +36,9 @@ export class MarketstackService {
   async getQuote(symbol: string): Promise<Quote | null> {
     const url = `https://api.marketstack.com/v1/eod/latest?access_key=${this.apiKey}&symbols=${symbol}`;
     const start = performance.now();
-    const quote = await fetchJson<{ data: any[] }>(
+    const quote = await this.client.get<{ data: any[] }>(
       url,
       this.cache,
-      this.ledger,
       json => {
         const raw = json.data[0];
         return {
@@ -68,10 +68,9 @@ export class MarketstackService {
     const gainUrl = `${base}?access_key=${this.apiKey}&limit=5&sort=change_over_time.desc`;
     const loseUrl = `${base}?access_key=${this.apiKey}&limit=5&sort=change_over_time.asc`;
     const start = performance.now();
-    const gainers = await fetchJson<{ data: any[] }>(
+    const gainers = await this.client.get<{ data: any[] }>(
       gainUrl,
       this.moversCache,
-      this.ledger,
       json =>
         json.data.map(raw => ({
           symbol: raw.symbol,
@@ -82,10 +81,9 @@ export class MarketstackService {
           close: raw.close,
         })) as Quote[]
     );
-    const losers = await fetchJson<{ data: any[] }>(
+    const losers = await this.client.get<{ data: any[] }>(
       loseUrl,
       this.moversCache,
-      this.ledger,
       json =>
         json.data.map(raw => ({
           symbol: raw.symbol,

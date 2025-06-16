@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { NewsService, type NewsArticle } from '../src/services/NewsService';
+import { NetClient } from '../../packages/core/net';
 
 const sampleArticles: NewsArticle[] = [
   { title: 't1', url: 'l1', source: 's1', published: 'p1' },
@@ -34,6 +35,7 @@ describe('NewsService', () => {
     const service = new NewsService('key');
     const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
     (service as any).ledger = ledger;
+    (service as any).client = new NetClient(ledger);
     const fetchMock = vi.fn().mockResolvedValue({ ok: true, json: async () => apiPayload() });
     global.fetch = fetchMock as any;
 
@@ -51,6 +53,7 @@ describe('NewsService', () => {
     const service = new NewsService('key');
     const ledger = { isSafe: vi.fn().mockReturnValue(false), increment: vi.fn() };
     (service as any).ledger = ledger;
+    (service as any).client = new NetClient(ledger);
     global.fetch = vi.fn();
 
     const res = await service.getNews('AA');
@@ -62,6 +65,7 @@ describe('NewsService', () => {
     const service = new NewsService('key');
     const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
     (service as any).ledger = ledger;
+    (service as any).client = new NetClient(ledger);
     const fetchMock = vi
       .fn()
       .mockResolvedValueOnce({ ok: false })
@@ -82,6 +86,7 @@ describe('NewsService', () => {
     const service = new NewsService('key');
     const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
     (service as any).ledger = ledger;
+    (service as any).client = new NetClient(ledger);
     const fetchMock = vi
       .fn()
       .mockResolvedValueOnce({ ok: true, json: async () => apiPayload() })

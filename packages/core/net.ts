@@ -28,3 +28,23 @@ export async function fetchJson<T>(
     return null;
   }
 }
+
+/**
+ * Simple client wrapper around `fetchJson` for convenience.
+ */
+export class NetClient {
+  constructor(
+    private ledger: import('../web-app/src/utils/ApiQuotaLedger').ApiQuotaLedger
+  ) {}
+
+  /**
+   * Perform a GET request using an existing cache and the client's ledger.
+   */
+  async get<T>(
+    url: string,
+    cache: import('../web-app/src/utils/LruCache').LruCache<string, T>,
+    transform: (json: any) => T
+  ): Promise<T | null> {
+    return fetchJson(url, cache, this.ledger, transform);
+  }
+}

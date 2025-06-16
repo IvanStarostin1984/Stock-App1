@@ -87,6 +87,15 @@ NewsData.io	200 req / day	12 h cache · automatic RSS fallback
 
 Toast warning at ≥ 90 % of any quota.
 
+### Network client
+`packages/core/net.ts` exposes `NetClient` to standardise HTTP calls.
+Services pass a cache and transform function:
+
+```ts
+const client = new NetClient(new ApiQuotaLedger(100));
+client.get(url, cache, json => json.value);
+```
+
 ⚙️ Useful Scripts
 Task	Mobile	Web
 Dev hot-reload	flutter run	npm run dev
