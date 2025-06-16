@@ -1,6 +1,7 @@
 # TODO
 
 - Implement a unified network layer shared by mobile and web services.
+- [x] Introduce NetClient class in Dart services and update tests.
 
 # Outstanding Tasks
 

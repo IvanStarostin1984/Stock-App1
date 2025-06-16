@@ -34,6 +34,7 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 | **Web**       | Vite + Vue 3 / Pinia · Bootstrap 5 · Chart.js 4                               |
 | **Data**      | Marketstack · Exchangerate.host (key-less) · NewsData.io                      |
 | **Storage**   | IndexedDB / SharedPrefs · **LruCache** · **ApiQuotaLedger**                   |
+| **Networking**| Reusable **NetClient** shared between mobile and web |
 | **CI / CD**   | GitHub Actions → Netlify (free) · Lighthouse CLI ≥ 90/100                    |
 
 ---
