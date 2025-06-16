@@ -1,3 +1,10 @@
+## 2025-06-16 PR #95
+- **Summary**: added CountrySettingRepository and stored country via LocationService.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0109, PR-0008
+- **Deviations/Decisions**: LocationService uses injected repository to avoid circular deps.
+- **Next step**: create web version of repository.
+
 ## 2025-06-16 PR #98
 
 - **Summary**: refactored Flutter services to use `NetClient.get` and updated tests.
@@ -11,7 +18,6 @@
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: none
 - **Next step**: implement CountrySettingRepository for web.
-
 
 ## 2025-06-16 PR #94
 - **Summary**: introduced `NetClient` wrapper and refactored web services and tests.
