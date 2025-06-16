@@ -1,3 +1,10 @@
+## 2025-06-19 PR #XXX
+- **Summary**: added exclude pattern in web tsconfig to ignore package tests and updated AGENTS.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: include list unchanged; compile should ignore tests.
+- **Next step**: confirm vue-tsc respects exclude.
+
 ## 2025-06-19 PR #103
 - **Summary**: noted tsconfig path rule and NetClient.get generic usage in AGENTS.
 - **Stage**: documentation
