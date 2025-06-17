@@ -1,3 +1,10 @@
+## 2025-06-28 PR #XXX
+- **Summary**: CI workflow installs shared package deps and runs their tests.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: monitor pipeline
+
 ## 2025-06-27 PR #XXX
 - **Summary**: CI workflows now run the service package tests with `flutter test` because the package uses Flutter plugins.
 - **Stage**: implementation

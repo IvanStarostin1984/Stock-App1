@@ -28,6 +28,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
         working-directory: web-app
+      - name: Install package deps
+        run: npm ci
+        working-directory: packages
+      - name: Run package tests
+        run: npm test
+        working-directory: packages
       - name: Run tests
         run: npm test
         working-directory: web-app
