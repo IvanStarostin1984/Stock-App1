@@ -1,4 +1,11 @@
 ## 2025-06-17 PR #XXX
+- **Summary**: added start_env.sh script and updated AGENTS setup steps.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: new script ensures packages installs; mobile services dep step after pub get.
+- **Next step**: monitor CI for green build.
+
+## 2025-06-17 PR #XXX
 - **Summary**: fixed NetClient caching tests and location service tests; added flutter_test dep and geolocator stubs.
 - **Stage**: implementation
 - **Requirements addressed**: FR-0104
