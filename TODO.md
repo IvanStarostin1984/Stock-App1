@@ -78,4 +78,4 @@
 - [ ] Verify tsconfig excludes to ensure package tests are ignored.
 - [ ] Investigate flutter analyze errors from generated-dart serializers
 - [x] Update Flutter services to pass ttlMs to NetClient calls
-- [ ] Fix README CI badge links for markdown-link-check
+- [x] Fix README CI badge links for markdown-link-check
