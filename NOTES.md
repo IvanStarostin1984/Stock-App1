@@ -1,3 +1,10 @@
+## 2025-07-15 PR #XXX
+- **Summary**: NewsService now requires API key and parses extra fields; added parity tests and README notes.
+- **Stage**: development
+- **Requirements addressed**: FR-0104
+- **Deviations/Decisions**: constructor now accepts key + ledger; uses ttl constant.
+- **Next step**: ensure CI green.
+
 ## 2025-06-17 PR #XXX
 - **Summary**: added @types crypto packages and tsconfig tweaks so build/test pass.
 - **Stage**: development

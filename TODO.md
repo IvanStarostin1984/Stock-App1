@@ -6,6 +6,7 @@
 - [x] Introduce NetClient class in Dart services and update tests.
 
 # Outstanding Tasks
+- [x] Add parity tests for NewsService
 
 - [x] Implement `packages/core/net.ts` with 24h LRU cache and quota handling.
 - [x] Start **shared-contracts** repo with spec and schema folders, then bundle the public APIs (`openapi.yaml`). (Repo hosted within main project)

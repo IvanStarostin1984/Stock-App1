@@ -8,13 +8,19 @@ class NewsService {
   final LruCache<String, List<Map<String, dynamic>>> _cache = LruCache(32);
   final ApiQuotaLedger _ledger;
   late final NetClient _net;
+  final String _apiKey;
 
-  NewsService([http.Client? client]) : _ledger = ApiQuotaLedger(200) {
+  NewsService(this._apiKey, {ApiQuotaLedger? ledger, http.Client? client})
+      : _ledger = ledger ?? ApiQuotaLedger(200) {
+    if (_apiKey.trim().isEmpty) {
+      throw ArgumentError('Newsdata API key is required');
+    }
     _net = NetClient(_ledger, client);
   }
 
   Future<List<Map<String, dynamic>>?> getDigest(String topic) async {
-    final url = 'https://newsdata.io/api/1/news?q=$topic&language=en';
+    final url =
+        'https://newsdata.io/api/1/news?apikey=$_apiKey&q=$topic&language=en';
     return _net.get<List<Map<String, dynamic>>>(
       url,
       _cache,
@@ -24,6 +30,8 @@ class NewsService {
           return {
             'title': n['title'],
             'url': n['link'],
+            'source': n['source_id'],
+            'published': n['pubDate'],
           };
         }).toList();
       },

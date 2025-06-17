@@ -73,6 +73,8 @@ VITE_NEWSDATA_KEY	pub_123…	News digest
 LHCI_GITHUB_APP_TOKEN gh_abc…   Lighthouse CI (CI only)
 
 Create identical .env files in mobile-app/ and web-app/.
+(For Flutter pass the keys via `--dart-define`, e.g.
+`flutter run --dart-define VITE_NEWSDATA_KEY=pub_123`.)
 (Exchangerate.host is key-less – no variable needed.)
 
 The Flutter app resolves your country once on startup and stores it in
