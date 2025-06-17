@@ -1,3 +1,10 @@
+## 2025-07-15 PR #XXX
+- **Summary**: start_env.sh now installs Flutter if missing; README and AGENTS updated.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: clone official 3.22.2 tag for container setup.
+- **Next step**: run CI to ensure script works.
+
 ## 2025-06-17 PR #XXX
 - **Summary**: added @types crypto packages and tsconfig tweaks so build/test pass.
 - **Stage**: development
