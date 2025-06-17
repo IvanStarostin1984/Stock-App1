@@ -90,6 +90,10 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
   `npx markdown-link-check README.md`.
 - CI runs this check via `.github/workflows/docs.yml`. Run it locally whenever you edit README or other docs files.
 - Provide at least one positive and one negative unit test per public API, aiming for ≥75 % branch coverage.
+- Add parity tests under `web-app/tests/*Parity.test.ts` and
+  `mobile-app/packages/services/test/*_parity_test.dart` to keep mobile and web
+  implementations consistent. These tests must cover cache expiry, ledger usage
+  and error handling across platforms.
 - GitHub Actions in `.github/workflows/ci.yml` will build the web app, run tests, trigger a Netlify deployment and execute Lighthouse CI. Keep the pipeline green.
 
 # Quality gates

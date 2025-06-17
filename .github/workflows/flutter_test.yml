@@ -22,6 +22,11 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
         working-directory: mobile-app
+      - name: Run service package tests
+        run: |
+          dart pub get
+          dart test
+        working-directory: mobile-app/packages/services
       - name: Run Flutter tests
         run: flutter test
         working-directory: mobile-app
