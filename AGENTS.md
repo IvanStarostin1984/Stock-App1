@@ -88,6 +88,7 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 - Run `npm run tokens` (or run tests) before any Flutter analysis or build steps so `tokens.dart` exists.
 - Run the documentation link check with Node 20:
   `npx markdown-link-check README.md`.
+- CI runs this check via `.github/workflows/docs.yml`. Run it locally whenever you edit README or other docs files.
 - Provide at least one positive and one negative unit test per public API, aiming for ≥75 % branch coverage.
 - GitHub Actions in `.github/workflows/ci.yml` will build the web app, run tests, trigger a Netlify deployment and execute Lighthouse CI. Keep the pipeline green.
 
@@ -111,6 +112,7 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 ## Contributing Workflow
 - **Fork** then branch off `main` using the pattern `feat/<topic>`.
 - **Ensure local tests pass** before opening a PR.
+- Run `npx markdown-link-check README.md` whenever docs are updated so the docs CI job passes.
 - **Each PR requires at least one reviewer.**
 
 ## Decision & Progress Logging
