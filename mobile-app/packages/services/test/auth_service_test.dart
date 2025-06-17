@@ -13,4 +13,10 @@ void main() {
     final ok = await svc.login('a@b.com', 'pwd');
     expect(ok, isTrue);
   });
+
+  test('login fails with empty email or password', () async {
+    final svc = AuthService();
+    expect(await svc.login('', 'pwd'), isFalse);
+    expect(await svc.login('a@b.com', ''), isFalse);
+  });
 }

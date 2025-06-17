@@ -1,3 +1,10 @@
+## 2025-06-29 PR #XXX
+- **Summary**: added negative tests for AuthService login rejecting empty inputs.
+- **Stage**: testing
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: stub login returns false when either email or password is empty.
+- **Next step**: monitor CI for cross-tool coverage.
+
 ## 2025-06-28 PR #XXX
 - **Summary**: added SymbolTrie unit tests for basic search behavior.
 - **Stage**: testing
