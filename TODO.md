@@ -81,3 +81,4 @@
 - [x] Document running `flutter pub get -C mobile-app/packages/services` after REST client generation
 - [x] Fix README CI badge links for markdown-link-check
 - [x] Fix README CI badge links for markdown-link-check
+- [x] Add start_env.sh script to automate local setup
