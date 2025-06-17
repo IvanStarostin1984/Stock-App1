@@ -1,3 +1,9 @@
+## 2025-06-17 PR #XXX
+- **Summary**: Document running `npm ci` in web-app before packages tests.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: packages tests import web utilities
+- **Next step**: monitor docs for clarity
 
 ## 2025-07-01 PR #XXX
 - **Summary**: CI failed because packages tests ran before installing web-app dependencies.
