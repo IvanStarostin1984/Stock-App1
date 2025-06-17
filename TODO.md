@@ -54,7 +54,7 @@
 - [ ] Monitor for further API integration.
 - [ ] Use news data on NewsScreen.
 - [ ] Expand store features.
-- [ ] Implement ranking for SymbolTrie suggestions.
+- [x] Implement ranking for SymbolTrie suggestions.
 - [x] Integrate helper in mobile services.
 - [ ] Flesh out real API calls.
 - [ ] Expand state usage across app.
