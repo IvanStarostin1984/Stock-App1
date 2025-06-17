@@ -1,11 +1,26 @@
 ## 2025-06-28 PR #XXX
+
 - **Summary**: CI workflow installs shared package deps and runs their tests.
 - **Stage**: implementation
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: none
 - **Next step**: monitor pipeline
 
+- **Summary**: added SymbolTrie unit tests for basic search behavior.
+- **Stage**: testing
+- **Requirements addressed**: FR-0112
+- **Deviations/Decisions**: simple in-memory trie suffices for now.
+- **Next step**: monitor CI and expand search tests as needed.
+
 ## 2025-06-27 PR #XXX
+- **Summary**: added unit tests for `useLoadTimeLogger` verifying console output in development only. Updated TODO list.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: used a dummy Vue component to invoke the hook; stubbed `NODE_ENV` for dev and prod cases.
+- **Next step**: run CI to confirm tests remain green.
+
+## 2025-06-27 PR #XXX
+
 - **Summary**: CI workflows now run the service package tests with `flutter test` because the package uses Flutter plugins.
 - **Stage**: implementation
 - **Requirements addressed**: N/A

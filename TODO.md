@@ -34,6 +34,7 @@
 - [x] Add ttl parameter to NetClient and pass specific durations in services with tests.
 - [x] Remove obsolete `web-app/packages/services` folder; services live in
   `web-app/src/services`.
+- [x] Add tests for `useLoadTimeLogger` hook.
 
 # In progress
 - [x] Verify cross-platform behaviour of NetClient.
@@ -52,6 +53,7 @@
 - [ ] Monitor for further API integration.
 - [ ] Use news data on NewsScreen.
 - [ ] Expand store features.
+- [ ] Implement ranking for SymbolTrie suggestions.
 - [x] Integrate helper in mobile services.
 - [ ] Flesh out real API calls.
 - [ ] Expand state usage across app.
