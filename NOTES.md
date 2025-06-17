@@ -1,3 +1,4 @@
+
 ## 2025-06-17 PR #XXX
 - **Summary**: CI runs `npm ci` and `npm test` in packages before web build.
 - **Stage**: implementation
@@ -5,7 +6,21 @@
 - **Deviations/Decisions**: packages tests run after Node setup.
 - **Next step**: monitor CI for failures.
 
+## 2025-06-29 PR #XXX
+- **Summary**: added negative tests for AuthService login rejecting empty inputs.
+- **Stage**: testing
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: stub login returns false when either email or password is empty.
+- **Next step**: monitor CI for cross-tool coverage.
+
 ## 2025-06-28 PR #XXX
+
+- **Summary**: CI workflow installs shared package deps and runs their tests.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: monitor pipeline
+
 - **Summary**: added SymbolTrie unit tests for basic search behavior.
 - **Stage**: testing
 - **Requirements addressed**: FR-0112
@@ -18,7 +33,6 @@
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: used a dummy Vue component to invoke the hook; stubbed `NODE_ENV` for dev and prod cases.
 - **Next step**: run CI to confirm tests remain green.
-
 
 ## 2025-06-27 PR #XXX
 
