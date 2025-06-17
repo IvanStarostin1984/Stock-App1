@@ -32,7 +32,8 @@ class AppStateNotifier extends StateNotifier<AppState> {
   AppStateNotifier(
       {QuoteRepository? quotes, NewsService? news, AuthService? auth})
       : _quotes = quotes ?? QuoteRepository(),
-        _news = news ?? NewsService(),
+        _news = news ??
+            NewsService(const String.fromEnvironment('VITE_NEWSDATA_KEY')),
         _auth = auth ?? AuthService(),
         super(const AppState());
 

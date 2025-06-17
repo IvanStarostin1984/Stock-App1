@@ -21,6 +21,7 @@ class _NullMarketstackService extends MarketstackService {
 }
 
 class _FakeNewsService extends NewsService {
+  _FakeNewsService() : super('x');
   @override
   Future<List<Map<String, dynamic>>> getDigest(String topic) async {
     return [];
