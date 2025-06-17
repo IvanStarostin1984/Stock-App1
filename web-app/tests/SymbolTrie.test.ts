@@ -13,5 +13,17 @@ describe('SymbolTrie', () => {
     trie.load(['AAA', 'AAB']);
     expect(trie.search('ZZ')).toEqual([]);
   });
+
+  it('ranks results by edit distance', () => {
+    const trie = new SymbolTrie();
+    trie.load(['AAPLX', 'AAPL', 'AAPLXY']);
+    expect(trie.search('AAPL', 3)).toEqual(['AAPL', 'AAPLX', 'AAPLXY']);
+  });
+
+  it('handles case insensitive queries', () => {
+    const trie = new SymbolTrie();
+    trie.load(['Abc', 'aBD']);
+    expect(trie.search('ab')).toEqual(['Abc', 'aBD']);
+  });
 });
 
