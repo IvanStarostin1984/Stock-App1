@@ -1,3 +1,10 @@
+## 2025-06-17 PR #XX
+- **Summary**: portfolio screen lists holdings via PortfolioRepository and shows total. Added state notifier and tests.
+- **Stage**: development
+- **Requirements addressed**: FR-0106
+- **Deviations/Decisions**: kept simple provider-based state; totals refresh uses cached quotes.
+- **Next step**: monitor CI results
+
 ## 2025-06-17 PR #XXX
 - **Summary**: added @types crypto packages and tsconfig tweaks so build/test pass.
 - **Stage**: development

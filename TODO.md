@@ -47,7 +47,7 @@
 - [ ] Fix container build scripts.
 - [ ] Monitor repo progress.
  - [x] Integrate with AuthService.
-- [ ] Integrate into PortfolioScreen.
+ - [x] Integrate into PortfolioScreen.
  - [x] Implement refreshTotals and integrate with UI.
 - [ ] Extend repositories for other domains.
 - [ ] Implement remaining repositories.
