@@ -5,6 +5,20 @@
 - **Deviations/Decisions**: stub package lacked types; added custom module declaration and limited tsconfig types.
 - **Next step**: monitor CI.
 
+## 2025-07-14 PR #XXX
+- **Summary**: documented requirement to install @types packages when adding new JS packages in web-app.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: prevents TS7016 compile errors.
+- **Next step**: follow guidance when installing packages.
+
+## 2025-06-17 PR #XXX
+- **Summary**: added TODO note to install type packages for AuthService.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: maintain type packages
+
 ## 2025-07-13 PR #XXX
 - **Summary**: Portfolio page displays total value using PortfolioRepository.refreshTotals with cached quotes. Added unit test verifying totals calculation and quote cache usage.
 - **Stage**: implementation
