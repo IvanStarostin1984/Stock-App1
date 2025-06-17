@@ -21,11 +21,14 @@ Future<String?> Function(double lat, double lon) isoCodeGetter =
 
 /// S-04 – LocationService
 class LocationService {
-  final ApiQuotaLedger _ledger = ApiQuotaLedger(1);
+  final ApiQuotaLedger _ledger;
   final CountrySettingRepository _repo;
 
-  LocationService({CountrySettingRepository? repository})
-      : _repo = repository ?? _NullCountryRepo();
+  LocationService({
+    CountrySettingRepository? repository,
+    ApiQuotaLedger? ledger,
+  })  : _repo = repository ?? _NullCountryRepo(),
+        _ledger = ledger ?? ApiQuotaLedger(1);
 
   Future<CountrySetting> resolveCountry() async {
     if (!_ledger.isSafe()) throw Exception('quota exceeded');

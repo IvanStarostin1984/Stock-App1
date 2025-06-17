@@ -37,6 +37,7 @@
 
 # In progress
 - [x] Verify cross-platform behaviour of NetClient.
+- [x] Verify cross-platform behaviour of LocationService.
 - [x] Follow CI instructions for docs.
 - [ ] Monitor CI for cross-tool coverage.
 - [ ] Ensure CI passes with updated hashing.

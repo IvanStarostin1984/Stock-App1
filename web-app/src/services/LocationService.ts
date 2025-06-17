@@ -35,11 +35,15 @@ export const setIsoCodeGetter = (fn: typeof isoCodeGetter) => {
  * Service resolving the user's country via browser geolocation.
  */
 export class LocationService {
-  private ledger = new ApiQuotaLedger(1);
+  private ledger: ApiQuotaLedger;
   private repo: CountrySettingRepository;
 
-  constructor(repo: CountrySettingRepository = new CountrySettingRepository()) {
+  constructor(
+    repo: CountrySettingRepository = new CountrySettingRepository(),
+    ledger: ApiQuotaLedger = new ApiQuotaLedger(1)
+  ) {
     this.repo = repo;
+    this.ledger = ledger;
   }
 
   /**
