@@ -1,3 +1,10 @@
+## 2025-06-17 PR #XXX
+- **Summary**: added @types crypto packages and tsconfig tweaks so build/test pass.
+- **Stage**: development
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: stub package lacked types; added custom module declaration and limited tsconfig types.
+- **Next step**: monitor CI.
+
 ## 2025-07-14 PR #XXX
 - **Summary**: documented requirement to install @types packages when adding new JS packages in web-app.
 - **Stage**: documentation
