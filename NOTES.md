@@ -1,3 +1,10 @@
+## 2025-07-11 PR #XXX
+- **Summary**: document running `flutter pub get` for package services after generating clients.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: ensure service packages have dependencies before analysis
+- **Next step**: monitor docs clarity
+
 ## 2025-07-02 PR #XXX
 - **Summary**: fixed README CI badge and link check.
 - **Stage**: documentation
