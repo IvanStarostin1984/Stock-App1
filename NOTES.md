@@ -1,3 +1,10 @@
+## 2025-07-12 PR #XXX
+- **Summary**: re-ran service package tests after installing dependencies; all tests pass.
+- **Stage**: testing
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: monitor CI
+
 ## 2025-06-17 PR #XXX
 - **Summary**: fixed NetClient caching tests and location service tests; added flutter_test dep and geolocator stubs.
 - **Stage**: implementation
