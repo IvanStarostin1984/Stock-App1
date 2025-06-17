@@ -1,6 +1,6 @@
 # Stock-App1 · **SMWA – Stock Market Mobile & Web Application**
 
-[![CI • unit → build → Lighthouse](https://github.com/IvanStarostin1984/Stock-App1/actions/workflows/ci.yml/badge.svg)](https://github.com/IvanStarostin1984/Stock-App1/actions)
+[![CI • unit → build → Lighthouse](https://img.shields.io/github/actions/workflow/status/IvanStarostin1984/Stock-App1/ci.yml?branch=main)](./.github/workflows/ci.yml)
 
 > **One code-base → two front-ends**: a Flutter 3 .22 mobile app **and** a responsive Vue-powered PWA that surface *end-of-day* market data **without** busting free-tier API limits.
 
@@ -127,9 +127,9 @@ Run tests from each app before pushing:
 cd mobile-app && flutter test
 cd ../web-app && npm test
 ```
-Run the documentation checks with Node 20:
+Run the documentation checks with Node 20 (use `-y` to skip prompts):
 ```bash
-npx markdown-link-check README.md
+npx -y markdown-link-check README.md
 ```
 
 flutter test and npm test – keep CI green

@@ -80,3 +80,4 @@
 - [x] Update Flutter services to pass ttlMs to NetClient calls
 - [x] Document running `flutter pub get -C mobile-app/packages/services` after REST client generation
 - [ ] Fix README CI badge links for markdown-link-check
+- [x] Fix README CI badge links for markdown-link-check
