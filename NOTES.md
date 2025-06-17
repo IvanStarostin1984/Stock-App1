@@ -1,3 +1,10 @@
+## 2025-07-13 PR #XXX
+- **Summary**: added AuthService with AES + bcrypt, new auth store and login page.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0105
+- **Deviations/Decisions**: bcryptjs uses $2a salt; replaced prefix with $2b for parity.
+- **Next step**: ensure CI passes
+
 ## 2025-06-17 PR #XXX
 - **Summary**: ranked SymbolTrie suggestions by edit distance and added tests.
 - **Stage**: development

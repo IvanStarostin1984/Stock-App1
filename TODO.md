@@ -45,7 +45,7 @@
 - [ ] Ensure CI passes with updated hashing.
 - [ ] Fix container build scripts.
 - [ ] Monitor repo progress.
-- [ ] Integrate with AuthService.
+ - [x] Integrate with AuthService.
 - [ ] Integrate into PortfolioScreen.
 - [ ] Implement refreshTotals and integrate with UI.
 - [ ] Extend repositories for other domains.
