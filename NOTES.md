@@ -1,3 +1,10 @@
+## 2025-06-17 PR #XXX
+- **Summary**: ranked SymbolTrie suggestions by edit distance and added tests.
+- **Stage**: development
+- **Requirements addressed**: FR-0112
+- **Deviations/Decisions**: stable sort preserves input order on ties.
+- **Next step**: verify cross-platform parity
+
 ## 2025-07-12 PR #XXX
 - **Summary**: re-ran service package tests after installing dependencies; all tests pass.
 - **Stage**: testing
