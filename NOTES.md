@@ -1,3 +1,10 @@
+## 2025-06-17 PR #XXX
+- **Summary**: added docs CI workflow running markdown-link-check and updated contributor guide.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: Node 20 docs check via docs.yml; contributors must run it locally when editing docs.
+- **Next step**: monitor docs workflow.
+
 ## 2025-06-25 PR #XXX
 - **Summary**: added browser LocationService, integrated with app store and saved country via CountrySettingRepository; docs and tests updated.
 - **Stage**: implementation

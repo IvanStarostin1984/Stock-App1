@@ -37,7 +37,7 @@
 
 # In progress
 - [x] Verify cross-platform behaviour of NetClient.
-- [ ] Follow CI instructions for docs.
+- [x] Follow CI instructions for docs.
 - [ ] Monitor CI for cross-tool coverage.
 - [ ] Ensure CI passes with updated hashing.
 - [ ] Fix container build scripts.
