@@ -36,6 +36,7 @@
   `web-app/src/services`.
 - [x] Add tests for `useLoadTimeLogger` hook.
 - [x] Add negative tests for AuthService login.
+- [ ] Install and maintain `@types/crypto-js` and `@types/bcryptjs` for web AuthService.
 
 # In progress
 - [x] Verify cross-platform behaviour of NetClient.
