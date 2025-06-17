@@ -126,9 +126,9 @@ Run tests from each app before pushing:
 cd mobile-app && flutter test
 cd ../web-app && npm test
 ```
-Run the documentation checks with Node 20:
+Run the documentation checks with Node 20 (use `-y` to skip prompts):
 ```bash
-npx markdown-link-check README.md
+npx -y markdown-link-check README.md
 ```
 
 flutter test and npm test – keep CI green
