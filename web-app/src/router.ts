@@ -5,6 +5,7 @@ import DetailPage from '@/pages/DetailPage.vue';
 import NewsPricesPage from '@/pages/NewsPricesPage.vue';
 import PortfolioPage from '@/pages/PortfolioPage.vue';
 import ProPage from '@/pages/ProPage.vue';
+import LoginPage from '@/pages/LoginPage.vue';
 
 const routes = [
   { path: '/', name: 'main', component: MainPage },
@@ -12,7 +13,8 @@ const routes = [
   { path: '/detail/:symbol?', name: 'detail', component: DetailPage },
   { path: '/news-prices', name: 'news-prices', component: NewsPricesPage },
   { path: '/portfolio', name: 'portfolio', component: PortfolioPage },
-  { path: '/pro', name: 'pro', component: ProPage }
+  { path: '/pro', name: 'pro', component: ProPage },
+  { path: '/login', name: 'login', component: LoginPage }
 ];
 
 const router = createRouter({
