@@ -37,7 +37,7 @@
   `web-app/src/services`.
 - [x] Add tests for `useLoadTimeLogger` hook.
 - [x] Add negative tests for AuthService login.
-- [ ] Install and maintain `@types/crypto-js` and `@types/bcryptjs` for web AuthService.
+- [x] Install and maintain `@types/crypto-js` and `@types/bcryptjs` for web AuthService.
 
 # In progress
 - [x] Verify cross-platform behaviour of NetClient.
@@ -45,10 +45,10 @@
 - [x] Follow CI instructions for docs.
 - [ ] Monitor CI for cross-tool coverage.
 - [ ] Ensure CI passes with updated hashing.
-- [ ] Fix container build scripts.
+ - [x] Fix container build scripts.
 - [ ] Monitor repo progress.
  - [x] Integrate with AuthService.
-- [ ] Integrate into PortfolioScreen.
+ - [x] Integrate into PortfolioScreen.
  - [x] Implement refreshTotals and integrate with UI.
 - [ ] Extend repositories for other domains.
 - [ ] Implement remaining repositories.

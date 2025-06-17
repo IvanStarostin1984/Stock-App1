@@ -56,13 +56,15 @@ cd Stock-App1
 cd packages
 npm run gen:clients   # runs gen:ts and gen:dart
 cd ..
-flutter pub get -C mobile-app/packages/services
 
-# 3 · Mobile (Flutter)
+# 3 · Install dependencies
+./start_env.sh
+
+# 4 · Mobile (Flutter)
 cd mobile-app
-flutter pub get && flutter run        # launches Android emulator
+flutter run        # launches Android emulator
 
-# 4 · Web (PWA)
+# 5 · Web (PWA)
 cd ../web-app
 npm install && npm run dev            # ⇒ http://localhost:5173
 # open http://localhost:5173/login to create a demo account

@@ -1,9 +1,27 @@
-## 2025-07-15 PR #XXX
 - **Summary**: NewsService now requires API key and parses extra fields; added parity tests and README notes.
 - **Stage**: development
 - **Requirements addressed**: FR-0104
 - **Deviations/Decisions**: constructor now accepts key + ledger; uses ttl constant.
 - **Next step**: ensure CI green.
+
+- **Summary**: start_env.sh now installs Flutter if missing; README and AGENTS updated.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: clone official 3.22.2 tag for container setup.
+- **Next step**: run CI to ensure script works.
+
+## 2025-06-17 PR #XX
+- **Summary**: portfolio screen lists holdings via PortfolioRepository and shows total. Added state notifier and tests.
+- **Stage**: development
+- **Requirements addressed**: FR-0106
+- **Deviations/Decisions**: kept simple provider-based state; totals refresh uses cached quotes.
+- **Next step**: monitor CI results
+
+- **Summary**: ticked TODO for crypto type packages; packages already present in web deps.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: monitor docs CI.
 
 ## 2025-06-17 PR #XXX
 - **Summary**: added @types crypto packages and tsconfig tweaks so build/test pass.

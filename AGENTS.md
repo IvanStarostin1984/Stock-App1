@@ -29,21 +29,23 @@ This repository hosts a cross-platform stock market app with a Flutter mobile fr
    cd ..
    ```
    This script replaces running `npm run gen:ts` and `npm run gen:dart` separately.
-2. Mobile app:
+2. Install dependencies:
+   ```bash
+   ./start_env.sh
+   ```
+3. Mobile app:
    ```bash
    cd mobile-app
-   flutter pub get
-   flutter pub get -C packages/services
    flutter run
    ```
-3. Web app:
+4. Web app:
    ```bash
    cd web-app
    npm install && npm run dev
    ```
-Local setup scripts must include `npm ci -C packages` and
-`flutter pub get -C mobile-app/packages/services` so the shared
-packages are ready for tests and analysis.
+`start_env.sh` installs all Node and Flutter dependencies,
+including running `flutter pub get -C mobile-app/packages/services` so
+the shared packages are ready for tests and analysis.
 4. When TypeScript files outside `web-app/src/` are imported (e.g. under
    `packages/`), update `web-app/tsconfig.json` to include those paths and
    exclude `../packages/**/tests` so vue-tsc skips package tests.
