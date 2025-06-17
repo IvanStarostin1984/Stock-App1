@@ -1,4 +1,11 @@
 
+## 2025-07-01 PR #XXX
+- **Summary**: CI failed because packages tests ran before installing web-app dependencies.
+- **Stage**: bug fix
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: Install `web-app` deps first so style-dictionary is ready for tokens.
+- **Next step**: monitor pipeline after reordering.
+
 ## 2025-06-17 PR #XXX
 - **Summary**: CI runs `npm ci` and `npm test` in packages before web build.
 - **Stage**: implementation
