@@ -13,8 +13,8 @@ void main() {
     }));
     final cache = LruCache<String, int>(1);
 
-    final first = await client.get<int>('u', cache, (j) => int.parse(j));
-    final second = await client.get<int>('u', cache, (j) => int.parse(j));
+    final first = await client.get<int>('u', cache, (j) => j as int);
+    final second = await client.get<int>('u', cache, (j) => j as int);
 
     expect(first, 3);
     expect(second, 3);
@@ -30,7 +30,7 @@ void main() {
     }));
     final cache = LruCache<String, int>(1);
 
-    final res = await client.get<int>('u', cache, (j) => int.parse(j));
+    final res = await client.get<int>('u', cache, (j) => j as int);
 
     expect(res, isNull);
     expect(calls, 0);
@@ -45,8 +45,8 @@ void main() {
     }));
     final cache = LruCache<String, int>(1);
 
-    final res1 = await client.get<int>('u', cache, (j) => int.parse(j));
-    final res2 = await client.get<int>('u', cache, (j) => int.parse(j));
+    final res1 = await client.get<int>('u', cache, (j) => j as int);
+    final res2 = await client.get<int>('u', cache, (j) => j as int);
 
     expect(res1, isNull);
     expect(res2, isNull);
@@ -62,10 +62,10 @@ void main() {
     }));
     final cache = LruCache<String, int>(1);
 
-    await client.get<int>('u', cache, (j) => int.parse(j),
+    await client.get<int>('u', cache, (j) => j as int,
         ttl: const Duration(milliseconds: 1));
     await Future.delayed(const Duration(milliseconds: 2));
-    await client.get<int>('u', cache, (j) => int.parse(j),
+    await client.get<int>('u', cache, (j) => j as int,
         ttl: const Duration(milliseconds: 1));
 
     expect(calls, 2);
