@@ -1,3 +1,10 @@
+## 2025-07-18 PR #XXX
+- **Summary**: ticked TODO for crypto type packages; packages already present in web deps.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: monitor docs CI.
+
 ## 2025-06-17 PR #XXX
 - **Summary**: added @types crypto packages and tsconfig tweaks so build/test pass.
 - **Stage**: development
