@@ -44,7 +44,7 @@
 - [x] Follow CI instructions for docs.
 - [ ] Monitor CI for cross-tool coverage.
 - [ ] Ensure CI passes with updated hashing.
-- [ ] Fix container build scripts.
+ - [x] Fix container build scripts.
 - [ ] Monitor repo progress.
  - [x] Integrate with AuthService.
  - [x] Integrate into PortfolioScreen.
