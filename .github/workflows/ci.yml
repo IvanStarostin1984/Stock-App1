@@ -25,16 +25,10 @@ jobs:
           node-version: 20
           cache: 'npm'
           cache-dependency-path: web-app/package-lock.json
-      - name: Install package dependencies
-        run: npm ci
-        working-directory: packages
-      - name: Run package tests
-        run: npm test
-        working-directory: packages
-      - name: Install dependencies
+      - name: Install web dependencies
         run: npm ci
         working-directory: web-app
-      - name: Install package deps
+      - name: Install package dependencies
         run: npm ci
         working-directory: packages
       - name: Run package tests

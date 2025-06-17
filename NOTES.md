@@ -1,3 +1,10 @@
+## 2025-06-17 PR #XXX
+- **Summary**: reorder CI steps so web dependencies install before package tests.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: packages rely on style-dictionary from web-app; removed duplicate install/test pair.
+- **Next step**: monitor CI for token build issues.
+
 
 ## 2025-06-17 PR #XXX
 - **Summary**: CI runs `npm ci` and `npm test` in packages before web build.
