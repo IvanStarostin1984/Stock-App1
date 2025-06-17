@@ -78,6 +78,9 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 - Secrets must remain in `.env`; never commit real API keys.
 - Use 2‑space indentation, single quotes and end files with a newline.
 - Document each public API/function with a doc comment.
+- When introducing new JS packages in `web-app`, also install the matching
+  `@types/...` package (or provide a custom `.d.ts`) to prevent TS7016
+  compilation errors.
 - Log `loadTimeMs` and external API latency in debug builds.
 - State management: Riverpod (Flutter) and Pinia (Vue) – avoid global singletons.
 - The generic parameter of `NetClient.get<T>` must match the transform function's

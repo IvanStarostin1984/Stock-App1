@@ -1,3 +1,10 @@
+## 2025-07-14 PR #XXX
+- **Summary**: documented requirement to install @types packages when adding new JS packages in web-app.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: prevents TS7016 compile errors.
+- **Next step**: follow guidance when installing packages.
+
 ## 2025-06-17 PR #XXX
 - **Summary**: added TODO note to install type packages for AuthService.
 - **Stage**: documentation
