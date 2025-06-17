@@ -71,7 +71,7 @@
 - [x] Document that packages tests depend on web utilities; run `npm ci` in `web-app/` before `packages` tests.
 
 - [x] Remember `mobile-app/packages/services` tests require `flutter test`.
-- [ ] Integrate Riverpod and Pinia state stores.
+- [x] Integrate Riverpod and Pinia state stores.
 - [ ] Verify tsconfig paths whenever packages are added.
 - [ ] Document that `packages/<pkg>/src` must import web utilities using '../../../web-app/src/'.
 - [ ] Add check to ensure packages reference web utilities via '../../web-app/src/…' at the package root and '../../../web-app/src/…' inside `packages/<name>/src`.

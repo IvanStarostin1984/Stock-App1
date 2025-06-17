@@ -26,11 +26,14 @@ class AppState {
 class AppStateNotifier extends StateNotifier<AppState> {
   final QuoteRepository _quotes;
   final NewsService _news;
+  final AuthService _auth;
 
   /// Creates an [AppStateNotifier] with optional service overrides.
-  AppStateNotifier({QuoteRepository? quotes, NewsService? news})
+  AppStateNotifier(
+      {QuoteRepository? quotes, NewsService? news, AuthService? auth})
       : _quotes = quotes ?? QuoteRepository(),
         _news = news ?? NewsService(),
+        _auth = auth ?? AuthService(),
         super(const AppState());
 
   /// Increments the counter by one.
@@ -46,8 +49,21 @@ class AppStateNotifier extends StateNotifier<AppState> {
     final articles = rawNews?.map((e) => NewsArticle.fromMap(e)).toList();
     state = state.copyWith(headline: q, articles: articles);
   }
+
+  /// Attempts to log in via [AuthService].
+  Future<bool> signIn(String email, String password) async {
+    return _auth.login(email, password);
+  }
+
+  /// Registers a new account via [AuthService].
+  Future<Map<String, dynamic>> register(String email, String password) async {
+    return _auth.register(email, password);
+  }
 }
 
 /// Riverpod provider exposing the application state.
+final authServiceProvider = Provider<AuthService>((ref) => AuthService());
+
 final appStateProvider = StateNotifierProvider<AppStateNotifier, AppState>(
-    (ref) => AppStateNotifier());
+  (ref) => AppStateNotifier(auth: ref.read(authServiceProvider)),
+);
