@@ -65,6 +65,7 @@ flutter pub get && flutter run        # launches Android emulator
 # 4 · Web (PWA)
 cd ../web-app
 npm install && npm run dev            # ⇒ http://localhost:5173
+# open http://localhost:5173/login to create a demo account
 Required env vars (MVP)
 Variable	Example	Purpose
 VITE_MARKETSTACK_KEY	9b3e…	EoD quotes
@@ -81,7 +82,7 @@ matching repository backed by `localStorage`.
 📂 Repo Layout
 packages/           shared DTOs + generated REST clients
 mobile-app/         Flutter application (6 screens)
-web-app/            PWA (Vue 3 + Vite, 6 pages)
+web-app/            PWA (Vue 3 + Vite, 7 pages)
 .github/workflows/  CI → unit → build → Lighthouse → Netlify deploy
 docs/               full ISO/IEC 29148 SRS, architecture, slides
 🔒 Free-Tier Guardrails (LIM-0003 … 0007 / 0016)

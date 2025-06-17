@@ -45,7 +45,7 @@
 - [ ] Ensure CI passes with updated hashing.
 - [ ] Fix container build scripts.
 - [ ] Monitor repo progress.
-- [ ] Integrate with AuthService.
+ - [x] Integrate with AuthService.
 - [ ] Integrate into PortfolioScreen.
  - [x] Implement refreshTotals and integrate with UI.
 - [ ] Extend repositories for other domains.
@@ -54,7 +54,7 @@
 - [ ] Monitor for further API integration.
 - [ ] Use news data on NewsScreen.
 - [ ] Expand store features.
-- [ ] Implement ranking for SymbolTrie suggestions.
+- [x] Implement ranking for SymbolTrie suggestions.
 - [x] Integrate helper in mobile services.
 - [ ] Flesh out real API calls.
 - [ ] Expand state usage across app.
@@ -71,7 +71,7 @@
 - [x] Document that packages tests depend on web utilities; run `npm ci` in `web-app/` before `packages` tests.
 
 - [x] Remember `mobile-app/packages/services` tests require `flutter test`.
-- [ ] Integrate Riverpod and Pinia state stores.
+- [x] Integrate Riverpod and Pinia state stores.
 - [ ] Verify tsconfig paths whenever packages are added.
 - [ ] Document that `packages/<pkg>/src` must import web utilities using '../../../web-app/src/'.
 - [ ] Add check to ensure packages reference web utilities via '../../web-app/src/…' at the package root and '../../../web-app/src/…' inside `packages/<name>/src`.

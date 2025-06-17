@@ -17,4 +17,9 @@ describe('router', () => {
     expect(match.name).toBe('detail');
     expect(match.params.symbol).toBe('ABC');
   });
+
+  it('resolves login route', () => {
+    const match = router.resolve('/login');
+    expect(match.name).toBe('login');
+  });
 });

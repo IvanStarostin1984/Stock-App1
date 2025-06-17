@@ -4,6 +4,28 @@
 - **Requirements addressed**: FR-0106
 - **Deviations/Decisions**: simple paragraph output; quoting from cached quotes ensures Marketstack service called once.
 - **Next step**: expand portfolio features and monitor CI.
+
+## 2025-06-17 PR #XXX
+- **Summary**: added login form using AuthService provider with Riverpod; AppState exposes signIn/register; widget tests cover success and failure.
+- **Stage**: development
+- **Requirements addressed**: FR-0105
+- **Deviations/Decisions**: simple status text for outcome
+- **Next step**: verify CI
+
+## 2025-07-13 PR #XXX
+- **Summary**: added AuthService with AES + bcrypt, new auth store and login page.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0105
+- **Deviations/Decisions**: bcryptjs uses $2a salt; replaced prefix with $2b for parity.
+- **Next step**: ensure CI passes
+
+## 2025-06-17 PR #XXX
+- **Summary**: ranked SymbolTrie suggestions by edit distance and added tests.
+- **Stage**: development
+- **Requirements addressed**: FR-0112
+- **Deviations/Decisions**: stable sort preserves input order on ties.
+- **Next step**: verify cross-platform parity
+
 ## 2025-07-12 PR #XXX
 - **Summary**: re-ran service package tests after installing dependencies; all tests pass.
 - **Stage**: testing
