@@ -82,3 +82,4 @@
 - [x] Fix README CI badge links for markdown-link-check
 - [x] Fix README CI badge links for markdown-link-check
 - [x] Add start_env.sh script to automate local setup
+- [ ] Add type stubs for crypto libraries and document tsconfig changes

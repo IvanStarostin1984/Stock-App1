@@ -18,3 +18,4 @@ build/
 # Misc
 .DS_Store
 mobile-app/pubspec.lock
+web-app/tsconfig.tsbuildinfo

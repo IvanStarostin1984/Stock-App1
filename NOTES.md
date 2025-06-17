@@ -1,3 +1,10 @@
+## 2025-06-17 PR #XXX
+- **Summary**: added @types crypto packages and tsconfig tweaks so build/test pass.
+- **Stage**: development
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: stub package lacked types; added custom module declaration and limited tsconfig types.
+- **Next step**: monitor CI.
+
 ## 2025-07-13 PR #XXX
 - **Summary**: Portfolio page displays total value using PortfolioRepository.refreshTotals with cached quotes. Added unit test verifying totals calculation and quote cache usage.
 - **Stage**: implementation
