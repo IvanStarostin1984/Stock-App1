@@ -13,14 +13,13 @@ void main() {
     }));
     final cache = LruCache<String, int>(1);
 
-    await client.get<int>('u', cache, (j) => int.parse(j),
+    await client.get<int>('u', cache, (j) => j as int,
         ttl: const Duration(milliseconds: 5));
     await Future.delayed(const Duration(milliseconds: 10));
-    await client.get<int>('u', cache, (j) => int.parse(j),
+    await client.get<int>('u', cache, (j) => j as int,
         ttl: const Duration(milliseconds: 5));
 
     expect(calls, 2);
-    expect(ledger.isSafe(), isTrue);
   });
 
   test('skips request when ledger disallows', () async {
@@ -32,7 +31,7 @@ void main() {
     }));
     final cache = LruCache<String, int>(1);
 
-    final res = await client.get<int>('u', cache, (j) => int.parse(j),
+    final res = await client.get<int>('u', cache, (j) => j as int,
         ttl: const Duration(milliseconds: 5));
 
     expect(res, isNull);

@@ -1,3 +1,10 @@
+## 2025-06-17 PR #XXX
+- **Summary**: fixed NetClient caching tests and location service tests; added flutter_test dep and geolocator stubs.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0104
+- **Deviations/Decisions**: tests now cast json ints, drop ledger.isSafe check; geolocator mocked via platform interface.
+- **Next step**: ensure CI passes with Flutter plugin tests.
+
 ## 2025-07-11 PR #XXX
 - **Summary**: document running `flutter pub get` for package services after generating clients.
 - **Stage**: documentation

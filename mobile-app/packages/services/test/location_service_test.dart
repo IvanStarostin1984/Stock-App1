@@ -4,7 +4,7 @@ import 'package:smwa_services/src/country_setting_repository.dart';
 import 'package:smwa_services/src/country_setting.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 class _FakeRepo implements CountrySettingRepository {
   CountrySetting? saved;
@@ -16,6 +16,20 @@ class _FakeRepo implements CountrySettingRepository {
   Future<void> save(CountrySetting setting) async {
     saved = setting;
   }
+}
+
+class _FakeGeolocator extends GeolocatorPlatform {
+  @override
+  Future<LocationPermission> checkPermission() async =>
+      LocationPermission.always;
+
+  @override
+  Future<LocationPermission> requestPermission() async =>
+      LocationPermission.always;
+
+  // Unused methods return default values.
+  @override
+  Future<bool> isLocationServiceEnabled() async => true;
 }
 
 Position _pos() => Position(
@@ -32,6 +46,8 @@ Position _pos() => Position(
     );
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
+  GeolocatorPlatform.instance = _FakeGeolocator();
   tearDown(() {
     loc.positionGetter = () => Geolocator.getCurrentPosition();
     loc.isoCodeGetter = (lat, lon) async {
