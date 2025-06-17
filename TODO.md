@@ -35,6 +35,7 @@
 - [x] Remove obsolete `web-app/packages/services` folder; services live in
   `web-app/src/services`.
 - [x] Add tests for `useLoadTimeLogger` hook.
+- [x] Add negative tests for AuthService login.
 
 # In progress
 - [x] Verify cross-platform behaviour of NetClient.
