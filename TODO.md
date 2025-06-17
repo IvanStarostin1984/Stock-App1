@@ -45,7 +45,7 @@
 - [ ] Ensure CI passes with updated hashing.
 - [ ] Fix container build scripts.
 - [ ] Monitor repo progress.
-- [ ] Integrate with AuthService.
+ - [x] Integrate with AuthService.
 - [ ] Integrate into PortfolioScreen.
 - [ ] Implement refreshTotals and integrate with UI.
 - [ ] Extend repositories for other domains.
@@ -54,7 +54,7 @@
 - [ ] Monitor for further API integration.
 - [ ] Use news data on NewsScreen.
 - [ ] Expand store features.
-- [ ] Implement ranking for SymbolTrie suggestions.
+- [x] Implement ranking for SymbolTrie suggestions.
 - [x] Integrate helper in mobile services.
 - [ ] Flesh out real API calls.
 - [ ] Expand state usage across app.
