@@ -1,4 +1,13 @@
 ## 2025-06-27 PR #XXX
+- **Summary**: added unit tests for `useLoadTimeLogger` verifying console output in development only. Updated TODO list.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: used a dummy Vue component to invoke the hook; stubbed `NODE_ENV` for dev and prod cases.
+- **Next step**: run CI to confirm tests remain green.
+
+
+## 2025-06-27 PR #XXX
+
 - **Summary**: CI workflows now run the service package tests with `flutter test` because the package uses Flutter plugins.
 - **Stage**: implementation
 - **Requirements addressed**: N/A

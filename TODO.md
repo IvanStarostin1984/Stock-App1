@@ -34,6 +34,7 @@
 - [x] Add ttl parameter to NetClient and pass specific durations in services with tests.
 - [x] Remove obsolete `web-app/packages/services` folder; services live in
   `web-app/src/services`.
+- [x] Add tests for `useLoadTimeLogger` hook.
 
 # In progress
 - [x] Verify cross-platform behaviour of NetClient.
