@@ -86,6 +86,7 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
   `mobile-app/analysis_options.yaml` and excludes generated design tokens.
 - Run `npm install` in `web-app/` before tests so the style-dictionary build step works.
 - Run `npm run tokens` (or run tests) before any Flutter analysis or build steps so `tokens.dart` exists.
+- `mobile-app/packages/services` uses Flutter plugins, so its tests must run via `flutter test` (not `dart test`).
 - Run the documentation link check with Node 20:
   `npx markdown-link-check README.md`.
 - CI runs this check via `.github/workflows/docs.yml`. Run it locally whenever you edit README or other docs files.
