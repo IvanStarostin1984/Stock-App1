@@ -1,4 +1,11 @@
 ## 2025-06-17 PR #XXX
+- **Summary**: replaced hard-coded owner slug in README badge and clone command.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: used <your-user> placeholder for portability.
+- **Next step**: confirm docs link check passes in CI.
+
+## 2025-06-17 PR #XXX
 - **Summary**: fixed NetClient caching tests and location service tests; added flutter_test dep and geolocator stubs.
 - **Stage**: implementation
 - **Requirements addressed**: FR-0104
