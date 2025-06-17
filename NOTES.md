@@ -1,3 +1,9 @@
+## 2025-07-11 PR #XXX
+- **Summary**: document running `flutter pub get` for package services after generating clients.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: ensure service packages have dependencies before analysis
+- **Next step**: monitor docs clarity
 ## 2025-06-17 PR #XXX
 
 - **Summary**: reorder CI steps so web dependencies install before package tests.

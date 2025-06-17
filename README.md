@@ -56,6 +56,7 @@ cd Stock-App1
 cd packages
 npm run gen:clients   # runs gen:ts and gen:dart
 cd ..
+flutter pub get -C mobile-app/packages/services
 
 # 3 · Mobile (Flutter)
 cd mobile-app
