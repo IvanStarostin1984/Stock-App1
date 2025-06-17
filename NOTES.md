@@ -1,3 +1,10 @@
+## 2025-07-13 PR #XXX
+- **Summary**: Portfolio page displays total value using PortfolioRepository.refreshTotals with cached quotes. Added unit test verifying totals calculation and quote cache usage.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0106
+- **Deviations/Decisions**: simple paragraph output; quoting from cached quotes ensures Marketstack service called once.
+- **Next step**: expand portfolio features and monitor CI.
+
 ## 2025-06-17 PR #XXX
 - **Summary**: added login form using AuthService provider with Riverpod; AppState exposes signIn/register; widget tests cover success and failure.
 - **Stage**: development
@@ -18,7 +25,6 @@
 - **Requirements addressed**: FR-0112
 - **Deviations/Decisions**: stable sort preserves input order on ties.
 - **Next step**: verify cross-platform parity
-
 
 ## 2025-07-12 PR #XXX
 - **Summary**: re-ran service package tests after installing dependencies; all tests pass.
