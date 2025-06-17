@@ -1,3 +1,11 @@
+
+## 2025-06-17 PR #XXX
+- **Summary**: CI runs `npm ci` and `npm test` in packages before web build.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: packages tests run after Node setup.
+- **Next step**: monitor CI for failures.
+
 ## 2025-06-29 PR #XXX
 - **Summary**: added negative tests for AuthService login rejecting empty inputs.
 - **Stage**: testing

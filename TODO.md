@@ -62,6 +62,7 @@
 - [ ] Wire Flutter store.
 - [ ] Monitor CI runs.
 - [x] Keep AGENTS.md up to date whenever CI tooling changes.
+- [ ] Ensure packages tests run via `npm ci` and `npm test` in CI workflow.
 - [ ] Remember `mobile-app/packages/services` tests require `flutter test`.
 - [ ] Integrate Riverpod and Pinia state stores.
 - [ ] Verify tsconfig paths whenever packages are added.

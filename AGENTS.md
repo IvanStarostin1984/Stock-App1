@@ -85,6 +85,8 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 - `flutter analyze` at the repo root uses `analysis_options.yaml` which includes
   `mobile-app/analysis_options.yaml` and excludes generated design tokens.
 - Run `npm install` in `web-app/` before tests so the style-dictionary build step works.
+- After setting up Node, run `npm ci` and `npm test` in `packages/` to verify the
+  shared client packages.
 - Run `npm run tokens` (or run tests) before any Flutter analysis or build steps so `tokens.dart` exists.
 - `mobile-app/packages/services` uses Flutter plugins, so its tests must run via `flutter test` (not `dart test`).
 - The shared packages under `packages/` install via `npm ci` and run `npm test` in CI.
