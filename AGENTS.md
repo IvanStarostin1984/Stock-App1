@@ -88,11 +88,13 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 - Package tests import utilities from `web-app/src/`, so run `npm ci` in `web-app/` before executing tests in `packages/`.
 - After setting up Node, run `npm ci` and `npm test` in `packages/` to verify the
   shared client packages.
+- After generating REST clients, run `flutter pub get -C mobile-app/packages/services` so
+  the service package has its dependencies ready.
 - Run `npm run tokens` (or run tests) before any Flutter analysis or build steps so `tokens.dart` exists.
 - `mobile-app/packages/services` uses Flutter plugins, so its tests must run via `flutter test` (not `dart test`).
 - The shared packages under `packages/` install via `npm ci` and run `npm test` in CI.
-- Run the documentation link check with Node 20:
-  `npx markdown-link-check README.md`.
+- Run the documentation link check with Node 20 (use `-y` to skip prompts):
+  `npx -y markdown-link-check README.md`.
 - CI runs this check via `.github/workflows/docs.yml`. Run it locally whenever you edit README or other docs files.
 - Provide at least one positive and one negative unit test per public API, aiming for ≥75 % branch coverage.
 - Add parity tests under `web-app/tests/*Parity.test.ts` and
@@ -121,7 +123,7 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 ## Contributing Workflow
 - **Fork** then branch off `main` using the pattern `feat/<topic>`.
 - **Ensure local tests pass** before opening a PR.
-- Run `npx markdown-link-check README.md` whenever docs are updated so the docs CI job passes.
+- Run `npx -y markdown-link-check README.md` whenever docs are updated to avoid prompts and keep the docs CI job green.
 - **Each PR requires at least one reviewer.**
 
 ## Decision & Progress Logging

@@ -1,10 +1,31 @@
-
 ## 2025-06-17 PR #XXX
 - **Summary**: fixed NetClient caching tests and location service tests; added flutter_test dep and geolocator stubs.
 - **Stage**: implementation
 - **Requirements addressed**: FR-0104
 - **Deviations/Decisions**: tests now cast json ints, drop ledger.isSafe check; geolocator mocked via platform interface.
 - **Next step**: ensure CI passes with Flutter plugin tests.
+
+## 2025-07-11 PR #XXX
+- **Summary**: document running `flutter pub get` for package services after generating clients.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: ensure service packages have dependencies before analysis
+- **Next step**: monitor docs clarity
+
+## 2025-07-02 PR #XXX
+- **Summary**: fixed README CI badge and link check.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: changed remote badge link to local path; uses shields.io for status.
+- **Next step**: ensure docs job passes.
+
+## 2025-06-17 PR #XXX
+- **Summary**: clarified docs link check uses `npx -y markdown-link-check` to skip prompts.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: kept docs CI workflow consistent with new command.
+- **Next step**: monitor docs pipeline.
+
 ## 2025-06-17 PR #XXX
 
 - **Summary**: reorder CI steps so web dependencies install before package tests.
