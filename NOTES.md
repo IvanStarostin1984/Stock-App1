@@ -1,3 +1,10 @@
+## 2025-06-27 PR #XXX
+- **Summary**: CI workflows now run the service package tests with `flutter test` because the package uses Flutter plugins.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: replaced `dart test` with `flutter test` in CI for plugin compatibility.
+- **Next step**: ensure CI passes after workflow updates.
+
 ## 2025-06-26 PR #XXX
 - **Summary**: added LocationService parity tests across web and mobile and enabled service package tests in CI.
 - **Stage**: testing

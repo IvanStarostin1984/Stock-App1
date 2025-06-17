@@ -24,8 +24,8 @@ jobs:
         working-directory: mobile-app
       - name: Run service package tests
         run: |
-          dart pub get
-          dart test
+          flutter pub get
+          flutter test
         working-directory: mobile-app/packages/services
       - name: Run Flutter tests
         run: flutter test
