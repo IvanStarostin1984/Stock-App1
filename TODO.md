@@ -47,7 +47,7 @@
 - [ ] Monitor repo progress.
 - [ ] Integrate with AuthService.
 - [ ] Integrate into PortfolioScreen.
-- [ ] Implement refreshTotals and integrate with UI.
+ - [x] Implement refreshTotals and integrate with UI.
 - [ ] Extend repositories for other domains.
 - [ ] Implement remaining repositories.
 - [ ] Enhance services to parse real API data.

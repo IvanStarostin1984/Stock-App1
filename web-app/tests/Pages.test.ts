@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
+import 'fake-indexeddb/auto';
 import { createPinia, setActivePinia } from 'pinia';
 import MainPage from '../src/pages/MainPage.vue';
 import DetailPage from '../src/pages/DetailPage.vue';
@@ -12,6 +13,17 @@ import { useRoute } from 'vue-router';
 let storeMock: any;
 vi.mock('../src/stores/appStore', () => ({
   useAppStore: () => storeMock
+}));
+const getQuote = vi.fn().mockResolvedValue({
+  symbol: 'AAPL',
+  price: 1,
+  open: 1,
+  high: 1,
+  low: 1,
+  close: 1
+});
+vi.mock('../src/services/MarketstackService', () => ({
+  MarketstackService: vi.fn().mockImplementation(() => ({ getQuote }))
 }));
 
 vi.mock('vue-router', () => ({ useRoute: vi.fn() }));

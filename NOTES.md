@@ -1,3 +1,9 @@
+## 2025-07-13 PR #XXX
+- **Summary**: Portfolio page displays total value using PortfolioRepository.refreshTotals with cached quotes. Added unit test verifying totals calculation and quote cache usage.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0106
+- **Deviations/Decisions**: simple paragraph output; quoting from cached quotes ensures Marketstack service called once.
+- **Next step**: expand portfolio features and monitor CI.
 ## 2025-07-12 PR #XXX
 - **Summary**: re-ran service package tests after installing dependencies; all tests pass.
 - **Stage**: testing
