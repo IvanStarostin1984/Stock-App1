@@ -31,11 +31,23 @@ jobs:
       - name: Install package dependencies
         run: npm ci
         working-directory: packages
-      - name: Run package tests
-        run: npm test
+      - name: Run package tests with coverage
+        run: |
+          npm install --no-save -D @vitest/coverage-v8
+          npx vitest run --coverage --coverage.provider=v8 \
+            --coverage.thresholds.lines=75 \
+            --coverage.thresholds.functions=75 \
+            --coverage.thresholds.branches=75 \
+            --coverage.thresholds.statements=75
         working-directory: packages
-      - name: Run tests
-        run: npm test
+      - name: Run web tests with coverage
+        run: |
+          npx vitest run --coverage --coverage.provider=v8 \
+            --coverage.thresholds.lines=75 \
+            --coverage.thresholds.functions=75 \
+            --coverage.thresholds.branches=75 \
+            --coverage.thresholds.statements=75
+          npx jest --coverage --coverageThreshold='{ "global": { "branches": 75, "functions": 75, "lines": 75, "statements": 75 } }'
         working-directory: web-app
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
@@ -45,13 +57,13 @@ jobs:
       - name: Install Flutter dependencies
         run: flutter pub get
         working-directory: mobile-app
-      - name: Run service package tests
+      - name: Run service package tests with coverage
         run: |
           flutter pub get
-          flutter test
+          VITE_NEWSDATA_KEY=test flutter test --coverage
         working-directory: mobile-app/packages/services
-      - name: Run Flutter tests
-        run: flutter test
+      - name: Run Flutter tests with coverage
+        run: VITE_NEWSDATA_KEY=test flutter test --coverage
         working-directory: mobile-app
       - name: Build
         run: npm run build
@@ -75,4 +87,24 @@ jobs:
         with:
           name: lighthouse-report
           path: web-app/.lighthouseci
+      - name: Upload web coverage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-web
+          path: web-app/coverage
+      - name: Upload Flutter coverage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-flutter
+          path: |
+            mobile-app/coverage
+            mobile-app/packages/services/coverage
+      - name: Upload package coverage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-packages
+          path: packages/coverage
 

@@ -1,3 +1,10 @@
+## 2025-06-18 PR #XX
+- **Summary**: CI now runs tests with coverage and fails below 75%. Coverage reports upload as artifacts and docs updated.
+- **Stage**: development
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: threshold chosen to match README guidance.
+- **Next step**: monitor CI results
+
 - **Summary**: NewsService now requires API key and parses extra fields; added parity tests and README notes.
 - **Stage**: development
 - **Requirements addressed**: FR-0104
