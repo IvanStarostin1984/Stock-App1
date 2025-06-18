@@ -1,3 +1,6 @@
+- 2025-06-18: Added RSS fallback to NewsService with tests; README explains fallback.
+  Reason: ensure digest when NewsData fails (FR-0104). Decisions: parse via DOMParser,
+  reuse cache with 12h TTL.
 - **Summary**: NewsService now requires API key and parses extra fields; added parity tests and README notes.
 - **Stage**: development
 - **Requirements addressed**: FR-0104

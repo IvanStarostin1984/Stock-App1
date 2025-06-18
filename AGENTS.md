@@ -102,6 +102,8 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 - After generating REST clients, run `flutter pub get -C mobile-app/packages/services` so
   the service package has its dependencies ready.
 - Run `npm run tokens` (or run tests) before any Flutter analysis or build steps so `tokens.dart` exists.
+- Flutter tests require API keys via `--dart-define`:
+  `flutter test --dart-define=VITE_NEWSDATA_KEY=dummy --dart-define=VITE_MARKETSTACK_KEY=dummy`.
 - `mobile-app/packages/services` uses Flutter plugins, so its tests must run via `flutter test` (not `dart test`).
 - The shared packages under `packages/` install via `npm ci` and run `npm test` in CI.
 - Run the documentation link check with Node 20 (use `-y` to skip prompts):

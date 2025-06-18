@@ -2,6 +2,7 @@ import { LruCache } from '@/utils/LruCache';
 import { ApiQuotaLedger } from '@/utils/ApiQuotaLedger';
 import { logApiCall } from '@/utils/logMetrics';
 import { NetClient, HALF_DAY_MS } from '../../../packages/core/net';
+/* global DOMParser */
 
 export interface NewsArticle {
   title: string;
@@ -32,6 +33,17 @@ export class NewsService {
     this.apiKey = apiKey;
   }
 
+  private parseRss(xml: string): NewsArticle[] {
+    const doc = new DOMParser().parseFromString(xml, 'text/xml');
+    const items = Array.from(doc.querySelectorAll('item')).slice(0, 3);
+    return items.map(item => ({
+      title: item.querySelector('title')?.textContent ?? '',
+      url: item.querySelector('link')?.textContent ?? '',
+      source: item.querySelector('source')?.textContent ?? 'rss',
+      published: item.querySelector('pubDate')?.textContent ?? '',
+    }));
+  }
+
   /**
    * Retrieve up to three recent articles about the given symbol.
    *
@@ -44,7 +56,8 @@ export class NewsService {
   async getNews(symbol: string): Promise<NewsArticle[] | null> {
     const url = `https://newsdata.io/api/1/news?apikey=${this.apiKey}&q=${symbol}&language=en`;
     const start = performance.now();
-    const articles = await this.client.get<NewsArticle[]>(
+    if (!this.ledger.isSafe()) return null;
+    let articles = await this.client.get<NewsArticle[]>(
       url,
       this.cache,
       json => {
@@ -59,6 +72,20 @@ export class NewsService {
       HALF_DAY_MS
     );
     logApiCall('NewsService.getNews', start);
-    return articles ?? null;
+    if (articles) return articles;
+
+    const rssUrl = 'https://rss.theguardian.com/business/markets/index.xml';
+    const cached = this.cache.get(rssUrl);
+    if (cached !== undefined) return cached;
+    try {
+      const resp = await fetch(rssUrl);
+      if (!resp.ok) return null;
+      const xml = await resp.text();
+      articles = this.parseRss(xml);
+      this.cache.put(rssUrl, articles, HALF_DAY_MS);
+      return articles;
+    } catch {
+      return null;
+    }
   }
 }
