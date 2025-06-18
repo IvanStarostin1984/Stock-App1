@@ -28,6 +28,9 @@ jobs:
       - name: Install web dependencies
         run: npm ci
         working-directory: web-app
+      - name: Build design tokens
+        run: npm run tokens
+        working-directory: web-app
       - name: Install package dependencies
         run: npm ci
         working-directory: packages

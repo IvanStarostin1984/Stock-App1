@@ -1,3 +1,10 @@
+## 2025-07-21 PR #XX
+- **Summary**: fixed CI tests failing due to missing design tokens.
+- **Stage**: bug fix
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: CI now runs `npm run tokens` before Node tests; AGENTS updated.
+- **Next step**: monitor pipeline for green status.
+
 ## 2025-06-18 PR #XX
 - **Summary**: documented coverage exclude paths in README and closed TODO.
 - **Stage**: documentation

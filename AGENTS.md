@@ -102,6 +102,7 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 - After generating REST clients, run `flutter pub get -C mobile-app/packages/services` so
   the service package has its dependencies ready.
 - Run `npm run tokens` (or run tests) before any Flutter analysis or build steps so `tokens.dart` exists.
+- Run `npm run tokens` before web tests if you invoke `npx vitest` or `npx jest` directly. Their pretest hook does not run automatically.
 - Flutter tests require API keys via `--dart-define`:
   `flutter test --dart-define=VITE_NEWSDATA_KEY=dummy --dart-define=VITE_MARKETSTACK_KEY=dummy`.
 - `mobile-app/packages/services` uses Flutter plugins, so its tests must run via `flutter test` (not `dart test`).
