@@ -1,3 +1,10 @@
+## 2025-06-18 PR #XX
+- **Summary**: documented how web-prototype guides design tokens.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: web-prototype stays read-only; tokens copied to web-app.
+- **Next step**: integrate new tokens into Vue pages.
+
 ## 2025-07-23 PR #XX
 - **Summary**: added web-prototype folder for design mockups.
 - **Stage**: planning
