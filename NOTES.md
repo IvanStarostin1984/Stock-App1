@@ -1,3 +1,10 @@
+## 2025-07-20 PR #XX
+- **Summary**: resolved merge conflict markers in NOTES and kept both entries.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: maintained newest-first order.
+- **Next step**: run docs link check.
+
 ## 2025-07-19 PR #XX
 - **Summary**: documented coverage exclusions for `packages/core/src/**` and
   `packages/vitest.config.ts`; synced README and vitest config.
@@ -12,6 +19,13 @@
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: pattern now independent of working directory.
 - **Next step**: verify CI.
+
+## 2025-06-18 PR #XX
+- **Summary**: fixed test config closing brace so vitest can run.
+- **Stage**: development
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: inserted missing brace to close test block.
+- **Next step**: run packages tests in CI.
 
 ## 2025-06-18 PR #XX
 - **Summary**: added tests for fetchJson error handling and NetClient caching; coverage now above 75%.
