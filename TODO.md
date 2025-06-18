@@ -79,6 +79,7 @@
 - [ ] Document that `packages/<pkg>/src` must import web utilities using '../../../web-app/src/'.
 - [ ] Add check to ensure packages reference web utilities via '../../web-app/src/…' at the package root and '../../../web-app/src/…' inside `packages/<name>/src`.
 - [ ] Verify tsconfig excludes to ensure package tests are ignored.
+- [x] Add vitest config in packages to ignore generated clients from coverage.
 - [ ] Investigate flutter analyze errors from generated-dart serializers
 - [x] Update Flutter services to pass ttlMs to NetClient calls
 - [x] Document running `flutter pub get -C mobile-app/packages/services` after REST client generation
