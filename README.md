@@ -49,7 +49,7 @@ Detailed setup steps live in `AGENTS.md`.
 
 ```bash
 # 1 · Clone
-git clone https://github.com/<your-user>/Stock-App1.git
+git clone https://github.com/<your-user>/Stock-App1.git  # replace <your-user> with your GitHub username
 cd Stock-App1
 
 # 2 · Generate REST clients

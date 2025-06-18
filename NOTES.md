@@ -1,4 +1,11 @@
 ## 2025-06-18 PR #XX
+- **Summary**: clarified that `<your-user>` placeholders in README and AGENTS should be replaced with your GitHub handle when forking.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: keep placeholder for portability while reminding contributors to customize.
+- **Next step**: run markdown link check.
+
+## 2025-06-18 PR #XX
 - **Summary**: NewsService now skips RSS fetch when ledger is exhausted. Updated parity test and docs.
 - **Stage**: development
 - **Requirements addressed**: FR-0104
