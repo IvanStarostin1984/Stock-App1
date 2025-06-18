@@ -16,3 +16,14 @@ onMounted(() => {
 
 useLoadTimeLogger('ProPage');
 </script>
+
+<style scoped>
+.page {
+  padding: var(--space-grid-4);
+  font-family: var(--font-body);
+}
+h1 {
+  font-family: var(--font-display);
+  color: var(--clr-primary-700);
+}
+</style>

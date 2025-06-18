@@ -1,3 +1,4 @@
+- [ ] Split font weights from font family tokens for easier CSS usage.
 # TODO
 
 - [x] Implement a unified network layer shared by mobile and web services.

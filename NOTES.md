@@ -1,4 +1,10 @@
 ## 2025-06-18 PR #XX
+- **Summary**: replaced colours and fonts in Vue pages with design tokens; imported tokens.scss globally.
+- **Stage**: development
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: tokens.scss generated at build; pages now use CSS variables.
+- **Next step**: refine layout based on prototype.
+
 - **Summary**: imported colours and fonts from styleguide into tokens and rebuilt design tokens.
 - **Stage**: implementation
 - **Requirements addressed**: N/A
