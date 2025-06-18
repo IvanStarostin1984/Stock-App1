@@ -45,4 +45,28 @@ void main() {
     await svc.getDigest('stocks');
     expect(calls, 1);
   });
+
+  test('falls back to rss on failure', () async {
+    var calls = 0;
+    final rss =
+        '''<rss><channel><item><title>r</title><link>l</link><pubDate>p</pubDate></item></channel></rss>''';
+    final client = MockClient((req) async {
+      calls++;
+      if (calls == 1) {
+        return http.Response('', 500);
+      }
+      return http.Response(rss, 200);
+    });
+    final svc = NewsService('k', client: client);
+    final news = await svc.getDigest('stocks');
+    expect(news?.first['title'], 'r');
+    expect(calls, 2);
+  });
+
+  test('returns null when rss also fails', () async {
+    final client = MockClient((req) async => http.Response('', 500));
+    final svc = NewsService('k', client: client);
+    final news = await svc.getDigest('stocks');
+    expect(news, isNull);
+  });
 }

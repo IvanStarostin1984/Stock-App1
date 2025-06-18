@@ -1,3 +1,10 @@
+## 2025-07-16 PR #XX
+- **Summary**: added RSS fallback in mobile NewsService with tests and docs.
+- **Stage**: development
+- **Requirements addressed**: FR-0104, IF-0130
+- **Deviations/Decisions**: uses xml package for simple parser.
+- **Next step**: monitor CI.
+
 - **Summary**: NewsService now requires API key and parses extra fields; added parity tests and README notes.
 - **Stage**: development
 - **Requirements addressed**: FR-0104
