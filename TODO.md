@@ -92,7 +92,7 @@
 - [x] Document installing `@types` packages when adding new JS dependencies to avoid TS7016 errors.
 - [x] Verify RSS fallback on mobile NewsService.
 - [x] Document customizing the `<your-user>` placeholder after forking the repo.
-- [ ] Keep `packages/vitest.config.ts` exclude patterns in sync with README
+- [x] Keep `packages/vitest.config.ts` exclude patterns in sync with README
       coverage instructions.
 - [ ] Maintain >75% coverage for packages tests
 - [ ] Add linter or pre-test step that verifies vitest config syntax parses.

@@ -6,11 +6,13 @@
 - **Next step**: run docs link check.
 
 ## 2025-07-19 PR #XX
-- **Summary**: documented new vitest config parsing step in AGENTS.
+- **Summary**: documented coverage exclusions for `packages/core/src/**` and
+  `packages/vitest.config.ts`; synced README and vitest config.
 - **Stage**: documentation
 - **Requirements addressed**: N/A
-- **Deviations/Decisions**: ensures config errors fail fast.
-- **Next step**: run markdown link check.
+- **Deviations/Decisions**: coverage rules now consistent across docs and config.
+- **Next step**: run markdown link check and verify packages tests.
+
 ## 2025-07-18 PR #XX
 - **Summary**: updated vitest coverage patterns to `**/generated-*/**` and clarified README about generated client exclusion and 75% packages coverage.
 - **Stage**: documentation
