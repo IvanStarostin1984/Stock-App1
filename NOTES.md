@@ -1,4 +1,11 @@
 ## 2025-06-18 PR #XX
+- **Summary**: Fixed vitest coverage exclusion so generated clients are not reported.
+- **Stage**: development
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: coverage config must be nested under `test`
+- **Next step**: ensure CI green
+
+## 2025-06-18 PR #XX
 - **Summary**: clarified that `<your-user>` placeholders in README and AGENTS should be replaced with your GitHub handle when forking.
 - **Stage**: documentation
 - **Requirements addressed**: N/A
