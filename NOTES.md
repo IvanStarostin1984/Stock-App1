@@ -17,6 +17,13 @@
 - **Next step**: use tokens in UI components.
 
 ## 2025-06-18 PR #XX
+- **Summary**: clarified tsconfig update when adding packages and import paths.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: keep TODO tasks up to date.
+
+## 2025-06-18 PR #XX
 - **Summary**: documented how web-prototype guides design tokens.
 - **Stage**: documentation
 - **Requirements addressed**: N/A
