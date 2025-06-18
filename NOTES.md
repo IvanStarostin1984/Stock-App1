@@ -1,3 +1,10 @@
+## 2025-07-22 PR #XX
+- **Summary**: CI now supplies Flutter tests with a dummy API key via `--dart-define`.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: workflows call `flutter test --dart-define=VITE_NEWSDATA_KEY=test`.
+- **Next step**: monitor CI for failures.
+
 ## 2025-07-21 PR #XX
 - **Summary**: fixed CI tests failing due to missing design tokens.
 - **Stage**: bug fix

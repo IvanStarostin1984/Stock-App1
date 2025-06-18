@@ -103,8 +103,9 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
   the service package has its dependencies ready.
 - Run `npm run tokens` (or run tests) before any Flutter analysis or build steps so `tokens.dart` exists.
 - Run `npm run tokens` before web tests if you invoke `npx vitest` or `npx jest` directly. Their pretest hook does not run automatically.
-- Flutter tests require API keys via `--dart-define`:
-  `flutter test --dart-define=VITE_NEWSDATA_KEY=dummy --dart-define=VITE_MARKETSTACK_KEY=dummy`.
+- Flutter tests require API keys via `--dart-define`. CI passes a dummy NewsData key:
+  `flutter test --dart-define=VITE_NEWSDATA_KEY=test`.
+  Include `--dart-define=VITE_MARKETSTACK_KEY=dummy` locally if Marketstack API calls run in tests.
 - `mobile-app/packages/services` uses Flutter plugins, so its tests must run via `flutter test` (not `dart test`).
 - The shared packages under `packages/` install via `npm ci` and run `npm test` in CI.
 - Run the documentation link check with Node 20 (use `-y` to skip prompts):

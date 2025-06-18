@@ -25,8 +25,8 @@ jobs:
       - name: Run service package tests
         run: |
           flutter pub get
-          flutter test
+          flutter test --dart-define=VITE_NEWSDATA_KEY=test
         working-directory: mobile-app/packages/services
       - name: Run Flutter tests
-        run: flutter test
+        run: flutter test --dart-define=VITE_NEWSDATA_KEY=test
         working-directory: mobile-app

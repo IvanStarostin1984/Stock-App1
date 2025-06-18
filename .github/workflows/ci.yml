@@ -63,10 +63,10 @@ jobs:
       - name: Run service package tests with coverage
         run: |
           flutter pub get
-          VITE_NEWSDATA_KEY=test flutter test --coverage
+          flutter test --coverage --dart-define=VITE_NEWSDATA_KEY=test
         working-directory: mobile-app/packages/services
       - name: Run Flutter tests with coverage
-        run: VITE_NEWSDATA_KEY=test flutter test --coverage
+        run: flutter test --coverage --dart-define=VITE_NEWSDATA_KEY=test
         working-directory: mobile-app
       - name: Build
         run: npm run build

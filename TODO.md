@@ -88,6 +88,7 @@
 - [x] Fix README CI badge links for markdown-link-check
 - [x] Fix README CI badge links for markdown-link-check
 - [x] Add start_env.sh script to automate local setup
+- [x] Update CI workflows to pass API keys via `--dart-define`
 - [ ] Add type stubs for crypto libraries and document tsconfig changes
 - [x] Document installing `@types` packages when adding new JS dependencies to avoid TS7016 errors.
 - [x] Verify RSS fallback on mobile NewsService.

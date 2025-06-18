@@ -112,7 +112,7 @@ The PWA's services now live directly under `web-app/src/services/`; the old
 ⚙️ Useful Scripts
 Task	Mobile	Web
 Dev hot-reload	flutter run	npm run dev
-Unit tests      flutter test (in mobile-app/)    npm test (in web-app/)
+Unit tests      flutter test --dart-define VITE_NEWSDATA_KEY=test --coverage (in mobile-app/)    npm test (in web-app/)
 Lint / format	dart format .	npm run lint
 REST clients    –               npm run gen:clients (in packages/)
 Build (CI)	GitHub Action → Netlify preview	(same)
@@ -129,7 +129,7 @@ Fork → branch feat/<topic>
 
 Run tests from each app and the shared packages before pushing:
 ```bash
-cd mobile-app && flutter test --coverage
+cd mobile-app && flutter test --dart-define VITE_NEWSDATA_KEY=test --coverage
 cd ../web-app && npx vitest run --coverage
 cd ../packages && npx vitest run --coverage
 ```
