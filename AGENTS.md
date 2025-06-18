@@ -63,7 +63,7 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 (Exchangerate.host is key-less – no variable needed.)
 
 ## Design Reference
-The folder `web-prototype/` contains HTML/CSS exported from Figma. Treat it as read-only. Copy colours, fonts and layout cues into `web-app/design-tokens/tokens.json` and Vue pages rather than importing the raw files.
+The folder `web-prototype/` contains HTML/CSS exported from Figma. Treat it as read-only. Colours and font names in `web-app/design-tokens/tokens.json` are parsed from `web-prototype/CSS/styleguide.css`. Copy layout cues manually when building Vue pages.
 
 ## API hygiene
 (API requests are implemented in service classes under `web-app/src/services/`.)
