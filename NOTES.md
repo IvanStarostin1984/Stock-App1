@@ -1,3 +1,10 @@
+## 2025-07-17 PR #XX
+- **Summary**: added vitest config for packages to exclude generated clients from coverage and updated scripts and docs.
+- **Stage**: development
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: coverage provider v8 ensures JS clients excluded; README notes packages tests.
+- **Next step**: verify CI passes with new coverage settings.
+
 ## 2025-07-16 PR #XX
 - **Summary**: added RSS fallback in mobile NewsService with tests and docs.
 - **Stage**: development

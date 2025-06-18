@@ -116,6 +116,7 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
   and error handling across platforms.
 - GitHub Actions in `.github/workflows/ci.yml` will build the web app, run tests, trigger a Netlify deployment and execute Lighthouse CI. Keep the pipeline green.
 - Coverage is enforced in CI using `vitest --coverage` and `flutter test --coverage`; each must report ≥75 % or the job fails. Coverage reports upload as artifacts.
+- Generated REST clients under `packages/generated-ts` and `packages/generated-dart` are excluded from coverage.
 
 # Quality gates
 * **Lighthouse** perf & a11y ≥ 90 or CI fails.  
