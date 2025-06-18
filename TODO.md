@@ -94,3 +94,4 @@
 - [ ] Keep `packages/vitest.config.ts` exclude patterns in sync with README
       coverage instructions.
 - [ ] Maintain >75% coverage for packages tests
+- [ ] Add linter or pre-test step that verifies vitest config syntax parses.
