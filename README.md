@@ -1,6 +1,6 @@
 # Stock-App1 · **SMWA – Stock Market Mobile & Web Application**
 
-[![CI • unit → build → Lighthouse](https://img.shields.io/github/actions/workflow/status/<your-user>/Stock-App1/ci.yml?branch=main)](./.github/workflows/ci.yml)
+[![CI • unit → build → Lighthouse](https://img.shields.io/github/actions/workflow/status/IvanStarostin1984/Stock-App1/ci.yml?branch=main)](./.github/workflows/ci.yml)
 
 > **One code-base → two front-ends**: a Flutter 3 .22 mobile app **and** a responsive Vue-powered PWA that surface *end-of-day* market data **without** busting free-tier API limits.
 
