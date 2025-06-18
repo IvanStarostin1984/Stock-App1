@@ -15,3 +15,14 @@ onMounted(() => {
   store.loadHeadline();
 });
 </script>
+
+<style scoped>
+.page {
+  padding: var(--space-grid-4);
+}
+
+h1 {
+  color: var(--clr-primary-700);
+  font-family: var(--font-display);
+}
+</style>
