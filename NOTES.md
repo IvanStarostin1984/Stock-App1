@@ -1,4 +1,10 @@
 ## 2025-06-18 PR #XX
+- **Summary**: documented coverage exclude paths in README and closed TODO.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: README now lists `core/src/**` and `vitest.config.ts` exclusion; TODO ticked.
+- **Next step**: monitor docs CI.
+
 - **Summary**: broadened packages coverage exclusions for vitest config and updated README.
 - **Stage**: development
 - **Requirements addressed**: N/A
