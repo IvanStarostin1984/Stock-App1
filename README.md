@@ -127,11 +127,13 @@ These components are feature-flagged (backendMode = remote) and kept out of the 
 🤝 Contributing
 Fork → branch feat/<topic>
 
-Run tests from each app before pushing:
+Run tests from each app and the shared packages before pushing:
 ```bash
 cd mobile-app && flutter test --coverage
 cd ../web-app && npx vitest run --coverage
+cd ../packages && npm test
 ```
+The packages suite uses `vitest.config.ts`, which ignores generated clients from coverage.
 Run the documentation checks with Node 20 (use `-y` to skip prompts):
 ```bash
 npx -y markdown-link-check README.md
