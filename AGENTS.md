@@ -109,6 +109,7 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 - Run the documentation link check with Node 20 (use `-y` to skip prompts):
   `npx -y markdown-link-check README.md`.
 - CI runs this check via `.github/workflows/docs.yml`. Run it locally whenever you edit README or other docs files.
+- Ensure the OpenAPI spec reports zero warnings: `npx openapi lint spec/openapi.yaml`.
 - Provide at least one positive and one negative unit test per public API, aiming for ≥75 % branch coverage.
 - Add parity tests under `web-app/tests/*Parity.test.ts` and
   `mobile-app/packages/services/test/*_parity_test.dart` to keep mobile and web
@@ -116,6 +117,7 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
   and error handling across platforms.
 - GitHub Actions in `.github/workflows/ci.yml` will build the web app, run tests, trigger a Netlify deployment and execute Lighthouse CI. Keep the pipeline green.
 - Coverage is enforced in CI using `vitest --coverage` and `flutter test --coverage`; each must report ≥75 % or the job fails. Coverage reports upload as artifacts.
+- Generated REST clients under `packages/generated-ts` and `packages/generated-dart` are excluded from coverage.
 
 # Quality gates
 * **Lighthouse** perf & a11y ≥ 90 or CI fails.  

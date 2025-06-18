@@ -5,6 +5,19 @@
 - **Deviations/Decisions**: early return ensures no HTTP when quota exhausted.
 - **Next step**: monitor CI.
 
+## 2025-07-17 PR #XX
+- **Summary**: linted OpenAPI spec with description, MIT license and operationIds; added 400 responses and removed FxRate. Updated AGENTS about warnings.
+- **Stage**: development
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: run CI
+
+- **Summary**: added vitest config for packages to exclude generated clients from coverage and updated scripts and docs.
+- **Stage**: development
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: coverage provider v8 ensures JS clients excluded; README notes packages tests.
+- **Next step**: verify CI passes with new coverage settings.
+
 ## 2025-07-16 PR #XX
 - **Summary**: added RSS fallback in mobile NewsService with tests and docs.
 - **Stage**: development

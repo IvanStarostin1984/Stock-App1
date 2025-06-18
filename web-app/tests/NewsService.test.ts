@@ -66,7 +66,7 @@ describe('NewsService', () => {
     const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
     (service as any).ledger = ledger;
     (service as any).client = new NetClient(ledger);
-    const rss = `<?xml version="1.0"?><rss><channel><item><title>r2</title><link>u2</link><pubDate>d2</pubDate></item></channel></rss>`;
+    const rss = '<?xml version="1.0"?><rss><channel><item><title>r2</title><link>u2</link><pubDate>d2</pubDate></item></channel></rss>';
     const fetchMock = vi
       .fn()
       .mockResolvedValueOnce({ ok: false })
@@ -84,7 +84,7 @@ describe('NewsService', () => {
     const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
     (service as any).ledger = ledger;
     (service as any).client = new NetClient(ledger);
-    const rss = `<?xml version="1.0"?><rss><channel><item><title>r1</title><link>u1</link><pubDate>d1</pubDate></item></channel></rss>`;
+    const rss = '<?xml version="1.0"?><rss><channel><item><title>r1</title><link>u1</link><pubDate>d1</pubDate></item></channel></rss>';
     const fetchMock = vi
       .fn()
       .mockResolvedValueOnce({ ok: false })
