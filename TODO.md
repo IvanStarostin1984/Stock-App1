@@ -92,3 +92,4 @@
 - [x] Document customizing the `<your-user>` placeholder after forking the repo.
 - [ ] Keep `packages/vitest.config.ts` exclude patterns in sync with README
       coverage instructions.
+- [ ] Maintain >75% coverage for packages tests
