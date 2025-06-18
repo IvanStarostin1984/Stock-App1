@@ -25,6 +25,9 @@ class NewsService {
   }
 
   Future<List<Map<String, dynamic>>?> getDigest(String topic) async {
+    if (!_ledger.isSafe()) {
+      return null;
+    }
     final url =
         'https://newsdata.io/api/1/news?apikey=$_apiKey&q=$topic&language=en';
     final articles = await _net.get<List<Map<String, dynamic>>>(

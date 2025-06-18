@@ -87,4 +87,4 @@
 - [x] Add start_env.sh script to automate local setup
 - [ ] Add type stubs for crypto libraries and document tsconfig changes
 - [x] Document installing `@types` packages when adding new JS dependencies to avoid TS7016 errors.
-- [ ] Verify RSS fallback on mobile NewsService.
+- [x] Verify RSS fallback on mobile NewsService.

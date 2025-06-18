@@ -1,3 +1,10 @@
+## 2025-06-18 PR #XX
+- **Summary**: NewsService now skips RSS fetch when ledger is exhausted. Updated parity test and docs.
+- **Stage**: development
+- **Requirements addressed**: FR-0104
+- **Deviations/Decisions**: early return ensures no HTTP when quota exhausted.
+- **Next step**: monitor CI.
+
 ## 2025-07-16 PR #XX
 - **Summary**: added RSS fallback in mobile NewsService with tests and docs.
 - **Stage**: development
