@@ -1,4 +1,11 @@
 ## 2025-06-18 PR #XX
+- **Summary**: imported colours and fonts from styleguide into tokens and rebuilt design tokens.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: tokens generated via style-dictionary.
+- **Next step**: use tokens in UI components.
+
+## 2025-06-18 PR #XX
 - **Summary**: documented how web-prototype guides design tokens.
 - **Stage**: documentation
 - **Requirements addressed**: N/A
