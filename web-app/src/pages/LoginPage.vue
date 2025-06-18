@@ -20,3 +20,18 @@ function submit() {
   store.login(email.value, password.value);
 }
 </script>
+
+<style scoped>
+.page {
+  padding: var(--space-grid-4);
+  font-family: var(--font-body);
+}
+h1 {
+  font-family: var(--font-display);
+  color: var(--clr-primary-700);
+}
+button {
+  background-color: var(--clr-primary-600);
+  color: var(--clr-neutral-050);
+}
+</style>

@@ -1,9 +1,20 @@
-## 2025-06-18 PR #XX
 - **Summary**: added vitest config lint step and CI job.
 - **Stage**: maintenance
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: CI now runs `npm run lint:vitest-config` to catch bad config.
 - **Next step**: monitor CI
+
+- **Summary**: replaced colours and fonts in Vue pages with design tokens; imported tokens.scss globally.
+- **Stage**: development
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: tokens.scss generated at build; pages now use CSS variables.
+- **Next step**: refine layout based on prototype.
+
+- **Summary**: imported colours and fonts from styleguide into tokens and rebuilt design tokens.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: tokens generated via style-dictionary.
+- **Next step**: use tokens in UI components.
 
 ## 2025-06-18 PR #XX
 - **Summary**: documented how web-prototype guides design tokens.
