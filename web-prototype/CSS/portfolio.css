@@ -1,0 +1,602 @@
+/* screen - portfolio */
+
+.portfolio {
+  align-items: flex-start;
+  background-color: var(--label-colordarkprimary);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 1224px;
+  position: relative;
+}
+
+.portfolio .top-bar {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--label-colordarkprimary);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 116px;
+  position: relative;
+  width: 100%;
+}
+
+.portfolio .status-bar {
+  align-items: flex-start;
+  display: flex;
+  height: 53px;
+  justify-content: center;
+  position: relative;
+  width: 393px;
+}
+
+.portfolio .time {
+  color: var(--eerie-black);
+  font-family: var(--font-family-sf_pro_text-semibold);
+  font-size: 17px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: -0.41px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 1px;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.portfolio .frame-1031 {
+  align-items: center;
+  background-color: var(--label-colordarkprimary);
+  display: flex;
+  gap: 95px;
+  height: 48px;
+  justify-content: space-around;
+  padding: 0px 20px;
+  position: relative;
+  width: 393px;
+}
+
+.portfolio .vector {
+  height: 16.67px;
+  position: relative;
+  width: 16.75px;
+}
+
+.portfolio .title {
+  left: 125px;
+  letter-spacing: 0;
+  line-height: 33.6px;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+  width: 145px;
+}
+
+.portfolio .buy-pro {
+  align-items: flex-start;
+  border: 1px solid;
+  border-color: var(--blue-ribbon);
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  left: 12px;
+  overflow: hidden;
+  position: absolute;
+  top: 3px;
+  width: 90px;
+}
+
+.portfolio .frame-30125 {
+  align-items: flex-end;
+  align-self: stretch;
+  background-color: var(--blue-ribbon);
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.portfolio .buy-pro-1 {
+  color: #f7f9fc;
+  font-weight: 700;
+  line-height: 19.6px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.portfolio .scrolable {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.portfolio .frame-30126 {
+  border: 2px solid;
+  border-color: var(--gray-nurse);
+  border-radius: 10px;
+  height: 228px;
+  margin-right: -4.00px;
+  overflow: hidden;
+  position: relative;
+  width: 357px;
+}
+
+.portfolio .frame-container {
+  height: 125px;
+  left: 2px;
+  position: absolute;
+  top: 34px;
+  width: 352px;
+}
+
+.portfolio .frame-30150 {
+  align-items: flex-start;
+  display: flex;
+  gap: 23px;
+  height: 96px;
+  justify-content: flex-end;
+  left: 0;
+  min-width: 352px;
+  padding: 6px 0;
+  position: absolute;
+  top: 0;
+}
+
+.portfolio .overlap-group {
+  align-items: flex-end;
+  background-color: var(--gray-nurse);
+  border-radius: 30.27px/28.5px;
+  display: flex;
+  height: 57px;
+  margin-top: 6px;
+  min-width: 61px;
+  padding: 3px 5px;
+}
+
+.portfolio .useroutline {
+  height: 50px;
+  width: 50px;
+}
+
+.portfolio .name-3 {
+  letter-spacing: 0;
+  line-height: 30px;
+  min-height: 75px;
+  width: 263px;
+}
+
+.portfolio .span1 {
+  color: var(--eerie-black);
+  font-weight: 400;
+}
+
+.portfolio .frame-30152 {
+  align-items: flex-start;
+  display: flex;
+  gap: 39px;
+  height: 33px;
+  left: 0;
+  min-width: 352px;
+  padding: 0 2px;
+  position: absolute;
+  top: 92px;
+}
+
+.portfolio .subcription {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 33px;
+  text-align: center;
+  width: 162px;
+}
+
+.portfolio .span0-1 {
+  font-weight: 700;
+}
+
+.portfolio .span1-1 {
+  font-weight: 600;
+}
+
+.portfolio .frame-30151 {
+  align-items: flex-start;
+  align-self: flex-end;
+  background-color: var(--blue-ribbon);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  overflow: hidden;
+  padding: 0 10px;
+  width: 116px;
+}
+
+.portfolio .pro-member {
+  color: var(--label-colordarkprimary);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  height: 30px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  text-align: center;
+  width: 96px;
+}
+
+.portfolio .frame-30166 {
+  align-items: flex-start;
+  background-color: var(--blue-ribbon);
+  border-radius: 10px;
+  display: flex;
+  height: 30px;
+  left: 25px;
+  overflow: hidden;
+  padding: 0 3px;
+  position: absolute;
+  top: 166px;
+  width: 110px;
+}
+
+.portfolio .edit-profile {
+  color: var(--label-colordarkprimary);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  height: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  width: 104px;
+}
+
+.portfolio .stock-graph {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 316px;
+  position: relative;
+  width: 353px;
+}
+
+.portfolio .frame-2 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.portfolio .name-4 {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+}
+
+.portfolio .address {
+  align-self: stretch;
+  color: var(--sonic-silver);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-xxxs);
+  font-weight: 600;
+  height: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+}
+
+.portfolio .price-2 {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 144px;
+}
+
+.portfolio .text-30 {
+  align-self: stretch;
+  color: var(--eerie-black);
+  font-family: var(--font-family-manrope);
+  font-size: 22px;
+  font-weight: 600;
+  height: 37px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: right;
+}
+
+.portfolio .text-31 {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-align: right;
+}
+
+.portfolio .graph {
+  align-self: stretch;
+  height: 178px;
+  position: relative;
+  width: 100%;
+}
+
+.portfolio .tab {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  padding: 0px 12px;
+  position: relative;
+  width: 352px;
+}
+
+.portfolio .price-3 {
+  letter-spacing: 0.20px;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.portfolio .stocks::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.portfolio .stocks {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  height: 48px;
+  overflow: hidden;
+  overflow-x: scroll;
+  position: relative;
+  width: 353px;
+}
+
+.portfolio .stock-small {
+  align-items: center;
+  border: 1px solid;
+  border-color: var(--gray-nurse);
+  border-radius: 5px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  height: 48px;
+  overflow: hidden;
+  padding: 0px 5px;
+  position: relative;
+}
+
+.portfolio .text {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 80px;
+}
+
+.portfolio .symbol {
+  letter-spacing: 0;
+}
+
+.portfolio .name {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+}
+
+.portfolio .change {
+  align-self: stretch;
+  color: var(--jade);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-xxxs);
+  font-weight: 700;
+}
+
+.portfolio .symbol-1 {
+  color: var(--eerie-black);
+  font-weight: 700;
+}
+
+.portfolio .tesla {
+  background-image: url(../img/tesla.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 42px;
+  position: relative;
+  width: 42px;
+}
+
+.portfolio .change-2 {
+  align-self: stretch;
+  color: var(--pomegranate);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-xxxs);
+  font-weight: 700;
+}
+
+.portfolio .frame-30165 {
+  align-items: flex-end;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.portfolio .magnificent-seven {
+  align-items: flex-start;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 245px;
+  padding: 5px;
+  position: relative;
+  width: 353px;
+}
+
+.portfolio .frame-4 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  padding: 5px 0px;
+  position: relative;
+}
+
+.portfolio .my-assets {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.portfolio .stock {
+  align-items: center;
+  align-self: stretch;
+  border-color: var(--sonic-silver);
+  border-top-style: solid;
+  border-top-width: 1px;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 4px 0px;
+  position: relative;
+  width: 100%;
+}
+
+.portfolio .name-1 {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  gap: 10px;
+  position: relative;
+}
+
+.portfolio .name-2 {
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: 80px;
+}
+
+.portfolio .price {
+  align-items: flex-end;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+}
+
+.portfolio .price-1 {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.portfolio .change-1 {
+  width: fit-content;
+}
+
+.portfolio .stock-1 {
+  align-items: center;
+  align-self: stretch;
+  border-color: var(--sonic-silver);
+  border-top-style: solid;
+  border-top-width: 1px;
+  display: flex;
+  flex: 0 0 auto;
+  margin-bottom: -5.00px;
+  padding: 4px 0px;
+  position: relative;
+  width: 100%;
+}
+
+.portfolio .price-4 {
+  align-items: flex-end;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  position: relative;
+}
+
+.portfolio .line-5 {
+  height: 24px;
+  left: 19px;
+  position: absolute;
+  top: 8px;
+  width: 2px;
+}
+
+.portfolio .bottom-nav {
+  align-items: center;
+  background-color: var(--label-colordarkprimary);
+  display: flex;
+  height: 71px;
+  justify-content: space-around;
+  padding: 4px 0px 22px;
+  position: relative;
+  width: 393px;
+}
+
+.portfolio .link {
+  cursor: pointer;
+  height: 25px;
+  position: relative;
+  width: 28px;
+}
+
+.portfolio .useroutline-1 {
+  height: 25px;
+  position: relative;
+  width: 25px;
+}
+
+.portfolio .change-3 {
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-align: right;
+}
+
+.portfolio .symbol-2 {
+  align-self: stretch;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+}

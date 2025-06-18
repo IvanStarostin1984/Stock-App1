@@ -1,0 +1,546 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Manrope:700,600,300,800,500,400|Inter:400,600,300,500,700");
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/6852856d896bc82af471bf46.6852856d896bc82af471bf49.8LVMkuN.hcp.png");
+
+@font-face {
+  font-family: "SF Pro Display-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/FontsFree-Net-SFProDisplay-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SF Pro Display-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/SF-Pro-Display-Medium.otf") format("opentype");
+}
+
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.group-1 {
+  align-items: flex-start;
+  background-color: var(--blue-ribbon);
+  display: flex;
+  height: 1024px;
+  min-width: 604px;
+  padding: 285px 138px;
+}
+
+.text-your {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 30px;
+  position: relative;
+}
+
+.google::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(0, 191, 255, 1) 0%, rgba(0, 97, 255, 1) 50%, rgba(155, 0, 255, 1) 100%);
+  border-radius: 15px;
+  content: "";
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.continue-with-google {
+  margin-top: -1.00px;
+  width: 219px;
+}
+
+.facebook::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(0, 191, 255, 1) 0%, rgba(0, 97, 255, 1) 50%, rgba(155, 0, 255, 1) 100%);
+  border-radius: 15px;
+  content: "";
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.continue-with {
+  height: 36px;
+  letter-spacing: 0;
+  line-height: 30px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.frame-30139 {
+  align-items: center;
+  background-color: var(--label-colordarkprimary);
+  border-radius: 15px;
+  display: flex;
+  gap: 16px;
+  height: 30px;
+  margin-left: 158px;
+  margin-top: 5.0px;
+  overflow: hidden;
+  padding: 9px 15px;
+  position: relative;
+  width: 403px;
+}
+
+.search-of-a-symbol {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: -2.50px;
+  margin-top: -4.50px;
+  position: relative;
+  width: 222px;
+}
+
+.conteiner {
+  align-items: flex-start;
+  display: flex;
+  height: 175px;
+  left: 1207px;
+  min-width: 150px;
+  position: absolute;
+  top: 23px;
+}
+
+.polygon-1 {
+  height: 7.48px;
+  position: relative;
+  width: 9.48px;
+}
+
+.lockheed-martin {
+  background-image: url(../img/logo-1.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 42px;
+  position: relative;
+  width: 42px;
+}
+
+.saab {
+  background-image: url(../img/saab.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 42px;
+  position: relative;
+  width: 42px;
+}
+
+.btc {
+  background-image: url(../img/btc.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 42px;
+  position: relative;
+  width: 42px;
+}
+
+.bloomberg-1h {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.netflix-reports-reco {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.over-9-million-new-s {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.the-verge-3h-ago {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.apple-introduces-i-pa {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.apple-today-introduc {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.eth {
+  background-image: url(../img/eth.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 42px;
+  position: relative;
+  width: 42px;
+}
+
+.xrp {
+  background-image: url(../img/xrp.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 42px;
+  position: relative;
+  width: 42px;
+}
+
+.checkbox {
+  height: 16px;
+  position: relative;
+  width: 16px;
+}
+
+.remember-me {
+  height: 30px;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: 152px;
+}
+
+.span2 {
+  color: var(--blue-ribbon);
+}
+
+.tabselected {
+  align-items: center;
+  background-color: var(--gray-nurse);
+  border-radius: 8px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  height: 32px;
+  justify-content: center;
+  padding: 8px 16px;
+  position: relative;
+}
+
+.x5-y {
+  letter-spacing: 0.20px;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.x1 {
+  letter-spacing: 0.20px;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.frame-30156 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 19px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.frame-3016 {
+  height: 33px;
+  position: relative;
+  width: 94px;
+}
+
+.nvda {
+  height: 33px;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: -1px;
+  width: 70px;
+}
+
+.nvidia-corp {
+  height: 33px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: 111px;
+}
+
+.aapl {
+  height: 33px;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: -1px;
+  width: 70px;
+}
+
+.apple-inc {
+  height: 33px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: 101px;
+}
+
+.meta-plat {
+  height: 33px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: 96px;
+}
+
+.popular-1 {
+  align-self: stretch;
+  flex: 0 0 auto;
+  flex-direction: column;
+  width: 100%;
+}
+
+.popular-item {
+  align-self: stretch;
+  flex: 0 0 auto;
+  overflow: hidden;
+  width: 100%;
+}
+
+.small-stock {
+  align-items: center;
+  border: 1px dashed;
+  border-color: var(--gray-nurse-2);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 5px;
+  height: 89px;
+  padding: 5px;
+  position: relative;
+}
+
+.points-6 {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+}
+
+.portfolio-price {
+  align-self: stretch;
+  height: 39px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.x {
+  height: 40px;
+  position: relative;
+  width: 42px;
+}
+
+.line-container {
+  background-color: var(--blue-ribbon);
+  border-radius: 20px;
+  height: 40px;
+  position: relative;
+  width: 40px;
+}
+
+.line-6 {
+  height: 2px;
+  left: 8px;
+  position: absolute;
+  top: 19px;
+  width: 24px;
+}
+
+.left-side {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 8px;
+  justify-content: center;
+  position: relative;
+}
+
+.status-bar-time {
+  border-radius: 24px;
+  height: 21px;
+  position: relative;
+  width: 54px;
+}
+
+.dynamic-island {
+  align-items: center;
+  align-self: stretch;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  padding: 8px 0px 0px;
+  position: relative;
+}
+
+.right-side {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  gap: 8px;
+  justify-content: center;
+  position: relative;
+}
+
+.signal-wifi-battery {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  position: relative;
+}
+
+.icon-mobile-signal {
+  height: 12px;
+  position: relative;
+  width: 18px;
+}
+
+.wifi {
+  height: 11.83px;
+  position: relative;
+  width: 17px;
+}
+
+.status-bar-battery {
+  height: 13px;
+  position: relative;
+  width: 27.4px;
+}
+
+.component-1 {
+  height: 288px;
+  position: relative;
+  width: 229px;
+}
+
+.botnav {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  height: 49px;
+  justify-content: space-between;
+  margin-bottom: -2.00px;
+  margin-top: -2.00px;
+  padding: 0px 34px;
+  position: relative;
+}
+
+.sing-up::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(0, 191, 255, 1) 0%, rgba(0, 97, 255, 1) 50%, rgba(155, 0, 255, 1) 100%);
+  border-radius: 15px;
+  content: "";
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.bar {
+  align-items: flex-end;
+  background-color: var(--blue-ribbon);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 120px;
+  position: relative;
+  width: 393px;
+}
+
+.botnav-item {
+  height: 25px;
+  position: relative;
+  width: 28px;
+}

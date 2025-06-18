@@ -1,0 +1,242 @@
+/* screen - sign-up */
+
+.sign-up {
+  align-items: center;
+  background-color: var(--label-colordarkprimary);
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  height: 852px;
+  position: relative;
+}
+
+.sign-up .status-bar {
+  align-items: flex-end;
+  align-self: stretch;
+  display: flex;
+  height: 53px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.sign-up .time {
+  color: var(--label-colordarkprimary);
+  font-family: var(--font-family-sf_pro_text-semibold);
+  font-size: 17px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: -0.41px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.sign-up .sign-up-1 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 75px;
+  padding: 0px 20px;
+  position: relative;
+  width: 100%;
+}
+
+.sign-up .frame {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 32px;
+  justify-content: center;
+  position: relative;
+  width: 32px;
+}
+
+.sign-up .frame-1 {
+  height: 28px;
+  position: relative;
+  width: 28px;
+}
+
+.sign-up .vector {
+  cursor: pointer;
+  height: 19px;
+  left: 8px;
+  position: absolute;
+  top: 4px;
+  width: 11px;
+}
+
+.sign-up .title {
+  color: var(--label-colordarkprimary);
+  font-family: var(--font-family-manrope);
+  font-size: 25px;
+  font-weight: 700;
+  height: 30px;
+  letter-spacing: 0;
+  line-height: 30px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 137px;
+}
+
+.sign-up .span1 {
+  font-size: var(--font-size-24px);
+}
+
+.sign-up .frame-9 {
+  align-items: flex-start;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  width: 350px;
+}
+
+.sign-up .email {
+  align-self: stretch;
+  height: 30px;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.sign-up .sing-up {
+  align-items: flex-end;
+  align-self: stretch;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 50px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 9px 15px;
+  position: relative;
+  width: 100%;
+}
+
+.sign-up .password {
+  align-self: stretch;
+  height: 30px;
+  letter-spacing: 0;
+  line-height: 30px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.sign-up .buttons {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.sign-up .log-in {
+  align-items: center;
+  background-color: var(--blue-ribbon);
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: 50px;
+  justify-content: center;
+  padding: 9px 101px;
+  position: relative;
+  width: 350px;
+}
+
+.sign-up .sign-up-2 {
+  cursor: pointer;
+  height: 36px;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-bottom: -1.00px;
+  margin-top: -3.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 147px;
+}
+
+.sign-up .or {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 5px;
+  position: relative;
+}
+
+.sign-up .line {
+  height: 2px;
+  position: relative;
+  width: 150px;
+}
+
+.sign-up .or-1 {
+  height: 32px;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 41px;
+}
+
+.sign-up .google {
+  align-items: flex-end;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  height: 50px;
+  padding: 7px 40px;
+  position: relative;
+  width: 350px;
+}
+
+.sign-up .google-1 {
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 40px;
+  margin-top: -4.00px;
+  position: relative;
+  width: 40px;
+}
+
+.sign-up .facebook {
+  align-items: flex-end;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  padding: 5px 30px;
+  position: relative;
+  width: 350px;
+}
+
+.sign-up .facebook-1 {
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 45px;
+  margin-top: -5.00px;
+  position: relative;
+  width: 45px;
+}
+
+.sign-up .continue-with-facebook {
+  width: 244px;
+}

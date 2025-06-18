@@ -1,0 +1,499 @@
+/* screen - pro-version-page */
+
+.pro-version-page {
+  align-items: center;
+  background-color: var(--label-colordarkprimary);
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  width: 1440px;
+}
+
+.pro-version-page .frame-30168 {
+  align-items: flex-start;
+  display: flex;
+  min-width: 1440px;
+}
+
+.pro-version-page .overlap-group1 {
+  height: 71px;
+  position: relative;
+  width: 1440px;
+}
+
+.pro-version-page .overlap-group {
+  align-items: center;
+  background-color: var(--blue-ribbon);
+  display: flex;
+  height: 71px;
+  left: 0;
+  min-width: 1440px;
+  padding: 9px 99px;
+  position: absolute;
+  top: 0;
+}
+
+.pro-version-page .logo {
+  align-self: flex-end;
+  height: 52px;
+  object-fit: cover;
+  width: 52px;
+}
+
+.pro-version-page .free-icon-font-search-3917132-1 {
+  height: 20px;
+  margin-bottom: -4.00px;
+  margin-top: -4.00px;
+  position: relative;
+  width: 20px;
+}
+
+.pro-version-page .place {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-left: 85px;
+  margin-top: 5.0px;
+  min-width: 40px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.pro-version-page .markets {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-left: 93px;
+  margin-top: 5.0px;
+  min-width: 55px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.pro-version-page .portfolio {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-left: 93px;
+  margin-top: 5.0px;
+  min-width: 58px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.pro-version-page .stockly {
+  color: var(--label-colordarkprimary);
+  cursor: pointer;
+  font-weight: 700;
+  left: 151px;
+  line-height: 30px;
+  position: absolute;
+  top: 21px;
+  white-space: nowrap;
+  width: 95px;
+}
+
+.pro-version-page .overlap-group2 {
+  height: 337px;
+  margin-right: 13.0px;
+  margin-top: 114px;
+  position: relative;
+  width: 415px;
+}
+
+.pro-version-page .take-full-control-of-your-investments {
+  color: var(--eerie-black);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-24px);
+  font-weight: 300;
+  left: 14px;
+  letter-spacing: 0;
+  line-height: 30px;
+  position: absolute;
+  text-align: center;
+  top: 277px;
+  width: 388px;
+}
+
+.pro-version-page .upgrade-to {
+  color: var(--eerie-black);
+  font-family: var(--font-family-manrope);
+  font-size: 64.8px;
+  font-weight: 700;
+  left: 9px;
+  letter-spacing: 0;
+  line-height: 81px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.pro-version-page .title {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(180deg, rgba(0, 80, 204, 1) 0%, rgba(0, 97, 255, 1) 100%);
+  background-clip: text;
+  color: transparent;
+  font-family: var(--font-family-manrope);
+  font-size: 199.3px;
+  font-weight: 800;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 249.1px;
+  position: absolute;
+  text-fill-color: transparent;
+  top: 45px;
+  white-space: nowrap;
+}
+
+.pro-version-page .price-1 {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  height: 236px;
+  justify-content: center;
+  margin-top: 47px;
+  padding: 12px 16px;
+  position: relative;
+  width: 854px;
+}
+
+.pro-version-page .depth-2-frame {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 1px solid;
+  border-color: var(--gray-nurse);
+  border-radius: 12px;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  gap: 10px;
+  position: relative;
+}
+
+.pro-version-page .depth-3-frame-0 {
+  align-items: flex-start;
+  background-color: var(--label-colordarkprimary);
+  border: 1px solid;
+  border-radius: 12px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 16px;
+  height: 215px;
+  margin-bottom: -4.00px;
+  padding: 24px;
+  position: relative;
+}
+
+.pro-version-page .depth-4-frame-0 {
+  gap: 4px;
+}
+
+.pro-version-page .depth-5-frame-0 {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pro-version-page .depth-6-frame-0 {
+  align-items: flex-start;
+  height: 20px;
+}
+
+.pro-version-page .yearly-plan {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.pro-version-page .depth-6-frame-1 {
+  align-items: center;
+  background-color: var(--blue-ribbon);
+  border-radius: 12px;
+  padding: 3px 12px;
+}
+
+.pro-version-page .save-50 {
+  align-self: stretch;
+  color: var(--label-colordarkprimary);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.pro-version-page .depth-5-frame-1 {
+  align-items: baseline;
+  gap: 4px;
+}
+
+.pro-version-page .depth-6-frame {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+}
+
+.pro-version-page .price {
+  align-self: stretch;
+  letter-spacing: -1.00px;
+  line-height: 45px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.pro-version-page .yr {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.pro-version-page .depth-4-frame-1 {
+  gap: 8px;
+}
+
+.pro-version-page .depth-5-frame {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 12px;
+  position: relative;
+  width: 100%;
+}
+
+.pro-version-page .depth-7-frame-0 {
+  flex: 1;
+  flex-grow: 1;
+  position: relative;
+  width: 20px;
+}
+
+.pro-version-page .vector-0 {
+  height: 11px;
+  left: 2px;
+  position: absolute;
+  top: 5px;
+  width: 16px;
+}
+
+.pro-version-page .unlimited-stock-insights {
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.pro-version-page .custom-alerts {
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.pro-version-page .remove-ads {
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.pro-version-page .depth-3-frame-0-1 {
+  margin-bottom: -4.00px;
+}
+
+.pro-version-page .monthly-plan {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.pro-version-page .surname {
+  align-self: stretch;
+  color: var(--label-colordarkprimary);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.pro-version-page .mo {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.pro-version-page .depth-2-frame-2 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  gap: 10px;
+  position: relative;
+}
+
+.pro-version-page .depth-3-frame-0-2 {
+  border-color: var(--gray-nurse);
+}
+
+.pro-version-page .depth-5-frame-0-1 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.pro-version-page .lifetime-plan {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.pro-version-page .one-time {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.pro-version-page .buy-pro {
+  align-items: flex-start;
+  border: 1px solid;
+  border-color: var(--blue-ribbon);
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 27px;
+  overflow: hidden;
+  position: relative;
+  width: 166px;
+}
+
+.pro-version-page .frame-30125 {
+  align-items: flex-end;
+  align-self: stretch;
+  background-color: var(--blue-ribbon);
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.pro-version-page .proceed {
+  color: #f7f9fc;
+  font-weight: 700;
+  line-height: 19.6px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.pro-version-page .custom-alerts-3 {
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.pro-version-page .depth-3-frame-0-3 {
+  align-items: flex-start;
+  background-color: var(--label-colordarkprimary);
+  border: 1px solid;
+  border-radius: 12px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 16px;
+  padding: 24px;
+  position: relative;
+}
+
+.pro-version-page .depth-4-frame {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.pro-version-page .depth-5-frame-2 {
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+.pro-version-page .depth-6-frame-2 {
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+}
+
+.pro-version-page .remove-ads-3 {
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.pro-version-page .unlimited-stock-insights-3 {
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}

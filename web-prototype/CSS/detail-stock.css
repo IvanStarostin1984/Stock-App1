@@ -1,0 +1,966 @@
+/* screen - detail-stock */
+
+.detail-stock {
+  align-items: center;
+  background-color: var(--label-colordarkprimary);
+  display: flex;
+  flex-direction: column;
+  gap: 71px;
+  height: 1024px;
+  width: 1440px;
+}
+
+.detail-stock .frame-30167 {
+  align-items: flex-start;
+  display: flex;
+  margin-top: -1px;
+  min-width: 1440px;
+}
+
+.detail-stock .overlap-group1 {
+  height: 71px;
+  position: relative;
+  width: 1440px;
+}
+
+.detail-stock .navbar {
+  align-items: center;
+  background-color: var(--blue-ribbon);
+  display: flex;
+  height: 71px;
+  left: 0;
+  min-width: 1440px;
+  padding: 9px 99px;
+  position: absolute;
+  top: 0;
+}
+
+.detail-stock .logo {
+  align-self: flex-end;
+  height: 52px;
+  object-fit: cover;
+  width: 52px;
+}
+
+.detail-stock .free-icon-font-search-3917132-1 {
+  height: 20px;
+  margin-bottom: -4.00px;
+  margin-top: -4.00px;
+  position: relative;
+  width: 20px;
+}
+
+.detail-stock .navbar-link-place {
+  margin-left: 85px;
+  min-width: 40px;
+}
+
+.detail-stock .navbar-link-markets {
+  margin-left: 93px;
+  min-width: 55px;
+}
+
+.detail-stock .navbar-link-portfolio {
+  cursor: pointer;
+  margin-left: 93px;
+  min-width: 58px;
+}
+
+.detail-stock .navbar-link-go-pro {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-left: 93px;
+  margin-top: 5.0px;
+  min-width: 45px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.detail-stock .stockly {
+  color: var(--label-colordarkprimary);
+  cursor: pointer;
+  font-weight: 700;
+  left: 151px;
+  line-height: 30px;
+  position: absolute;
+  top: 21px;
+  white-space: nowrap;
+  width: 95px;
+}
+
+.detail-stock .flex-row {
+  gap: 35px;
+  height: 818px;
+  margin-left: 14.0px;
+  min-width: 1250px;
+}
+
+.detail-stock .flex-col {
+  flex-direction: column;
+  min-height: 818px;
+  width: 393px;
+}
+
+.detail-stock .depth-2-frame-2 {
+  align-items: flex-end;
+  display: flex;
+  gap: 15px;
+  height: 60px;
+  margin-right: 13px;
+  min-width: 324px;
+  padding: 11px 0;
+}
+
+.detail-stock .amazon {
+  height: 30px;
+  margin-left: -45px;
+  width: 30px;
+}
+
+.detail-stock .amazoncom-inc {
+  color: var(--eerie-black);
+  font-family: var(--font-family-manrope);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-bottom: 2px;
+  width: 338px;
+}
+
+.detail-stock .amazoncom-inc-eng {
+  color: var(--eerie-black);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: 7px;
+  min-height: 48px;
+  position: relative;
+  width: 393px;
+}
+
+.detail-stock .depth-2-frame-4 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  padding: 16px;
+  position: relative;
+  width: 393px;
+}
+
+.detail-stock .depth-3-frame-0 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+.detail-stock .depth-4-frame-0 {
+  padding: 16px 8px 16px 0px;
+}
+
+.detail-stock .depth-5-frame {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.detail-stock .ceo {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .name {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .depth-4-frame-1 {
+  padding: 16px 0px 16px 8px;
+}
+
+.detail-stock .employees {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .depth-3-frame {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+}
+
+.detail-stock .headquarters {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .seattle-washington {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .founded {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .number {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .stats {
+  align-self: center;
+  color: var(--eerie-black);
+  font-weight: 700;
+  line-height: 23px;
+  margin-top: 19px;
+  position: relative;
+  width: 361px;
+}
+
+.detail-stock .depth-2-frame-6 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 29px;
+  padding: 16px;
+  position: relative;
+  width: 393px;
+}
+
+.detail-stock .open {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .price {
+  align-self: stretch;
+  color: var(--eerie-black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .volume {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .x624-m {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .high {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .avg-vol {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .x73-m {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .low {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .mkr-cap {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .x857-b {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .address {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .pe-ratio {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .address-1 {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .div-yield {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .flex-col-1 {
+  align-items: center;
+  gap: 50px;
+  min-height: 791px;
+  width: 822px;
+}
+
+.detail-stock .chart {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 397px;
+  margin-left: 12.0px;
+  position: relative;
+  width: 616px;
+}
+
+.detail-stock .frame-stock {
+  align-items: center;
+  border-radius: 6px;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 20px;
+  padding: 12px;
+  position: relative;
+  width: 393px;
+}
+
+.detail-stock .amazon-1 {
+  height: 42px;
+  position: relative;
+  width: 42px;
+}
+
+.detail-stock .frame-974 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px;
+  position: relative;
+}
+
+.detail-stock .frame-974-1 {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  position: relative;
+  width: 122px;
+}
+
+.detail-stock .frame-972 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.detail-stock .amzn {
+  color: var(--eerie-black);
+  font-weight: 700;
+  line-height: 19.6px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.detail-stock .amazon-inc {
+  letter-spacing: 0;
+  line-height: 12px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.detail-stock .chart-1 {
+  align-items: center;
+  background-color: var(--label-colordarkprimary);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 61px;
+  justify-content: flex-end;
+  padding: 10px 0px;
+  position: relative;
+  width: 392px;
+}
+
+.detail-stock .frame-975 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 13px;
+  margin-top: -2.00px;
+  padding: 0px 1px;
+  position: relative;
+  width: 100%;
+}
+
+.detail-stock .price-1 {
+  color: var(--eerie-black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  height: 12px;
+  letter-spacing: 0;
+  line-height: 22.4px;
+  margin-top: -1.00px;
+  width: 243px;
+}
+
+.detail-stock .frame-973 {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  position: relative;
+  width: 243px;
+}
+
+.detail-stock .today-129 {
+  color: transparent;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.detail-stock .span0 {
+  color: var(--sonic-silver);
+  font-weight: 500;
+}
+
+.detail-stock .span1 {
+  color: var(--jade);
+  font-weight: 600;
+}
+
+.detail-stock .chart-2 {
+  align-self: stretch;
+  height: 192px;
+  position: relative;
+  width: 100%;
+}
+
+.detail-stock .line-chart {
+  height: 1px;
+  left: 6px;
+  object-fit: cover;
+  position: absolute;
+  top: -1px;
+  width: 605px;
+}
+
+.detail-stock .overlap-group {
+  height: 175px;
+  left: 0;
+  position: absolute;
+  top: 17px;
+  width: 616px;
+}
+
+.detail-stock .line-chart-1 {
+  top: 30px;
+}
+
+.detail-stock .line-chart-2 {
+  top: 78px;
+}
+
+.detail-stock .line-chart-3 {
+  top: 85px;
+}
+
+.detail-stock .line-chart-4 {
+  top: 126px;
+}
+
+.detail-stock .vector-31 {
+  height: 138px;
+  left: 5px;
+  position: absolute;
+  top: 0;
+  width: 609px;
+}
+
+.detail-stock .ellipse-108 {
+  background-color: var(--label-colordarkprimary);
+  border: 2px solid;
+  border-color: #16192c;
+  border-radius: 8.06px/5px;
+  height: 10px;
+  left: 189px;
+  position: absolute;
+  top: 81px;
+  width: 16px;
+}
+
+.detail-stock .frame-989 {
+  align-items: center;
+  background-color: var(--eerie-black);
+  border-radius: 12px;
+  box-shadow: 0px 12px 24px #16192c1f;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 56px;
+  justify-content: center;
+  left: 135px;
+  padding: 16px;
+  position: absolute;
+  top: 21px;
+  width: 121px;
+}
+
+.detail-stock .mar-27 {
+  color: var(--gray-nurse);
+  font-family: var(--font-family-inter);
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.20px;
+  line-height: normal;
+  margin-top: -5.50px;
+  position: relative;
+  width: fit-content;
+}
+
+.detail-stock .price-2 {
+  color: var(--label-colordarkprimary);
+  font-family: var(--font-family-sf_pro_display-bold);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.20px;
+  line-height: normal;
+  margin-bottom: -3.50px;
+  width: fit-content;
+}
+
+.detail-stock .group-34 {
+  height: 56px;
+  left: 0;
+  position: absolute;
+  top: 119px;
+  width: 616px;
+}
+
+.detail-stock .tab {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  padding: 0px 12px;
+  position: relative;
+  width: 100%;
+}
+
+.detail-stock .price-3 {
+  letter-spacing: 0.20px;
+  line-height: normal;
+  width: fit-content;
+}
+
+.detail-stock .frame-30167-1 {
+  height: 344px;
+  position: relative;
+  width: 822px;
+}
+
+.detail-stock .title {
+  color: var(--eerie-black);
+  font-weight: 600;
+  left: 39px;
+  line-height: normal;
+  position: absolute;
+  top: 4px;
+  width: 361px;
+}
+
+.detail-stock .depth-3-frame-0-1 {
+  height: 110px;
+  left: 18px;
+  top: 72px;
+  width: 361px;
+}
+
+.detail-stock .depth-4-frame-0-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 228px;
+}
+
+.detail-stock .yahoo-finance-today {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .depth-5-frame-1 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  position: relative;
+  width: 100%;
+}
+
+.detail-stock .amazon-s {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .amzn-4 {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .image-8 {
+  background-image: url(../img/image-8@2x.png);
+  height: 110px;
+  left: 235px;
+  position: absolute;
+  top: 0;
+  width: 133px;
+}
+
+.detail-stock .depth-3-frame-0-2 {
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  left: 422px;
+  padding: 5px 0px;
+  top: 239px;
+  width: 400px;
+}
+
+.detail-stock .depth-4-frame-0-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  width: 228px;
+}
+
+.detail-stock .yahoo-finance-today-1 {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .depth-5-frame-1-1 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.detail-stock .amzn-4-1 {
+  align-self: stretch;
+  margin-top: -1.00px;
+}
+
+.detail-stock .image-6 {
+  background-image: url(../img/image-6-1@2x.png);
+  height: 89px;
+  position: relative;
+  width: 131.33px;
+}
+
+.detail-stock .depth-3-frame-0-3 {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding: 0px 12px;
+  top: 229px;
+  width: 402px;
+}
+
+.detail-stock .market-watch-2d {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .amazon-pharmacy-expa {
+  align-self: stretch;
+  color: var(--eerie-black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .depth-2-frame-8 {
+  flex: 1;
+  flex-grow: 1;
+  margin-bottom: -1.00px;
+  margin-right: -165.00px;
+  position: relative;
+  width: 393px;
+}
+
+.detail-stock .amzn-4-2 {
+  align-self: stretch;
+  margin-top: -1.00px;
+}
+
+.detail-stock .image-7 {
+  background-image: url(../img/image-7@2x.png);
+  height: 110px;
+  position: relative;
+  width: 133px;
+}
+
+.detail-stock .depth-3-frame-0-4 {
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  height: 133px;
+  justify-content: center;
+  left: 422px;
+  padding: 5px 0px;
+  top: 65px;
+  width: 400px;
+}
+
+.detail-stock .depth-4-frame-0-3 {
+  height: 110px;
+  position: relative;
+  width: 228px;
+}
+
+.detail-stock .flex-col-2 {
+  align-items: flex-start;
+  min-height: 110px;
+}
+
+.detail-stock .fortune-4d {
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1px;
+  position: relative;
+  width: 228px;
+}
+
+.detail-stock .ceo-andy-jassy-encou {
+  color: var(--eerie-black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: 4px;
+  min-height: 40px;
+  position: relative;
+  width: 228px;
+}
+
+.detail-stock .amzn-4-3 {
+  margin-top: 24px;
+  width: 228px;
+}
+
+.detail-stock .image-9 {
+  background-image: url(../img/image-9@2x.png);
+  height: 110px;
+  position: relative;
+  width: 133px;
+}
+
+.detail-stock .amzn-4-4 {
+  letter-spacing: 0;
+  line-height: 21px;
+  position: relative;
+}
+
+.detail-stock .depth-3-frame-0-5 {
+  border-radius: 12px;
+  position: absolute;
+}
+
+.detail-stock .depth-4-frame {
+  align-items: flex-start;
+  align-self: stretch;
+  border-color: var(--mercury);
+  border-top-style: solid;
+  border-top-width: 1px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 4px;
+  justify-content: center;
+  position: relative;
+}
+
+.detail-stock .flex {
+  align-items: flex-end;
+  display: flex;
+}
+
+.detail-stock .flex-col-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-stock .image {
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.detail-stock .line-chart-5 {
+  height: 1px;
+  left: 6px;
+  object-fit: cover;
+  position: absolute;
+  width: 605px;
+}
+
+.detail-stock .navbar-link {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-top: 5.0px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.detail-stock .number-3 {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.detail-stock .price-4 {
+  position: relative;
+  white-space: nowrap;
+}
+
+.detail-stock .text {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  position: relative;
+}

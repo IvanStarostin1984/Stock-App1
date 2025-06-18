@@ -1,0 +1,275 @@
+/* screen - log-in */
+
+.log-in {
+  align-items: center;
+  background-color: var(--label-colordarkprimary);
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  height: 852px;
+  position: relative;
+}
+
+.log-in .status-bar {
+  align-items: flex-end;
+  align-self: stretch;
+  display: flex;
+  height: 53px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.log-in .time {
+  color: var(--label-colordarkprimary);
+  font-family: var(--font-family-sf_pro_text-semibold);
+  font-size: 17px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: -0.41px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.log-in .frame-9 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 75px;
+  padding: 0px 20px;
+  position: relative;
+  width: 100%;
+}
+
+.log-in .frame {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 32px;
+  justify-content: center;
+  position: relative;
+  width: 32px;
+}
+
+.log-in .frame-1 {
+  height: 28px;
+  position: relative;
+  width: 28px;
+}
+
+.log-in .vector {
+  cursor: pointer;
+  height: 19px;
+  left: 8px;
+  position: absolute;
+  top: 4px;
+  width: 11px;
+}
+
+.log-in .title {
+  color: var(--label-colordarkprimary);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-24px);
+  font-weight: 700;
+  height: 30px;
+  letter-spacing: 0;
+  line-height: 30px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 137px;
+}
+
+.log-in .frame-8 {
+  align-items: flex-start;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0px 5px;
+  position: relative;
+  width: 350px;
+}
+
+.log-in .email {
+  align-self: stretch;
+  height: 30px;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.log-in .sing-up {
+  align-items: flex-end;
+  align-self: stretch;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 50px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 9px 15px;
+  position: relative;
+  width: 100%;
+}
+
+.log-in .password {
+  align-self: stretch;
+  height: 30px;
+  letter-spacing: 0;
+  line-height: 30px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.log-in .frame-8-1 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.log-in .forgot-your-password {
+  height: 30px;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-right: -7.00px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: 169px;
+}
+
+.log-in .buttons {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.log-in .log-in-1 {
+  align-items: center;
+  background-color: var(--blue-ribbon);
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: 50px;
+  justify-content: center;
+  padding: 9px 101px;
+  position: relative;
+  width: 350px;
+}
+
+.log-in .log-in-2 {
+  height: 36px;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-bottom: -1.00px;
+  margin-top: -3.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 147px;
+}
+
+.log-in .or {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 5px;
+  position: relative;
+}
+
+.log-in .line {
+  height: 2px;
+  position: relative;
+  width: 150px;
+}
+
+.log-in .or-1 {
+  height: 32px;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 41px;
+}
+
+.log-in .google {
+  align-items: flex-end;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  height: 50px;
+  padding: 7px 40px;
+  position: relative;
+  width: 350px;
+}
+
+.log-in .google-1 {
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 40px;
+  margin-top: -4.00px;
+  position: relative;
+  width: 40px;
+}
+
+.log-in .facebook {
+  align-items: flex-end;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  padding: 5px 30px;
+  position: relative;
+  width: 350px;
+}
+
+.log-in .facebook-1 {
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 45px;
+  margin-top: -5.00px;
+  position: relative;
+  width: 45px;
+}
+
+.log-in .continue-with-facebook {
+  width: 228px;
+}
+
+.log-in .dont-have-an-account-register {
+  color: transparent;
+  cursor: pointer;
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  height: 30px;
+  letter-spacing: 0;
+  line-height: 30px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 351px;
+}

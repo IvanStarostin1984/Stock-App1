@@ -1,0 +1,809 @@
+/* screen - profil */
+
+.profil {
+  align-items: flex-start;
+  background-color: var(--label-colordarkprimary);
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  width: 1440px;
+}
+
+.profil .frame-30169 {
+  align-items: flex-start;
+  display: flex;
+  min-width: 1440px;
+}
+
+.profil .overlap-group2 {
+  height: 71px;
+  position: relative;
+  width: 1440px;
+}
+
+.profil .overlap-group {
+  align-items: center;
+  background-color: var(--blue-ribbon);
+  display: flex;
+  height: 71px;
+  left: 0;
+  min-width: 1440px;
+  padding: 9px 99px;
+  position: absolute;
+  top: 0;
+}
+
+.profil .logo {
+  align-self: flex-end;
+  height: 52px;
+  object-fit: cover;
+  width: 52px;
+}
+
+.profil .free-icon-font-search-3917132-1 {
+  height: 20px;
+  margin-bottom: -4.00px;
+  margin-top: -4.00px;
+  position: relative;
+  width: 20px;
+}
+
+.profil .place {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-left: 85px;
+  margin-top: 5.0px;
+  min-width: 40px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.profil .markets {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-left: 93px;
+  margin-top: 5.0px;
+  min-width: 55px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.profil .go-pro {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-left: 101px;
+  margin-top: 5.0px;
+  min-width: 42px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.profil .stockly {
+  color: var(--label-colordarkprimary);
+  cursor: pointer;
+  font-weight: 700;
+  left: 151px;
+  line-height: 30px;
+  position: absolute;
+  top: 21px;
+  white-space: nowrap;
+  width: 95px;
+}
+
+.profil .frame-30150 {
+  align-items: center;
+  display: inline-flex;
+  gap: 10px;
+  justify-content: center;
+  margin-left: 117px;
+  margin-top: 76px;
+  position: relative;
+}
+
+.profil .ellipse-112 {
+  background-color: var(--gray-nurse);
+  border-radius: 50px/47px;
+  height: 94px;
+  position: relative;
+  width: 100px;
+}
+
+.profil .name-2 {
+  color: var(--eerie-black);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-28px);
+  font-weight: 400;
+  height: 75px;
+  letter-spacing: 0;
+  line-height: 30px;
+  position: relative;
+  width: 287px;
+}
+
+.profil .span0 {
+  font-weight: 700;
+}
+
+.profil .span1 {
+  font-size: var(--font-size-20px);
+}
+
+.profil .frame-30149 {
+  background-color: var(--blue-ribbon);
+  border-radius: 10px;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  width: 150px;
+}
+
+.profil .edit-profile {
+  color: var(--label-colordarkprimary);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-20px);
+  font-weight: 600;
+  height: 39px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+  width: 150px;
+}
+
+.profil .useroutline {
+  height: 80px;
+  left: 9px;
+  position: absolute;
+  top: 6px;
+  width: 80px;
+}
+
+.profil .frame-container {
+  align-items: flex-start;
+  display: flex;
+  gap: 95px;
+  height: 631px;
+  margin-left: 117px;
+  margin-top: 44px;
+  min-width: 930px;
+}
+
+.profil .frame-30155 {
+  align-items: flex-start;
+  border: 1px solid;
+  border-color: var(--gray-nurse);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  height: 541px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 6px 20px;
+  position: relative;
+  width: 414px;
+}
+
+.profil .frame-30159 {
+  align-self: stretch;
+  height: 144px;
+  position: relative;
+  width: 100%;
+}
+
+.profil .flex-col {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  min-height: 144px;
+  position: relative;
+  top: -1px;
+  width: 370px;
+}
+
+.profil .profile {
+  align-self: center;
+  color: var(--eerie-black);
+  font-weight: 700;
+  line-height: 30px;
+  margin-right: 33.0px;
+  white-space: nowrap;
+  width: 285px;
+}
+
+.profil .line-4 {
+  height: 2px;
+  margin-top: 4px;
+  width: 370px;
+}
+
+.profil .email-pauljohnsongmailcom {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 30px;
+  margin-top: 18px;
+  white-space: nowrap;
+  width: 356px;
+}
+
+.profil .overlap-group1 {
+  height: 59px;
+  margin-top: 1px;
+  position: relative;
+  width: 356px;
+}
+
+.profil .overlap-group-1 {
+  height: 31px;
+  left: 0;
+  position: absolute;
+  top: -1px;
+  width: 158px;
+}
+
+.profil .status {
+  color: var(--eerie-black);
+  font-weight: 400;
+  left: 0;
+  line-height: 30px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 120px;
+}
+
+.profil .span1-1 {
+  font-family: var(--font-family-manrope);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.profil .frame-30153 {
+  align-items: flex-start;
+  background-color: var(--blue-ribbon);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  height: 25px;
+  left: 68px;
+  overflow: hidden;
+  padding: 0 6px;
+  position: absolute;
+  top: 6px;
+  width: 90px;
+}
+
+.profil .pro-member {
+  color: var(--label-colordarkprimary);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-xxs);
+  font-weight: 700;
+  height: 25px;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-left: 2px;
+  margin-top: -1px;
+  text-align: center;
+  white-space: nowrap;
+  width: 76px;
+}
+
+.profil .member-since-january-2023 {
+  color: var(--eerie-black);
+  font-weight: 400;
+  left: 0;
+  line-height: 30px;
+  position: absolute;
+  top: 29px;
+  white-space: nowrap;
+  width: 356px;
+}
+
+.profil .line-5 {
+  align-self: stretch;
+  height: 2px;
+  position: relative;
+  width: 100%;
+}
+
+.profil .frame-30158 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.profil .change-password {
+  color: var(--eerie-black);
+  font-weight: 700;
+  height: 30px;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: 344px;
+}
+
+.profil .x-password {
+  height: 30px;
+  letter-spacing: 0;
+  line-height: 30px;
+  position: relative;
+  white-space: nowrap;
+  width: 343px;
+}
+
+.profil .frame-3015 {
+  border: 1px solid;
+  border-color: var(--gray-nurse);
+  border-radius: 5px;
+  height: 30px;
+  position: relative;
+  width: 250px;
+}
+
+.profil .frame-30154 {
+  background-color: var(--blue-ribbon);
+  border-radius: 5px;
+  height: 30px;
+  overflow: hidden;
+  position: relative;
+  width: 150px;
+}
+
+.profil .change-password-1 {
+  color: var(--label-colordarkprimary);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-l);
+  font-weight: 500;
+  height: 30px;
+  left: 8px;
+  letter-spacing: 0;
+  line-height: 30px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+  width: 137px;
+}
+
+.profil .frame-30160 {
+  background-color: var(--pomegranate);
+  border-radius: 5px;
+  height: 30px;
+  overflow: hidden;
+  position: relative;
+  width: 150px;
+}
+
+.profil .delete-account {
+  color: var(--label-colordarkprimary);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  height: 30px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 30px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+  width: 150px;
+}
+
+.profil .frame-30170 {
+  align-items: center;
+  border: 1px solid;
+  border-color: var(--gray-nurse);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px 34px;
+  position: relative;
+  width: 421px;
+}
+
+.profil .stock-graph {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  height: 316px;
+}
+
+.profil .frame-2 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.profil .name-3 {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+}
+
+.profil .address {
+  align-self: stretch;
+  color: var(--sonic-silver);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-xxxs);
+  font-weight: 600;
+  height: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+}
+
+.profil .price-2 {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 144px;
+}
+
+.profil .text-24 {
+  align-self: stretch;
+  color: var(--eerie-black);
+  font-family: var(--font-family-manrope);
+  font-size: 22px;
+  font-weight: 600;
+  height: 37px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: right;
+}
+
+.profil .text-25 {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-align: right;
+}
+
+.profil .graph {
+  align-items: flex-end;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 178px;
+  position: relative;
+  width: 100%;
+}
+
+.profil .graph-1 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: 5px;
+  height: 169px;
+  position: relative;
+  width: 100%;
+}
+
+.profil .y-axis {
+  align-items: flex-start;
+  align-self: stretch;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px 0px 18px;
+  position: relative;
+}
+
+.profil .number-1 {
+  margin-top: -1.00px;
+}
+
+.profil .graph-2 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 10px;
+  justify-content: center;
+  padding: 7.5px 0px 0px;
+  position: relative;
+}
+
+.profil .graph-with-lines {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.profil .line-1 {
+  align-self: stretch;
+  height: 1px;
+  margin-top: -1.00px;
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+}
+
+.profil .line {
+  align-self: stretch;
+  height: 1px;
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+}
+
+.profil .lines {
+  align-items: flex-start;
+  display: flex;
+  gap: 112px;
+  height: 138px;
+  left: 0;
+  padding: 0px 94px;
+  position: absolute;
+  top: 0;
+  width: 283px;
+}
+
+.profil .line-2 {
+  height: 1px;
+  margin-left: -687.00px;
+  margin-top: -4914.00px;
+  position: relative;
+  width: 138px;
+}
+
+.profil .line-3 {
+  height: 1px;
+  margin-left: -575.00px;
+  margin-top: -4914.00px;
+  position: relative;
+  width: 138px;
+}
+
+.profil .graph-3 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 138px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 283px;
+}
+
+.profil .base-graph {
+  align-self: stretch;
+  flex: 1;
+  flex-grow: 1;
+  margin-left: -1.50px;
+  margin-right: -1.50px;
+  margin-top: -1.50px;
+  position: relative;
+  width: 100%;
+}
+
+.profil .x-axis {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.profil .text-2 {
+  color: var(--sonic-silver);
+  font-weight: 600;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.profil .tab {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  padding: 0px 12px;
+  position: relative;
+  width: 352px;
+}
+
+.profil .price-3 {
+  letter-spacing: 0.20px;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.profil .frame-30165 {
+  align-items: flex-end;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.profil .magnificent-seven {
+  align-items: flex-start;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 245px;
+  padding: 5px;
+  position: relative;
+  width: 353px;
+}
+
+.profil .frame-4 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  padding: 5px 0px;
+  position: relative;
+}
+
+.profil .my-assets {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.profil .stock {
+  align-items: center;
+  border-color: var(--sonic-silver);
+  border-top-style: solid;
+  border-top-width: 1px;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 4px 0px;
+}
+
+.profil .name {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  gap: 10px;
+  position: relative;
+}
+
+.profil .text {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 80px;
+}
+
+.profil .symbol {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.profil .name-1 {
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: 80px;
+}
+
+.profil .price {
+  align-items: flex-end;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+}
+
+.profil .price-1 {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.profil .change {
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-align: right;
+  width: fit-content;
+}
+
+.profil .tesla {
+  background-image: url(../img/tesla.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 42px;
+  position: relative;
+  width: 42px;
+}
+
+.profil .stock-1 {
+  align-items: center;
+  border-color: var(--sonic-silver);
+  border-top-style: solid;
+  border-top-width: 1px;
+  height: 50px;
+  margin-bottom: -5.00px;
+  padding: 4px 0px;
+}
+
+.profil .price-4 {
+  align-items: flex-end;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  position: relative;
+}
+
+.profil .line-5-1 {
+  height: 24px;
+  left: 19px;
+  position: absolute;
+  top: 8px;
+  width: 2px;
+}
+
+.profil .number-2 {
+  align-self: stretch;
+  color: var(--sonic-silver);
+  font-weight: 600;
+  line-height: normal;
+  position: relative;
+}
+
+.profil .stock-2 {
+  align-self: stretch;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
