@@ -126,7 +126,8 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 - Coverage also excludes shared utilities under `packages/core/src/**` and the
   config file `packages/vitest.config.ts`. Keep this list in sync with the
   README and `packages/vitest.config.ts` itself.
-- After editing `packages/vitest.config.ts` (or any vitest config), run `npx vitest run --config packages/vitest.config.ts` to ensure it parses.
+ - After editing `packages/vitest.config.ts` (or any vitest config), run `npm run lint:vitest-config` to ensure it parses.
+ - CI runs this script right after installing package dependencies so broken config files fail early.
 
 # Quality gates
 * **Lighthouse** perf & a11y ≥ 90 or CI fails.  

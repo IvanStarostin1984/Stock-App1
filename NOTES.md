@@ -1,4 +1,11 @@
 ## 2025-06-18 PR #XX
+- **Summary**: added vitest config lint step and CI job.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: CI now runs `npm run lint:vitest-config` to catch bad config.
+- **Next step**: monitor CI
+
+## 2025-06-18 PR #XX
 - **Summary**: documented how web-prototype guides design tokens.
 - **Stage**: documentation
 - **Requirements addressed**: N/A
