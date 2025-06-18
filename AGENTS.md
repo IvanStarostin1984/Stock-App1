@@ -140,6 +140,7 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 - **Fork** then branch off `main` using the pattern `feat/<topic>`.
 - **Ensure local tests pass** before opening a PR.
 - Run `npx -y markdown-link-check README.md` whenever docs are updated to avoid prompts and keep the docs CI job green.
+- Update the `<your-user>` placeholder in README badges and clone commands with your GitHub username after forking.
 - **Each PR requires at least one reviewer.**
 
 ## Decision & Progress Logging
