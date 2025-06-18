@@ -87,6 +87,8 @@ matching repository backed by `localStorage`.
 packages/           shared DTOs + generated REST clients
 mobile-app/         Flutter application (6 screens)
 web-app/            PWA (Vue 3 + Vite, 7 pages)
+web-prototype/      Figma HTML/CSS reference (read only).
+                    Tokens in `web-app/design-tokens/tokens.json` mirror its colours and fonts.
 .github/workflows/  CI → unit → build → Lighthouse → Netlify deploy
 docs/               full ISO/IEC 29148 SRS, architecture, slides
 🔒 Free-Tier Guardrails (LIM-0003 … 0007 / 0016)
