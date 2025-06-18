@@ -1,3 +1,4 @@
+<<<<<<< codex/update-ci-to-run-tests-with-coverage
 ## 2025-06-18 PR #XX
 - **Summary**: CI now runs tests with coverage and fails below 75%. Coverage reports upload as artifacts and docs updated.
 - **Stage**: development
@@ -5,6 +6,11 @@
 - **Deviations/Decisions**: threshold chosen to match README guidance.
 - **Next step**: monitor CI results
 
+=======
+- 2025-06-18: Added RSS fallback to NewsService with tests; README explains fallback.
+  Reason: ensure digest when NewsData fails (FR-0104). Decisions: parse via DOMParser,
+  reuse cache with 12h TTL.
+>>>>>>> main
 - **Summary**: NewsService now requires API key and parses extra fields; added parity tests and README notes.
 - **Stage**: development
 - **Requirements addressed**: FR-0104
