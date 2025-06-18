@@ -1,3 +1,10 @@
+## 2025-07-23 PR #XX
+- **Summary**: added web-prototype folder for design mockups.
+- **Stage**: planning
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: prototypes stored outside build; placeholder HTML pages only.
+- **Next step**: gather design assets.
+
 ## 2025-07-22 PR #XX
 - **Summary**: CI now supplies Flutter tests with a dummy API key via `--dart-define`.
 - **Stage**: maintenance

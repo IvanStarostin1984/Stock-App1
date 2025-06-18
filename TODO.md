@@ -99,3 +99,4 @@
       coverage instructions.
 - [ ] Maintain >75% coverage for packages tests
 - [ ] Add linter or pre-test step that verifies vitest config syntax parses.
+- [x] Create web-prototype directory with placeholder HTML pages for design.
