@@ -2,12 +2,17 @@ openapi: 3.0.0
 info:
   title: External Services
   version: 1.0.0
+  description: API contract for stock quotes, currency rates and news articles.
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
 servers:
   - url: https://api.example.com
 paths:
   /eod:
     get:
       summary: Marketstack end of day quote
+      operationId: getEodQuote
       parameters:
         - in: query
           name: access_key
@@ -31,9 +36,12 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/Quote'
+        '400':
+          description: Bad request
   /latest:
     get:
       summary: Latest FX rate
+      operationId: getLatestRate
       parameters:
         - in: query
           name: base
@@ -58,9 +66,12 @@ paths:
                     additionalProperties:
                       type: number
                       format: double
+        '400':
+          description: Bad request
   /api/1/news:
     get:
       summary: NewsData search
+      operationId: searchNews
       parameters:
         - in: query
           name: apikey
@@ -90,6 +101,8 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/NewsArticle'
+        '400':
+          description: Bad request
 components:
   schemas:
     Quote:
@@ -113,17 +126,6 @@ components:
           type: number
           format: double
       required: [symbol, price, open, high, low, close]
-    FxRate:
-      type: object
-      properties:
-        base:
-          type: string
-        quote:
-          type: string
-        rate:
-          type: number
-          format: double
-      required: [base, quote, rate]
     NewsArticle:
       type: object
       properties:
