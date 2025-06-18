@@ -5,12 +5,7 @@ export default defineConfig({
   test: {
     coverage: {
       provider: 'v8',
-      exclude: [
-        'generated-ts/**',
-        'generated-dart/**',
-        'core/src/**',
-        'vitest.config.ts',
-      ],
+      exclude: ['generated-ts/**', 'generated-dart/**', 'core/src/**', 'vitest.config.ts'],
     },
   },
 });
