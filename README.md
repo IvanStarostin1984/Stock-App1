@@ -134,8 +134,8 @@ cd ../web-app && npx vitest run --coverage
 cd ../packages && npx vitest run --coverage
 ```
 The packages suite uses `vitest.config.ts`; its `coverage.exclude` patterns
-(`**/generated-ts/**` and `**/generated-dart/**`) skip the generated REST
-clients.
+(`**/generated-ts/**`, `**/generated-dart/**`, `core/src/**`, `vitest.config.ts`)
+skip the generated REST clients and internal helpers.
 Run the documentation checks with Node 20 (use `-y` to skip prompts):
 ```bash
 npx -y markdown-link-check README.md
