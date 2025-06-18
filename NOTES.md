@@ -5,6 +5,12 @@
 - **Deviations/Decisions**: README now lists `core/src/**` and `vitest.config.ts` exclusion; TODO ticked.
 - **Next step**: monitor docs CI.
 
+- **Summary**: broadened packages coverage exclusions for vitest config and updated README.
+- **Stage**: development
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: ensures core utilities and config not in coverage.
+- **Next step**: verify config parsing.
+
 ## 2025-07-19 PR #XX
 - **Summary**: documented new vitest config parsing step in AGENTS.
 - **Stage**: documentation
@@ -19,12 +25,36 @@
 - **Deviations/Decisions**: inserted missing brace to close test block.
 - **Next step**: run packages tests in CI.
 
+## 2025-07-20 PR #XX
+- **Summary**: resolved merge conflict markers in NOTES and kept both entries.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: maintained newest-first order.
+- **Next step**: run docs link check.
+
+## 2025-07-19 PR #XX
+- **Summary**: documented coverage exclusions for `packages/core/src/**` and
+  `packages/vitest.config.ts`; synced README and vitest config.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: coverage rules now consistent across docs and config.
+- **Next step**: run markdown link check and verify packages tests.
+
 ## 2025-07-18 PR #XX
-- **Summary**: updated vitest coverage patterns to `**/generated-*/**` and clarified README about generated client exclusion and 75% packages coverage.
+- **Summary**: updated vitest coverage patterns to `**/generated-*/**` 
+  and clarified README about generated client exclusion
+  and 75% packages coverage.
 - **Stage**: documentation
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: pattern now independent of working directory.
 - **Next step**: verify CI.
+
+## 2025-06-18 PR #XX
+- **Summary**: fixed test config closing brace so vitest can run.
+- **Stage**: development
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: inserted missing brace to close test block.
+- **Next step**: run packages tests in CI.
 
 ## 2025-06-18 PR #XX
 - **Summary**: added tests for fetchJson error handling and NetClient caching; coverage now above 75%.

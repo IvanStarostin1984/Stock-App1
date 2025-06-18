@@ -5,6 +5,7 @@
 - [x] Implement a unified network layer shared by mobile and web services.
 - [x] Introduce NetClient class in Dart services and update tests.
 
+- [x] Resolved merge conflict in NOTES.md and preserved entry order.
 # Outstanding Tasks
 - [x] Add parity tests for NewsService
 - [x] Implement RSS fallback in mobile NewsService
@@ -93,5 +94,7 @@
 - [x] Document customizing the `<your-user>` placeholder after forking the repo.
  - [x] Keep `packages/vitest.config.ts` exclude patterns in sync with README
        coverage instructions.
+- [x] Keep `packages/vitest.config.ts` exclude patterns in sync with README
+      coverage instructions.
 - [ ] Maintain >75% coverage for packages tests
 - [ ] Add linter or pre-test step that verifies vitest config syntax parses.
