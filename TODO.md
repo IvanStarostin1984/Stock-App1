@@ -99,7 +99,7 @@
 - [x] Keep `packages/vitest.config.ts` exclude patterns in sync with README
       coverage instructions.
 - [ ] Maintain >75% coverage for packages tests
-- [ ] Add linter or pre-test step that verifies vitest config syntax parses.
+- [x] Add linter or pre-test step that verifies vitest config syntax parses.
 - [x] Create web-prototype directory with placeholder HTML pages for design.
 - [x] Import colours and fonts from `web-prototype/CSS/styleguide.css` into `web-app/design-tokens/tokens.json`.
 - [ ] Bundle prototype fonts in the PWA (verify licenses).

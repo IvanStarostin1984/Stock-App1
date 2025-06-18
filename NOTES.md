@@ -1,4 +1,9 @@
-## 2025-06-18 PR #XX
+- **Summary**: added vitest config lint step and CI job.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: CI now runs `npm run lint:vitest-config` to catch bad config.
+- **Next step**: monitor CI
+
 - **Summary**: replaced colours and fonts in Vue pages with design tokens; imported tokens.scss globally.
 - **Stage**: development
 - **Requirements addressed**: N/A
