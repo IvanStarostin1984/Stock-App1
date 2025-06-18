@@ -100,6 +100,6 @@
 - [ ] Maintain >75% coverage for packages tests
 - [ ] Add linter or pre-test step that verifies vitest config syntax parses.
 - [x] Create web-prototype directory with placeholder HTML pages for design.
-- [ ] Import colours and fonts from `web-prototype/CSS/styleguide.css` into `web-app/design-tokens/tokens.json`.
+- [x] Import colours and fonts from `web-prototype/CSS/styleguide.css` into `web-app/design-tokens/tokens.json`.
 - [ ] Bundle prototype fonts in the PWA (verify licenses).
 - [ ] Rebuild Vue pages to match `web-prototype/*.html` using the new tokens.
