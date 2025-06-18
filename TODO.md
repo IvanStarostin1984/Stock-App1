@@ -44,7 +44,7 @@
 - [x] Verify cross-platform behaviour of NetClient.
 - [x] Verify cross-platform behaviour of LocationService.
 - [x] Follow CI instructions for docs.
-- [ ] Monitor CI for cross-tool coverage.
+- [x] Monitor CI for cross-tool coverage.
 - [ ] Ensure CI passes with updated hashing.
  - [x] Fix container build scripts.
 - [ ] Monitor repo progress.
@@ -87,3 +87,4 @@
 - [x] Add start_env.sh script to automate local setup
 - [ ] Add type stubs for crypto libraries and document tsconfig changes
 - [x] Document installing `@types` packages when adding new JS dependencies to avoid TS7016 errors.
+- [ ] Verify RSS fallback on mobile NewsService.

@@ -14,7 +14,7 @@ npm install
 npm run dev
 ```
 
-Vite will expose the PWA at http://localhost:5173.
+Vite will expose the PWA at `http://localhost:5173`.
 
 ## Configure environment variables
 
@@ -27,6 +27,10 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 ```
 
 `Exchangerate.host` needs no API key. Never commit real credentials.
+
+If the NewsData request fails, `NewsService` falls back to the public RSS feed
+`https://rss.theguardian.com/business/markets/index.xml`. Parsed headlines are
+cached for 12 hours just like the API data.
 
 ## Build design tokens
 

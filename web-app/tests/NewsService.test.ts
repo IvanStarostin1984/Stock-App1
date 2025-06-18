@@ -61,25 +61,40 @@ describe('NewsService', () => {
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
-  it('handles fetch failure and does not cache', async () => {
+  it('uses RSS fallback when API returns error', async () => {
     const service = new NewsService('key');
     const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
     (service as any).ledger = ledger;
     (service as any).client = new NetClient(ledger);
+    const rss = `<?xml version="1.0"?><rss><channel><item><title>r2</title><link>u2</link><pubDate>d2</pubDate></item></channel></rss>`;
     const fetchMock = vi
       .fn()
       .mockResolvedValueOnce({ ok: false })
-      .mockResolvedValueOnce({ ok: true, json: async () => apiPayload() });
+      .mockResolvedValueOnce({ ok: true, text: async () => rss });
     global.fetch = fetchMock as any;
 
-    const bad = await service.getNews('AA');
-    expect(bad).toBeNull();
-    expect(ledger.increment).not.toHaveBeenCalled();
-
-    const good = await service.getNews('AA');
-    expect(good).toEqual(sampleArticles);
+    const res = await service.getNews('AA');
+    expect(res).toEqual([{ title: 'r2', url: 'u2', source: 'rss', published: 'd2' }]);
     expect(fetchMock).toHaveBeenCalledTimes(2);
-    expect(ledger.increment).toHaveBeenCalledTimes(1);
+    expect(ledger.increment).not.toHaveBeenCalled();
+  });
+
+  it('falls back to RSS when API fails', async () => {
+    const service = new NewsService('key');
+    const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() };
+    (service as any).ledger = ledger;
+    (service as any).client = new NetClient(ledger);
+    const rss = `<?xml version="1.0"?><rss><channel><item><title>r1</title><link>u1</link><pubDate>d1</pubDate></item></channel></rss>`;
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce({ ok: false })
+      .mockResolvedValueOnce({ ok: true, text: async () => rss });
+    global.fetch = fetchMock as any;
+
+    const res = await service.getNews('AA');
+    expect(res).toEqual([{ title: 'r1', url: 'u1', source: 'rss', published: 'd1' }]);
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+    expect(ledger.increment).not.toHaveBeenCalled();
   });
 
   it('maintains separate cache entries per symbol', async () => {

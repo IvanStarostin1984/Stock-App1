@@ -129,8 +129,8 @@ Fork → branch feat/<topic>
 
 Run tests from each app before pushing:
 ```bash
-cd mobile-app && flutter test
-cd ../web-app && npm test
+cd mobile-app && flutter test --coverage
+cd ../web-app && npx vitest run --coverage
 ```
 Run the documentation checks with Node 20 (use `-y` to skip prompts):
 ```bash
@@ -138,6 +138,7 @@ npx -y markdown-link-check README.md
 ```
 
 flutter test and npm test – keep CI green
+Both suites must report at least 75% coverage.
 
 PR → main, 1 reviewer min.
 

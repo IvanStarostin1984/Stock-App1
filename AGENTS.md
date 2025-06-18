@@ -102,6 +102,8 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 - After generating REST clients, run `flutter pub get -C mobile-app/packages/services` so
   the service package has its dependencies ready.
 - Run `npm run tokens` (or run tests) before any Flutter analysis or build steps so `tokens.dart` exists.
+- Flutter tests require API keys via `--dart-define`:
+  `flutter test --dart-define=VITE_NEWSDATA_KEY=dummy --dart-define=VITE_MARKETSTACK_KEY=dummy`.
 - `mobile-app/packages/services` uses Flutter plugins, so its tests must run via `flutter test` (not `dart test`).
 - The shared packages under `packages/` install via `npm ci` and run `npm test` in CI.
 - Run the documentation link check with Node 20 (use `-y` to skip prompts):
@@ -113,6 +115,7 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
   implementations consistent. These tests must cover cache expiry, ledger usage
   and error handling across platforms.
 - GitHub Actions in `.github/workflows/ci.yml` will build the web app, run tests, trigger a Netlify deployment and execute Lighthouse CI. Keep the pipeline green.
+- Coverage is enforced in CI using `vitest --coverage` and `flutter test --coverage`; each must report ≥75 % or the job fails. Coverage reports upload as artifacts.
 
 # Quality gates
 * **Lighthouse** perf & a11y ≥ 90 or CI fails.  
