@@ -1,3 +1,10 @@
+## 2025-07-17 PR #XX
+- **Summary**: linted OpenAPI spec with description, MIT license and operationIds; added 400 responses and removed FxRate. Updated AGENTS about warnings.
+- **Stage**: development
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: run CI
+
 ## 2025-07-16 PR #XX
 - **Summary**: added RSS fallback in mobile NewsService with tests and docs.
 - **Stage**: development
