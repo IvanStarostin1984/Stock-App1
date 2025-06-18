@@ -9,7 +9,7 @@
     "gen:clients": "npm run gen:ts && npm run gen:dart",
     "gen:all": "openapi-generator-cli generate -i ../spec/openapi.yaml -g typescript-axios -o generated",
     "lint:spec": "openapi-cli lint spec/openapi.yaml",
-    "test": "vitest run --config vitest.config.ts --coverage"
+    "test": "vitest run --config vitest.config.ts --coverage --coverage.include=core/net.ts --coverage.exclude=**/generated-ts/** --coverage.exclude=**/generated-dart/** --coverage.exclude=**/core/src/**"
   },
   "devDependencies": {
     "@redocly/openapi-cli": "^1.0.0-beta.95",

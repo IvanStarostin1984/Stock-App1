@@ -131,16 +131,18 @@ Run tests from each app and the shared packages before pushing:
 ```bash
 cd mobile-app && flutter test --coverage
 cd ../web-app && npx vitest run --coverage
-cd ../packages && npm test
+cd ../packages && npx vitest run --coverage
 ```
-The packages suite uses `vitest.config.ts`, which ignores generated clients from coverage.
+The packages suite uses `vitest.config.ts`; its `coverage.exclude` patterns
+(`**/generated-ts/**` and `**/generated-dart/**`) skip the generated REST
+clients.
 Run the documentation checks with Node 20 (use `-y` to skip prompts):
 ```bash
 npx -y markdown-link-check README.md
 ```
 
 flutter test and npm test – keep CI green
-Both suites must report at least 75% coverage.
+All suites, including the packages tests, must report at least 75% coverage.
 
 PR → main, 1 reviewer min.
 
