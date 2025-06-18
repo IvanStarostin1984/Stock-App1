@@ -7,4 +7,5 @@ export default defineConfig({
       provider: 'v8',
       exclude: ['generated-ts/**', 'generated-dart/**'],
     },
+  },
 });
