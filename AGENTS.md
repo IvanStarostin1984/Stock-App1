@@ -118,6 +118,9 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 - GitHub Actions in `.github/workflows/ci.yml` will build the web app, run tests, trigger a Netlify deployment and execute Lighthouse CI. Keep the pipeline green.
 - Coverage is enforced in CI using `vitest --coverage` and `flutter test --coverage`; each must report ≥75 % or the job fails. Coverage reports upload as artifacts.
 - Generated REST clients under `packages/generated-ts` and `packages/generated-dart` are excluded from coverage.
+- Coverage also excludes shared utilities under `packages/core/src/**` and the
+  config file `packages/vitest.config.ts`. Keep this list in sync with the
+  README and `packages/vitest.config.ts` itself.
 - After editing `packages/vitest.config.ts` (or any vitest config), run `npx vitest run --config packages/vitest.config.ts` to ensure it parses.
 
 # Quality gates

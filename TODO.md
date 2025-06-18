@@ -5,6 +5,7 @@
 - [x] Implement a unified network layer shared by mobile and web services.
 - [x] Introduce NetClient class in Dart services and update tests.
 
+- [x] Resolved merge conflict in NOTES.md and preserved entry order.
 # Outstanding Tasks
 - [x] Add parity tests for NewsService
 - [x] Implement RSS fallback in mobile NewsService
