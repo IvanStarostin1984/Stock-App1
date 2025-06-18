@@ -62,6 +62,15 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 ```
 (Exchangerate.host is key-less – no variable needed.)
 
+## Shared Packages
+- When creating a new package under `packages/`, add its `src` folder to
+  `web-app/tsconfig.json` under `compilerOptions.paths`.
+- Keep `../packages/**/tests` listed in `exclude` so `vue-tsc` ignores package
+  tests.
+- Files directly inside a package import utilities from the web app with
+  `'../../web-app/src/…'` while files under `packages/<name>/src/` use
+  `'../../../web-app/src/…'`.
+
 ## Design Reference
 The folder `web-prototype/` contains HTML/CSS exported from Figma. Treat it as read-only. Copy colours, fonts and layout cues into `web-app/design-tokens/tokens.json` and Vue pages rather than importing the raw files.
 
