@@ -1,18 +1,23 @@
-<<<<<<< codex/update-documentation-for-vitest-config
+## 2025-06-18 PR #XX
+- **Summary**: documented coverage exclude paths in README and closed TODO.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: README now lists `core/src/**` and `vitest.config.ts` exclusion; TODO ticked.
+- **Next step**: monitor docs CI.
+
 ## 2025-07-19 PR #XX
 - **Summary**: documented new vitest config parsing step in AGENTS.
 - **Stage**: documentation
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: ensures config errors fail fast.
 - **Next step**: run markdown link check.
-=======
+
 ## 2025-06-18 PR #XX
 - **Summary**: fixed test config closing brace so vitest can run.
 - **Stage**: development
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: inserted missing brace to close test block.
 - **Next step**: run packages tests in CI.
->>>>>>> main
 
 ## 2025-07-18 PR #XX
 - **Summary**: updated vitest coverage patterns to `**/generated-*/**` and clarified README about generated client exclusion and 75% packages coverage.
