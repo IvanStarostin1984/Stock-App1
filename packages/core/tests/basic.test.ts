@@ -23,4 +23,11 @@ describe('fetchJson (core)', () => {
     await fetchJson('u', cache, ledger, j => j as number, 5);
     expect(fetchMock).toHaveBeenCalledTimes(2);
   });
+  it('returns null when fetch throws', async () => {
+    const cache = new LruCache<string, number>(1);
+    const ledger = { isSafe: vi.fn().mockReturnValue(true), increment: vi.fn() } as unknown as ApiQuotaLedger;
+    global.fetch = vi.fn().mockRejectedValue(new Error('fail'));
+    const res = await fetchJson('u', cache, ledger, j => j as number, 50);
+    expect(res).toBeNull();
+  });
 });

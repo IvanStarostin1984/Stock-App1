@@ -1,4 +1,11 @@
 ## 2025-06-18 PR #XX
+- **Summary**: added tests for fetchJson error handling and NetClient caching; coverage now above 75%.
+- **Stage**: development
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: tuned vitest config to exclude generated clients from coverage.
+- **Next step**: maintain coverage in future packages.
+
+## 2025-06-18 PR #XX
 - **Summary**: clarified that `<your-user>` placeholders in README and AGENTS should be replaced with your GitHub handle when forking.
 - **Stage**: documentation
 - **Requirements addressed**: N/A
