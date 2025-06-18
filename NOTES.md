@@ -1,3 +1,10 @@
+## 2025-07-19 PR #XX
+- **Summary**: documented new vitest config parsing step in AGENTS.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: ensures config errors fail fast.
+- **Next step**: run markdown link check.
+
 ## 2025-07-18 PR #XX
 - **Summary**: updated vitest coverage patterns to `**/generated-*/**` and clarified README about generated client exclusion and 75% packages coverage.
 - **Stage**: documentation
