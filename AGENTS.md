@@ -136,6 +136,8 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
   config file `packages/vitest.config.ts`. Keep this list in sync with the
   README and `packages/vitest.config.ts` itself.
  - After editing `packages/vitest.config.ts` (or any vitest config), run `npm run lint:vitest-config` to ensure it parses.
+   This command relies on Vitest's built‑in `dot` reporter, so avoid
+   overriding `--reporter` when editing it.
  - CI runs this script right after installing package dependencies so broken config files fail early.
 
 # Quality gates
