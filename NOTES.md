@@ -1,3 +1,10 @@
+## 2025-06-18 PR #XX
+- **Summary**: bundled SF Pro fonts from prototype, added @font-face rules, updated attribution.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: only SF Pro fonts available; others rely on system fonts.
+- **Next step**: verify web build includes fonts.
+
 - **Summary**: added vitest config lint step and CI job.
 - **Stage**: maintenance
 - **Requirements addressed**: N/A
