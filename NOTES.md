@@ -1,3 +1,10 @@
+## 2025-06-20 PR #XX
+- **Summary**: changed vitest config lint script to use dot reporter.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: replaced invalid reporter to fix script.
+- **Next step**: verify CI passes.
+
 ## 2025-06-18 PR #XX
 - **Summary**: bundled SF Pro fonts from prototype, added @font-face rules, updated attribution.
 - **Stage**: implementation
