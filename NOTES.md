@@ -1,3 +1,10 @@
+## 2025-06-20 PR #XX
+- **Summary**: changed vitest config lint script to use dot reporter.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: replaced invalid reporter to fix script.
+- **Next step**: verify CI passes.
+
 ## 2025-07-28 PR #XX
 - **Summary**: clarified AGENTS instructions for `lint:vitest-config` to mention the built-in dot reporter.
 - **Stage**: documentation
