@@ -1,4 +1,18 @@
-@import '../design-tokens/build/css/tokens.scss';
+@import './tokens.css';
+
+@font-face {
+  font-family: 'SF Pro Display-Bold';
+  src: url('/fonts/SF-Pro-Display-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display-Medium';
+  src: url('/fonts/SF-Pro-Display-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
 
 :root {
   font-family: var(--font-body);
