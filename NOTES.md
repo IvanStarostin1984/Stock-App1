@@ -1,3 +1,10 @@
+## 2025-07-28 PR #XX
+- **Summary**: clarified AGENTS instructions for `lint:vitest-config` to mention the built-in dot reporter.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: command relies on dot reporter; avoid custom `--reporter` flags.
+- **Next step**: monitor future changes for reporter drift.
+
 ## 2025-06-18 PR #XX
 - **Summary**: bundled SF Pro fonts from prototype, added @font-face rules, updated attribution.
 - **Stage**: implementation
@@ -1080,3 +1087,4 @@ npm test
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: emphasised Node 20; doc link check via npx.
 - **Next step**: add automated job for docs.
+
