@@ -40,6 +40,9 @@ jobs:
       - name: Check package import paths
         run: npm run lint:paths
         working-directory: packages
+      - name: Check NOTES order
+        run: npm run lint:notes
+        working-directory: packages
       - name: Run package tests with coverage
         run: |
           npm install --no-save -D @vitest/coverage-v8
