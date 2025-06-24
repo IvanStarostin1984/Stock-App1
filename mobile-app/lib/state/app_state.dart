@@ -3,6 +3,7 @@ import 'package:smwa_services/services.dart';
 import '../repositories/quote_repository.dart';
 import '../models/quote.dart';
 import '../models/news_article.dart';
+import '../repositories/watch_list_repository.dart';
 
 /// Simple state container used by the app.
 class AppState {
@@ -27,14 +28,19 @@ class AppStateNotifier extends StateNotifier<AppState> {
   final QuoteRepository _quotes;
   final NewsService _news;
   final AuthService _auth;
+  final WatchListRepository _watchRepo;
 
   /// Creates an [AppStateNotifier] with optional service overrides.
   AppStateNotifier(
-      {QuoteRepository? quotes, NewsService? news, AuthService? auth})
+      {QuoteRepository? quotes,
+      NewsService? news,
+      AuthService? auth,
+      WatchListRepository? watchRepo})
       : _quotes = quotes ?? QuoteRepository(),
         _news = news ??
             NewsService(const String.fromEnvironment('VITE_NEWSDATA_KEY')),
         _auth = auth ?? AuthService(),
+        _watchRepo = watchRepo ?? WatchListRepository(),
         super(const AppState());
 
   /// Increments the counter by one.
@@ -59,6 +65,12 @@ class AppStateNotifier extends StateNotifier<AppState> {
   /// Registers a new account via [AuthService].
   Future<Map<String, dynamic>> register(String email, String password) async {
     return _auth.register(email, password);
+  }
+
+  /// Loads and re-saves the watch list.
+  Future<void> syncWatchList() async {
+    final list = await _watchRepo.list();
+    await _watchRepo.save(list);
   }
 }
 

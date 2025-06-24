@@ -1,3 +1,10 @@
+## 2025-08-01 PR #XX
+- **Summary**: added mobile WatchListRepository using SharedPreferences and updated state to sync watch list on PortfolioScreen.
+- **Stage**: implementation
+- **Requirements addressed**: R-04
+- **Deviations/Decisions**: kept syncWatchList simple (load/save) per MVP design.
+- **Next step**: expand tests around state notifier.
+
 ## 2025-06-24 PR #XX
 - **Summary**: added WatchListRepository and updated syncWatchList action to persist symbols via localStorage.
 - **Stage**: implementation

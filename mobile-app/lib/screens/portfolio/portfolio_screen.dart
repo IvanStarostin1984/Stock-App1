@@ -15,6 +15,7 @@ class _PortfolioScreenState extends ConsumerState<PortfolioScreen> {
   @override
   void initState() {
     super.initState();
+    ref.read(appStateProvider.notifier).syncWatchList();
     ref.read(portfolioNotifierProvider.notifier).load();
   }
 
