@@ -1,3 +1,36 @@
+## 2025-06-24 PR #XX
+- **Summary**: added parity tests for NewsService verifying TTL, ledger increment and RSS fallback on both platforms.
+- **Stage**: testing
+- **Requirements addressed**: FR-0104
+- **Deviations/Decisions**: reused existing network stubs to keep API unchanged.
+- **Next step**: monitor coverage results.
+
+- **Summary**: displayed news articles on NewsPricesPage using store data and updated page styles for new font tokens.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0104
+- **Deviations/Decisions**: kept legacy font tokens alongside new ones.
+- **Next step**: monitor coverage of news features across platforms.
+
+- **Summary**: pages now use SF Pro tokens for fonts.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: replaced font token usage; heading weights set to bold.
+- **Next step**: verify design tokens usage across project.
+
+## 2025-06-24 PR #XX
+- **Summary**: updated SDD font token names; verified tsconfig excludes and crypto stubs.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: rebuild pages using new tokens.
+
+## 2025-06-24 PR #XX
+- **Summary**: split SF Pro font tokens into family and weight; updated generators.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: font tokens now use `font-family-*` and `font-weight-*`.
+- **Next step**: ensure pages use new tokens.
+
 ## 2025-07-31 PR #XXX
 - **Summary**: sorted NOTES entries by date and restored headings for PR #184 and #185.
 - **Stage**: documentation
@@ -1300,5 +1333,3 @@ npm test
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: None
 - **Next step**: Populate TODO.md and implement core services.
-
-
