@@ -7,6 +7,7 @@
 - [x] Introduce NetClient class in Dart services and update tests.
 
 - [x] Resolved merge conflict in NOTES.md and preserved entry order.
+- [x] Documented rule to keep NOTES.md chronological and reordered entries.
 # Outstanding Tasks
 - [x] Add parity tests for NewsService
 - [x] Implement RSS fallback in mobile NewsService
@@ -77,15 +78,15 @@
 
 - [x] Remember `mobile-app/packages/services` tests require `flutter test`.
 - [x] Integrate Riverpod and Pinia state stores.
-- [ ] Verify tsconfig paths whenever packages are added.
+- [x] Verify tsconfig paths whenever packages are added.
 - [x] Document import rules for shared packages:
   - Files at `packages/<name>/` use `'../../web-app/src/...`'.
   - Files under `packages/<name>/src/` use `'../../../web-app/src/...`'.
-- [ ] Add check to ensure packages reference web utilities via '../../web-app/src/…' at the package root and '../../../web-app/src/…' inside `packages/<name>/src`.
+- [x] Add check to ensure packages reference web utilities via '../../web-app/src/…' at the package root and '../../../web-app/src/…' inside `packages/<name>/src`.
 - [ ] Verify tsconfig excludes to ensure package tests are ignored.
 - [x] Add vitest config in packages to ignore generated clients from coverage.
 - [x] Moved coverage exclusions under test.coverage to fix generated clients in reports.
-- [ ] Investigate flutter analyze errors from generated-dart serializers
+- [x] Investigate flutter analyze errors from generated-dart serializers
 - [x] Update Flutter services to pass ttlMs to NetClient calls
 - [x] Document running `flutter pub get -C mobile-app/packages/services` after REST client generation
 - [x] Fix README CI badge links for markdown-link-check

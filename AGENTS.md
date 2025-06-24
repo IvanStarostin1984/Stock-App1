@@ -70,6 +70,8 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 - Files directly inside a package import utilities from the web app with
   `'../../web-app/src/…'` while files under `packages/<name>/src/` use
   `'../../../web-app/src/…'`.
+- After adding or editing packages, run `npm run lint:paths` in `packages/`
+  to verify these relative imports.
 
 ## Design Reference
 The folder `web-prototype/` contains HTML/CSS exported from Figma. Treat it as read-only. Colours and font names in `web-app/design-tokens/tokens.json` are parsed from `web-prototype/CSS/styleguide.css`. Copy layout cues manually when building Vue pages.
@@ -106,7 +108,8 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 ## Testing & CI
 - Run `dart format`, `flutter analyze`, `flutter test`, `eslint --fix`, and `npm test` before committing.
 - `flutter analyze` at the repo root uses `analysis_options.yaml` which includes
-  `mobile-app/analysis_options.yaml` and excludes generated design tokens.
+  `mobile-app/analysis_options.yaml` and excludes generated design tokens and the
+  OpenAPI client under `packages/generated-dart`.
 - Run `npm install` in `web-app/` before tests so the style-dictionary build step works.
 - Package tests import utilities from `web-app/src/`, so run `npm ci` in `web-app/` before executing tests in `packages/`.
 - After setting up Node, run `npm ci` and `npm test` in `packages/` to verify the
@@ -189,6 +192,7 @@ Append **one new section at the top of `NOTES.md`** (newest entry first) using t
 - **Next step**: …
 - **Notes**: … (optional)
 ```
+- Older entries must never precede newer ones; keep the log newest first.
 Agents MUST consult Notes.md and the referenced requirement IDs before starting work
 to understand the current stage, past decisions, and open questions tied to the spec.
 

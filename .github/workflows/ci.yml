@@ -37,6 +37,9 @@ jobs:
       - name: Check vitest config
         run: npm run lint:vitest-config
         working-directory: packages
+      - name: Check package import paths
+        run: npm run lint:paths
+        working-directory: packages
       - name: Run package tests with coverage
         run: |
           npm install --no-save -D @vitest/coverage-v8
