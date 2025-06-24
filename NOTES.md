@@ -4,12 +4,25 @@
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: opted to ignore auto-generated code rather than modify it.
 - **Next step**: ensure CI stays green
+
+## 2025-07-30 PR #XX
+- **Summary**: added path lint script, updated CI and docs.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: script computes expected relative prefix for web imports.
+- **Next step**: monitor new packages for compliance.
+
 ## 2025-06-20 PR #XX
 - **Summary**: changed vitest config lint script to use dot reporter.
 - **Stage**: maintenance
+
+## 2025-07-29 PR #XX
+- **Summary**: reordered log entries and updated AGENTS about keeping notes newest-first.
+- **Stage**: documentation
+
 - **Requirements addressed**: N/A
-- **Deviations/Decisions**: replaced invalid reporter to fix script.
-- **Next step**: verify CI passes.
+- **Deviations/Decisions**: none
+- **Next step**: follow updated logging rule.
 
 ## 2025-07-28 PR #XX
 - **Summary**: clarified AGENTS instructions for `lint:vitest-config` to mention the built-in dot reporter.
@@ -17,6 +30,13 @@
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: command relies on dot reporter; avoid custom `--reporter` flags.
 - **Next step**: monitor future changes for reporter drift.
+
+## 2025-06-20 PR #XX
+- **Summary**: changed vitest config lint script to use dot reporter.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: replaced invalid reporter to fix script.
+- **Next step**: verify CI passes.
 
 ## 2025-06-18 PR #XX
 - **Summary**: bundled SF Pro fonts from prototype, added @font-face rules, updated attribution.
