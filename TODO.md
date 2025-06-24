@@ -10,6 +10,7 @@
 - [x] Documented rule to keep NOTES.md chronological and reordered entries.
 # Outstanding Tasks
 - [x] Add parity tests for NewsService
+- [x] Extend NewsService parity tests for TTL, ledger and RSS fallback
 - [x] Implement RSS fallback in mobile NewsService
 
 - [x] Implement `packages/core/net.ts` with 24h LRU cache and quota handling.

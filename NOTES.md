@@ -1,3 +1,10 @@
+## 2025-06-24 PR #XX
+- **Summary**: added parity tests for NewsService verifying TTL, ledger increment and RSS fallback on both platforms.
+- **Stage**: testing
+- **Requirements addressed**: FR-0104
+- **Deviations/Decisions**: reused existing network stubs to keep API unchanged.
+- **Next step**: monitor coverage results.
+
 - **Summary**: displayed news articles on NewsPricesPage using store data and updated page styles for new font tokens.
 - **Stage**: implementation
 - **Requirements addressed**: FR-0104
