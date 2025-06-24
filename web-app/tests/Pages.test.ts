@@ -90,6 +90,18 @@ describe('NewsPricesPage', () => {
     expect(wrapper.text()).toContain('Top Losers');
     expect(wrapper.text()).toContain('B 2');
   });
+
+  it('renders articles when present', () => {
+    storeMock.articles = [
+      { title: 'T1', url: 'http://a', source: 's', published: '' },
+      { title: 'T2', url: 'http://b', source: 's', published: '' }
+    ];
+    const wrapper = mount(NewsPricesPage);
+    const links = wrapper.findAll('a');
+    expect(links.length).toBe(2);
+    expect(links[0].text()).toBe('T1');
+    expect(links[0].attributes('href')).toBe('http://a');
+  });
 });
 
 describe('ProPage', () => {

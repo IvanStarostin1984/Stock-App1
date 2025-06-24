@@ -58,7 +58,7 @@
 - [ ] Implement remaining repositories.
 - [ ] Enhance services to parse real API data.
 - [ ] Monitor for further API integration.
-- [ ] Use news data on NewsScreen.
+- [x] Use news data on NewsScreen.
 - [ ] Expand store features.
 - [x] Implement ranking for SymbolTrie suggestions.
 - [x] Integrate helper in mobile services.
@@ -106,4 +106,4 @@
 - [x] Create web-prototype directory with placeholder HTML pages for design.
 - [x] Import colours and fonts from `web-prototype/CSS/styleguide.css` into `web-app/design-tokens/tokens.json`.
 - [x] Bundle prototype fonts in the PWA (verify licenses).
-- [ ] Rebuild Vue pages to match `web-prototype/*.html` using the new tokens.
+- [x] Rebuild Vue pages to match `web-prototype/*.html` using the new tokens.
