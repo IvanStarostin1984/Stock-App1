@@ -29,6 +29,7 @@ export interface AppDeps {
   trie?: SymbolTrie;
   locationService?: LocationService;
   countryRepo?: CountrySettingRepository;
+  watchRepo?: WatchListRepository;
 }
 
 export function createAppStore(deps: AppDeps = {}) {
@@ -102,9 +103,28 @@ export function createAppStore(deps: AppDeps = {}) {
       },
       async syncWatchList() {
         if (typeof localStorage === 'undefined') return;
-        const repo = new WatchListRepository();
+        const repo = deps.watchRepo ?? new WatchListRepository();
         const list = await repo.list();
         await repo.save(list);
+      },
+      /** Add a symbol to the watch list if not already present. */
+      async addToWatchList(symbol: string) {
+        const repo = deps.watchRepo ?? new WatchListRepository();
+        const list = await repo.list();
+        if (!list.includes(symbol)) {
+          list.push(symbol);
+          await repo.save(list);
+        }
+      },
+      /** Remove a symbol from the watch list. */
+      async removeFromWatchList(symbol: string) {
+        const repo = deps.watchRepo ?? new WatchListRepository();
+        const list = await repo.list();
+        const idx = list.indexOf(symbol);
+        if (idx !== -1) {
+          list.splice(idx, 1);
+          await repo.save(list);
+        }
       }
     }
   });

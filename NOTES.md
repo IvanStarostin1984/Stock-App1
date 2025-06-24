@@ -1,4 +1,11 @@
 ## 2025-06-24 PR #XX
+- **Summary**: added watch list page and store actions for managing symbols; registered route and tests.
+- **Stage**: implementation
+- **Requirements addressed**: UC-15
+- **Deviations/Decisions**: storing watch list locally despite SRS scope.
+- **Next step**: monitor coverage and integrate UI for editing list.
+
+## 2025-06-24 PR #XX
 - **Summary**: added WatchListRepository and updated syncWatchList action to persist symbols via localStorage.
 - **Stage**: implementation
 - **Requirements addressed**: UC-15
