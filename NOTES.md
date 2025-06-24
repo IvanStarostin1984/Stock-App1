@@ -1,3 +1,10 @@
+## 2025-06-24 PR #XX
+- **Summary**: excluded generated Dart client from analyzer to silence errors.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: opted to ignore auto-generated code rather than modify it.
+- **Next step**: ensure CI stays green
+
 ## 2025-07-30 PR #XX
 - **Summary**: added path lint script, updated CI and docs.
 - **Stage**: maintenance
