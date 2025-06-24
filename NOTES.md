@@ -1,3 +1,9 @@
+## 2025-06-24 PR #XX
+- **Summary**: excluded generated Dart client from analyzer to silence errors.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: opted to ignore auto-generated code rather than modify it.
+- **Next step**: ensure CI stays green
 ## 2025-06-20 PR #XX
 - **Summary**: changed vitest config lint script to use dot reporter.
 - **Stage**: maintenance

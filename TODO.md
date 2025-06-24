@@ -85,7 +85,7 @@
 - [ ] Verify tsconfig excludes to ensure package tests are ignored.
 - [x] Add vitest config in packages to ignore generated clients from coverage.
 - [x] Moved coverage exclusions under test.coverage to fix generated clients in reports.
-- [ ] Investigate flutter analyze errors from generated-dart serializers
+- [x] Investigate flutter analyze errors from generated-dart serializers
 - [x] Update Flutter services to pass ttlMs to NetClient calls
 - [x] Document running `flutter pub get -C mobile-app/packages/services` after REST client generation
 - [x] Fix README CI badge links for markdown-link-check

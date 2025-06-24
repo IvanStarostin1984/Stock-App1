@@ -106,7 +106,8 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 ## Testing & CI
 - Run `dart format`, `flutter analyze`, `flutter test`, `eslint --fix`, and `npm test` before committing.
 - `flutter analyze` at the repo root uses `analysis_options.yaml` which includes
-  `mobile-app/analysis_options.yaml` and excludes generated design tokens.
+  `mobile-app/analysis_options.yaml` and excludes generated design tokens and the
+  OpenAPI client under `packages/generated-dart`.
 - Run `npm install` in `web-app/` before tests so the style-dictionary build step works.
 - Package tests import utilities from `web-app/src/`, so run `npm ci` in `web-app/` before executing tests in `packages/`.
 - After setting up Node, run `npm ci` and `npm test` in `packages/` to verify the
