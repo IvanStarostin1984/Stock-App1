@@ -189,6 +189,7 @@ Append **one new section at the top of `NOTES.md`** (newest entry first) using t
 - **Next step**: …
 - **Notes**: … (optional)
 ```
+- Older entries must never precede newer ones; keep the log newest first.
 Agents MUST consult Notes.md and the referenced requirement IDs before starting work
 to understand the current stage, past decisions, and open questions tied to the spec.
 
