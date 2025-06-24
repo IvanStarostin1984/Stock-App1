@@ -634,8 +634,8 @@ space-grid-2	8 px	Base spacing unit – every multiple derives from it
 space-grid-3	12 px	Compact vertical rhythm
 space-grid-4	16 px	Default component gutter
 space-grid-6	24 px	Section padding / lg. breakpoint gutter
-font-display	Inter 700	H1–H3 headings
-font-body	Inter 400	Body copy & table cells
+font-family-sf-pro-display/font-weight-bold	SF Pro Display 700	H1–H3 headings
+font-family-sf-pro-text/font-weight-regular	SF Pro Text 400	Body copy & table cells
 font-mono	JetBrains Mono 400	Code snippets / data labels
 dur-swift	120 ms	Button hover / press ripple
 dur-normal	240 ms	Navigation transition

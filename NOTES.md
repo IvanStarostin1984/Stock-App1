@@ -1,4 +1,11 @@
 ## 2025-06-24 PR #XX
+- **Summary**: updated SDD font token names; verified tsconfig excludes and crypto stubs.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: rebuild pages using new tokens.
+
+## 2025-06-24 PR #XX
 - **Summary**: split SF Pro font tokens into family and weight; updated generators.
 - **Stage**: implementation
 - **Requirements addressed**: N/A

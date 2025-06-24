@@ -83,7 +83,7 @@
   - Files at `packages/<name>/` use `'../../web-app/src/...`'.
   - Files under `packages/<name>/src/` use `'../../../web-app/src/...`'.
 - [x] Add check to ensure packages reference web utilities via '../../web-app/src/…' at the package root and '../../../web-app/src/…' inside `packages/<name>/src`.
-- [ ] Verify tsconfig excludes to ensure package tests are ignored.
+- [x] Verify tsconfig excludes to ensure package tests are ignored.
 - [x] Add vitest config in packages to ignore generated clients from coverage.
 - [x] Moved coverage exclusions under test.coverage to fix generated clients in reports.
 - [x] Investigate flutter analyze errors from generated-dart serializers
@@ -93,7 +93,7 @@
 - [x] Fix README CI badge links for markdown-link-check
 - [x] Add start_env.sh script to automate local setup
 - [x] Update CI workflows to pass API keys via `--dart-define`
-- [ ] Add type stubs for crypto libraries and document tsconfig changes
+- [x] Add type stubs for crypto libraries and document tsconfig changes
 - [x] Document installing `@types` packages when adding new JS dependencies to avoid TS7016 errors.
 - [x] Verify RSS fallback on mobile NewsService.
 - [x] Document customizing the `<your-user>` placeholder after forking the repo.
