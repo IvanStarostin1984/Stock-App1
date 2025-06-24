@@ -19,6 +19,7 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 | **Detail** | 🕰 *Interactive OHLC charts* (1 d / 1 m / 3 m / 1 y) | PF-002·FR-0102 |
 | **News + Prices** | 💹 *Top 5 gainers & losers* · 📰 *News digest* (NewsData.io → RSS fallback) | PF-003/004·FR-0103/0104 |
 | **Portfolio** | 👜 *Local tracker* with hourly auto-refresh; EUR ↔ USD ↔ local toggle | PF-006/007·FR-0106/0107 |
+| **Watch List** | 📝 *Saved symbols stored locally* | – |
 | **Pro** | ⭐ *Mock “Pro” upgrade* via `stripe-mock` | PF-008·FR-0108 |
 
 > **Exam-spec quirks covered**<br>
@@ -86,7 +87,7 @@ matching repository backed by `localStorage`.
 📂 Repo Layout
 packages/           shared DTOs + generated REST clients
 mobile-app/         Flutter application (6 screens)
-web-app/            PWA (Vue 3 + Vite, 7 pages)
+web-app/            PWA (Vue 3 + Vite, 8 pages)
 web-prototype/      Figma HTML/CSS reference (read only).
                     Colours and font names in `web-app/design-tokens/tokens.json`
                     come from `web-prototype/CSS/styleguide.css`. Font families
