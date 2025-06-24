@@ -28,6 +28,9 @@ StyleDictionary.registerFormat({
           : rgbaToHex(t.value);
         return `const ${name} = Color(${hex});`;
       }
+      if (t.name.startsWith('font-weight-')) {
+        return `const ${name} = ${parseInt(t.value, 10)}.0;`;
+      }
       if (t.value.endsWith('px')) {
         return `const ${name} = ${parseFloat(t.value)}.0;`;
       }

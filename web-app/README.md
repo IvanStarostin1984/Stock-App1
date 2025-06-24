@@ -36,7 +36,7 @@ cached for 12 hours just like the API data.
 
 Run `npm run tokens` to generate `design-tokens/build/css/tokens.scss` and `design-tokens/build/dart/tokens.dart`. These files are regenerated automatically during `npm run build` and before tests.
 
-Tokens come from `web-prototype/CSS/styleguide.css`. Copy its colour and font variables into `design-tokens/tokens.json` and use them via the generated CSS variables.
+Tokens come from `web-prototype/CSS/styleguide.css`. Copy its colour and font variables into `design-tokens/tokens.json` and use them via the generated CSS variables. Font tokens now separate family and weight, for example `font-family-sf_pro_display` and `font-weight-bold`.
 
 Run this command (or `npm test`, which also triggers it) **before** running any
 Flutter analysis or build steps so `tokens.dart` exists.

@@ -89,7 +89,9 @@ mobile-app/         Flutter application (6 screens)
 web-app/            PWA (Vue 3 + Vite, 7 pages)
 web-prototype/      Figma HTML/CSS reference (read only).
                     Colours and font names in `web-app/design-tokens/tokens.json`
-                    come from `web-prototype/CSS/styleguide.css`.
+                    come from `web-prototype/CSS/styleguide.css`. Font families
+                    and weights are split into tokens like `font-family-sf_pro_display`
+                    and `font-weight-bold`.
 .github/workflows/  CI → unit → build → Lighthouse → Netlify deploy
 docs/               full ISO/IEC 29148 SRS, architecture, slides
 🔒 Free-Tier Guardrails (LIM-0003 … 0007 / 0016)
