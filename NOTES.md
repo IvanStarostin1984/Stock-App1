@@ -1,3 +1,10 @@
+## 2025-06-24 PR #XX
+- **Summary**: split SF Pro font tokens into family and weight; updated generators.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: font tokens now use `font-family-*` and `font-weight-*`.
+- **Next step**: ensure pages use new tokens.
+
 ## 2025-06-20 PR #XX
 - **Summary**: changed vitest config lint script to use dot reporter.
 - **Stage**: maintenance
