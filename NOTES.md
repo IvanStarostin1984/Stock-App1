@@ -1,3 +1,10 @@
+## 2025-06-24 PR #XX
+- **Summary**: added WatchListRepository and updated syncWatchList action to persist symbols via localStorage.
+- **Stage**: implementation
+- **Requirements addressed**: UC-15
+- **Deviations/Decisions**: local watch-list persistence added although SRS lists persistent watch-list as out-of-scope.
+- **Next step**: monitor for integration with UI components.
+
 - **Summary**: displayed news articles on NewsPricesPage using store data and updated page styles for new font tokens.
 - **Stage**: implementation
 - **Requirements addressed**: FR-0104

@@ -9,6 +9,7 @@ import {
   type CountrySetting
 } from '@/repositories/CountrySettingRepository';
 import { SymbolTrie } from '@/utils/SymbolTrie';
+import { WatchListRepository } from '@/repositories/WatchListRepository';
 
 export interface AppState {
   headline: Quote | null;
@@ -100,7 +101,10 @@ export function createAppStore(deps: AppDeps = {}) {
         }
       },
       async syncWatchList() {
-        // placeholder for future sync logic
+        if (typeof localStorage === 'undefined') return;
+        const repo = new WatchListRepository();
+        const list = await repo.list();
+        await repo.save(list);
       }
     }
   });
