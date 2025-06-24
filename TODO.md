@@ -58,7 +58,7 @@
 - [ ] Implement remaining repositories.
 - [ ] Enhance services to parse real API data.
 - [ ] Monitor for further API integration.
-- [ ] Use news data on NewsScreen.
+- [x] Use news data on NewsScreen.
 - [ ] Expand store features.
 - [x] Implement ranking for SymbolTrie suggestions.
 - [x] Integrate helper in mobile services.
