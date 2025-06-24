@@ -10,6 +10,7 @@
     "gen:all": "openapi-generator-cli generate -i ../spec/openapi.yaml -g typescript-axios -o generated",
     "lint:spec": "openapi-cli lint spec/openapi.yaml",
     "lint:vitest-config": "npx vitest run --config vitest.config.ts --reporter dot",
+    "lint:paths": "node ../scripts/check-package-paths.mjs",
     "test": "vitest run --config vitest.config.ts --coverage --coverage.include=core/net.ts --coverage.exclude=**/generated-ts/** --coverage.exclude=**/generated-dart/** --coverage.exclude=**/core/src/**"
   },
   "devDependencies": {
