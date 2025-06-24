@@ -1,8 +1,12 @@
 - [x] Split font weights from font family tokens for easier CSS usage.
 # TODO
 
+- [x] Add WatchListPage and store actions for watch list.
+
 - [x] Implement a unified network layer shared by mobile and web services.
 - [x] Implement local WatchListRepository for web
+- [x] Implement WatchListRepository for mobile
+- [x] Expose syncWatchList via AppStateNotifier and PortfolioScreen
 - [x] Refactor mobile (Flutter) services to use NetClient.
 - [x] Implement a unified network layer shared by mobile and web services.
 - [x] Introduce NetClient class in Dart services and update tests.
