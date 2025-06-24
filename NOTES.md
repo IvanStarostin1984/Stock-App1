@@ -1,4 +1,11 @@
 ## 2025-06-24 PR #XX
+- **Summary**: displayed news articles on NewsPricesPage using store data and updated page styles for new font tokens.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0104
+- **Deviations/Decisions**: kept legacy font tokens alongside new ones.
+- **Next step**: monitor coverage of news features across platforms.
+
+## 2025-06-24 PR #XX
 - **Summary**: split SF Pro font tokens into family and weight; updated generators.
 - **Stage**: implementation
 - **Requirements addressed**: N/A

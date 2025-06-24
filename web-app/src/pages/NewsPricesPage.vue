@@ -9,6 +9,14 @@
         </li>
       </ul>
     </div>
+    <div v-if="store.articles && store.articles.length">
+      <h2>News</h2>
+      <ul>
+        <li v-for="a in store.articles" :key="a.url">
+          <a :href="a.url" target="_blank" rel="noopener">{{ a.title }}</a>
+        </li>
+      </ul>
+    </div>
     <div v-if="store.topLosers.length">
       <h2>Top Losers</h2>
       <ul>
@@ -37,10 +45,12 @@ useLoadTimeLogger('NewsPricesPage');
 <style scoped>
 .page {
   padding: var(--space-grid-4);
-  font-family: var(--font-body);
+  font-family: var(--font-family-sf-pro-text);
+  font-weight: var(--font-weight-regular);
 }
 h1 {
-  font-family: var(--font-display);
+  font-family: var(--font-family-sf-pro-display);
+  font-weight: var(--font-weight-bold);
   color: var(--clr-primary-700);
 }
 </style>
