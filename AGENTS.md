@@ -70,6 +70,8 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 - Files directly inside a package import utilities from the web app with
   `'../../web-app/src/…'` while files under `packages/<name>/src/` use
   `'../../../web-app/src/…'`.
+- After adding or editing packages, run `npm run lint:paths` in `packages/`
+  to verify these relative imports.
 
 ## Design Reference
 The folder `web-prototype/` contains HTML/CSS exported from Figma. Treat it as read-only. Colours and font names in `web-app/design-tokens/tokens.json` are parsed from `web-prototype/CSS/styleguide.css`. Copy layout cues manually when building Vue pages.

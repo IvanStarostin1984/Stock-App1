@@ -77,11 +77,11 @@
 
 - [x] Remember `mobile-app/packages/services` tests require `flutter test`.
 - [x] Integrate Riverpod and Pinia state stores.
-- [ ] Verify tsconfig paths whenever packages are added.
+- [x] Verify tsconfig paths whenever packages are added.
 - [x] Document import rules for shared packages:
   - Files at `packages/<name>/` use `'../../web-app/src/...`'.
   - Files under `packages/<name>/src/` use `'../../../web-app/src/...`'.
-- [ ] Add check to ensure packages reference web utilities via '../../web-app/src/…' at the package root and '../../../web-app/src/…' inside `packages/<name>/src`.
+- [x] Add check to ensure packages reference web utilities via '../../web-app/src/…' at the package root and '../../../web-app/src/…' inside `packages/<name>/src`.
 - [ ] Verify tsconfig excludes to ensure package tests are ignored.
 - [x] Add vitest config in packages to ignore generated clients from coverage.
 - [x] Moved coverage exclusions under test.coverage to fix generated clients in reports.
