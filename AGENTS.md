@@ -138,10 +138,11 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 - Coverage also excludes shared utilities under `packages/core/src/**` and the
   config file `packages/vitest.config.ts`. Keep this list in sync with the
   README and `packages/vitest.config.ts` itself.
- - After editing `packages/vitest.config.ts` (or any vitest config), run `npm run lint:vitest-config` to ensure it parses.
-   This command relies on Vitest's built‑in `dot` reporter, so avoid
-   overriding `--reporter` when editing it.
- - CI runs this script right after installing package dependencies so broken config files fail early.
+- After editing `packages/vitest.config.ts` (or any vitest config), run `npm run lint:vitest-config` to ensure it parses.
+  This command relies on Vitest's built‑in `dot` reporter, so avoid
+  overriding `--reporter` when editing it.
+- CI runs this script right after installing package dependencies so broken config files fail early.
+- Run `npm run lint:notes` to verify `NOTES.md` entries remain newest-first. CI runs this before tests.
 
 # Quality gates
 * **Lighthouse** perf & a11y ≥ 90 or CI fails.  
