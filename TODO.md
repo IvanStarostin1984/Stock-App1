@@ -11,6 +11,7 @@
 - [x] Documented rule to keep NOTES.md chronological and reordered entries.
 # Outstanding Tasks
 - [x] Add parity tests for NewsService
+- [x] Extend NewsService parity tests for TTL, ledger and RSS fallback
 - [x] Implement RSS fallback in mobile NewsService
 
 - [x] Implement `packages/core/net.ts` with 24h LRU cache and quota handling.
@@ -69,6 +70,8 @@
 - [ ] Wire Flutter store.
 - [ ] Monitor CI runs.
 - [x] Keep AGENTS.md up to date whenever CI tooling changes.
+
+- [ ] Add linter to verify NOTES.md entries start with a proper heading and remain newest-first.
 
 - [x] Ensure packages tests run via `npm ci` and `npm test` in CI workflow.
 
