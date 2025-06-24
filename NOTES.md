@@ -1,4 +1,12 @@
 ## 2025-06-24 PR #XX
+- **Summary**: pages now use SF Pro tokens for fonts.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: replaced font token usage; heading weights set to bold.
+- **Next step**: verify design tokens usage across project.
+
+## 2025-06-24 PR #XX
+
 - **Summary**: split SF Pro font tokens into family and weight; updated generators.
 - **Stage**: implementation
 - **Requirements addressed**: N/A
