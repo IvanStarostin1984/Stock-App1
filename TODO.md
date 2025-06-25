@@ -1,4 +1,5 @@
 - [x] Split font weights from font family tokens for easier CSS usage.
+
 # TODO
 
 - [x] Add WatchListPage and store actions for watch list.
@@ -13,7 +14,9 @@
 
 - [x] Resolved merge conflict in NOTES.md and preserved entry order.
 - [x] Documented rule to keep NOTES.md chronological and reordered entries.
+
 # Outstanding Tasks
+
 - [x] Add parity tests for NewsService
 - [x] Extend NewsService parity tests for TTL, ledger and RSS fallback
 - [x] Implement RSS fallback in mobile NewsService
@@ -44,22 +47,23 @@
 - [x] Exclude package tests directories when adding their sources to web tsconfig.
 - [x] Add ttl parameter to NetClient and pass specific durations in services with tests.
 - [x] Remove obsolete `web-app/packages/services` folder; services live in
-  `web-app/src/services`.
+      `web-app/src/services`.
 - [x] Add tests for `useLoadTimeLogger` hook.
 - [x] Add negative tests for AuthService login.
 - [x] Install and maintain `@types/crypto-js` and `@types/bcryptjs` for web AuthService.
 
 # In progress
+
 - [x] Verify cross-platform behaviour of NetClient.
 - [x] Verify cross-platform behaviour of LocationService.
 - [x] Follow CI instructions for docs.
 - [x] Monitor CI for cross-tool coverage.
 - [ ] Ensure CI passes with updated hashing.
- - [x] Fix container build scripts.
+- [x] Fix container build scripts.
 - [ ] Monitor repo progress.
- - [x] Integrate with AuthService.
- - [x] Integrate into PortfolioScreen.
- - [x] Implement refreshTotals and integrate with UI.
+- [x] Integrate with AuthService.
+- [x] Integrate into PortfolioScreen.
+- [x] Implement refreshTotals and integrate with UI.
 - [ ] Extend repositories for other domains.
 - [ ] Implement remaining repositories.
 - [ ] Enhance services to parse real API data.
@@ -105,12 +109,13 @@
 - [x] Document installing `@types` packages when adding new JS dependencies to avoid TS7016 errors.
 - [x] Verify RSS fallback on mobile NewsService.
 - [x] Document customizing the `<your-user>` placeholder after forking the repo.
- - [x] Keep `packages/vitest.config.ts` exclude patterns in sync with README
-       coverage instructions.
+- [x] Keep `packages/vitest.config.ts` exclude patterns in sync with README
+      coverage instructions.
 - [x] Keep `packages/vitest.config.ts` exclude patterns in sync with README
       coverage instructions.
 - [ ] Maintain >75% coverage for packages tests
 - [x] Add linter or pre-test step that verifies vitest config syntax parses.
+- [x] Add script to detect merge conflict markers and run it in CI.
 - [x] Create web-prototype directory with placeholder HTML pages for design.
 - [x] Import colours and fonts from `web-prototype/CSS/styleguide.css` into `web-app/design-tokens/tokens.json`.
 - [x] Bundle prototype fonts in the PWA (verify licenses).
