@@ -1,48 +1,16 @@
+## 2025-08-02 PR #XX
+- **Summary**: reordered NOTES.md chronologically and verified linter.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: used script to sort entries.
+- **Next step**: keep notes log newest-first.
+
 ## 2025-08-01 PR #XX
 - **Summary**: added notes order check in CI and updated docs.
 - **Stage**: implementation
 - **Requirements addressed**: R-04
 - **Deviations/Decisions**: kept syncWatchList simple (load/save) per MVP design.
 - **Next step**: expand tests around state notifier.
-
-## 2025-06-24 PR #XX
-- **Summary**: added watch list page and store actions for managing symbols; registered route and tests.
-- **Stage**: implementation
-- **Requirements addressed**: UC-15
-- **Deviations/Decisions**: storing watch list locally despite SRS scope.
-- **Next step**: monitor coverage and integrate UI for editing list.
-
-## 2025-06-24 PR #XX
-- **Summary**: added WatchListRepository and updated syncWatchList action to persist symbols via localStorage.
-- **Stage**: implementation
-- **Requirements addressed**: UC-15
-- **Deviations/Decisions**: local watch-list persistence added although SRS lists persistent watch-list as out-of-scope.
-- **Next step**: monitor for integration with UI components.
-
-- **Summary**: added parity tests for NewsService verifying TTL, ledger increment and RSS fallback on both platforms.
-- **Stage**: testing
-- **Requirements addressed**: FR-0104
-- **Deviations/Decisions**: reused existing network stubs to keep API unchanged.
-- **Next step**: monitor coverage results.
-
-- **Summary**: displayed news articles on NewsPricesPage using store data and updated page styles for new font tokens.
-- **Stage**: implementation
-- **Requirements addressed**: FR-0104
-- **Deviations/Decisions**: kept legacy font tokens alongside new ones.
-- **Next step**: monitor coverage of news features across platforms.
-
-- **Summary**: pages now use SF Pro tokens for fonts.
-- **Stage**: implementation
-- **Requirements addressed**: N/A
-- **Deviations/Decisions**: replaced font token usage; heading weights set to bold.
-- **Next step**: verify design tokens usage across project.
-
-## 2025-06-24 PR #XX
-- **Summary**: updated SDD font token names; verified tsconfig excludes and crypto stubs.
-- **Stage**: maintenance
-- **Requirements addressed**: N/A
-- **Deviations/Decisions**: implemented Node script verifying heading order.
-- **Next step**: monitor pipeline for sorting errors.
 
 ## 2025-07-31 PR #XXX
 - **Summary**: sorted NOTES entries by date and restored headings for PR #184 and #185.
@@ -264,6 +232,45 @@
 - **Requirements addressed**: FR-0104
 - **Deviations/Decisions**: parity ensures same cache and ledger behaviour.
 - **Next step**: follow CI instructions for docs.
+
+## 2025-06-24 PR #XX
+- **Summary**: added watch list page and store actions for managing symbols; registered route and tests.
+- **Stage**: implementation
+- **Requirements addressed**: UC-15
+- **Deviations/Decisions**: storing watch list locally despite SRS scope.
+- **Next step**: monitor coverage and integrate UI for editing list.
+
+## 2025-06-24 PR #XX
+- **Summary**: added WatchListRepository and updated syncWatchList action to persist symbols via localStorage.
+- **Stage**: implementation
+- **Requirements addressed**: UC-15
+- **Deviations/Decisions**: local watch-list persistence added although SRS lists persistent watch-list as out-of-scope.
+- **Next step**: monitor for integration with UI components.
+
+- **Summary**: added parity tests for NewsService verifying TTL, ledger increment and RSS fallback on both platforms.
+- **Stage**: testing
+- **Requirements addressed**: FR-0104
+- **Deviations/Decisions**: reused existing network stubs to keep API unchanged.
+- **Next step**: monitor coverage results.
+
+- **Summary**: displayed news articles on NewsPricesPage using store data and updated page styles for new font tokens.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0104
+- **Deviations/Decisions**: kept legacy font tokens alongside new ones.
+- **Next step**: monitor coverage of news features across platforms.
+
+- **Summary**: pages now use SF Pro tokens for fonts.
+- **Stage**: implementation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: replaced font token usage; heading weights set to bold.
+- **Next step**: verify design tokens usage across project.
+
+## 2025-06-24 PR #XX
+- **Summary**: updated SDD font token names; verified tsconfig excludes and crypto stubs.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: implemented Node script verifying heading order.
+- **Next step**: monitor pipeline for sorting errors.
 
 ## 2025-06-24 PR #XX
 - **Summary**: added WatchListRepository and updated syncWatchList action to persist symbols via localStorage.
