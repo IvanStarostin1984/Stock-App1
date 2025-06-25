@@ -1,9 +1,17 @@
 ## 2025-08-02 PR #XX
+<<<<<<< codex/update-agents.md-with-lint-notes-reminder
+- **Summary**: documented notes merge check and reminder.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: follow rule when resolving conflicts.
+=======
 - **Summary**: reordered NOTES.md chronologically and verified linter.
 - **Stage**: documentation
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: used script to sort entries.
 - **Next step**: keep notes log newest-first.
+>>>>>>> main
 
 ## 2025-08-01 PR #XX
 - **Summary**: added notes order check in CI and updated docs.

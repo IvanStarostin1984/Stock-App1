@@ -143,6 +143,7 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
   overriding `--reporter` when editing it.
 - CI runs this script right after installing package dependencies so broken config files fail early.
 - Run `npm run lint:notes` to verify `NOTES.md` entries remain newest-first. CI runs this before tests.
+- Always append new sections at the top of `NOTES.md`. After rebasing or resolving merge conflicts, run `npm run lint:notes` again to confirm the order.
 
 # Quality gates
 * **Lighthouse** perf & a11y ≥ 90 or CI fails.  
