@@ -1,3 +1,10 @@
+## 2025-08-02 PR #XX
+- **Summary**: documented notes merge check and reminder.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: none
+- **Next step**: follow rule when resolving conflicts.
+
 ## 2025-08-01 PR #XX
 - **Summary**: added notes order check in CI and updated docs.
 - **Stage**: implementation
