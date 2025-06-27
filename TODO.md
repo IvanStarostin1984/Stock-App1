@@ -73,9 +73,9 @@
 - [ ] Expand store features.
 - [x] Implement ranking for SymbolTrie suggestions.
 - [x] Integrate helper in mobile services.
-- [ ] Flesh out real API calls.
+- [x] Flesh out real API calls.
 - [ ] Expand state usage across app.
-- [ ] Expand to remaining service stubs.
+- [x] Expand to remaining service stubs.
 - [ ] Wire Flutter store.
 - [ ] Monitor CI runs.
 - [x] Keep AGENTS.md up to date whenever CI tooling changes.

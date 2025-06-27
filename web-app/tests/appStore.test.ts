@@ -69,18 +69,36 @@ describe('appStore', () => {
     expect(search).toHaveBeenCalledWith('AA', 5);
   });
 
-  it('signIn and upgradePro set pro flag', () => {
+  it('signIn and upgradePro set pro flag', async () => {
+    const checkout = vi.fn().mockResolvedValue(true);
     const store = createAppStore({
       quoteRepo: new QuoteRepository({ getQuote: vi.fn() } as any),
       newsService: { getNews: vi.fn() } as any,
       fxRepo: { rate: vi.fn() } as any,
-      trie: { search: vi.fn().mockReturnValue([]) } as any
+      trie: { search: vi.fn().mockReturnValue([]) } as any,
+      proService: { checkoutMock: checkout } as any,
     })();
     store.signIn();
     expect(store.isPro).toBe(true);
     store.isPro = false;
-    store.upgradePro();
+    await store.upgradePro();
     expect(store.isPro).toBe(true);
+    expect(checkout).toHaveBeenCalled();
+  });
+
+  it('does not enable pro on checkout failure', async () => {
+    const checkout = vi.fn().mockResolvedValue(false);
+    const store = createAppStore({
+      quoteRepo: new QuoteRepository({ getQuote: vi.fn() } as any),
+      newsService: { getNews: vi.fn() } as any,
+      fxRepo: { rate: vi.fn() } as any,
+      trie: { search: vi.fn().mockReturnValue([]) } as any,
+      proService: { checkoutMock: checkout } as any,
+    })();
+    store.isPro = false;
+    await store.upgradePro();
+    expect(store.isPro).toBe(false);
+    expect(checkout).toHaveBeenCalled();
   });
 
   it('loads top movers', async () => {
