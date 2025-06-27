@@ -5,6 +5,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mobile_app/state/app_state.dart';
 import 'package:smwa_services/services.dart';
 import 'package:mobile_app/repositories/quote_repository.dart';
+import 'package:mobile_app/repositories/news_repository.dart';
+import 'package:mobile_app/models/news_article.dart';
 
 class _FakeMarketstackService extends MarketstackService {
   @override
@@ -20,19 +22,17 @@ class _NullMarketstackService extends MarketstackService {
   }
 }
 
-class _FakeNewsService extends NewsService {
-  _FakeNewsService() : super('x');
+class _FakeNewsRepository implements NewsRepository {
   @override
-  Future<List<Map<String, dynamic>>> getDigest(String topic) async {
-    return [];
-  }
+  Future<List<NewsArticle>?> digest(String symbol) async => [];
 }
 
 void main() {
   group('MainScreen', () {
     testWidgets('shows quote when service returns data', (tester) async {
       final repo = QuoteRepository(service: _FakeMarketstackService());
-      final notifier = AppStateNotifier(quotes: repo, news: _FakeNewsService());
+      final notifier =
+          AppStateNotifier(quotes: repo, news: _FakeNewsRepository());
       await tester.pumpWidget(
         ProviderScope(
           overrides: [appStateProvider.overrideWith((ref) => notifier)],
@@ -45,7 +45,8 @@ void main() {
 
     testWidgets('shows loading when service returns null', (tester) async {
       final repo = QuoteRepository(service: _NullMarketstackService());
-      final notifier = AppStateNotifier(quotes: repo, news: _FakeNewsService());
+      final notifier =
+          AppStateNotifier(quotes: repo, news: _FakeNewsRepository());
       await tester.pumpWidget(
         ProviderScope(
           overrides: [appStateProvider.overrideWith((ref) => notifier)],
