@@ -5,6 +5,12 @@
 - **Deviations/Decisions**: fetch to stripe-mock; store only sets flag on success.
 - **Next step**: monitor CI and refine UI.
 
+- **Summary**: integrated CredentialStore with AuthService, added encryption tests and updated state.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0105
+- **Deviations/Decisions**: duplicated store code in service package to avoid circular dependency.
+- **Next step**: ensure CI passes and refine validation.
+
 ## 2025-08-05 PR #XX
 - **Summary**: expanded Quote model with open/high/low/close and updated services, repository and tests to parse these fields.
 - **Stage**: implementation
