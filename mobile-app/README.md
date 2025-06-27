@@ -11,3 +11,5 @@ This directory contains the Flutter implementation of the Stock App.
 5. Services share a `NetClient` wrapper with the web app for quota-aware HTTP calls.
 6. NewsService falls back to an RSS feed if the NewsData API fails.
 7. Tap the header to toggle prices between USD and EUR (rates cached for 24h).
+8. With `stripe-mock` running on port 12111, call `AppStateNotifier.upgradePro()`
+   to unlock the Pro badge.

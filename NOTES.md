@@ -1,3 +1,10 @@
+## 2025-08-06 PR #XX
+- **Summary**: implemented ProUpgradeService POST call via stripe-mock, added tests, new app state method and docs.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0108
+- **Deviations/Decisions**: used NetClient ledger with direct http post; injected CredentialStore via constructor.
+- **Next step**: monitor CI and wire Pro screen button.
+
 ## 2025-08-05 PR #XX
 - **Summary**: expanded Quote model with open/high/low/close and updated services, repository and tests to parse these fields.
 - **Stage**: implementation

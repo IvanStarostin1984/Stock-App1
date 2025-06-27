@@ -1,11 +1,13 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:smwa_services/services.dart';
+import 'package:smwa_services/services.dart' as svc
+    show AuthService, ProUpgradeService;
 import '../repositories/quote_repository.dart';
 import '../models/quote.dart';
 import '../models/news_article.dart';
 import '../repositories/news_repository.dart';
 import '../repositories/watch_list_repository.dart';
 import '../repositories/fx_repository.dart';
+import '../repositories/credential_store.dart';
 
 /// Simple state container used by the app.
 class AppState {
@@ -36,23 +38,37 @@ class AppState {
 class AppStateNotifier extends StateNotifier<AppState> {
   final QuoteRepository _quotes;
   final NewsRepository _news;
-  final AuthService _auth;
+  final svc.AuthService _auth;
   final WatchListRepository _watchRepo;
   final FxRepository _fx;
+  final CredentialStore _cred;
+  final svc.ProUpgradeService _proSvc;
+
+  AppStateNotifier._(this._quotes, this._news, this._auth, this._watchRepo,
+      this._fx, this._cred, this._proSvc)
+      : super(const AppState());
 
   /// Creates an [AppStateNotifier] with optional service overrides.
-  AppStateNotifier(
-      {QuoteRepository? quotes,
-      NewsRepository? news,
-      AuthService? auth,
-      WatchListRepository? watchRepo,
-      FxRepository? fxRepo})
-      : _quotes = quotes ?? QuoteRepository(),
-        _news = news ?? NewsRepository(),
-        _auth = auth ?? AuthService(),
-        _watchRepo = watchRepo ?? WatchListRepository(),
-        _fx = fxRepo ?? FxRepository(),
-        super(const AppState());
+  factory AppStateNotifier({
+    QuoteRepository? quotes,
+    NewsRepository? news,
+    svc.AuthService? auth,
+    WatchListRepository? watchRepo,
+    FxRepository? fxRepo,
+    CredentialStore? credStore,
+    svc.ProUpgradeService? proSvc,
+  }) {
+    final store = credStore ?? CredentialStore();
+    return AppStateNotifier._(
+      quotes ?? QuoteRepository(),
+      news ?? NewsRepository(),
+      auth ?? svc.AuthService(),
+      watchRepo ?? WatchListRepository(),
+      fxRepo ?? FxRepository(),
+      store,
+      proSvc ?? svc.ProUpgradeService(store.updateProFlag),
+    );
+  }
 
   /// Increments the counter by one.
   void increment() => state = state.copyWith(count: state.count + 1);
@@ -91,10 +107,15 @@ class AppStateNotifier extends StateNotifier<AppState> {
     final list = await _watchRepo.list();
     await _watchRepo.save(list);
   }
+
+  /// Performs the mock checkout and flips the Pro flag on success.
+  Future<bool> upgradePro() async {
+    return _proSvc.checkoutMock();
+  }
 }
 
 /// Riverpod provider exposing the application state.
-final authServiceProvider = Provider<AuthService>((ref) => AuthService());
+final authServiceProvider = Provider<svc.AuthService>((ref) => svc.AuthService());
 
 final appStateProvider = StateNotifierProvider<AppStateNotifier, AppState>(
   (ref) => AppStateNotifier(auth: ref.read(authServiceProvider)),
