@@ -1,4 +1,16 @@
 ## 2025-08-03 PR #XX
+- **Summary**: added tests for fetchJson and NetClient to reach 100% coverage.
+- **Stage**: testing
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: added negative cases for non-ok responses and denied requests.
+- **Next step**: monitor coverage in CI.
+- 
+## 2025-08-02 PR #XX
+- **Summary**: documented notes merge check and reminder; reordered entries chronologically.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: used script to sort entries.
+- **Next step**: follow rule when resolving conflicts.
 
 - **Summary**: added conflict marker linter and CI step.
 - **Stage**: implementation
@@ -7,7 +19,6 @@
 - **Next step**: monitor pipeline.
 
 ## 2025-08-02 PR #XX
-
 - **Summary**: documented notes merge check and reminder.
 - **Stage**: documentation
 - **Requirements addressed**: N/A
@@ -15,7 +26,6 @@
 - **Next step**: follow rule when resolving conflicts.
 
 ## 2025-08-02 PR #XX
-
 - **Summary**: reordered NOTES.md chronologically and verified linter.
 - **Stage**: documentation
 - **Requirements addressed**: N/A

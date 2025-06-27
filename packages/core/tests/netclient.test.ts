@@ -19,4 +19,18 @@ describe('NetClient.get', () => {
     expect(fetchMock).toHaveBeenCalledTimes(1);
     expect(ledger.increment).toHaveBeenCalledTimes(1);
   });
+
+  it('returns null when ledger denies request', async () => {
+    const cache = new LruCache<string, number>(1);
+    const ledger = { isSafe: vi.fn().mockReturnValue(false), increment: vi.fn() } as unknown as ApiQuotaLedger;
+    const fetchMock = vi.fn();
+    global.fetch = fetchMock as any;
+    const client = new NetClient(ledger);
+
+    const res = await client.get('u', cache, j => j as number, 50);
+
+    expect(res).toBeNull();
+    expect(fetchMock).not.toHaveBeenCalled();
+    expect(ledger.increment).not.toHaveBeenCalled();
+  });
 });

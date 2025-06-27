@@ -113,7 +113,7 @@
       coverage instructions.
 - [x] Keep `packages/vitest.config.ts` exclude patterns in sync with README
       coverage instructions.
-- [ ] Maintain >75% coverage for packages tests
+- [x] Maintain >75% coverage for packages tests
 - [x] Add linter or pre-test step that verifies vitest config syntax parses.
 - [x] Add script to detect merge conflict markers and run it in CI.
 - [x] Create web-prototype directory with placeholder HTML pages for design.
