@@ -3,6 +3,7 @@ import 'package:smwa_services/services.dart';
 import '../repositories/quote_repository.dart';
 import '../models/quote.dart';
 import '../models/news_article.dart';
+import '../repositories/news_repository.dart';
 import '../repositories/watch_list_repository.dart';
 
 /// Simple state container used by the app.
@@ -26,19 +27,18 @@ class AppState {
 /// Application level state provider managing market data.
 class AppStateNotifier extends StateNotifier<AppState> {
   final QuoteRepository _quotes;
-  final NewsService _news;
+  final NewsRepository _news;
   final AuthService _auth;
   final WatchListRepository _watchRepo;
 
   /// Creates an [AppStateNotifier] with optional service overrides.
   AppStateNotifier(
       {QuoteRepository? quotes,
-      NewsService? news,
+      NewsRepository? news,
       AuthService? auth,
       WatchListRepository? watchRepo})
       : _quotes = quotes ?? QuoteRepository(),
-        _news = news ??
-            NewsService(const String.fromEnvironment('VITE_NEWSDATA_KEY')),
+        _news = news ?? NewsRepository(),
         _auth = auth ?? AuthService(),
         _watchRepo = watchRepo ?? WatchListRepository(),
         super(const AppState());
@@ -52,8 +52,7 @@ class AppStateNotifier extends StateNotifier<AppState> {
   /// Loads the headline quote and related news articles.
   Future<void> loadHeadline([String symbol = 'AAPL']) async {
     final q = await _quotes.headline(symbol);
-    final rawNews = q != null ? await _news.getDigest(symbol) : null;
-    final articles = rawNews?.map((e) => NewsArticle.fromMap(e)).toList();
+    final articles = q != null ? await _news.digest(symbol) : null;
     state = state.copyWith(headline: q, articles: articles);
   }
 
