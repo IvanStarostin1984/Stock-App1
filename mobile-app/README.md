@@ -10,3 +10,4 @@ This directory contains the Flutter implementation of the Stock App.
 4. Launch the app with `flutter run --dart-define VITE_NEWSDATA_KEY=YOUR_KEY`.
 5. Services share a `NetClient` wrapper with the web app for quota-aware HTTP calls.
 6. NewsService falls back to an RSS feed if the NewsData API fails.
+7. Tap the header to toggle prices between USD and EUR (rates cached for 24h).
