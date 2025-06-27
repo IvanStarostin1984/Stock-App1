@@ -55,3 +55,11 @@ const store = useAppStore();
 store.initLocation();
 ```
 
+
+## Unlock Pro with stripe-mock
+
+The `ProPage` calls `upgradePro()` from `appStore`. This method uses
+`ProUpgradeService.checkoutMock()` to POST to
+`http://localhost:12111/v1/checkout/sessions` provided by `stripe-mock`.
+When the request succeeds the store flag `isPro` is set to `true`.
+

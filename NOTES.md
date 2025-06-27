@@ -1,3 +1,10 @@
+## 2025-08-06 PR #XX
+- **Summary**: added ProUpgradeService for web, integrated into store with tests.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0108
+- **Deviations/Decisions**: fetch to stripe-mock; store only sets flag on success.
+- **Next step**: monitor CI and refine UI.
+
 ## 2025-08-05 PR #XX
 - **Summary**: expanded Quote model with open/high/low/close and updated services, repository and tests to parse these fields.
 - **Stage**: implementation
