@@ -82,7 +82,7 @@ class AppStateNotifier extends StateNotifier<AppState> {
   }
 
   /// Registers a new account via [AuthService].
-  Future<Map<String, dynamic>> register(String email, String password) async {
+  Future<UserCredential> register(String email, String password) async {
     return _auth.register(email, password);
   }
 

@@ -7,3 +7,5 @@ export 'src/location_service.dart';
 export 'src/auth_service.dart';
 export 'src/pro_upgrade_service.dart';
 export 'src/fetch_json.dart';
+export 'src/credential_store.dart';
+export 'src/user_credential.dart';
