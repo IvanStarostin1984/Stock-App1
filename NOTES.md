@@ -1,5 +1,14 @@
 ## 2025-08-04 PR #XX
-- **Summary**: introduced NewsRepository wrapping NewsService and updated AppStateNotifier. Added unit tests for success, failure and caching.
+- **Summary**: added FxRepository caching FX rates via FxService,
+- integrated into app store, and wrote tests.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0107
+- **Deviations/Decisions**: repository caches rates for 24h
+-  before calling FxService to match AGENTS.md TTL.
+- **Next step**: monitor CI and expand repository coverage.
+
+- **Summary**: introduced NewsRepository wrapping 
+- NewsService and updated AppStateNotifier. Added unit tests for success, failure and caching.
 - **Stage**: implementation
 - **Requirements addressed**: PF-004, FR-0104
 - **Deviations/Decisions**: repository caches for 12h and delegates to NewsService.

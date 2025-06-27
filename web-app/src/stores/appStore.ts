@@ -3,6 +3,7 @@ import { MarketstackService, type Quote } from '@/services/MarketstackService';
 import { QuoteRepository } from '@/repositories/QuoteRepository';
 import { NewsService, type NewsArticle } from '@/services/NewsService';
 import { FxService } from '@/services/FxService';
+import { FxRepository } from '@/repositories/FxRepository';
 import { LocationService } from '@/services/LocationService';
 import {
   CountrySettingRepository,
@@ -25,7 +26,7 @@ export interface AppState {
 export interface AppDeps {
   quoteRepo?: QuoteRepository;
   newsService?: NewsService;
-  fxService?: FxService;
+  fxRepo?: FxRepository;
   trie?: SymbolTrie;
   locationService?: LocationService;
   countryRepo?: CountrySettingRepository;
@@ -69,8 +70,9 @@ export function createAppStore(deps: AppDeps = {}) {
       },
       async toggleCurrency() {
         const target = this.currency === 'USD' ? 'EUR' : 'USD';
-        const fxSvc = deps.fxService ?? new FxService();
-        const rate = await fxSvc.getRate(this.currency, target);
+        const repo =
+          deps.fxRepo ?? new FxRepository(new FxService());
+        const rate = await repo.rate(this.currency, target);
         if (rate !== null) this.currency = target;
       },
       signIn() {

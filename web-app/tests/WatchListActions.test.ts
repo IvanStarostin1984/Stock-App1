@@ -15,7 +15,7 @@ describe('watch list actions', () => {
       watchRepo: { list, save } as any,
       quoteRepo: new QuoteRepository({ getQuote: vi.fn() } as any),
       newsService: { getNews: vi.fn() } as any,
-      fxService: { getRate: vi.fn() } as any,
+      fxRepo: { rate: vi.fn() } as any,
       trie: { search: vi.fn().mockReturnValue([]) } as any
     })();
     await store.addToWatchList('GOOG');
@@ -29,7 +29,7 @@ describe('watch list actions', () => {
       watchRepo: { list, save } as any,
       quoteRepo: new QuoteRepository({ getQuote: vi.fn() } as any),
       newsService: { getNews: vi.fn() } as any,
-      fxService: { getRate: vi.fn() } as any,
+      fxRepo: { rate: vi.fn() } as any,
       trie: { search: vi.fn().mockReturnValue([]) } as any
     })();
     await store.addToWatchList('AAPL');
@@ -43,7 +43,7 @@ describe('watch list actions', () => {
       watchRepo: { list, save } as any,
       quoteRepo: new QuoteRepository({ getQuote: vi.fn() } as any),
       newsService: { getNews: vi.fn() } as any,
-      fxService: { getRate: vi.fn() } as any,
+      fxRepo: { rate: vi.fn() } as any,
       trie: { search: vi.fn().mockReturnValue([]) } as any
     })();
     await store.removeFromWatchList('GOOG');
