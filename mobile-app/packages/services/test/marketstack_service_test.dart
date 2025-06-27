@@ -9,7 +9,13 @@ void main() {
     final client = MockClient((req) async => http.Response(
         jsonEncode({
           'data': [
-            {'symbol': 'AAPL', 'close': 123.45}
+            {
+              'symbol': 'AAPL',
+              'open': 120.0,
+              'high': 125.0,
+              'low': 119.0,
+              'close': 123.45
+            }
           ]
         }),
         200));
@@ -17,6 +23,10 @@ void main() {
     final quote = await svc.getIndexQuote('AAPL');
     expect(quote?['symbol'], 'AAPL');
     expect(quote?['price'], 123.45);
+    expect(quote?['open'], 120.0);
+    expect(quote?['high'], 125.0);
+    expect(quote?['low'], 119.0);
+    expect(quote?['close'], 123.45);
   });
 
   test('getIndexQuote returns null on failure', () async {
@@ -33,7 +43,13 @@ void main() {
       return http.Response(
           jsonEncode({
             'data': [
-              {'symbol': 'AAPL', 'close': 1.0}
+              {
+                'symbol': 'AAPL',
+                'open': 0.8,
+                'high': 1.2,
+                'low': 0.7,
+                'close': 1.0
+              }
             ]
           }),
           200);

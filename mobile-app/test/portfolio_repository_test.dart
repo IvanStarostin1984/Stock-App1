@@ -13,7 +13,14 @@ class _FakeQuoteRepo implements QuoteRepository {
   @override
   Future<Quote?> headline([String symbol = 'AAPL']) async {
     calls++;
-    return Quote(symbol: symbol, price: price);
+    return Quote(
+      symbol: symbol,
+      price: price,
+      open: price - 0.1,
+      high: price + 0.1,
+      low: price - 0.2,
+      close: price,
+    );
   }
 
   @override

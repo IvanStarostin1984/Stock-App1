@@ -22,7 +22,14 @@ class MarketstackService {
       _cache,
       (json) {
         final raw = json['data'][0];
-        return {'symbol': raw['symbol'], 'price': raw['close']};
+        return {
+          'symbol': raw['symbol'],
+          'price': raw['close'],
+          'open': raw['open'],
+          'high': raw['high'],
+          'low': raw['low'],
+          'close': raw['close'],
+        };
       },
       ttl: const Duration(hours: 24),
     );
@@ -34,7 +41,13 @@ class MarketstackService {
       url,
       _seriesCache,
       (json) => (json['data'] as List)
-          .map((r) => {'symbol': r['symbol'], 'close': r['close']})
+          .map((r) => {
+                'symbol': r['symbol'],
+                'open': r['open'],
+                'high': r['high'],
+                'low': r['low'],
+                'close': r['close'],
+              })
           .toList(),
       ttl: const Duration(hours: 24),
     );

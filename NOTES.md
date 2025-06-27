@@ -1,3 +1,10 @@
+## 2025-08-05 PR #XX
+- **Summary**: expanded Quote model with open/high/low/close and updated services, repository and tests to parse these fields.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0101, FR-0102
+- **Deviations/Decisions**: kept price as alias of close for backward compatibility.
+- **Next step**: monitor CI, update docs if API fields change.
+
 ## 2025-08-04 PR #XX
 - **Summary**: added FxRepository caching FX rates via FxService,
 - integrated into app store, and wrote tests.

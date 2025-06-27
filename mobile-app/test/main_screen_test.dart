@@ -11,7 +11,14 @@ import 'package:mobile_app/models/news_article.dart';
 class _FakeMarketstackService extends MarketstackService {
   @override
   Future<Map<String, dynamic>> getIndexQuote(String symbol) async {
-    return {'symbol': symbol, 'price': 1.5};
+    return {
+      'symbol': symbol,
+      'price': 1.5,
+      'open': 1.4,
+      'high': 1.6,
+      'low': 1.3,
+      'close': 1.5,
+    };
   }
 }
 

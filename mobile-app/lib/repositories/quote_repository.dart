@@ -20,6 +20,10 @@ class QuoteRepository {
     final quote = Quote(
       symbol: data['symbol'] as String,
       price: (data['price'] as num).toDouble(),
+      open: (data['open'] as num).toDouble(),
+      high: (data['high'] as num).toDouble(),
+      low: (data['low'] as num).toDouble(),
+      close: (data['close'] as num).toDouble(),
     );
     _headlineCache.put(symbol, quote, const Duration(hours: 24));
     return quote;
@@ -35,6 +39,10 @@ class QuoteRepository {
         .map((e) => Quote(
               symbol: e['symbol'] as String,
               price: (e['close'] as num).toDouble(),
+              open: (e['open'] as num).toDouble(),
+              high: (e['high'] as num).toDouble(),
+              low: (e['low'] as num).toDouble(),
+              close: (e['close'] as num).toDouble(),
             ))
         .toList();
     _seriesCache.put(symbol, list, const Duration(hours: 24));
