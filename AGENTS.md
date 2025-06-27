@@ -1,26 +1,30 @@
 # Contributor Guidelines for Stock-App1
 
-This repository hosts a cross-platform stock market app with a Flutter mobile front‑end and a Vue 3 web PWA.  Follow these rules when adding or updating code.
+This repository hosts a cross-platform stock market app with a Flutter mobile front‑end and a Vue 3 web PWA. Follow these rules when adding or updating code.
 
 # Important — Not authoritative:
+
 1. This file is only a quick-start contributor guide.
 2. For any requirement or design decision, /docs (SRS_v1.md, SDD_v1.md, original_assignment.md) is the sole authority; this file is only a convenience summary.
-3. If following SRS_v1.md, SDD_v1.md produces a conflict, or not working code, treat original_assignment.md as single source of truth. Inform end-user about such situation with *IMPORTANT* disclaimer.
+3. If following SRS_v1.md, SDD_v1.md produces a conflict, or not working code, treat original_assignment.md as single source of truth. Inform end-user about such situation with _IMPORTANT_ disclaimer.
 4. Always consult those documents first and treat AGENTS.md as secondary.
 5. End-user of codex may explicitly ask to modify SRS_v1.md and/or SDD_v1.md, in that case comply.
 
 #Distinct-files rule:
+
 1. Every concurrent task must confine its edits to a unique list of code or data files.
 2. Shared exceptions: any task may append (never rewrite) the markdown logs NOTES.md, TODO.md, and this AGENTS.md.
 3. If two or more open PRs would touch the same non-markdown file, cancel or re-scope one of them before continuing.
 
 ## Required Tools
+
 - **Node 20** for the web app.
 - **Flutter 3.22** for the mobile app.
 - `openapi-generator-cli` (`openapitools.json` pins version 7.13.0) to refresh API clients under `packages/`.
 - Charting stack is fixed to **Chart.js 4.4.9 (UMD, SRI-pinned)** and **fl_chart 0.66.x**; CI fails on drift.
 
 ## Setup & Build
+
 1. Clone the repo and generate REST clients:
    ```bash
    cd packages
@@ -43,10 +47,10 @@ This repository hosts a cross-platform stock market app with a Flutter mobile fr
    cd web-app
    npm install && npm run dev
    ```
-`start_env.sh` installs all Node and Flutter dependencies,
-including running `flutter pub get -C mobile-app/packages/services` so
-the shared packages are ready for tests and analysis.
-4. When TypeScript files outside `web-app/src/` are imported (e.g. under
+   `start_env.sh` installs all Node and Flutter dependencies,
+   including running `flutter pub get -C mobile-app/packages/services` so
+   the shared packages are ready for tests and analysis.
+5. When TypeScript files outside `web-app/src/` are imported (e.g. under
    `packages/`), update `web-app/tsconfig.json` to include those paths and
    exclude `../packages/**/tests` so vue-tsc skips package tests.
    Missing entries cause TS6307 build failures.
@@ -55,14 +59,17 @@ the shared packages are ready for tests and analysis.
    `'../../web-app/src/…'`.
 
 Create identical `.env` files in `mobile-app/` and `web-app/` containing:
+
 ```
 VITE_MARKETSTACK_KEY=YOUR_MARKETSTACK_KEY
 VITE_NEWSDATA_KEY=YOUR_NEWSDATA_KEY
 LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 ```
+
 (Exchangerate.host is key-less – no variable needed.)
 
 ## Shared Packages
+
 - When creating a new package under `packages/`, add its `src` folder to
   `web-app/tsconfig.json` under `compilerOptions.paths`.
 - Keep `../packages/**/tests` listed in `exclude` so `vue-tsc` ignores package
@@ -74,9 +81,11 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
   to verify these relative imports.
 
 ## Design Reference
+
 The folder `web-prototype/` contains HTML/CSS exported from Figma. Treat it as read-only. Colours and font names in `web-app/design-tokens/tokens.json` are parsed from `web-prototype/CSS/styleguide.css`. Copy layout cues manually when building Vue pages.
 
 ## API hygiene
+
 (API requests are implemented in service classes under `web-app/src/services/`.)
 Each service uses `LruCache`, `ApiQuotaLedger` and the shared `NetClient`
 wrapper. MarketstackService and FxService cache results for 24 h while
@@ -84,9 +93,10 @@ NewsService caches data for only 12 h. The TTL must be passed to
 `NetClient.get`/`fetchJson` when calling the API to enforce the correct
 caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month⁻¹,
 ≤ 200 NewsData calls · day⁻¹.
-(See *docs/SRS_v1.md § 9.6.7 Limitations*.)
+(See _docs/SRS_v1.md § 9.6.7 Limitations_.)
 
 ## Coding Standards
+
 - One domain concept per file; no cyclic imports.
 - Functions should stay under 20 lines with at most 2 nesting levels.
 - Favour composition over inheritance and keep variables scoped tightly.
@@ -103,9 +113,10 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
   return type.
 - Pass an explicit `ttl` to `NetClient.get` when services need a different
   cache duration.
-(These frameworks are planned; current code does not yet use them.)
+  (These frameworks are planned; current code does not yet use them.)
 
 ## Testing & CI
+
 - Run `dart format`, `flutter analyze`, `flutter test`, `eslint --fix`, and `npm test` before committing.
 - `flutter analyze` at the repo root uses `analysis_options.yaml` which includes
   `mobile-app/analysis_options.yaml` and excludes generated design tokens and the
@@ -143,18 +154,20 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
   overriding `--reporter` when editing it.
 - CI runs this script right after installing package dependencies so broken config files fail early.
 - Run `npm run lint:notes` to verify `NOTES.md` entries remain newest-first. CI runs this before tests.
+- Run `npm run lint:conflicts` to ensure no merge conflict markers remain. CI runs this before tests.
 - Always append new sections at the top of `NOTES.md`. After rebasing or resolving merge conflicts, run `npm run lint:notes` again to confirm the order.
 
 # Quality gates
-* **Lighthouse** perf & a11y ≥ 90 or CI fails.  
-* **Core Web Vitals** budget: LCP ≤ 2.5 s, CLS < 0.10.  
-* **Axe-core** a11y violations = 0.  
-* **Flutter** frame time ≤ 16 ms (DevTools trace).  
-* WCAG 2.1 AA colour contrast verified via axe-lint.
+
+- **Lighthouse** perf & a11y ≥ 90 or CI fails.
+- **Core Web Vitals** budget: LCP ≤ 2.5 s, CLS < 0.10.
+- **Axe-core** a11y violations = 0.
+- **Flutter** frame time ≤ 16 ms (DevTools trace).
+- WCAG 2.1 AA colour contrast verified via axe-lint.
 
 ### Requirement traceability
 
-* **Always comment generated code with requirement IDs** (`FR-`, `US-`, `QR-`, etc).  
+- **Always comment generated code with requirement IDs** (`FR-`, `US-`, `QR-`, etc).  
   Example:
   ```dart
   /// FR-123 – Place trade order
@@ -163,6 +176,7 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
   ```
 
 ## Contributing Workflow
+
 - **Fork** then branch off `main` using the pattern `feat/<topic>`.
 - **Ensure local tests pass** before opening a PR.
 - Run `npx -y markdown-link-check README.md` whenever docs are updated to avoid prompts and keep the docs CI job green.
@@ -170,23 +184,27 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 - **Each PR requires at least one reviewer.**
 
 ## Decision & Progress Logging
+
 To keep project history and reasoning transparent **and** trace every change back to official documentation,  
 **every contribution must include**:
 
-### PR Decision Checklist *(in the PR description)*
-- **Major design decisions** and their rationale  
-- **Any deviations** from `/docs` (`SRS_v1.md`, `SDD_v1.md`) or this `AGENTS.md`  
-- **Blockers / limitations**, e.g., failing tests or unmet dependencies  
+### PR Decision Checklist _(in the PR description)_
+
+- **Major design decisions** and their rationale
+- **Any deviations** from `/docs` (`SRS_v1.md`, `SDD_v1.md`) or this `AGENTS.md`
+- **Blockers / limitations**, e.g., failing tests or unmet dependencies
 - **Requirements addressed**: list the exact IDs touched, e.g.  
   `FR-01`, `US-03`, `QR-02` <br>
-  *(Use the IDs defined in `SRS_v1.md` § 4 “Functional Requirements”, § 5 “User Stories”,  
-  and `SDD_v1.md` § 7 “Quality Requirements”.)*
+  _(Use the IDs defined in `SRS_v1.md` § 4 “Functional Requirements”, § 5 “User Stories”,  
+  and `SDD_v1.md` § 7 “Quality Requirements”.)_
 
 ### Progress Log (`Notes.md`)
+
 Append **one new section at the top of `NOTES.md`** (newest entry first) using this template:
 
 ```markdown
 ## YYYY-MM-DD PR #<number>
+
 - **Summary**: …
 - **Stage**: …
 - **Requirements addressed**: FR-01, US-03, QR-02
@@ -194,8 +212,9 @@ Append **one new section at the top of `NOTES.md`** (newest entry first) using t
 - **Next step**: …
 - **Notes**: … (optional)
 ```
+
 - Older entries must never precede newer ones; keep the log newest first.
-Agents MUST consult Notes.md and the referenced requirement IDs before starting work
-to understand the current stage, past decisions, and open questions tied to the spec.
+  Agents MUST consult Notes.md and the referenced requirement IDs before starting work
+  to understand the current stage, past decisions, and open questions tied to the spec.
 
 Refer to `README.md` and full documentation in `docs/` for further details on features and architecture.

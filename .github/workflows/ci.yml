@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: "npm"
           cache-dependency-path: web-app/package-lock.json
       - name: Install web dependencies
         run: npm ci
@@ -42,6 +42,9 @@ jobs:
         working-directory: packages
       - name: Check NOTES order
         run: npm run lint:notes
+        working-directory: packages
+      - name: Check merge conflicts
+        run: npm run lint:conflicts
         working-directory: packages
       - name: Run package tests with coverage
         run: |
@@ -64,7 +67,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.22.x'
+          flutter-version: "3.22.x"
           channel: stable
       - name: Install Flutter dependencies
         run: flutter pub get
@@ -119,4 +122,3 @@ jobs:
         with:
           name: coverage-packages
           path: packages/coverage
-
