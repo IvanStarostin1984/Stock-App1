@@ -13,3 +13,4 @@ This directory contains the Flutter implementation of the Stock App.
 7. Tap the header to toggle prices between USD and EUR (rates cached for 24h).
 8. With `stripe-mock` running on port 12111, call `AppStateNotifier.upgradePro()`
    to unlock the Pro badge.
+

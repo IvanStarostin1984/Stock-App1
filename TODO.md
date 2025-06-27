@@ -59,7 +59,7 @@
 - [x] Verify cross-platform behaviour of LocationService.
 - [x] Follow CI instructions for docs.
 - [x] Monitor CI for cross-tool coverage.
-- [ ] Ensure CI passes with updated hashing.
+- [x] Ensure CI passes with updated hashing.
 - [x] Fix container build scripts.
 - [ ] Monitor repo progress.
 - [x] Integrate with AuthService.

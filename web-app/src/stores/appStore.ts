@@ -5,6 +5,7 @@ import { NewsService, type NewsArticle } from '@/services/NewsService';
 import { FxService } from '@/services/FxService';
 import { FxRepository } from '@/repositories/FxRepository';
 import { LocationService } from '@/services/LocationService';
+import { ProUpgradeService } from '@/services/ProUpgradeService';
 import {
   CountrySettingRepository,
   type CountrySetting
@@ -30,6 +31,7 @@ export interface AppDeps {
   trie?: SymbolTrie;
   locationService?: LocationService;
   countryRepo?: CountrySettingRepository;
+  proService?: import('@/services/ProUpgradeService').ProUpgradeService;
   watchRepo?: WatchListRepository;
 }
 
@@ -84,7 +86,9 @@ export function createAppStore(deps: AppDeps = {}) {
         return this.searchResults;
       },
       async upgradePro() {
-        this.isPro = true;
+        const svc = deps.proService ?? new ProUpgradeService();
+        const ok = await svc.checkoutMock();
+        if (ok) this.isPro = true;
       },
       async initLocation() {
         const repo =
