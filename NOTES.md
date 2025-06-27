@@ -4,7 +4,7 @@
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: added negative cases for non-ok responses and denied requests.
 - **Next step**: monitor coverage in CI.
-- 
+
 ## 2025-08-02 PR #XX
 - **Summary**: documented notes merge check and reminder; reordered entries chronologically.
 - **Stage**: documentation
@@ -19,18 +19,12 @@
 - **Next step**: monitor pipeline.
 
 ## 2025-08-02 PR #XX
-- **Summary**: documented notes merge check and reminder.
-- **Stage**: documentation
-- **Requirements addressed**: N/A
-- **Deviations/Decisions**: none
-- **Next step**: follow rule when resolving conflicts.
-
-## 2025-08-02 PR #XX
-- **Summary**: reordered NOTES.md chronologically and verified linter.
+- **Summary**: documented notes merge check reminder and
+-  reordered NOTES.md chronologically; verified linter.
 - **Stage**: documentation
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: used script to sort entries.
-- **Next step**: keep notes log newest-first.
+- **Next step**: follow rule when resolving conflicts and keep notes log newest-first.
 
 ## 2025-08-01 PR #XX
 

@@ -14,6 +14,7 @@
 
 - [x] Resolved merge conflict in NOTES.md and preserved entry order.
 - [x] Documented rule to keep NOTES.md chronological and reordered entries.
+- [x] Removed leftover merge markers from NOTES.md entry on 2025-08-02 and combined summaries.
 
 # Outstanding Tasks
 
