@@ -1,3 +1,10 @@
+## 2025-08-04 PR #XX
+- **Summary**: added FxRepository caching FX rates via FxService, integrated into app store, and wrote tests.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0107
+- **Deviations/Decisions**: repository caches rates for 24h before calling FxService to match AGENTS.md TTL.
+- **Next step**: monitor CI and expand repository coverage.
+
 ## 2025-08-03 PR #XX
 - **Summary**: added tests for fetchJson and NetClient to reach 100% coverage.
 - **Stage**: testing
