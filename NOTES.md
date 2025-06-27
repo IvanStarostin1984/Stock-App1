@@ -6,6 +6,12 @@
 - **Next step**: monitor CI, update docs if API fields change.
 
 ## 2025-08-04 PR #XX
+- **Summary**: implemented mobile FxRepository and currency toggle with tests.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0107
+- **Deviations/Decisions**: reused 24h TTL pattern from web repo.
+- **Next step**: ensure further repository parity.
+## 2025-08-04 PR #XX
 - **Summary**: added FxRepository caching FX rates via FxService,
 - integrated into app store, and wrote tests.
 - **Stage**: implementation

@@ -66,8 +66,8 @@
 - [x] Integrate into PortfolioScreen.
 - [x] Implement refreshTotals and integrate with UI.
 - [x] Extend repositories for other domains.
-- [ ] Implement remaining repositories.
 - [x] Enhance services to parse real API data.
+- [x] Implement remaining repositories.
 - [ ] Monitor for further API integration.
 - [x] Use news data on NewsScreen.
 - [ ] Expand store features.

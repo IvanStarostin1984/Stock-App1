@@ -5,21 +5,29 @@ import '../models/quote.dart';
 import '../models/news_article.dart';
 import '../repositories/news_repository.dart';
 import '../repositories/watch_list_repository.dart';
+import '../repositories/fx_repository.dart';
 
 /// Simple state container used by the app.
 class AppState {
   final int count;
   final Quote? headline;
   final List<NewsArticle>? articles;
+  final String currency;
 
-  const AppState({this.count = 0, this.headline, this.articles});
+  const AppState(
+      {this.count = 0, this.headline, this.articles, this.currency = 'USD'});
 
-  AppState copyWith(
-      {int? count, Quote? headline, List<NewsArticle>? articles}) {
+  AppState copyWith({
+    int? count,
+    Quote? headline,
+    List<NewsArticle>? articles,
+    String? currency,
+  }) {
     return AppState(
       count: count ?? this.count,
       headline: headline ?? this.headline,
       articles: articles ?? this.articles,
+      currency: currency ?? this.currency,
     );
   }
 }
@@ -30,17 +38,20 @@ class AppStateNotifier extends StateNotifier<AppState> {
   final NewsRepository _news;
   final AuthService _auth;
   final WatchListRepository _watchRepo;
+  final FxRepository _fx;
 
   /// Creates an [AppStateNotifier] with optional service overrides.
   AppStateNotifier(
       {QuoteRepository? quotes,
       NewsRepository? news,
       AuthService? auth,
-      WatchListRepository? watchRepo})
+      WatchListRepository? watchRepo,
+      FxRepository? fxRepo})
       : _quotes = quotes ?? QuoteRepository(),
         _news = news ?? NewsRepository(),
         _auth = auth ?? AuthService(),
         _watchRepo = watchRepo ?? WatchListRepository(),
+        _fx = fxRepo ?? FxRepository(),
         super(const AppState());
 
   /// Increments the counter by one.
@@ -48,6 +59,15 @@ class AppStateNotifier extends StateNotifier<AppState> {
 
   /// Resets the counter to zero.
   void reset() => state = state.copyWith(count: 0);
+
+  /// Toggles the display currency between USD and EUR.
+  Future<void> toggleCurrency() async {
+    final target = state.currency == 'USD' ? 'EUR' : 'USD';
+    final rate = await _fx.rate(state.currency, target);
+    if (rate != null) {
+      state = state.copyWith(currency: target);
+    }
+  }
 
   /// Loads the headline quote and related news articles.
   Future<void> loadHeadline([String symbol = 'AAPL']) async {
