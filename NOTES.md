@@ -5,6 +5,18 @@
 - **Deviations/Decisions**: added `publish_to: 'none'` after version.
 - **Next step**: ensure CI runs clean.
 
+- **Summary**: CI installs service package deps before Flutter analysis.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: added flutter pub get step in workflows; documented in AGENTS.
+- **Next step**: ensure analyze warnings disappear.
+
+- **Summary**: added missing mobile .env.example and documented GitHub secrets.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: README already listed env vars; AGENTS now states CI needs secrets.
+- **Next step**: monitor CI and keep docs synced.
+
 ## 2025-08-07 PR #XX
 - **Summary**: CI now runs flutter analyze without pub to fail on warnings.
 - **Stage**: maintenance
