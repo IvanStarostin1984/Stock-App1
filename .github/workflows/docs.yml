@@ -15,4 +15,4 @@ jobs:
         with:
           node-version: 20
       - name: Check links
-        run: npx -y markdown-link-check README.md
+        run: npx markdown-link-check README.md
