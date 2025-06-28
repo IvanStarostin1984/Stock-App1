@@ -1,6 +1,5 @@
 import 'package:smwa_services/services.dart';
 import 'package:smwa_services/src/location_service.dart' as loc;
-import 'package:smwa_services/src/country_setting_repository.dart';
 import 'package:smwa_services/src/country_setting.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
