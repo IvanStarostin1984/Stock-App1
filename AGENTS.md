@@ -94,6 +94,7 @@ The folder `web-prototype/` contains HTML/CSS exported from Figma. Treat it as r
   npm ci -C web-app
   npx markdown-link-check README.md
   ```
+- `web-app/package.json` overrides `css-select` to 5.1.0 so the link checker works with Node 20. Keep this pin when updating dependencies.
 ## API hygiene
 
 (API requests are implemented in service classes under `web-app/src/services/`.)
