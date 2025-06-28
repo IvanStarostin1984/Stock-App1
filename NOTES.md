@@ -1,5 +1,11 @@
 ## 2025-08-13 PR #XX
 
+- **Summary**: integrated PortfolioPage with Pinia actions, rendering holdings list and totals. Updated tests.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0106
+- **Deviations/Decisions**: simple table layout; store hooks handle add/remove.
+- **Next step**: monitor CI for coverage.
+
 - **Summary**: added add/remove holdings actions and updated PortfolioScreen with buttons.
 - **Stage**: development
 - **Requirements addressed**: FR-0106

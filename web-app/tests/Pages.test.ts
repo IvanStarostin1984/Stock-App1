@@ -39,6 +39,11 @@ beforeEach(() => {
     search: vi.fn().mockReturnValue([]),
     upgradePro: vi.fn(),
     syncWatchList: vi.fn(),
+    holdings: [],
+    portfolioTotal: 0,
+    loadPortfolio: vi.fn(),
+    addHolding: vi.fn(),
+    removeHolding: vi.fn(),
     topGainers: [],
     topLosers: []
   };
