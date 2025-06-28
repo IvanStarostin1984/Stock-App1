@@ -130,6 +130,8 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
   shared client packages.
 - After generating REST clients, run `flutter pub get -C mobile-app/packages/services` so
   the service package has its dependencies ready.
+- Before running Flutter analysis in CI, also run `flutter pub get -C mobile-app/packages/services`
+  so dev dependencies like `flutter_lints` are available.
 - Run `npm run tokens` (or run tests) before any Flutter analysis or build steps so `tokens.dart` exists.
 - Run `npm run tokens` before web tests if you invoke `npx vitest` or `npx jest` directly. Their pretest hook does not run automatically.
 - CI runs `flutter analyze --no-pub` after fetching mobile dependencies and fails on warnings.
