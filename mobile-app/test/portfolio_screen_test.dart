@@ -16,6 +16,32 @@ class _FakeRepo extends PortfolioRepository {
   Future<double> refreshTotals() async => _total;
 }
 
+class _MutRepo extends PortfolioRepository {
+  List<PortfolioHolding> items;
+  int addCalls = 0;
+  int removeCalls = 0;
+  _MutRepo(this.items);
+
+  @override
+  Future<List<PortfolioHolding>> list() async => List.from(items);
+
+  @override
+  Future<double> refreshTotals() async =>
+      items.fold<double>(0, (t, h) => t + h.quantity * h.buyPrice);
+
+  @override
+  Future<void> add(PortfolioHolding h) async {
+    addCalls++;
+    items.add(h);
+  }
+
+  @override
+  Future<void> remove(String id) async {
+    removeCalls++;
+    items.removeWhere((e) => e.id == id);
+  }
+}
+
 void main() {
   group('PortfolioScreen', () {
     testWidgets('lists holdings and shows total', (tester) async {
@@ -59,6 +85,49 @@ void main() {
       await tester.pumpAndSettle();
       expect(find.text('No holdings'), findsOneWidget);
       expect(find.textContaining('Total:'), findsOneWidget);
+    });
+
+    testWidgets('adds holding on FAB tap', (tester) async {
+      final repo = _MutRepo([]);
+      final notifier = PortfolioNotifier(repo: repo);
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            portfolioNotifierProvider.overrideWith((ref) => notifier),
+          ],
+          child: const MaterialApp(home: PortfolioScreen()),
+        ),
+      );
+      await tester.pumpAndSettle();
+      await tester.tap(find.byType(FloatingActionButton));
+      await tester.pumpAndSettle();
+      expect(repo.addCalls, 1);
+      expect(find.byType(ListTile), findsOneWidget);
+    });
+
+    testWidgets('removes holding on delete tap', (tester) async {
+      final item = PortfolioHolding(
+        id: '1',
+        symbol: 'AAPL',
+        quantity: 1,
+        buyPrice: 1,
+        added: DateTime.utc(2024, 1, 1),
+      );
+      final repo = _MutRepo([item]);
+      final notifier = PortfolioNotifier(repo: repo);
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            portfolioNotifierProvider.overrideWith((ref) => notifier),
+          ],
+          child: const MaterialApp(home: PortfolioScreen()),
+        ),
+      );
+      await tester.pumpAndSettle();
+      await tester.tap(find.byIcon(Icons.delete));
+      await tester.pumpAndSettle();
+      expect(repo.removeCalls, 1);
+      expect(find.text('No holdings'), findsOneWidget);
     });
   });
 }

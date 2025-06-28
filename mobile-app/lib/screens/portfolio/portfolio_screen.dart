@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../state/app_state.dart';
 import '../../state/portfolio_state.dart';
+import '../../models/portfolio_holding.dart';
 
 /// Displays the user's stock portfolio.
 class PortfolioScreen extends ConsumerStatefulWidget {
@@ -33,6 +34,12 @@ class _PortfolioScreenState extends ConsumerState<PortfolioScreen> {
                   ListTile(
                     title: Text(h.symbol),
                     subtitle: Text('Qty: ${h.quantity}'),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.delete),
+                      onPressed: () => ref
+                          .read(portfolioNotifierProvider.notifier)
+                          .removeHolding(h.id),
+                    ),
                   ),
               ],
             ),
@@ -41,9 +48,19 @@ class _PortfolioScreenState extends ConsumerState<PortfolioScreen> {
         child: Text('Total: ${portfolio.total.toStringAsFixed(2)} ($counter)'),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () =>
-            ref.read(appStateProvider.notifier).removeFromWatchList('AAPL'),
-        child: const Icon(Icons.remove),
+        onPressed: () {
+          final now = DateTime.now().toUtc();
+          ref.read(portfolioNotifierProvider.notifier).addHolding(
+                PortfolioHolding(
+                  id: now.toIso8601String(),
+                  symbol: 'AAPL',
+                  quantity: 1,
+                  buyPrice: 1,
+                  added: now,
+                ),
+              );
+        },
+        child: const Icon(Icons.add),
       ),
     );
   }
