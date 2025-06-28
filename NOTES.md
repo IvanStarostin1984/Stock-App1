@@ -6,6 +6,12 @@
 - **Deviations/Decisions**: used placeholder symbol 'AAPL' across screens.
 - **Next step**: monitor CI for cross-platform parity.
 
+- **Summary**: added script to check flutter_lints usage and integrated in CI.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: ensures packages declare flutter_lints when included.
+- **Next step**: monitor CI for new check.
+
 ## 2025-08-11 PR #XX
 
 - **Summary**: bumped markdown-link-check to 3.13.7 after docs job failed with a
@@ -1559,3 +1565,5 @@ npm test
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: None
 - **Next step**: Populate TODO.md and implement core services.
+
+
