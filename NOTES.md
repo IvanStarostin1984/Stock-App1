@@ -1,4 +1,10 @@
 ## 2025-08-10 PR #XX
+- **Summary**: documented css-select override and triple-slash rule.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: AGENTS now warns against file-leading `///` unless with `library` and notes css-select pin.
+- **Next step**: confirm docs workflow stays green.
+
 - **Summary**: fixed lints in auth service and tests; removed unused imports; changed rss variables to const.
 - **Stage**: maintenance
 - **Requirements addressed**: N/A
