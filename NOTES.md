@@ -1,3 +1,11 @@
+## 2025-08-13 PR #XX
+
+- **Summary**: added add/remove holdings actions and updated PortfolioScreen with buttons.
+- **Stage**: development
+- **Requirements addressed**: FR-0106
+- **Deviations/Decisions**: notifier reloads state after each repo call for simplicity.
+- **Next step**: monitor CI and refine portfolio UI.
+
 ## 2025-08-12 PR #XX
 - **Summary**: added portfolio actions to web store and unit tests.
 - **Stage**: implementation
