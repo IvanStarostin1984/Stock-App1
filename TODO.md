@@ -2,6 +2,8 @@
 
 # TODO
 
+- [x] Add mobile .env.example and document required GitHub secrets in AGENTS.
+
 - [x] Add WatchListPage and store actions for watch list.
 
 - [x] Implement a unified network layer shared by mobile and web services.

@@ -68,6 +68,9 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 
 (Exchangerate.host is key-less – no variable needed.)
 
+These variables must also be configured as GitHub repository secrets so CI can
+create `.env` files. Include `NETLIFY_HOOK_URL` if deploying to Netlify.
+
 ## Shared Packages
 
 - When creating a new package under `packages/`, add its `src` folder to
