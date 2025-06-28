@@ -1,5 +1,11 @@
 ## 2025-08-12 PR #XX
 
+- **Summary**: added watch-list actions to AppStateNotifier, updated screens and tests.
+- **Stage**: development
+- **Requirements addressed**: VM-01, VM-02, UC-15
+- **Deviations/Decisions**: used placeholder symbol 'AAPL' across screens.
+- **Next step**: monitor CI for cross-platform parity.
+
 - **Summary**: added script to check flutter_lints usage and integrated in CI.
 - **Stage**: maintenance
 - **Requirements addressed**: N/A
