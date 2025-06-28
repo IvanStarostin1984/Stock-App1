@@ -1,4 +1,11 @@
 ## 2025-08-06 PR #XX
+- **Summary**: fixed register return type using UserCredential model and added missing import.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0105
+- **Deviations/Decisions**: convert service credential via toJson/fromJson to avoid type mismatch.
+- **Next step**: monitor CI for further auth flows.
+
+## 2025-08-06 PR #XX
 - **Summary**: implemented ProUpgradeService POST call via stripe-mock, added tests, new app state method and docs.
 - **Stage**: implementation
 - **Requirements addressed**: FR-0108

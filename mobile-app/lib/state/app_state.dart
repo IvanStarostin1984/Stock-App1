@@ -8,6 +8,7 @@ import '../repositories/news_repository.dart';
 import '../repositories/watch_list_repository.dart';
 import '../repositories/fx_repository.dart';
 import '../repositories/credential_store.dart';
+import '../models/user_credential.dart';
 
 /// Simple state container used by the app.
 class AppState {
@@ -99,7 +100,8 @@ class AppStateNotifier extends StateNotifier<AppState> {
 
   /// Registers a new account via [AuthService].
   Future<UserCredential> register(String email, String password) async {
-    return _auth.register(email, password);
+    final svcCred = await _auth.register(email, password);
+    return UserCredential.fromJson(svcCred.toJson());
   }
 
   /// Loads and re-saves the watch list.
