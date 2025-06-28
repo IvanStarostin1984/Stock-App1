@@ -151,7 +151,8 @@ imports of `web-app/src` use the correct relative paths.
 Run the documentation checks with Node 20 (no `-y` needed once the package is
 installed locally):
 ```bash
-npx markdown-link-check README.md
+npm ci --prefix web-app
+npx --prefix web-app markdown-link-check README.md
 ```
 
 flutter test and npm test – keep CI green
