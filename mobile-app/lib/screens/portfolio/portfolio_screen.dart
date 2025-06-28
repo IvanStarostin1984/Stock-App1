@@ -41,8 +41,9 @@ class _PortfolioScreenState extends ConsumerState<PortfolioScreen> {
         child: Text('Total: ${portfolio.total.toStringAsFixed(2)} ($counter)'),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => ref.read(appStateProvider.notifier).increment(),
-        child: const Icon(Icons.add),
+        onPressed: () =>
+            ref.read(appStateProvider.notifier).removeFromWatchList('AAPL'),
+        child: const Icon(Icons.remove),
       ),
     );
   }

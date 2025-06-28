@@ -74,13 +74,13 @@
 - [x] Implement remaining repositories.
 - [ ] Monitor for further API integration.
 - [x] Use news data on NewsScreen.
-- [ ] Expand store features.
+ - [x] Expand store features.
 - [x] Implement ranking for SymbolTrie suggestions.
 - [x] Integrate helper in mobile services.
 - [x] Flesh out real API calls.
-- [ ] Expand state usage across app.
+ - [x] Expand state usage across app.
 - [x] Expand to remaining service stubs.
-- [ ] Wire Flutter store.
+ - [x] Wire Flutter store.
 - [x] Monitor CI runs.
 - [x] Keep AGENTS.md up to date whenever CI tooling changes.
 - [ ] Audit Flutter packages for flutter_lints dev dependency.
