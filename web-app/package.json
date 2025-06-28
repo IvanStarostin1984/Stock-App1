@@ -45,6 +45,12 @@
     "vue-tsc": "^2.2.8",
     "markdown-link-check": "3.11.1",
     "cheerio": "1.0.0-rc.12",
-    "css-select": "4"
+    "css-select": "5.1.0"
+  },
+  "overrides": {
+    "css-select": "5.1.0",
+    "cheerio-select": {
+      "css-select": "5.1.0"
+    }
   }
 }

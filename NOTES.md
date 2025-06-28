@@ -1,3 +1,10 @@
+## 2025-08-10 PR #XX
+- **Summary**: added css-select override and regenerated lock file.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: patched markdown-link-check to allow empty config; documented override in AGENTS.
+- **Next step**: ensure docs job remains green.
+
 ## 2025-08-09 PR #XX
 - **Summary**: docs workflow installs deps in web-app and runs link check via prefix.
 - **Stage**: maintenance
