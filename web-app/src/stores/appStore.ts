@@ -12,6 +12,10 @@ import {
 } from '@/repositories/CountrySettingRepository';
 import { SymbolTrie } from '@/utils/SymbolTrie';
 import { WatchListRepository } from '@/repositories/WatchListRepository';
+import {
+  PortfolioRepository,
+  type PortfolioHolding
+} from '@/repositories/PortfolioRepository';
 
 export interface AppState {
   headline: Quote | null;
@@ -22,6 +26,8 @@ export interface AppState {
   topGainers: Quote[];
   topLosers: Quote[];
   countryCode: string | null;
+  holdings: PortfolioHolding[];
+  portfolioTotal: number;
 }
 
 export interface AppDeps {
@@ -33,6 +39,7 @@ export interface AppDeps {
   countryRepo?: CountrySettingRepository;
   proService?: import('@/services/ProUpgradeService').ProUpgradeService;
   watchRepo?: WatchListRepository;
+  portfolioRepo?: PortfolioRepository;
 }
 
 export function createAppStore(deps: AppDeps = {}) {
@@ -45,7 +52,9 @@ export function createAppStore(deps: AppDeps = {}) {
       searchResults: [],
       topGainers: [],
       topLosers: [],
-      countryCode: null
+      countryCode: null,
+      holdings: [],
+      portfolioTotal: 0
     }),
     actions: {
       async loadHeadline(symbol: string = 'AAPL') {
@@ -131,6 +140,24 @@ export function createAppStore(deps: AppDeps = {}) {
           list.splice(idx, 1);
           await repo.save(list);
         }
+      },
+      /** Load portfolio holdings and total value. */
+      async loadPortfolio() {
+        const repo = deps.portfolioRepo ?? new PortfolioRepository();
+        this.holdings = await repo.list();
+        this.portfolioTotal = await repo.refreshTotals();
+      },
+      /** Add a holding then refresh totals. */
+      async addHolding(h: PortfolioHolding) {
+        const repo = deps.portfolioRepo ?? new PortfolioRepository();
+        await repo.add(h);
+        await this.loadPortfolio();
+      },
+      /** Remove a holding by id then refresh totals. */
+      async removeHolding(id: string) {
+        const repo = deps.portfolioRepo ?? new PortfolioRepository();
+        await repo.remove(id);
+        await this.loadPortfolio();
       }
     }
   });

@@ -1,4 +1,9 @@
 ## 2025-08-12 PR #XX
+- **Summary**: added portfolio actions to web store and unit tests.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0106
+- **Deviations/Decisions**: mirrored Flutter PortfolioNotifier via new appStore actions.
+- **Next step**: integrate holdings view into PortfolioPage.
 
 - **Summary**: added watch-list actions to AppStateNotifier, updated screens and tests.
 - **Stage**: development
