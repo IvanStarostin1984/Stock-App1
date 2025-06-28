@@ -1,4 +1,10 @@
 ## 2025-08-10 PR #XX
+- **Summary**: fixed lints in auth service and tests; removed unused imports; changed rss variables to const.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: root flutter analyze missing flutter_lints, ran analysis in mobile-app.
+- **Next step**: monitor CI for clean run.
+
 - **Summary**: added css-select override and regenerated lock file.
 - **Stage**: maintenance
 - **Requirements addressed**: N/A

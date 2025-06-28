@@ -1,4 +1,4 @@
-/// S-05 – AuthService
+// S-05 – AuthService
 import 'package:bcrypt/bcrypt.dart';
 
 import 'credential_store.dart';

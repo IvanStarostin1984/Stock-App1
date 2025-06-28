@@ -48,7 +48,7 @@ void main() {
 
   test('falls back to rss on failure', () async {
     var calls = 0;
-    final rss =
+    const rss =
         '''<rss><channel><item><title>r</title><link>l</link><pubDate>p</pubDate></item></channel></rss>''';
     final client = MockClient((req) async {
       calls++;
