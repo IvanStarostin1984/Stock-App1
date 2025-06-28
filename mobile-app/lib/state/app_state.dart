@@ -42,11 +42,10 @@ class AppStateNotifier extends StateNotifier<AppState> {
   final svc.AuthService _auth;
   final WatchListRepository _watchRepo;
   final FxRepository _fx;
-  final CredentialStore _cred;
   final svc.ProUpgradeService _proSvc;
 
   AppStateNotifier._(this._quotes, this._news, this._auth, this._watchRepo,
-      this._fx, this._cred, this._proSvc)
+      this._fx, this._proSvc)
       : super(const AppState());
 
   /// Creates an [AppStateNotifier] with optional service overrides.
@@ -56,17 +55,15 @@ class AppStateNotifier extends StateNotifier<AppState> {
     svc.AuthService? auth,
     WatchListRepository? watchRepo,
     FxRepository? fxRepo,
-    CredentialStore? credStore,
     svc.ProUpgradeService? proSvc,
   }) {
-    final store = credStore ?? CredentialStore();
+    final store = CredentialStore();
     return AppStateNotifier._(
       quotes ?? QuoteRepository(),
       news ?? NewsRepository(),
       auth ?? svc.AuthService(),
       watchRepo ?? WatchListRepository(),
       fxRepo ?? FxRepository(),
-      store,
       proSvc ?? svc.ProUpgradeService(store.updateProFlag),
     );
   }
@@ -117,7 +114,8 @@ class AppStateNotifier extends StateNotifier<AppState> {
 }
 
 /// Riverpod provider exposing the application state.
-final authServiceProvider = Provider<svc.AuthService>((ref) => svc.AuthService());
+final authServiceProvider =
+    Provider<svc.AuthService>((ref) => svc.AuthService());
 
 final appStateProvider = StateNotifierProvider<AppStateNotifier, AppState>(
   (ref) => AppStateNotifier(auth: ref.read(authServiceProvider)),

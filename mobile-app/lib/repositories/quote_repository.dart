@@ -1,6 +1,5 @@
 import 'package:smwa_services/services.dart';
 import '../models/quote.dart';
-import 'package:smwa_services/src/lru_cache.dart';
 
 /// R-01 – Provides cached access to quotes via [MarketstackService].
 class QuoteRepository {
