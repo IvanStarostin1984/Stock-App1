@@ -1,3 +1,10 @@
+## 2025-08-09 PR #XX
+- **Summary**: docs workflow installs deps in web-app and runs link check via prefix.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: check uses `npm ci --prefix web-app` and `npx --prefix web-app markdown-link-check README.md`.
+- **Next step**: monitor docs job in CI.
+
 ## 2025-08-08 PR #XX
 - **Summary**: disabled package publishing for mobile to silence Flutter warning.
 - **Stage**: maintenance

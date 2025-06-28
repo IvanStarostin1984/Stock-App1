@@ -90,7 +90,8 @@ The folder `web-prototype/` contains HTML/CSS exported from Figma. Treat it as r
 ## Docs
 
 - After editing README or other docs, run:
-  `npx markdown-link-check README.md`.
+  `npm ci --prefix web-app` then
+  `npx --prefix web-app markdown-link-check README.md`.
 
 ## API hygiene
 
@@ -146,8 +147,9 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 - `mobile-app/packages/services` uses Flutter plugins, so its tests must run via `flutter test` (not `dart test`).
 - The shared packages under `packages/` install via `npm ci` and run `npm test` in CI.
  - Run the documentation link check with Node 20 using the local package:
-  `npx markdown-link-check README.md`.
-- CI runs this check via `.github/workflows/docs.yml`. Run it locally whenever you edit README or other docs files.
+  `npm ci --prefix web-app` then
+  `npx --prefix web-app markdown-link-check README.md`.
+ - CI runs this check via `.github/workflows/docs.yml`. Run it locally whenever you edit README or other docs files.
 - Ensure the OpenAPI spec reports zero warnings: `npx openapi lint spec/openapi.yaml`.
 - Provide at least one positive and one negative unit test per public API, aiming for ≥75 % branch coverage.
 - Add parity tests under `web-app/tests/*Parity.test.ts` and
@@ -190,7 +192,7 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 
 - **Fork** then branch off `main` using the pattern `feat/<topic>`.
 - **Ensure local tests pass** before opening a PR.
-- Run `npx markdown-link-check README.md` whenever docs are updated to keep the docs CI job green.
+ - Run `npm ci --prefix web-app` and `npx --prefix web-app markdown-link-check README.md` whenever docs are updated to keep the docs CI job green.
 - Update the `<your-user>` placeholder in README badges and clone commands with your GitHub username after forking.
 - **Each PR requires at least one reviewer.**
 
