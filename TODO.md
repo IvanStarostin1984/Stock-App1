@@ -75,7 +75,7 @@
 - [ ] Monitor for further API integration.
 - [x] Use news data on NewsScreen.
 - [x] Expand store features.
-- [ ] Integrate portfolio holdings view with PortfolioPage.
+- [x] Integrate portfolio holdings view with PortfolioPage.
 - [x] Implement ranking for SymbolTrie suggestions.
 - [x] Integrate helper in mobile services.
 - [x] Flesh out real API calls.
