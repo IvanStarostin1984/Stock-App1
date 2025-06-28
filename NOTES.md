@@ -1,3 +1,11 @@
+## 2025-08-12 PR #XX
+
+- **Summary**: added portfolio actions to web store and unit tests.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0106
+- **Deviations/Decisions**: mirrored Flutter PortfolioNotifier via new appStore actions.
+- **Next step**: integrate holdings view into PortfolioPage.
+
 ## 2025-08-11 PR #XX
 
 - **Summary**: bumped markdown-link-check to 3.13.7 after docs job failed with a
