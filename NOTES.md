@@ -1,3 +1,10 @@
+## 2025-08-08 PR #XX
+- **Summary**: disabled package publishing for mobile to silence Flutter warning.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: added `publish_to: 'none'` after version.
+- **Next step**: ensure CI runs clean.
+
 ## 2025-08-07 PR #XX
 - **Summary**: CI now runs flutter analyze without pub to fail on warnings.
 - **Stage**: maintenance

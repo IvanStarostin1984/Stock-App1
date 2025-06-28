@@ -123,3 +123,4 @@
 - [x] Bundle prototype fonts in the PWA (verify licenses).
 - [x] Rebuild Vue pages to match `web-prototype/*.html` using the new tokens.
 - [x] Fix AppState register return type to map service credential to domain model.
+- [x] Disable package publishing via 'publish_to: none' in mobile pubspec to silence Flutter analyzer warning.
