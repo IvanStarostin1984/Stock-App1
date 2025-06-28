@@ -14,7 +14,6 @@ class FxService {
   }
 
   Future<double?> getRate(String from, String to) async {
-    final key = '$from-$to';
     final url = 'https://api.exchangerate.host/latest?base=$from&symbols=$to';
     return _net.get<double>(
       url,

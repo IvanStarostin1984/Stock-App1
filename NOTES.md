@@ -1,3 +1,17 @@
+## 2025-08-09 PR #XX
+- **Summary**: docs workflow installs deps in web-app and runs link check via prefix.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: check uses `npm ci --prefix web-app` and `npx --prefix web-app markdown-link-check README.md`.
+- **Next step**: monitor docs job in CI.
+
+## 2025-08-08 PR #XX
+- **Summary**: aligned repositories with service exports and cleaned code.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: added flutter_lints to services; removed _cred; used services.dart imports.
+- **Next step**: verify CI stays green.
+
 ## 2025-08-08 PR #XX
 - **Summary**: clarified docs link check steps and enforced flutter_lints dep.
 - **Stage**: maintenance

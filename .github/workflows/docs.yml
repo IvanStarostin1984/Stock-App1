@@ -17,4 +17,4 @@ jobs:
       - name: Install markdown-link-check
         run: npm ci -C web-app
       - name: Check links
-        run: npx markdown-link-check README.md
+        run: npx --prefix web-app markdown-link-check README.md

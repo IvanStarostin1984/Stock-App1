@@ -1,5 +1,4 @@
 import 'package:smwa_services/services.dart';
-import 'package:smwa_services/src/lru_cache.dart';
 
 /// FR-0107 – Provides cached access to FX rates via [FxService].
 class FxRepository {
@@ -10,7 +9,7 @@ class FxRepository {
 
   /// Returns the conversion rate from [base] to [quote] using a 24h cache.
   Future<double?> rate(String base, String quote) async {
-    final key = '${base}_${quote}';
+    final key = '${base}_$quote';
     final cached = _cache.get(key);
     if (cached != null) return cached;
     final value = await _svc.getRate(base, quote);

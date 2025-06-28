@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../models/portfolio_holding.dart';
 import '../models/quote.dart';
 import 'quote_repository.dart';
-import 'package:smwa_services/src/lru_cache.dart';
+import 'package:smwa_services/services.dart';
 
 /// R-02 – CRUD access to portfolio holdings using SharedPreferences.
 class PortfolioRepository {
