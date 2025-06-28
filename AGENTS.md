@@ -94,8 +94,8 @@ The folder `web-prototype/` contains HTML/CSS exported from Figma. Treat it as r
   npm ci -C web-app
   npx markdown-link-check README.md
   ```
-- The docs workflow pins `css-select@4` to keep markdown-link-check stable. Keep
-  this override in `web-app/package.json`.
+ - The docs workflow pins `markdown-link-check` to version 3.13.7 and overrides
+   `css-select` to 5.1.0. Keep these settings in `web-app/package.json`.
 
 ## API hygiene
 

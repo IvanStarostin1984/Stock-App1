@@ -130,3 +130,5 @@
 - [x] Fix AppState register return type to map service credential to domain model.
 - [x] Disable package publishing via 'publish_to: none' in mobile pubspec to silence Flutter analyzer warning.
 - [x] Document css-select override for docs workflow.
+- [x] Upgrade markdown-link-check to v3.13.7 after docs job failed with a
+  TypeError.

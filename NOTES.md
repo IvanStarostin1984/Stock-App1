@@ -1,3 +1,12 @@
+## 2025-08-11 PR #XX
+
+- **Summary**: bumped markdown-link-check to 3.13.7 after docs job failed with a
+  TypeError.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: upgraded package and kept css-select override.
+- **Next step**: verify docs workflow passes.
+
 ## 2025-08-10 PR #XX
 - **Summary**: documented css-select override and triple-slash rule.
 - **Stage**: documentation
