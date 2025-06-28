@@ -94,6 +94,8 @@ The folder `web-prototype/` contains HTML/CSS exported from Figma. Treat it as r
   npm ci -C web-app
   npx markdown-link-check README.md
   ```
+- The docs workflow pins `css-select@4` to keep markdown-link-check stable. Keep
+  this override in `web-app/package.json`.
 ## API hygiene
 
 (API requests are implemented in service classes under `web-app/src/services/`.)
@@ -114,6 +116,8 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 - Secrets must remain in `.env`; never commit real API keys.
 - Use 2‑space indentation, single quotes and end files with a newline.
 - Document each public API/function with a doc comment.
+- Avoid file-leading `///` comments unless followed by a `library` directive.
+  Use standard `//` comments for file headers.
 - When introducing new JS packages in `web-app`, also install the matching
   `@types/...` package (or provide a custom `.d.ts`) to prevent TS7016
   compilation errors.

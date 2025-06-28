@@ -1,3 +1,10 @@
+## 2025-08-10 PR #XX
+- **Summary**: documented css-select override and triple-slash rule.
+- **Stage**: documentation
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: AGENTS now warns against file-leading `///` unless with `library` and notes css-select pin.
+- **Next step**: confirm docs workflow stays green.
+
 ## 2025-08-09 PR #XX
 - **Summary**: docs workflow installs deps in web-app and runs link check via prefix.
 - **Stage**: maintenance
