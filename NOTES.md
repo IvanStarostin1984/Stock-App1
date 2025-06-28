@@ -1,3 +1,10 @@
+## 2025-08-07 PR #XX
+- **Summary**: CI now runs flutter analyze without pub to fail on warnings.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: added analyzer step to workflows; docs updated.
+- **Next step**: monitor CI results.
+
 ## 2025-08-06 PR #XX
 - **Summary**: fixed register return type using UserCredential model and added missing import.
 - **Stage**: implementation

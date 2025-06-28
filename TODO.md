@@ -80,6 +80,7 @@
 - [ ] Monitor CI runs.
 - [x] Keep AGENTS.md up to date whenever CI tooling changes.
 
+- [x] Enforce flutter analyze step in CI after dependencies install.
 - [x] Add linter to verify NOTES.md entries start with a proper heading and remain newest-first.
 
 - [x] Ensure packages tests run via `npm ci` and `npm test` in CI workflow.
