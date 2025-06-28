@@ -148,9 +148,10 @@ skip the generated REST clients and internal helpers.
 Run `npm run lint:paths` in `packages/` after adding a package to verify
 imports of `web-app/src` use the correct relative paths.
 
-Run the documentation checks with Node 20 (use `-y` to skip prompts):
+Run the documentation checks with Node 20 (no `-y` needed once the package is
+installed locally):
 ```bash
-npx -y markdown-link-check README.md
+npx markdown-link-check README.md
 ```
 
 flutter test and npm test – keep CI green

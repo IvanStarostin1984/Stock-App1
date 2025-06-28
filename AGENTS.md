@@ -84,6 +84,11 @@ LHCI_GITHUB_APP_TOKEN=YOUR_LHCI_TOKEN  # CI only
 
 The folder `web-prototype/` contains HTML/CSS exported from Figma. Treat it as read-only. Colours and font names in `web-app/design-tokens/tokens.json` are parsed from `web-prototype/CSS/styleguide.css`. Copy layout cues manually when building Vue pages.
 
+## Docs
+
+- After editing README or other docs, run:
+  `npx markdown-link-check README.md`.
+
 ## API hygiene
 
 (API requests are implemented in service classes under `web-app/src/services/`.)
@@ -135,8 +140,8 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
   Include `--dart-define=VITE_MARKETSTACK_KEY=dummy` locally if Marketstack API calls run in tests.
 - `mobile-app/packages/services` uses Flutter plugins, so its tests must run via `flutter test` (not `dart test`).
 - The shared packages under `packages/` install via `npm ci` and run `npm test` in CI.
-- Run the documentation link check with Node 20 (use `-y` to skip prompts):
-  `npx -y markdown-link-check README.md`.
+ - Run the documentation link check with Node 20 using the local package:
+  `npx markdown-link-check README.md`.
 - CI runs this check via `.github/workflows/docs.yml`. Run it locally whenever you edit README or other docs files.
 - Ensure the OpenAPI spec reports zero warnings: `npx openapi lint spec/openapi.yaml`.
 - Provide at least one positive and one negative unit test per public API, aiming for ≥75 % branch coverage.
@@ -180,7 +185,7 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 
 - **Fork** then branch off `main` using the pattern `feat/<topic>`.
 - **Ensure local tests pass** before opening a PR.
-- Run `npx -y markdown-link-check README.md` whenever docs are updated to avoid prompts and keep the docs CI job green.
+- Run `npx markdown-link-check README.md` whenever docs are updated to keep the docs CI job green.
 - Update the `<your-user>` placeholder in README badges and clone commands with your GitHub username after forking.
 - **Each PR requires at least one reviewer.**
 

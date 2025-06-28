@@ -5,6 +5,13 @@
 - **Deviations/Decisions**: added analyzer step to workflows; docs updated.
 - **Next step**: monitor CI results.
 
+## 2025-08-07 PR #XX
+- **Summary**: docs workflow uses local markdown-link-check dev dependency.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: pinned cheerio and css-select; removed -y flag.
+- **Next step**: confirm docs check runs without prompts.
+
 ## 2025-08-06 PR #XX
 - **Summary**: fixed register return type using UserCredential model and added missing import.
 - **Stage**: implementation
