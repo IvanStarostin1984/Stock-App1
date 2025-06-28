@@ -107,6 +107,25 @@ class AppStateNotifier extends StateNotifier<AppState> {
     await _watchRepo.save(list);
   }
 
+  /// Adds [symbol] to the watch list if not already present.
+  Future<void> addToWatchList(String symbol) async {
+    final list = await _watchRepo.list();
+    if (!list.contains(symbol)) {
+      list.add(symbol);
+      await _watchRepo.save(list);
+    }
+  }
+
+  /// Removes [symbol] from the watch list when present.
+  Future<void> removeFromWatchList(String symbol) async {
+    final list = await _watchRepo.list();
+    final idx = list.indexOf(symbol);
+    if (idx != -1) {
+      list.removeAt(idx);
+      await _watchRepo.save(list);
+    }
+  }
+
   /// Performs the mock checkout and flips the Pro flag on success.
   Future<bool> upgradePro() async {
     return _proSvc.checkoutMock();

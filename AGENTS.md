@@ -147,6 +147,7 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
 - Any Flutter package whose `analysis_options.yaml` includes
   `package:flutter_lints/flutter.yaml` must list `flutter_lints` under
   `dev_dependencies`.
+- Verify this via `npm run lint:flutter-lints`; CI runs this check before Flutter analysis.
 - Run `npm run tokens` (or run tests) before any Flutter analysis or build steps so `tokens.dart` exists.
 - Run `npm run tokens` before web tests if you invoke `npx vitest` or `npx jest` directly. Their pretest hook does not run automatically.
 - CI runs `flutter analyze --no-pub` after fetching mobile dependencies and fails on warnings.

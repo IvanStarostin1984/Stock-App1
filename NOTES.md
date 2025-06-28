@@ -1,10 +1,21 @@
 ## 2025-08-12 PR #XX
-
 - **Summary**: added portfolio actions to web store and unit tests.
 - **Stage**: implementation
 - **Requirements addressed**: FR-0106
 - **Deviations/Decisions**: mirrored Flutter PortfolioNotifier via new appStore actions.
 - **Next step**: integrate holdings view into PortfolioPage.
+
+- **Summary**: added watch-list actions to AppStateNotifier, updated screens and tests.
+- **Stage**: development
+- **Requirements addressed**: VM-01, VM-02, UC-15
+- **Deviations/Decisions**: used placeholder symbol 'AAPL' across screens.
+- **Next step**: monitor CI for cross-platform parity.
+
+- **Summary**: added script to check flutter_lints usage and integrated in CI.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: ensures packages declare flutter_lints when included.
+- **Next step**: monitor CI for new check.
 
 ## 2025-08-11 PR #XX
 
@@ -1559,3 +1570,5 @@ npm test
 - **Requirements addressed**: N/A
 - **Deviations/Decisions**: None
 - **Next step**: Populate TODO.md and implement core services.
+
+

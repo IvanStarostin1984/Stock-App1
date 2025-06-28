@@ -24,7 +24,8 @@ class NewsScreen extends ConsumerWidget {
             )
           : const Center(child: Text('No articles')),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => ref.read(appStateProvider.notifier).increment(),
+        onPressed: () =>
+            ref.read(appStateProvider.notifier).addToWatchList('AAPL'),
         child: const Icon(Icons.add),
       ),
     );

@@ -12,7 +12,8 @@ class ProScreen extends ConsumerWidget {
     return Scaffold(
       body: Center(child: Text('Pro Screen: ${state.count}')),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => ref.read(appStateProvider.notifier).increment(),
+        onPressed: () =>
+            ref.read(appStateProvider.notifier).addToWatchList('AAPL'),
         child: const Icon(Icons.add),
       ),
     );

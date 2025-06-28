@@ -28,7 +28,8 @@ class _MainScreenState extends ConsumerState<MainScreen> {
             : const Text('Loading...'),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => ref.read(appStateProvider.notifier).increment(),
+        onPressed: () =>
+            ref.read(appStateProvider.notifier).addToWatchList('AAPL'),
         child: const Icon(Icons.add),
       ),
     );
