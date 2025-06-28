@@ -81,8 +81,9 @@
 - [ ] Expand state usage across app.
 - [x] Expand to remaining service stubs.
 - [ ] Wire Flutter store.
-- [ ] Monitor CI runs.
+- [x] Monitor CI runs.
 - [x] Keep AGENTS.md up to date whenever CI tooling changes.
+- [ ] Audit Flutter packages for flutter_lints dev dependency.
 
 - [x] Enforce flutter analyze step in CI after dependencies install.
 - [x] Add linter to verify NOTES.md entries start with a proper heading and remain newest-first.

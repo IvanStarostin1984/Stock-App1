@@ -89,10 +89,11 @@ The folder `web-prototype/` contains HTML/CSS exported from Figma. Treat it as r
 
 ## Docs
 
-- After editing README or other docs, run:
-  `npm ci --prefix web-app` then
-  `npx --prefix web-app markdown-link-check README.md`.
-
+- After editing README or other docs, run the pinned version of the link checker.
+  ```bash
+  npm ci -C web-app
+  npx markdown-link-check README.md
+  ```
 ## API hygiene
 
 (API requests are implemented in service classes under `web-app/src/services/`.)
@@ -138,6 +139,9 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
   the service package has its dependencies ready.
 - Before running Flutter analysis in CI, also run `flutter pub get -C mobile-app/packages/services`
   so dev dependencies like `flutter_lints` are available.
+- Any Flutter package whose `analysis_options.yaml` includes
+  `package:flutter_lints/flutter.yaml` must list `flutter_lints` under
+  `dev_dependencies`.
 - Run `npm run tokens` (or run tests) before any Flutter analysis or build steps so `tokens.dart` exists.
 - Run `npm run tokens` before web tests if you invoke `npx vitest` or `npx jest` directly. Their pretest hook does not run automatically.
 - CI runs `flutter analyze --no-pub` after fetching mobile dependencies and fails on warnings.
@@ -146,10 +150,14 @@ caching period. Free‑tier quotas remain ≤ 100 Marketstack/FX calls · month�
   Include `--dart-define=VITE_MARKETSTACK_KEY=dummy` locally if Marketstack API calls run in tests.
 - `mobile-app/packages/services` uses Flutter plugins, so its tests must run via `flutter test` (not `dart test`).
 - The shared packages under `packages/` install via `npm ci` and run `npm test` in CI.
- - Run the documentation link check with Node 20 using the local package:
-  `npm ci --prefix web-app` then
-  `npx --prefix web-app markdown-link-check README.md`.
- - CI runs this check via `.github/workflows/docs.yml`. Run it locally whenever you edit README or other docs files.
+- Run the documentation link check with Node 20 using the version pinned in
+  `web-app/package.json`:
+  ```bash
+  npm ci -C web-app
+  npx markdown-link-check README.md
+  ```
+- CI runs this check via `.github/workflows/docs.yml`. Run it locally whenever you edit README or other docs files.
+
 - Ensure the OpenAPI spec reports zero warnings: `npx openapi lint spec/openapi.yaml`.
 - Provide at least one positive and one negative unit test per public API, aiming for ≥75 % branch coverage.
 - Add parity tests under `web-app/tests/*Parity.test.ts` and
