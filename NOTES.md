@@ -6,6 +6,13 @@
 - **Next step**: monitor docs job in CI.
 
 ## 2025-08-08 PR #XX
+- **Summary**: aligned repositories with service exports and cleaned code.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: added flutter_lints to services; removed _cred; used services.dart imports.
+- **Next step**: verify CI stays green.
+
+## 2025-08-08 PR #XX
 - **Summary**: disabled package publishing for mobile to silence Flutter warning.
 - **Stage**: maintenance
 - **Requirements addressed**: N/A

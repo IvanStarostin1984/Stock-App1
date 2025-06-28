@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:smwa_services/src/country_setting_repository.dart' as repo;
+import 'package:smwa_services/services.dart' as repo;
 import '../models/country_setting.dart';
 
 class CountrySettingRepository implements repo.CountrySettingRepository {

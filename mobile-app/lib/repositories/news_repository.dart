@@ -1,6 +1,5 @@
 import 'package:smwa_services/services.dart';
 import '../models/news_article.dart';
-import 'package:smwa_services/src/lru_cache.dart';
 
 /// R-05 – Provides cached news articles via [NewsService].
 class NewsRepository {

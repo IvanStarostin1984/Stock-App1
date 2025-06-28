@@ -58,10 +58,10 @@ class NewsService {
       final doc = XmlDocument.parse(resp.body);
       final items = doc.findAllElements('item').take(3).map((n) {
         return {
-          'title': n.getElement('title')?.text ?? '',
-          'url': n.getElement('link')?.text ?? '',
+          'title': n.getElement('title')?.innerText ?? '',
+          'url': n.getElement('link')?.innerText ?? '',
           'source': 'rss',
-          'published': n.getElement('pubDate')?.text ?? '',
+          'published': n.getElement('pubDate')?.innerText ?? '',
         };
       }).toList();
       _rssCache.put(_rssUrl, items, const Duration(hours: 12));
