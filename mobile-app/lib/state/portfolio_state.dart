@@ -31,6 +31,18 @@ class PortfolioNotifier extends StateNotifier<PortfolioState> {
     final total = await _repo.refreshTotals();
     state = PortfolioState(holdings: items, total: total);
   }
+
+  /// Adds a [holding] through the repository and reloads state.
+  Future<void> addHolding(PortfolioHolding holding) async {
+    await _repo.add(holding);
+    await load();
+  }
+
+  /// Removes a holding by [id] and reloads state.
+  Future<void> removeHolding(String id) async {
+    await _repo.remove(id);
+    await load();
+  }
 }
 
 /// Provider exposing [PortfolioRepository].
