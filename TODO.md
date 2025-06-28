@@ -121,3 +121,4 @@
 - [x] Import colours and fonts from `web-prototype/CSS/styleguide.css` into `web-app/design-tokens/tokens.json`.
 - [x] Bundle prototype fonts in the PWA (verify licenses).
 - [x] Rebuild Vue pages to match `web-prototype/*.html` using the new tokens.
+- [x] Fix AppState register return type to map service credential to domain model.
