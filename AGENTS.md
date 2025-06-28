@@ -96,6 +96,7 @@ The folder `web-prototype/` contains HTML/CSS exported from Figma. Treat it as r
   ```
 - The docs workflow pins `css-select@4` to keep markdown-link-check stable. Keep
   this override in `web-app/package.json`.
+
 ## API hygiene
 
 (API requests are implemented in service classes under `web-app/src/services/`.)
