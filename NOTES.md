@@ -1,3 +1,10 @@
+## 2025-08-08 PR #XX
+- **Summary**: CI installs service package deps before Flutter analysis.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: added flutter pub get step in workflows; documented in AGENTS.
+- **Next step**: ensure analyze warnings disappear.
+
 ## 2025-08-07 PR #XX
 - **Summary**: CI now runs flutter analyze without pub to fail on warnings.
 - **Stage**: maintenance

@@ -26,6 +26,7 @@
 - [x] Start **shared-contracts** repo with spec and schema folders, then bundle the public APIs (`openapi.yaml`). (Repo hosted within main project)
 - [x] Add JSON schema models with tests in shared-contracts.
 - [x] Generate design tokens via style-dictionary for CSS and Dart.
+- [x] Install service package deps before Flutter analysis in CI.
 - [x] Build Dart service package `smwa_services` using LruCache and ApiQuotaLedger.
 - [x] Implement QuoteRepository (mobile & web)
 - [x] Document tsconfig path requirement when importing packages to avoid TS6307.
