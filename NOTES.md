@@ -1,4 +1,11 @@
 ## 2025-08-08 PR #XX
+- **Summary**: clarified docs link check steps and enforced flutter_lints dep.
+- **Stage**: maintenance
+- **Requirements addressed**: N/A
+- **Deviations/Decisions**: AGENTS now states to run `npm ci -C web-app` before link check and to declare flutter_lints when included via analysis options.
+- **Next step**: monitor CI runs.
+
+## 2025-08-08 PR #XX
 - **Summary**: disabled package publishing for mobile to silence Flutter warning.
 - **Stage**: maintenance
 - **Requirements addressed**: N/A
