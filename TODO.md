@@ -65,7 +65,7 @@
 - [x] Monitor CI for cross-tool coverage.
 - [x] Ensure CI passes with updated hashing.
 - [x] Fix container build scripts.
-- [ ] Monitor repo progress.
+- [x] Monitor repo progress.
 - [x] Integrate with AuthService.
 - [x] Integrate into PortfolioScreen.
 - [x] Implement refreshTotals and integrate with UI.

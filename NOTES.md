@@ -1,3 +1,11 @@
+## 2025-08-14 PR #XX
+
+- **Summary**: added hourly portfolio refresh timers on mobile and web stores with tests. Updated docs and completed TODO item.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0106
+- **Deviations/Decisions**: timer uses next whole-hour delay for efficiency.
+- **Next step**: monitor CI results.
+
 ## 2025-08-13 PR #XX
 
 - **Summary**: integrated PortfolioPage with Pinia actions, rendering holdings list and totals. Updated tests.
