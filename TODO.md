@@ -25,6 +25,7 @@
 - [x] Extend NewsService parity tests for TTL, ledger and RSS fallback
 - [x] Implement RSS fallback in mobile NewsService
 
+- [x] Add parity tests for ProUpgradeService on web and mobile
 - [x] Implement `packages/core/net.ts` with 24h LRU cache and quota handling.
 - [x] Start **shared-contracts** repo with spec and schema folders, then bundle the public APIs (`openapi.yaml`). (Repo hosted within main project)
 - [x] Add JSON schema models with tests in shared-contracts.
