@@ -1,3 +1,4 @@
+/* eslint-env browser */
 import { defineStore } from 'pinia';
 import { MarketstackService, type Quote } from '@/services/MarketstackService';
 import { QuoteRepository } from '@/repositories/QuoteRepository';
@@ -43,7 +44,7 @@ export interface AppDeps {
 }
 
 export function createAppStore(deps: AppDeps = {}) {
-  return defineStore('app', {
+  const useStore = defineStore('app', {
     state: (): AppState => ({
       headline: null,
       articles: null,
@@ -161,6 +162,24 @@ export function createAppStore(deps: AppDeps = {}) {
       }
     }
   });
+
+  return () => {
+    const store = useStore();
+    if (deps.portfolioRepo) {
+      const repo = deps.portfolioRepo;
+      const now = new Date();
+      const delay =
+        (60 - now.getMinutes()) * 60_000 - now.getSeconds() * 1000;
+      const tick = async () => {
+        store.portfolioTotal = await repo.refreshTotals();
+      };
+      globalThis.setTimeout(() => {
+        tick();
+        globalThis.setInterval(tick, 60 * 60 * 1000);
+      }, delay);
+    }
+    return store;
+  };
 }
 
 export const useAppStore = createAppStore();

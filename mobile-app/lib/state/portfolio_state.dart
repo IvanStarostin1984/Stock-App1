@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../repositories/portfolio_repository.dart';
 import '../models/portfolio_holding.dart';
@@ -20,10 +21,32 @@ class PortfolioState {
 /// Notifier managing portfolio data via [PortfolioRepository].
 class PortfolioNotifier extends StateNotifier<PortfolioState> {
   final PortfolioRepository _repo;
+  Timer? _timer;
 
   PortfolioNotifier({PortfolioRepository? repo})
       : _repo = repo ?? PortfolioRepository(),
-        super(const PortfolioState());
+        super(const PortfolioState()) {
+    final now = DateTime.now();
+    final delay = Duration(
+      minutes: 60 - now.minute,
+      seconds: -now.second,
+    );
+    _timer = Timer(delay, () {
+      _tick();
+      _timer = Timer.periodic(const Duration(hours: 1), (_) => _tick());
+    });
+  }
+
+  Future<void> _tick() async {
+    final total = await _repo.refreshTotals();
+    state = state.copyWith(total: total);
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
 
   /// Loads holdings and total value from the repository.
   Future<void> load() async {
