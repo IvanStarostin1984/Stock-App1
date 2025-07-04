@@ -1,5 +1,6 @@
 import { get, set } from 'idb-keyval';
 import { QuoteRepository } from './QuoteRepository';
+import { LruCache } from '../utils/LruCache';
 
 export interface PortfolioHolding {
   id: string;
@@ -15,6 +16,7 @@ export interface PortfolioHolding {
 export class PortfolioRepository {
   private storeKey = 'holdings';
   private quoteRepo: QuoteRepository;
+  private totalCache = new LruCache<string, number>(1);
 
   constructor(opts?: { quoteRepo?: QuoteRepository }) {
     this.quoteRepo = opts?.quoteRepo ?? new QuoteRepository();
@@ -37,6 +39,7 @@ export class PortfolioRepository {
     }
     const list = await this.list();
     await set(this.storeKey, [...list, h]);
+    this.totalCache.delete('total');
   }
 
   /**
@@ -48,18 +51,22 @@ export class PortfolioRepository {
       this.storeKey,
       list.filter(item => item.id !== id)
     );
+    this.totalCache.delete('total');
   }
 
   /**
    * Refresh total values using cached quotes.
    */
   async refreshTotals(): Promise<number> {
+    const cached = this.totalCache.get('total');
+    if (cached !== undefined) return cached;
     const list = await this.list();
     let total = 0;
     for (const h of list) {
       const quote = await this.quoteRepo.headline(h.symbol);
       if (quote) total += quote.close * h.quantity;
     }
+    this.totalCache.put('total', total, 60 * 60 * 1000);
     return total;
   }
 }

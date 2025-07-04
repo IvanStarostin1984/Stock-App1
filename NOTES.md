@@ -1,3 +1,11 @@
+## 2025-08-14 PR #XX
+
+- **Summary**: added PortfolioRepository parity tests for web and mobile; implemented total cache in web repository.
+- **Stage**: implementation
+- **Requirements addressed**: FR-0106
+- **Deviations/Decisions**: added 1h LruCache to match Flutter behaviour.
+- **Next step**: monitor CI for coverage.
+
 ## 2025-08-13 PR #XX
 
 - **Summary**: integrated PortfolioPage with Pinia actions, rendering holdings list and totals. Updated tests.
