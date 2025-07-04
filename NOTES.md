@@ -1,3 +1,11 @@
+## 2025-08-14 PR #XX
+
+- **Summary**: added ProUpgradeService parity tests for web and mobile using fake timers and mocked clients.
+- **Stage**: testing
+- **Requirements addressed**: FR-0108
+- **Deviations/Decisions**: subclassed web service inside tests to inject ledger.
+- **Next step**: monitor CI and ensure parity remains.
+
 ## 2025-08-13 PR #XX
 
 - **Summary**: integrated PortfolioPage with Pinia actions, rendering holdings list and totals. Updated tests.
